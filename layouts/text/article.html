@@ -1,0 +1,22 @@
+<article>
+  <nav class="nav">
+    {{ if .NextInSection }}
+      <h4>Next article</h4>
+      <p><a href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a></p>
+    {{ end }}
+    {{ if .PrevInSection }}
+      <h4>Previous article</h4>
+      <p><a href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a></p>
+    {{ end }}
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="/">{{ .Site.Title }}</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
+    </ul>
+    <p><a href="{{ .RelRef "index.md" }}">Text index</a></p>
+  </nav>
+  <h1>{{ .Title }}</h1>
+  <p>Created at: <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02 15:04:05 -0700" }}</time></p>
+  {{ .Content }}
+</article>

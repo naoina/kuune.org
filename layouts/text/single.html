@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{ partial "head.html" . }}
+  <link rel="stylesheet" href="/css/text.css" media="all">
+</head>
+<body>
+  <div class="main">
+    {{ if eq .Status "index" }}
+      {{ .Render "index" }}
+    {{ else }}
+      {{ .Render "article" }}
+    {{ end }}
+  </div>
+</body>
+</html>

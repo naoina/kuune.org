@@ -1,0 +1,13 @@
+baseurl = "https://kuune.org/"
+languageCode = "en-us"
+title = "kuune.org"
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+builddrafts = false
+
+[permalinks]
+  text = "/:section/:year/:month/:day/:filename/"
+
+[blackfriday]
+  extensions = ["hardLineBreak"]
