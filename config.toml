@@ -5,6 +5,7 @@ contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
 builddrafts = false
+canonifyurls = true
 
 [permalinks]
   text = "/:section/:year/:month/:day/:filename/"
