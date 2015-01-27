@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="msapplication-config" content="none">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>PythonistaはPEP8を読もう | kuune.org</title>
+<link rel="canonical" href="https://kuune.org/text/2013/06/03/pythonista-should-read-pep8/">
+
+<link rel="stylesheet" href="/css/normalize.css" media="all">
+<link rel="stylesheet" href="/css/common.css" media="all">
+
+  <link rel="stylesheet" href="/css/text.css" media="all">
+</head>
+<body>
+  <div class="main">
+    
+      <article>
+  <nav class="nav">
+    
+      <h4>Next article</h4>
+      <p><a href="/text/2013/06/08/migrate-mysql-to-postgresql/">MySQLからPostgreSQLに移行しました</a></p>
+    
+    
+      <h4>Previous article</h4>
+      <p><a href="/text/2013/05/24/create-flight-mocha/">flight-mocha作りました</a></p>
+    
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
+    </ul>
+    <p><a href="/text/index/">Text index</a></p>
+  </nav>
+  <h1>PythonistaはPEP8を読もう</h1>
+  <p>Created at: <time datetime="2013-06-03T12:22:56&#43;09:00">2013-06-03 12:22:56 &#43;0900</time></p>
+  <p>タイトル通りです。<a href="http://www.python.org/dev/peps/pep-0008">PEP 8</a> にはPythonistaの全てが詰まっている。クリスチャンが聖書を何度も読むように、Pythonistaも <a href="http://www.python.org/dev/peps/pep-0008">PEP 8</a> を何度も読むべきだ。
+以下蛇足。</p>
+
+<p>最近 <a href="http://www.python.org/dev/peps/pep-0008">PEP 8</a> を原文で読んでいて、<a href="http://oldriver.org/python/pep-0008j.html">日本語訳</a> と違う部分がありました。
+<a href="http://www.python.org/dev/peps/pep-0008/#other-recommendations">Other Recommendations</a> の部分なんですが、原文だと</p>
+
+<p>Yes:</p>
+
+<pre><code>i = i + 1
+submitted += 1
+x = x*2 - 1
+hypot2 = x*x + y*y
+c = (a+b) * (a-b)
+</code></pre>
+
+<p>No:</p>
+
+<pre><code>i=i+1
+submitted +=1
+x = x * 2 - 1
+hypot2 = x * x + y * y
+c = (a + b) * (a - b)
+</code></pre>
+
+<p>と書いてあるのに対し、日本語訳だと</p>
+
+<p>○</p>
+
+<pre><code>i = i + 1
+submitted += 1
+x = x * 2 - 1
+hypot2 = x * x + y * y
+c = (a + b) * (a - b)
+</code></pre>
+
+<p>×</p>
+
+<pre><code>i=i+1
+submitted +=1
+x = x*2 - 1
+hypot2 = x*x + y*y
+c = (a+b) * (a-b)
+</code></pre>
+
+<p>と書いてあったわけです。概ね真逆なんですね。これ、どういうことかというと、翻訳当時とはPEP8の内容が変わってるということでした。
+具体的には <a href="http://hg.python.org/peps/rev/37af28ad2972">http://hg.python.org/peps/rev/37af28ad2972</a> のチェンジセットで文言が変わって、間違っていたexampleが <a href="http://hg.python.org/peps/rev/16dd63848921">http://hg.python.org/peps/rev/16dd63848921</a> のチェンジセットで修正されたということみたいです。
+というかPEPのリポジトリがあるのを今回のことで初めて知ったのでPEP8の変更履歴を見てみましたが、割と変更されてて驚きました。</p>
+
+</article>
+
+    
+  </div>
+</body>
+</html>

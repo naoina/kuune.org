@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="msapplication-config" content="none">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>flight-mocha作りました | kuune.org</title>
+<link rel="canonical" href="https://kuune.org/text/2013/05/24/create-flight-mocha/">
+
+<link rel="stylesheet" href="/css/normalize.css" media="all">
+<link rel="stylesheet" href="/css/common.css" media="all">
+
+  <link rel="stylesheet" href="/css/text.css" media="all">
+</head>
+<body>
+  <div class="main">
+    
+      <article>
+  <nav class="nav">
+    
+      <h4>Next article</h4>
+      <p><a href="/text/2013/06/03/pythonista-should-read-pep8/">PythonistaはPEP8を読もう</a></p>
+    
+    
+      <h4>Previous article</h4>
+      <p><a href="/text/2013/05/09/pyflakes-to-flake8/">pyflakes から flake8 に乗り換えて幸せになった話</a></p>
+    
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
+    </ul>
+    <p><a href="/text/index/">Text index</a></p>
+  </nav>
+  <h1>flight-mocha作りました</h1>
+  <p>Created at: <time datetime="2013-05-24T20:10:14&#43;09:00">2013-05-24 20:10:14 &#43;0900</time></p>
+  <p><a href="https://github.com/naoina/flight-mocha">https://github.com/naoina/flight-mocha</a></p>
+
+<p>Twitter社製の <a href="http://twitter.github.io/flight/">Flight</a> という素晴らしいJavaScriptのフレームワークがありまして、このplogでも使っています。</p>
+
+<p>JavaScriptのテストはいつも <a href="http://visionmedia.github.io/mocha/">mocha</a> + <a href="https://github.com/LearnBoost/expect.js/">expect.js</a> でやっているのですが、今回だけ <a href="https://github.com/twitter/flight-jasmine">flight-jasmine</a> があるのでjasmineで書こうとしました。
+が、jasmineの非同期テストがあまりにもダサすぎて使う気にならなかったのでカッとなって作りました。</p>
+
+<ul>
+<li>plogのテスト書こう
+↓</li>
+<li>Flightのヘルパー関数書くの面倒
+↓</li>
+<li>flight-jasmine使おう
+↓</li>
+<li>jasmineの非同期テストダサすぎ
+↓</li>
+<li>そうだflight-mocha作ろう
+↓</li>
+<li>出来た←イマココ</li>
+</ul>
+
+<p>こんな感じです。</p>
+
+<p>また、現状ではFlightのイベント周りのテストは <a href="http://sinonjs.org/">sinon.js</a> あたりを使って自力でやる必要があります。
+なので、ここらへんをflight-mochaでうまくやれないかなと考えていますがそれはまた別のお話。</p>
+
+</article>
+
+    
+  </div>
+</body>
+</html>

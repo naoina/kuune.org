@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="msapplication-config" content="none">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>GroongaをTravis-CIで動かす方法 | kuune.org</title>
+<link rel="canonical" href="https://kuune.org/text/2013/08/03/how-to-run-groonga-on-travis-ci/">
+
+<link rel="stylesheet" href="/css/normalize.css" media="all">
+<link rel="stylesheet" href="/css/common.css" media="all">
+
+  <link rel="stylesheet" href="/css/text.css" media="all">
+</head>
+<body>
+  <div class="main">
+    
+      <article>
+  <nav class="nav">
+    
+      <h4>Next article</h4>
+      <p><a href="/text/2013/08/30/revel-boilerplate-upload-to-github/">Revel Boilerplate上げた</a></p>
+    
+    
+      <h4>Previous article</h4>
+      <p><a href="/text/2013/06/21/why-i-use-us-layout-keyboard-or-reminisce/">私がUS配列を使う理由、または昔話</a></p>
+    
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
+    </ul>
+    <p><a href="/text/index/">Text index</a></p>
+  </nav>
+  <h1>GroongaをTravis-CIで動かす方法</h1>
+  <p>Created at: <time datetime="2013-08-03T18:35:25&#43;09:00">2013-08-03 18:35:25 &#43;0900</time></p>
+  
+
+<p>最近このブログに全文検索を付けるべく pyroonga の開発を再開しました、どうも私です。</p>
+
+<p>さて、開発用リポジトリに GitHub をお使いの方は <a href="https://travis-ci.org/">Travis-CI</a> を使っておられるかと思います。
+pyroonga でも Travis-CI を使おうと思ったのですがそのままでは動かなかったので四苦八苦しながら動かしました。
+最終的な <code>.travis.yml</code> は <a href="https://github.com/naoina/pyroonga/blob/develop/.travis.yml">https://github.com/naoina/pyroonga/blob/develop/.travis.yml</a> ですが、これに至るまでにハマったところを書いていきます。</p>
+
+<h2 id="travis-ci-ではランタイムのバージョンを複数指定しても同じvm上で並列にテストが走る:ea080f36b433f566bba5ea648bc9103a">Travis-CI ではランタイムのバージョンを複数指定しても同じVM上で並列にテストが走る</h2>
+
+<p>初めにハマったのがこれです。Travis-CI を使うときは</p>
+
+<pre><code class="language-yaml">language: python
+python:
+ - &quot;2.6&quot;
+ - &quot;2.7&quot;
+ - &quot;3.3&quot;
+</code></pre>
+
+<p>のように複数バージョンを指定することがありますが、これらは同じ Travis-CI の VM 上で並列に実行されます。
+どういうことかというと、普通に MySQL などのデータストレージを使ったテストを書いた場合、DB 名やテーブル名が同じだと更新や取得の結果が毎回変わり得るということです。
+pyroonga の場合はテストケースごとに 「groonga データベースの作成 → groonga サーバー起動 → データベースの削除」ということをやっていたため、
+並列で実行した場合にテスト結果が変わるという現象になりました。</p>
+
+<p>対策としては、テーブル名を全てユニークにするなどしました。
+また、groonga データベースの作成と groonga サーバーの起動は予め1回のみ行なってテストを走らせるという方式に変更しました。</p>
+
+<h2 id="groonga-が起動しない:ea080f36b433f566bba5ea648bc9103a">Groonga が起動しない</h2>
+
+<p>以下のように .travis.yml を書いていたら何故か groonga が起動しないという現象がありました。</p>
+
+<pre><code class="language-yaml">language: python
+python:
+ - &quot;2.6&quot;
+ - &quot;2.7&quot;
+ - &quot;3.3&quot;
+before_install:
+ - curl https://raw.github.com/groonga/groonga/master/data/travis/setup.sh | sh
+before_script:
+ - groonga -n /tmp/test.db quit
+ - groonga -d /tmp/test.db
+script: python setup.py testall
+</code></pre>
+
+<p>そこで、 groonga のログを出すように</p>
+
+<pre><code class="language-yaml">......
+before_script:
+ ......
+ - groonga --log-path /tmp/groonga.log -d /tmp/test.db
+ - cat /tmp/groonga.log
+ ......
+</code></pre>
+
+<p>としてみました。するとログの中に</p>
+
+<pre><code>syscall error 'gethostbyname' (Success)
+</code></pre>
+
+<p>というものがありました。まぁ名前解決が出来てなくて起動できてないとわかったわけです。
+ですので、最終的に</p>
+
+<pre><code class="language-yaml">......
+- groonga -i localhost -d /tmp/test.db
+......
+</code></pre>
+
+<p>というように修正して Travis-CI で Groonga を起動してのテストができるようになりました。</p>
+
+<p>余談ですが、<code>groonga -d /tmp/test.db --log-path /tmp/groonga.log</code> などのように、<code>-d</code> や <code>-s</code> オプションの後に <code>--log-path</code> オプションを置くとログが出ない環境もありましたので、常に <code>--log-path</code> オプションを前に置くほうがいいです。（Arch Linux では出たが、Ubuntu 12.04 では出なかった）</p>
+
+</article>
+
+    
+  </div>
+</body>
+</html>

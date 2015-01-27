@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://kuune.org/</loc>
+    <lastmod>2014-11-07T16:21:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2014/11/07/json-struct-interface-in-golang/</loc>
+    <lastmod>2014-11-07T16:21:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2014/10/29/migu/</loc>
+    <lastmod>2014-10-29T17:53:44+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2014/08/20/test-windows-binary-on-travis-ci/</loc>
+    <lastmod>2014-08-20T13:55:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2014/07/24/kocha-v0.5/</loc>
+    <lastmod>2014-07-24T10:56:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2014/07/01/gin-web-framework/</loc>
+    <lastmod>2014-07-01T11:14:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2014/06/27/engineers/</loc>
+    <lastmod>2014-06-27T09:22:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2014/06/26/type-the-enter/</loc>
+    <lastmod>2014-06-26T19:44:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2014/06/26/miyabi/</loc>
+    <lastmod>2014-06-26T12:00:43+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2014/06/17/commentary-of-denco/</loc>
+    <lastmod>2014-06-17T17:52:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2014/06/12/denco/</loc>
+    <lastmod>2014-06-12T18:35:08+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2014/03/14/kocha-v0.3/</loc>
+    <lastmod>2014-03-14T09:50:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2014/03/14/why-you-should-read-official-docs-at-first/</loc>
+    <lastmod>2014-03-14T00:41:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2014/02/25/say-a-word-to-golang/</loc>
+    <lastmod>2014-02-25T20:46:33+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2014/02/21/discard-codes/</loc>
+    <lastmod>2014-02-21T20:19:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2014/02/20/ui-first/</loc>
+    <lastmod>2014-02-20T22:28:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2014/02/18/reason-for-develop-waf-for-golang/</loc>
+    <lastmod>2014-02-18T23:09:59+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2014/02/17/orm-for-golang/</loc>
+    <lastmod>2014-02-17T12:17:43+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2014/01/20/write-library-of-feature-toggle/</loc>
+    <lastmod>2014-01-20T09:31:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2014/01/08/create-url-router-for-golang/</loc>
+    <lastmod>2014-01-08T23:36:36+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/12/16/plan-for-implementation-of-url-router-for-kocha/</loc>
+    <lastmod>2013-12-16T23:05:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/12/10/kocha-v0.1/</loc>
+    <lastmod>2013-12-10T00:44:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/11/26/for-all-it-officials/</loc>
+    <lastmod>2013-11-26T09:16:51+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/11/12/get-fd-from-net-tcplistener-of-golang/</loc>
+    <lastmod>2013-11-12T23:57:53+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/10/22/implementation-of-to-camel-case-in-golang/</loc>
+    <lastmod>2013-10-22T18:52:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/10/21/how-to-get-argument-names-in-runtime/</loc>
+    <lastmod>2013-10-21T23:40:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/10/17/defer-of-golang-with-os-exit/</loc>
+    <lastmod>2013-10-17T12:57:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/10/17/web-application-framework-written-in-go/</loc>
+    <lastmod>2013-10-17T00:54:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/10/12/result-of-using-terminal-of-inverted-colors-during-4months/</loc>
+    <lastmod>2013-10-12T00:08:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/09/22/renew-vocanew-server-part/</loc>
+    <lastmod>2013-09-22T21:16:52+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/09/22/renew-vocanew-design-part/</loc>
+    <lastmod>2013-09-22T12:29:17+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/08/30/revel-boilerplate-upload-to-github/</loc>
+    <lastmod>2013-08-30T00:54:27+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/08/03/how-to-run-groonga-on-travis-ci/</loc>
+    <lastmod>2013-08-03T18:35:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/06/21/why-i-use-us-layout-keyboard-or-reminisce/</loc>
+    <lastmod>2013-06-21T15:03:13+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/06/20/goodbye-bootstrap-hello-pure/</loc>
+    <lastmod>2013-06-20T20:30:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/06/15/bookmarklet-to-calculate-total-purchase-at-amazon/</loc>
+    <lastmod>2013-06-15T01:02:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/06/14/add-image-upload-feature/</loc>
+    <lastmod>2013-06-14T20:37:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/06/08/migrate-mysql-to-postgresql/</loc>
+    <lastmod>2013-06-08T01:26:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/06/03/pythonista-should-read-pep8/</loc>
+    <lastmod>2013-06-03T12:22:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/05/24/create-flight-mocha/</loc>
+    <lastmod>2013-05-24T20:10:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/2013/05/09/pyflakes-to-flake8/</loc>
+    <lastmod>2013-05-09T23:37:20+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuune.org/text/index/</loc>
+    <lastmod>1970-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+</urlset>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="msapplication-config" content="none">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>UI ファーストという開発手法 | kuune.org</title>
+<link rel="canonical" href="https://kuune.org/text/2014/02/20/ui-first/">
+
+<link rel="stylesheet" href="/css/normalize.css" media="all">
+<link rel="stylesheet" href="/css/common.css" media="all">
+
+  <link rel="stylesheet" href="/css/text.css" media="all">
+</head>
+<body>
+  <div class="main">
+    
+      <article>
+  <nav class="nav">
+    
+      <h4>Next article</h4>
+      <p><a href="/text/2014/02/21/discard-codes/">書いたコードを捨てる勇気</a></p>
+    
+    
+      <h4>Previous article</h4>
+      <p><a href="/text/2014/02/18/reason-for-develop-waf-for-golang/">私が Golang の WEB アプリケーションフレームワークを開発する理由</a></p>
+    
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
+    </ul>
+    <p><a href="/text/index/">Text index</a></p>
+  </nav>
+  <h1>UI ファーストという開発手法</h1>
+  <p>Created at: <time datetime="2014-02-20T22:28:50&#43;09:00">2014-02-20 22:28:50 &#43;0900</time></p>
+  <p>ソフトウェアエンジニアは新しく何かを開発する際に、技術的に可能かどうか、どう実装すればいいか、みたいなのを先んじて考えがちな気がする。
+そういうボトムアップ的な思考は技術を知っているが故に出る自然な思考なのだが、私の経験上そういう思考で作られたものは大体使いづらい、いわゆる gomi が出来上がる。</p>
+
+<p>なぜか？それは UI を考える際に実現可能性や実装のしやすさを優先してしまうから。
+ここでいう UI とは WEB サービスやネイティブアプリなどに限らず、ライブラリなどであれば API を指す。</p>
+
+<p>私は数年前から UI → 実装という開発順序で開発をしていて、それは以下のような感じ。</p>
+
+<ol>
+<li>まず実現可能性を窓から投げ捨てる</li>
+<li>素晴らしいと思う UI を考える</li>
+<li>その素晴らしい UI を実現するための実装方法を考える</li>
+</ol>
+
+<p>こういう感じで進めると、ほとんどの場合、素晴らしい UI を実現するための方法がすごく煩雑になったり難しくなるのだけど、ここで UI を実装寄りにしてしまうと元の木阿弥で gomi が出来上がるので歯を食いしばって泣きながら実装する。
+最初に実現可能性を捨てて UI を考えると実装できない UI になると思うかも知れないが、まぁ大体なんとかなるし、なんとかするべきである。</p>
+
+<p>ただ、素晴らしいと思っていた UI が実は gomi だったということはよくあるし、そういうのはゴミ箱にダンクシュートするしかない。</p>
+
+</article>
+
+    
+  </div>
+</body>
+</html>

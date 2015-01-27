@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+.main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 33.33%;
+    height: 50%;
+}
+
+.vcard > li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .main {
+        display: -webkit-box;
+        display:    -moz-box;
+        display:     -ms-box;
+        display:      -o-box;
+        display:         box;
+        -webkit-box-align: center;
+           -moz-box-align: center;
+            -ms-box-align: center;
+             -o-box-align: center;
+        -webkit-box-pack: center;
+           -moz-box-pack: center;
+            -ms-box-pack: center;
+             -o-box-pack: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .inner {
+        width: 66.66%;
+        height: 66.66%;
+    }
+}

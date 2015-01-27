@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="msapplication-config" content="none">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Travis-CI で Windows バイナリをテストする | kuune.org</title>
+<link rel="canonical" href="https://kuune.org/text/2014/08/20/test-windows-binary-on-travis-ci/">
+
+<link rel="stylesheet" href="/css/normalize.css" media="all">
+<link rel="stylesheet" href="/css/common.css" media="all">
+
+  <link rel="stylesheet" href="/css/text.css" media="all">
+</head>
+<body>
+  <div class="main">
+    
+      <article>
+  <nav class="nav">
+    
+      <h4>Next article</h4>
+      <p><a href="/text/2014/10/29/migu/">Migu という golang 用 DB スキーマのマイグレーションツールを作った話</a></p>
+    
+    
+      <h4>Previous article</h4>
+      <p><a href="/text/2014/07/24/kocha-v0.5/">Kocha v0.5 リリースしました</a></p>
+    
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
+    </ul>
+    <p><a href="/text/index/">Text index</a></p>
+  </nav>
+  <h1>Travis-CI で Windows バイナリをテストする</h1>
+  <p>Created at: <time datetime="2014-08-20T13:55:22&#43;09:00">2014-08-20 13:55:22 &#43;0900</time></p>
+  <p><blockquote class="twitter-tweet" lang="en"><p>travis-ciでapi-getでwine突っ込んでやったらwindows環境でのテストできるのでは？</p>&mdash; 7017 (@naoina) <a href="https://twitter.com/naoina/statuses/498832759981240321">August 11, 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>できました。</p>
+
+<p><a href="https://github.com/naoina/travis-win-test">https://github.com/naoina/travis-win-test</a></p>
+
+<pre><code class="language-yaml">language: go
+
+go:
+  - 1.3
+
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -y wine
+
+install:
+  - gvm cross windows 386
+
+script:
+  - GOOS=windows GOARCH=386 go test -c
+  - wine travis-win-test.test.exe
+</code></pre>
+
+<p><a href="https://github.com/naoina/travis-win-test/blob/master/.travis.yml">https://github.com/naoina/travis-win-test/blob/master/.travis.yml</a></p>
+
+<p>宗教上の理由で Golang を使いましたが、MinGW などのクロスコンパイラを用いても同様にできると思います。</p>
+
+<p>このように Travis-CI を用いる場合でも Windows バイナリのテストが行えることが分かりましたので、Gopher の皆様におかれましては Golang のクロスコンパイルの手軽さを活かして Windows 対応をしてみてはいかがでしょうか？</p>
+
+</article>
+
+    
+  </div>
+</body>
+</html>

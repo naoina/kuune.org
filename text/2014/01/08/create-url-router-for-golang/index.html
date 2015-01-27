@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="msapplication-config" content="none">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Golang 用 URL ルーター作った | kuune.org</title>
+<link rel="canonical" href="https://kuune.org/text/2014/01/08/create-url-router-for-golang/">
+
+<link rel="stylesheet" href="/css/normalize.css" media="all">
+<link rel="stylesheet" href="/css/common.css" media="all">
+
+  <link rel="stylesheet" href="/css/text.css" media="all">
+</head>
+<body>
+  <div class="main">
+    
+      <article>
+  <nav class="nav">
+    
+      <h4>Next article</h4>
+      <p><a href="/text/2014/01/20/write-library-of-feature-toggle/">FeatureToggle ライブラリ書いた</a></p>
+    
+    
+      <h4>Previous article</h4>
+      <p><a href="/text/2013/12/16/plan-for-implementation-of-url-router-for-kocha/">Kocha における URL ルーターの実装と予定</a></p>
+    
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
+    </ul>
+    <p><a href="/text/index/">Text index</a></p>
+  </nav>
+  <h1>Golang 用 URL ルーター作った</h1>
+  <p>Created at: <time datetime="2014-01-08T23:36:36&#43;09:00">2014-01-08 23:36:36 &#43;0900</time></p>
+  
+
+<p><a href="https://github.com/naoina/kocha-urlrouter">https://github.com/naoina/kocha-urlrouter</a></p>
+
+<p>これ <a href="http://naoina.plog.la/2013/12/16/230502728087">http://naoina.plog.la/2013/12/16/230502728087</a> の最後に書いた URL ルーターの実装をした。
+Kocha で使う用にひと通り実装したものを別ライブラリとして切り出したものになる。
+使い方は README.md みれば多分分かると思う。
+Golang の標準ライブラリの <code>database/sql</code> と同じようなコンパイルタイムプラグインの方式を取っているので、色んな URL ルーターの実装ができ、用途によって切り替えるとかできる。
+現在の実装は ダブル配列 と 正規表現 の 2 つがある。ダブル配列は構築は遅いが lookup が速い。ベンチマークを取ると分かるが、私の環境だと正規表現実装と比べて、ルート数が 100 の場合は約 17 倍、ルート数 700 の場合だと約 110 倍速い。</p>
+
+<h2 id="golang-界隈の-web-フレームワークにおける-url-ルーターの状況:c86d99d637a0df45da7874fd7a263411">Golang 界隈の WEB フレームワークにおける URL ルーターの状況</h2>
+
+<p>Golang で作られている WEB フレームワークには <a href="https://github.com/robfig/revel">Revel</a>、<a href="https://github.com/astaxie/beego/">beego</a>、<a href="https://github.com/codegangsta/martini">Martini</a>、URL ルーターは <a href="https://github.com/gorilla/mux">gorilla/mux</a> などがありますが、これらの URL ルーターの実装は<del>全て、ループを回して正規表現などでマッチングする方法を取っています</del>(勘違いしてましたが、Revel は Trie により実装でした)。つまりルートの数が増えれば増えるほど遅くなります。
+これらのフレームワークが何故この方法を取っているのかは知りませんが、実装が簡単なのと、URL ルーターがまだそこまでパフォーマンスに与える影響がない（他の部分の方が重い）からですかね。。。</p>
+
+<h2 id="閑話休題:c86d99d637a0df45da7874fd7a263411">閑話休題</h2>
+
+<p>これ作るために色々調べてて、割と Trie というか、そのへんに興味出てきたので、今後はダブル配列の末尾文字列圧縮や三分探索木、 LOUDS、ウェーブレット行列での実装とかも入れたいですね。</p>
+
+<h3 id="追記1:c86d99d637a0df45da7874fd7a263411">追記1</h3>
+
+<p>三分探索木の実装を入れたらダブル配列より速くなったしにたい。</p>
+
+<h3 id="追記2:c86d99d637a0df45da7874fd7a263411">追記2</h3>
+
+<p>ダブル配列速くしたので、速度はダブル配列の方がちょっとだけ速くなった。メモリ効率はダブル配列の方が約 2 倍から 3 倍程度良いが、構築は三分探索木の方が約 2 倍速い。
+というか、URL ルーターとして使う文には何万件とか入れないだろうし、メモリプロファイルとった限りでは三分探索木でも 700 件で 3MB ぐらいしか使ってないし、ダブル配列を使う意義とは。。。</p>
+
+</article>
+
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="msapplication-config" content="none">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Migu という golang 用 DB スキーマのマイグレーションツールを作った話 | kuune.org</title>
+<link rel="canonical" href="https://kuune.org/text/2014/10/29/migu/">
+
+<link rel="stylesheet" href="/css/normalize.css" media="all">
+<link rel="stylesheet" href="/css/common.css" media="all">
+
+  <link rel="stylesheet" href="/css/text.css" media="all">
+</head>
+<body>
+  <div class="main">
+    
+      <article>
+  <nav class="nav">
+    
+      <h4>Next article</h4>
+      <p><a href="/text/2014/11/07/json-struct-interface-in-golang/">Golangでどんな json が返ってくるかわからない時に struct で定義するまでじゃないんだけど､ interface だと呼び出しが面倒なのどうしたらいいんだろう問題への一回答例</a></p>
+    
+    
+      <h4>Previous article</h4>
+      <p><a href="/text/2014/08/20/test-windows-binary-on-travis-ci/">Travis-CI で Windows バイナリをテストする</a></p>
+    
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
+    </ul>
+    <p><a href="/text/index/">Text index</a></p>
+  </nav>
+  <h1>Migu という golang 用 DB スキーマのマイグレーションツールを作った話</h1>
+  <p>Created at: <time datetime="2014-10-29T17:53:44&#43;09:00">2014-10-29 17:53:44 &#43;0900</time></p>
+  
+
+<p><a href="https://github.com/winebarrel/ridgepole">Ridgepole</a> インスパイアの golang 用 DB スキーマのマイグレーションツールを作りました。</p>
+
+<p><a href="https://github.com/naoina/migu">https://github.com/naoina/migu</a></p>
+
+<p>Migu は Ridgepole と同様に（バグが無い限り）冪等性が保証されています。
+Ridgepole と違うところは、スキーマ定義を DSL ではなくて golang の struct で定義するところです。こうすることによって、モデル定義 ＝ スキーマ定義となるので DRY になります。</p>
+
+<h2 id="使い方:4b4ff7f79111255303f954736a076f6f">使い方</h2>
+
+<p>下記を <code>schema.go</code> というファイル名で保存します。ファイル名は何でもいいんですが、ここでは <code>schema.go</code> を使います。package 名も何でも構いません。</p>
+
+<pre><code class="language-go">package schema
+
+type User struct {
+    Name string
+    Age  int
+}
+</code></pre>
+
+<p>次に <code>migu_test</code> というデータベースを <code>mysqladmin</code> コマンドで作成します。</p>
+
+<pre><code class="language-bash">mysqladmin -u root create migu_test
+</code></pre>
+
+<p>ここでは MySQL のパスワード無しの <code>root</code> ユーザーでログインすることを想定しています。
+データベースを作成したら <code>migu</code> コマンドでマイグレーションを実行します。</p>
+
+<pre><code class="language-bash">migu -u root sync migu_test schema.go
+</code></pre>
+
+<p>実行した結果、下記のように <code>migu_test</code> に <code>user</code> テーブルが作成されます。</p>
+
+<pre><code class="language-bash">% mysql -u root migu_test -e 'desc user'
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| name  | varchar(255) | NO   |     | NULL    |       |
+| age   | int(11)      | NO   |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+</code></pre>
+
+<p>ではここから更に Migu のマイグレーションを試していきます。
+先ほどの <code>schema.go</code> を下記のように変更します。</p>
+
+<pre><code class="language-go">package schema
+
+type User struct {
+    Name string
+    Age  uint
+}
+</code></pre>
+
+<p><code>Age int</code> を <code>Age uint</code> に変えました。
+では再度 <code>migu</code> コマンドでマイグレーションを実行して結果を確認します。</p>
+
+<pre><code class="language-bash">% migu -u root sync migu_test schema.go
+% mysql -u root migu_test -e 'desc user'
++-------+------------------+------+-----+---------+-------+
+| Field | Type             | Null | Key | Default | Extra |
++-------+------------------+------+-----+---------+-------+
+| name  | varchar(255)     | NO   |     | NULL    |       |
+| age   | int(10) unsigned | NO   |     | NULL    |       |
++-------+------------------+------+-----+---------+-------+
+</code></pre>
+
+<p><code>age</code> フィールドが <code>int(11)</code> から <code>int(10) unsigned</code> に変わっているのが分かるでしょうか？
+このように、Migu ではスキーマ定義を変えてコマンドを実行すればマイグレーションができます。今までのようにマイグレーション用 SQL を書く必要はありません。
+また、Migu の冪等性を確認するためにもう一度マイグレーションを実行してみます。</p>
+
+<pre><code class="language-bash">% migu -u root sync migu_test schema.go
+% mysql -u root migu_test -e 'desc user'
++-------+------------------+------+-----+---------+-------+
+| Field | Type             | Null | Key | Default | Extra |
++-------+------------------+------+-----+---------+-------+
+| name  | varchar(255)     | NO   |     | NULL    |       |
+| age   | int(10) unsigned | NO   |     | NULL    |       |
++-------+------------------+------+-----+---------+-------+
+</code></pre>
+
+<p>変わっていませんね。</p>
+
+<p>ちなみに golang は同じパッケージ内であれば struct 本体とメソッドが別々のファイルにあってもいいので、下記のようにスキーマ定義とモデルの実装を分離することができます。</p>
+
+<pre><code class="language-go">// schema.go
+type User struct {
+    Name string
+    Age  int
+}
+</code></pre>
+
+<pre><code class="language-go">// user.go
+func (u *User) IsAlice() bool {
+    return u.Name == &quot;alice&quot;
+}
+</code></pre>
+
+<h2 id="まとめ:4b4ff7f79111255303f954736a076f6f">まとめ</h2>
+
+<p>Migu を使うことで大量のマイグレーションファイルを書く必要が無くなり、DB スキーマの管理が非常に楽になる上に身長が 5 センチ伸び、恋人もできることがお分かりいただけたかと思います。
+とはいえ、まだまだ粗削りで足りない部分も多いので、これからもっと改良していく必要があります。
+というわけで、あなたの Pull Request をお待ちしております。</p>
+
+</article>
+
+    
+  </div>
+</body>
+</html>

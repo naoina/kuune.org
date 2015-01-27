@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="msapplication-config" content="none">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Gin Web Framework について | kuune.org</title>
+<link rel="canonical" href="https://kuune.org/text/2014/07/01/gin-web-framework/">
+
+<link rel="stylesheet" href="/css/normalize.css" media="all">
+<link rel="stylesheet" href="/css/common.css" media="all">
+
+  <link rel="stylesheet" href="/css/text.css" media="all">
+</head>
+<body>
+  <div class="main">
+    
+      <article>
+  <nav class="nav">
+    
+      <h4>Next article</h4>
+      <p><a href="/text/2014/07/24/kocha-v0.5/">Kocha v0.5 リリースしました</a></p>
+    
+    
+      <h4>Previous article</h4>
+      <p><a href="/text/2014/06/27/engineers/">使うエンジニア、作るエンジニア</a></p>
+    
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
+    </ul>
+    <p><a href="/text/index/">Text index</a></p>
+  </nav>
+  <h1>Gin Web Framework について</h1>
+  <p>Created at: <time datetime="2014-07-01T11:14:16&#43;09:00">2014-07-01 11:14:16 &#43;0900</time></p>
+  <p>golang の新しい WEB アプリケーションフレームワークである <a href="http://gin-gonic.github.io/gin/">Gin Web Framework</a> が出たらしいです。
+この Gin、スゴイことにあの <a href="https://github.com/go-martini/martini">Martini</a> より 40 倍速いとの触れ込みです。
+ですが、この部分ちょっと違います。</p>
+
+<p>まず、Martini と比べて <strong>何が</strong> 40 倍速いのか、というところですが</p>
+
+<p><img src="/image/dd59ea0d-11d3-5dca-915f-ddb148cb4abc.png" alt="20140701105236.png" />
+</p>
+
+<p>これ、HTTP ルーターの速度を測ってるんですね。速いですね。ちなみに <em>Check out the benchmark suite</em> ってところからベンチマークリポジトリに飛べます。</p>
+
+<p>で、ここからが本題です。
+Gin の HTTP ルーターは実は自前ではなく <a href="https://github.com/julienschmidt/httprouter">HttpRouter</a> という他の方が作った爆速の HTTP ルーターを使っています。
+つまり、Martini より 40 倍速いのは Gin 本体ではなく HttpRouter ということです。これはちゃんと <a href="http://gin-gonic.github.io/gin/#features">ここ</a> の <em>Low Overhead Powerful API</em> にも明記されています。
+ソースコードをざっと読んだ限りだと HttpRouter をチューニングして使っているということもなさそうなので、Gin 自体が Martini よりも 40 倍速いというのとはちょっと違うと思います。
+多分 Martini よりも速い部分はあるのでしょうが、40 times faster の大部分は HttpRouter が持っていると思います。
+github の starts 的にはマーケティングに成功してるっぽいですが、他人のプロダクトに乗っかってそれを広告に使うというのは私個人としては正直気持ち悪いです。</p>
+
+<p>余談ですが、HttpRouter は <a href="https://github.com/julienschmidt/httprouter/issues/12">https://github.com/julienschmidt/httprouter/issues/12</a> みたいなのがあるので、実用できるのか微妙な気がしています。
+ちなみに私も <a href="https://github.com/naoina/denco">Denco</a> という HTTP ルーターを作ってまして、興味があれば <a href="http://naoina.plog.la/2014/06/12/183508686252">前の記事</a> をご覧ください。</p>
+
+</article>
+
+    
+  </div>
+</body>
+</html>

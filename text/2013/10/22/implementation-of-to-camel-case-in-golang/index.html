@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="msapplication-config" content="none">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>toCamelCaseの実装 in golang | kuune.org</title>
+<link rel="canonical" href="https://kuune.org/text/2013/10/22/implementation-of-to-camel-case-in-golang/">
+
+<link rel="stylesheet" href="/css/normalize.css" media="all">
+<link rel="stylesheet" href="/css/common.css" media="all">
+
+  <link rel="stylesheet" href="/css/text.css" media="all">
+</head>
+<body>
+  <div class="main">
+    
+      <article>
+  <nav class="nav">
+    
+      <h4>Next article</h4>
+      <p><a href="/text/2013/11/12/get-fd-from-net-tcplistener-of-golang/">golang の net.TCPLister から file descriptor を取る</a></p>
+    
+    
+      <h4>Previous article</h4>
+      <p><a href="/text/2013/10/21/how-to-get-argument-names-in-runtime/">golangで実行時に関数の引数の名前を取得する方法</a></p>
+    
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
+    </ul>
+    <p><a href="/text/index/">Text index</a></p>
+  </nav>
+  <h1>toCamelCaseの実装 in golang</h1>
+  <p>Created at: <time datetime="2013-10-22T18:52:15&#43;09:00">2013-10-22 18:52:15 &#43;0900</time></p>
+  <p>どうやるのがベストなのかよく知らないので色々書いてみた。</p>
+
+<pre><code class="language-go">package main
+
+import (
+    &quot;bytes&quot;
+    &quot;regexp&quot;
+    &quot;strings&quot;
+    &quot;testing&quot;
+    &quot;unicode&quot;
+)
+
+func BenchmarkSplitJoin(b *testing.B) {
+    b.StopTimer()
+    s := &quot;hoge_foo_bar&quot;
+    b.StartTimer()
+    for i := 0; i &lt; b.N; i++ {
+        ss := strings.Split(s, &quot;_&quot;)
+        var buf bytes.Buffer
+        for _, v := range ss {
+            buf.WriteString(strings.Title(v))
+            buf.String()
+        }
+    }
+}
+
+func BenchmarkReplace(b *testing.B) {
+    b.StopTimer()
+    s := &quot;hoge_foo_bar&quot;
+    b.StartTimer()
+    for i := 0; i &lt; b.N; i++ {
+        strings.Replace(strings.Title(strings.Replace(s, &quot;_&quot;, &quot; &quot;, -1)), &quot; &quot;, &quot;&quot;, -1)
+    }
+}
+
+func BenchmarkRegexp(b *testing.B) {
+    b.StopTimer()
+    s := &quot;hoge_foo_bar&quot;
+    r := regexp.MustCompile(`_([a-z])`)
+    fn := func(m string) string {
+        return strings.ToUpper(string(m[1]))
+    }
+    b.StartTimer()
+    for i := 0; i &lt; b.N; i++ {
+        strings.Title(r.ReplaceAllStringFunc(s, fn))
+    }
+}
+
+func BenchmarkForLoop(b *testing.B) {
+    b.StopTimer()
+    s := &quot;hoge_foo_bar&quot;
+    b.StartTimer()
+    for i := 0; i &lt; b.N; i++ {
+        buf := make([]rune, 0, len(s))
+        conv := false
+        for _, v := range s {
+            if v == '_' {
+                conv = true
+                continue
+            }
+            if conv {
+                buf = append(buf, unicode.ToUpper(v))
+                conv = false
+                continue
+            }
+            buf = append(buf, v)
+        }
+        buf[0] = unicode.ToUpper(buf[0])
+        _ = string(buf)
+    }
+}
+</code></pre>
+
+<p>私の環境でのベンチ結果はこんな感じ。</p>
+
+<pre><code class="language-text">% go test -bench .
+testing: warning: no tests to run
+PASS
+BenchmarkSplitJoin       1000000              1553 ns/op
+BenchmarkReplace         1000000              1220 ns/op
+BenchmarkRegexp  1000000              2848 ns/op
+BenchmarkForLoop         5000000               396 ns/op
+ok      _/home/naoina/work/test/bench   8.056s
+</code></pre>
+
+</article>
+
+    
+  </div>
+</body>
+</html>

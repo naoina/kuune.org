@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="msapplication-config" content="none">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Golangでどんな json が返ってくるかわからない時に struct で定義するまでじゃないんだけど､ interface だと呼び出しが面倒なのどうしたらいいんだろう問題への一回答例 | kuune.org</title>
+<link rel="canonical" href="https://kuune.org/text/2014/11/07/json-struct-interface-in-golang/">
+
+<link rel="stylesheet" href="/css/normalize.css" media="all">
+<link rel="stylesheet" href="/css/common.css" media="all">
+
+  <link rel="stylesheet" href="/css/text.css" media="all">
+</head>
+<body>
+  <div class="main">
+    
+      <article>
+  <nav class="nav">
+    
+    
+      <h4>Previous article</h4>
+      <p><a href="/text/2014/10/29/migu/">Migu という golang 用 DB スキーマのマイグレーションツールを作った話</a></p>
+    
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
+    </ul>
+    <p><a href="/text/index/">Text index</a></p>
+  </nav>
+  <h1>Golangでどんな json が返ってくるかわからない時に struct で定義するまでじゃないんだけど､ interface だと呼び出しが面倒なのどうしたらいいんだろう問題への一回答例</h1>
+  <p>Created at: <time datetime="2014-11-07T16:21:00&#43;09:00">2014-11-07 16:21:00 &#43;0900</time></p>
+  <p><a href="http://konboi.hatenablog.com/entry/2014/11/07/155418">http://konboi.hatenablog.com/entry/2014/11/07/155418</a> これへの自分なりの回答です。元ブログのタイトルは const になってますが、多分 struct のことですかね。</p>
+
+<p>Golang では <code>var</code> を使えば変数が定義できますが、このときに型を指定する必要があります。</p>
+
+<pre><code class="language-go">var name string
+</code></pre>
+
+<p>この型のところに struct を置いてやることができます。</p>
+
+<pre><code class="language-go">var user struct {
+    Name string
+    Age  int
+}
+</code></pre>
+
+<p>よく考えればまぁできますよねという感じです。
+これを応用すると、元ブログの例は下記のように書けます。</p>
+
+<pre><code class="language-go">package main
+
+import (
+    &quot;bytes&quot;
+    &quot;encoding/json&quot;
+    &quot;fmt&quot;
+)
+
+func main() {
+    b := []byte(`{&quot;foo&quot;: &quot;bar&quot;, &quot;hoge&quot;: {&quot;fuga&quot;: &quot;hoga&quot;}}`)
+    dec := json.NewDecoder(bytes.NewReader(b))
+    var jsonData struct {
+        Foo  string `json:&quot;foo&quot;`
+        Hoge struct {
+            Fuga string `json:&quot;fuga&quot;`
+        } `json:&quot;hoge&quot;`
+    }
+    dec.Decode(&amp;jsonData)
+    fmt.Println(jsonData)
+    fmt.Println(jsonData.Hoge.Fuga)
+
+}
+</code></pre>
+
+<p><a href="http://play.golang.org/p/nTCdrMxYoQ">http://play.golang.org/p/nTCdrMxYoQ</a></p>
+
+<p>ただしこの方法は本当にどんな内容が返ってくるか分からない時には使えない（例えば返ってくる json が {&ldquo;foo&rdquo;: &ldquo;bar&rdquo;} なのか {&ldquo;bar&rdquo;: &ldquo;foo&rdquo;} なのか分からない時など）のでその時は元の記事のように <code>interface{}</code> で受け取って型アサーションしてやる必要があります。</p>
+
+</article>
+
+    
+  </div>
+</body>
+</html>

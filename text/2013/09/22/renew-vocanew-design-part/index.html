@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="msapplication-config" content="none">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ぼかにゅーをリニューアルしました（デザイン編） | kuune.org</title>
+<link rel="canonical" href="https://kuune.org/text/2013/09/22/renew-vocanew-design-part/">
+
+<link rel="stylesheet" href="/css/normalize.css" media="all">
+<link rel="stylesheet" href="/css/common.css" media="all">
+
+  <link rel="stylesheet" href="/css/text.css" media="all">
+</head>
+<body>
+  <div class="main">
+    
+      <article>
+  <nav class="nav">
+    
+      <h4>Next article</h4>
+      <p><a href="/text/2013/09/22/renew-vocanew-server-part/">ぼかにゅーをリニューアルしました（サーバー編）</a></p>
+    
+    
+      <h4>Previous article</h4>
+      <p><a href="/text/2013/08/30/revel-boilerplate-upload-to-github/">Revel Boilerplate上げた</a></p>
+    
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
+    </ul>
+    <p><a href="/text/index/">Text index</a></p>
+  </nav>
+  <h1>ぼかにゅーをリニューアルしました（デザイン編）</h1>
+  <p>Created at: <time datetime="2013-09-22T12:29:17&#43;09:00">2013-09-22 12:29:17 &#43;0900</time></p>
+  
+
+<p>本日ぼかにゅーをリニューアルしました。</p>
+
+<p><a href="http://vocanew.kuune.org/">http://vocanew.kuune.org/</a></p>
+
+<p>今回は内外ともに完全に一から作り直しました。
+UIの主な変更点は以下です。</p>
+
+<ul>
+<li>全面的なデザインの刷新</li>
+<li>スマートフォン対応</li>
+<li>詳細検索UIの撤廃</li>
+<li>動画紹介文の全文表示</li>
+</ul>
+
+<h2 id="全面的なデザインの刷新:101b771392d8eea17781887349c0a564">全面的なデザインの刷新</h2>
+
+<p>デザインは最近のトレンドともいえるフラットなデザインとしました。
+フラットデザインはシンプルだからといっても、全然簡単ではないので割と何回かゴッソリ調整し直したりもしました。
+今回の刷新で1番のポイントは</p>
+
+<p><img src="/image/50ad3cac-1e23-5840-8cbb-26925e3f0c14.png" alt="sidebar.png" />
+</p>
+
+<p>この部分の文字のinvertです。多分ほとんどの人がどうでもいいところだと思いますはい。
+ちなみに今回のデザインは画像を一切使っていません。<a href="http://fortawesome.github.io/Font-Awesome/">Font-Awesome</a> あるし、CSS3で表現力上がったし、最近は画像使ったら負けだと思うようになりました。</p>
+
+<h2 id="スマートフォン対応:101b771392d8eea17781887349c0a564">スマートフォン対応</h2>
+
+<p>当方iPhoneしか持っていないのでiPhoneでしか動作確認してません。
+<a href="http://getbootstrap.com/">Bootstrap3</a> を使っているのですが、サイドバーを固定幅にするために半分ぐらいは独自でCSS書いてたりするので恩恵があるやらないやらよくわからないことになってます。
+また、JavaScriptでメニューの開閉などを行なっていますが、知ってる人は当然のように知っている <code>touchstart</code> イベントで処理してるのでレスポンスは良いです。</p>
+
+<h2 id="詳細検索uiの撤廃:101b771392d8eea17781887349c0a564">詳細検索UIの撤廃</h2>
+
+<p>以前は複数のボーカロイドの曲を検索できるチェックボックスをつけていましたが、今回のデザインを考えた限りでは良いUIが思いつかなかったので取り払いました。
+機能自体は残しているので以前と同様に <a href="http://vocanew.kuune.org/?miku&amp;rin&amp;luka">http://vocanew.kuune.org/?miku&amp;rin&amp;luka</a> というURLを叩くと複数のボーカロイドの曲が取れます。
+良いUIが思い付けば再度UIを付けますが、予定は未定です。</p>
+
+<h2 id="動画紹介文の全文表示:101b771392d8eea17781887349c0a564">動画紹介文の全文表示</h2>
+
+<p>これはオマケですね。以前は長い動画説明文を <code>...</code> で省略していましたが、BootstrapのCollapseでそれなりなUIが作れそうなのでやりましたという感じです。</p>
+
+<h2 id="最後に:101b771392d8eea17781887349c0a564">最後に</h2>
+
+<p>この記事を書いてて思い出しましたが、以前あったRSSフィードを実装するのを忘れてました。そのうちやります。
+次回はサーバーサイドなどの内部的なことを書きます。</p>
+
+</article>
+
+    
+  </div>
+</body>
+</html>

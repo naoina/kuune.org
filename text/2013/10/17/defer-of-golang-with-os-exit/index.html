@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="msapplication-config" content="none">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>golangのdeferはos.Exitした場合は実行されない件 | kuune.org</title>
+<link rel="canonical" href="https://kuune.org/text/2013/10/17/defer-of-golang-with-os-exit/">
+
+<link rel="stylesheet" href="/css/normalize.css" media="all">
+<link rel="stylesheet" href="/css/common.css" media="all">
+
+  <link rel="stylesheet" href="/css/text.css" media="all">
+</head>
+<body>
+  <div class="main">
+    
+      <article>
+  <nav class="nav">
+    
+      <h4>Next article</h4>
+      <p><a href="/text/2013/10/21/how-to-get-argument-names-in-runtime/">golangで実行時に関数の引数の名前を取得する方法</a></p>
+    
+    
+      <h4>Previous article</h4>
+      <p><a href="/text/2013/10/17/web-application-framework-written-in-go/">GoでWEBアプリケーションフレームワーク書いた</a></p>
+    
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
+    </ul>
+    <p><a href="/text/index/">Text index</a></p>
+  </nav>
+  <h1>golangのdeferはos.Exitした場合は実行されない件</h1>
+  <p>Created at: <time datetime="2013-10-17T12:57:11&#43;09:00">2013-10-17 12:57:11 &#43;0900</time></p>
+  <p>golang の <code>defer</code> はてっきり(関数/メソッド)を抜けた際に必ず実行されるものだと思っていたが、どうやら違うらしい。</p>
+
+<p><a href="http://golang.org/ref/spec#Defer_statements">http://golang.org/ref/spec#Defer_statements</a></p>
+
+<pre><code class="language-text">A &quot;defer&quot; statement invokes a function whose execution is deferred to the moment the surrounding function returns, either because the surrounding function executed a return statement, reached the end of its function body, or because the corresponding goroutine is panicking.
+</code></pre>
+
+<p>要は関数からreturnした場合、関数の終わりに達した場合、または panic した場合だけ <code>defer</code> が実行されるらしい。</p>
+
+<p>例えば下記のコードの場合 <em>start</em> しか出力されない。
+<a href="http://play.golang.org/p/nU-neWPUiR">http://play.golang.org/p/nU-neWPUiR</a></p>
+
+<pre><code>package main
+
+import &quot;os&quot;
+
+func main() {
+    defer println(&quot;hook exit&quot;)
+    println(&quot;start&quot;)
+    os.Exit(0)
+    println(&quot;end&quot;)
+}
+</code></pre>
+
+<pre><code class="language-text">start
+</code></pre>
+
+</article>
+
+    
+  </div>
+</body>
+</html>
