@@ -40,7 +40,7 @@
 
 <p>FeatureToggle とはなんぞや？という方は <a href="http://martinfowler.com/bliki/FeatureToggle.html">http://martinfowler.com/bliki/FeatureToggle.html</a> とか見てください。日本語の情報はかなり少ないようです。</p>
 
-<p>今回作ったのは Gocchan という golang 用 FeatureToggle ライブラリです。読みは「ごっちゃん」です。Go の channel とは一切関係ないです。
+<p>今回作ったのは Gocchan という golang 用 FeatureToggle ライブラリです。読みは「ごっちゃん」です。Go の channel とは一切関係ないです。<br />
 Ruby on Rails 用のそういったライブラリとして <a href="https://github.com/cookpad/chanko">Chanko</a> というのがあるのですが、まぁ名前や機能はそこから来てます。</p>
 
 <p>使い方は以下のような感じです。</p>
@@ -70,9 +70,9 @@ func main() {
 }
 </code></pre>
 
-<p>この例でいうと、<code>ActiveIf</code> が <code>true</code> を返した場合に <code>ExecMyFeature</code> が実行され、<code>false</code> を返した場合は <code>Invoke</code> に渡した関数（デフォルト関数）が実行されます。
-例えば <code>ActiveIf</code> の返す値を設定ファイルや DB から持ってくるようにしていれば、まさに FeatureToggle として機能します。
-また、Chanko と同様に、<code>Invoke</code> の中（<code>ExecMyFeature</code> メソッドの中など) でエラーが発生した場合もデフォルト関数が呼ばれます。ですので、単なるフラグを使って if-else で分岐するよりも安全です。
+<p>この例でいうと、<code>ActiveIf</code> が <code>true</code> を返した場合に <code>ExecMyFeature</code> が実行され、<code>false</code> を返した場合は <code>Invoke</code> に渡した関数（デフォルト関数）が実行されます。<br />
+例えば <code>ActiveIf</code> の返す値を設定ファイルや DB から持ってくるようにしていれば、まさに FeatureToggle として機能します。<br />
+また、Chanko と同様に、<code>Invoke</code> の中（<code>ExecMyFeature</code> メソッドの中など) でエラーが発生した場合もデフォルト関数が呼ばれます。ですので、単なるフラグを使って if-else で分岐するよりも安全です。<br />
 <code>Invoke</code> の第 1 引数には任意のオブジェクトが渡せ、それが <code>ActiveIf</code> や Feature function (この例でいうと <code>ExecMyFeature</code>) に渡されますので、これを使って自由に機能を追加できます。</p>
 
 <p>まぁこれだけのライブラリですが、FeatureToggle 用途として普通に使えるんじゃないかと思います。</p>

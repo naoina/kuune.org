@@ -36,38 +36,38 @@
   </nav>
   <h1>Kocha における URL ルーターの実装と予定</h1>
   <p>Created at: <time datetime="2013-12-16T23:05:02&#43;09:00">2013-12-16 23:05:02 &#43;0900</time></p>
-  <p>現在、<a href="https://github.com/naoina/kocha">Kocha</a> における URL ルーター(<code>/path/to/controller</code> とかの URL を特定のコントローラーにルーティングするアレ)の実装は素朴な実装で、ルートごとの正規表現を配列に持っていて、頭から順番にループを回して一致するものを探すようになっている。
+  <p>現在、<a href="https://github.com/naoina/kocha">Kocha</a> における URL ルーター(<code>/path/to/controller</code> とかの URL を特定のコントローラーにルーティングするアレ)の実装は素朴な実装で、ルートごとの正規表現を配列に持っていて、頭から順番にループを回して一致するものを探すようになっている。<br />
 非常に簡単な仕組みだが、O(N)なのでルートが増えると遅くなる。そこで下記の記事にあるような全部のルートを 1 つの正規表現でマッチさせる実装を試した。</p>
 
 <p><a href="http://r7kamura.github.io/2013/11/27/rack-multiplexer.html">http://r7kamura.github.io/2013/11/27/rack-multiplexer.html</a></p>
 
-<p>結果は、ループを回す方法の約 7 倍程度 <strong>遅く</strong> なった。Ruby だと 17 倍ほど速くなるものが Golang だと 7 倍遅くなってしまった。
+<p>結果は、ループを回す方法の約 7 倍程度 <strong>遅く</strong> なった。Ruby だと 17 倍ほど速くなるものが Golang だと 7 倍遅くなってしまった。<br />
 泣きながらググったところ、golang の正規表現は Ruby や Python のそれとは違う方式なのと、Pure Go で実装してるから〜みたいな話っぽい。</p>
 
-<p><a href="https://groups.google.com/forum/#!topic/golang-nuts/6d1maef4jQ8">https://groups.google.com/forum/#!topic/golang-nuts/6d1maef4jQ8</a>
+<p><a href="https://groups.google.com/forum/#!topic/golang-nuts/6d1maef4jQ8">https://groups.google.com/forum/#!topic/golang-nuts/6d1maef4jQ8</a><br />
 <a href="http://golang.org/doc/faq#Why_does_Go_perform_badly_on_benchmark_x">http://golang.org/doc/faq#Why_does_Go_perform_badly_on_benchmark_x</a></p>
 
 <p>さらに調べたら下記の記事が見つかった。</p>
 
 <p><a href="http://blog.ant0ine.com/typepad/2013/02/better-url-routing-golang-1.html">http://blog.ant0ine.com/typepad/2013/02/better-url-routing-golang-1.html</a></p>
 
-<p><a href="http://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A9%E3%82%A4%E6%9C%A8">Trie</a> を使ったらめっちゃ速くなったわー。らしい。
-というわけで、Trie 関連の調査を開始して、<a href="http://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A9%E3%82%A4%E6%9C%A8">Trie</a> → <a href="http://ja.wikipedia.org/wiki/%E5%9F%BA%E6%95%B0%E6%9C%A8">Patricia tree</a> → <a href="http://ja.wikipedia.org/wiki/%E4%B8%89%E5%88%86%E6%8E%A2%E7%B4%A2%E6%9C%A8">Ternary Search Tree</a> → <a href="http://d.hatena.ne.jp/takeda25/20120303/1330760254">LOUDS</a> → <a href="http://nanika.osonae.com/DArray/dary.html">Double Array</a> ←ｲﾏｺｺ
-という状況です。
+<p><a href="http://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A9%E3%82%A4%E6%9C%A8">Trie</a> を使ったらめっちゃ速くなったわー。らしい。<br />
+というわけで、Trie 関連の調査を開始して、<a href="http://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A9%E3%82%A4%E6%9C%A8">Trie</a> → <a href="http://ja.wikipedia.org/wiki/%E5%9F%BA%E6%95%B0%E6%9C%A8">Patricia tree</a> → <a href="http://ja.wikipedia.org/wiki/%E4%B8%89%E5%88%86%E6%8E%A2%E7%B4%A2%E6%9C%A8">Ternary Search Tree</a> → <a href="http://d.hatena.ne.jp/takeda25/20120303/1330760254">LOUDS</a> → <a href="http://nanika.osonae.com/DArray/dary.html">Double Array</a> ←ｲﾏｺｺ<br />
+という状況です。<br />
 とりあえず Kocha の URL ルーターは</p>
 
 <ul>
-<li>起動時に静的に構築する</li>
-<li>追加や削除は無い</li>
-<li>よって、構築する時間よりは検索時間が速いものが好ましい</li>
+<li>起動時に静的に構築する<br /></li>
+<li>追加や削除は無い<br /></li>
+<li>よって、構築する時間よりは検索時間が速いものが好ましい<br /></li>
 </ul>
 
 <p>という要件なので、Double Array による URL ルーターが本命ではないかと考えていますが、憶測より実測するべきなので、</p>
 
 <ul>
-<li>Ternary Search Tree</li>
-<li>Double Array</li>
-<li>Trie (前述の記事の実装)</li>
+<li>Ternary Search Tree<br /></li>
+<li>Double Array<br /></li>
+<li>Trie (前述の記事の実装)<br /></li>
 </ul>
 
 <p>の 3 つを実装、ベンチマークして速いものを採用しようかと考えています。</p>

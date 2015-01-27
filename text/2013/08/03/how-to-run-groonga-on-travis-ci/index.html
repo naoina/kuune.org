@@ -40,8 +40,8 @@
 
 <p>最近このブログに全文検索を付けるべく pyroonga の開発を再開しました、どうも私です。</p>
 
-<p>さて、開発用リポジトリに GitHub をお使いの方は <a href="https://travis-ci.org/">Travis-CI</a> を使っておられるかと思います。
-pyroonga でも Travis-CI を使おうと思ったのですがそのままでは動かなかったので四苦八苦しながら動かしました。
+<p>さて、開発用リポジトリに GitHub をお使いの方は <a href="https://travis-ci.org/">Travis-CI</a> を使っておられるかと思います。<br />
+pyroonga でも Travis-CI を使おうと思ったのですがそのままでは動かなかったので四苦八苦しながら動かしました。<br />
 最終的な <code>.travis.yml</code> は <a href="https://github.com/naoina/pyroonga/blob/develop/.travis.yml">https://github.com/naoina/pyroonga/blob/develop/.travis.yml</a> ですが、これに至るまでにハマったところを書いていきます。</p>
 
 <h2 id="travis-ci-ではランタイムのバージョンを複数指定しても同じvm上で並列にテストが走る:ea080f36b433f566bba5ea648bc9103a">Travis-CI ではランタイムのバージョンを複数指定しても同じVM上で並列にテストが走る</h2>
@@ -55,12 +55,12 @@ python:
  - &quot;3.3&quot;
 </code></pre>
 
-<p>のように複数バージョンを指定することがありますが、これらは同じ Travis-CI の VM 上で並列に実行されます。
-どういうことかというと、普通に MySQL などのデータストレージを使ったテストを書いた場合、DB 名やテーブル名が同じだと更新や取得の結果が毎回変わり得るということです。
-pyroonga の場合はテストケースごとに 「groonga データベースの作成 → groonga サーバー起動 → データベースの削除」ということをやっていたため、
+<p>のように複数バージョンを指定することがありますが、これらは同じ Travis-CI の VM 上で並列に実行されます。<br />
+どういうことかというと、普通に MySQL などのデータストレージを使ったテストを書いた場合、DB 名やテーブル名が同じだと更新や取得の結果が毎回変わり得るということです。<br />
+pyroonga の場合はテストケースごとに 「groonga データベースの作成 → groonga サーバー起動 → データベースの削除」ということをやっていたため、<br />
 並列で実行した場合にテスト結果が変わるという現象になりました。</p>
 
-<p>対策としては、テーブル名を全てユニークにするなどしました。
+<p>対策としては、テーブル名を全てユニークにするなどしました。<br />
 また、groonga データベースの作成と groonga サーバーの起動は予め1回のみ行なってテストを走らせるという方式に変更しました。</p>
 
 <h2 id="groonga-が起動しない:ea080f36b433f566bba5ea648bc9103a">Groonga が起動しない</h2>
@@ -95,7 +95,7 @@ before_script:
 <pre><code>syscall error 'gethostbyname' (Success)
 </code></pre>
 
-<p>というものがありました。まぁ名前解決が出来てなくて起動できてないとわかったわけです。
+<p>というものがありました。まぁ名前解決が出来てなくて起動できてないとわかったわけです。<br />
 ですので、最終的に</p>
 
 <pre><code class="language-yaml">......

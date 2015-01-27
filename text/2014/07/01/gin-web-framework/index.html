@@ -36,8 +36,8 @@
   </nav>
   <h1>Gin Web Framework について</h1>
   <p>Created at: <time datetime="2014-07-01T11:14:16&#43;09:00">2014-07-01 11:14:16 &#43;0900</time></p>
-  <p>golang の新しい WEB アプリケーションフレームワークである <a href="http://gin-gonic.github.io/gin/">Gin Web Framework</a> が出たらしいです。
-この Gin、スゴイことにあの <a href="https://github.com/go-martini/martini">Martini</a> より 40 倍速いとの触れ込みです。
+  <p>golang の新しい WEB アプリケーションフレームワークである <a href="http://gin-gonic.github.io/gin/">Gin Web Framework</a> が出たらしいです。<br />
+この Gin、スゴイことにあの <a href="https://github.com/go-martini/martini">Martini</a> より 40 倍速いとの触れ込みです。<br />
 ですが、この部分ちょっと違います。</p>
 
 <p>まず、Martini と比べて <strong>何が</strong> 40 倍速いのか、というところですが</p>
@@ -47,14 +47,14 @@
 
 <p>これ、HTTP ルーターの速度を測ってるんですね。速いですね。ちなみに <em>Check out the benchmark suite</em> ってところからベンチマークリポジトリに飛べます。</p>
 
-<p>で、ここからが本題です。
-Gin の HTTP ルーターは実は自前ではなく <a href="https://github.com/julienschmidt/httprouter">HttpRouter</a> という他の方が作った爆速の HTTP ルーターを使っています。
-つまり、Martini より 40 倍速いのは Gin 本体ではなく HttpRouter ということです。これはちゃんと <a href="http://gin-gonic.github.io/gin/#features">ここ</a> の <em>Low Overhead Powerful API</em> にも明記されています。
-ソースコードをざっと読んだ限りだと HttpRouter をチューニングして使っているということもなさそうなので、Gin 自体が Martini よりも 40 倍速いというのとはちょっと違うと思います。
-多分 Martini よりも速い部分はあるのでしょうが、40 times faster の大部分は HttpRouter が持っていると思います。
+<p>で、ここからが本題です。<br />
+Gin の HTTP ルーターは実は自前ではなく <a href="https://github.com/julienschmidt/httprouter">HttpRouter</a> という他の方が作った爆速の HTTP ルーターを使っています。<br />
+つまり、Martini より 40 倍速いのは Gin 本体ではなく HttpRouter ということです。これはちゃんと <a href="http://gin-gonic.github.io/gin/#features">ここ</a> の <em>Low Overhead Powerful API</em> にも明記されています。<br />
+ソースコードをざっと読んだ限りだと HttpRouter をチューニングして使っているということもなさそうなので、Gin 自体が Martini よりも 40 倍速いというのとはちょっと違うと思います。<br />
+多分 Martini よりも速い部分はあるのでしょうが、40 times faster の大部分は HttpRouter が持っていると思います。<br />
 github の starts 的にはマーケティングに成功してるっぽいですが、他人のプロダクトに乗っかってそれを広告に使うというのは私個人としては正直気持ち悪いです。</p>
 
-<p>余談ですが、HttpRouter は <a href="https://github.com/julienschmidt/httprouter/issues/12">https://github.com/julienschmidt/httprouter/issues/12</a> みたいなのがあるので、実用できるのか微妙な気がしています。
+<p>余談ですが、HttpRouter は <a href="https://github.com/julienschmidt/httprouter/issues/12">https://github.com/julienschmidt/httprouter/issues/12</a> みたいなのがあるので、実用できるのか微妙な気がしています。<br />
 ちなみに私も <a href="https://github.com/naoina/denco">Denco</a> という HTTP ルーターを作ってまして、興味があれば <a href="http://naoina.plog.la/2014/06/12/183508686252">前の記事</a> をご覧ください。</p>
 
 </article>

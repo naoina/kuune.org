@@ -42,7 +42,7 @@
 
 <p><a href="https://github.com/naoina/migu">https://github.com/naoina/migu</a></p>
 
-<p>Migu は Ridgepole と同様に（バグが無い限り）冪等性が保証されています。
+<p>Migu は Ridgepole と同様に（バグが無い限り）冪等性が保証されています。<br />
 Ridgepole と違うところは、スキーマ定義を DSL ではなくて golang の struct で定義するところです。こうすることによって、モデル定義 ＝ スキーマ定義となるので DRY になります。</p>
 
 <h2 id="使い方:4b4ff7f79111255303f954736a076f6f">使い方</h2>
@@ -62,7 +62,7 @@ type User struct {
 <pre><code class="language-bash">mysqladmin -u root create migu_test
 </code></pre>
 
-<p>ここでは MySQL のパスワード無しの <code>root</code> ユーザーでログインすることを想定しています。
+<p>ここでは MySQL のパスワード無しの <code>root</code> ユーザーでログインすることを想定しています。<br />
 データベースを作成したら <code>migu</code> コマンドでマイグレーションを実行します。</p>
 
 <pre><code class="language-bash">migu -u root sync migu_test schema.go
@@ -79,7 +79,7 @@ type User struct {
 +-------+--------------+------+-----+---------+-------+
 </code></pre>
 
-<p>ではここから更に Migu のマイグレーションを試していきます。
+<p>ではここから更に Migu のマイグレーションを試していきます。<br />
 先ほどの <code>schema.go</code> を下記のように変更します。</p>
 
 <pre><code class="language-go">package schema
@@ -90,7 +90,7 @@ type User struct {
 }
 </code></pre>
 
-<p><code>Age int</code> を <code>Age uint</code> に変えました。
+<p><code>Age int</code> を <code>Age uint</code> に変えました。<br />
 では再度 <code>migu</code> コマンドでマイグレーションを実行して結果を確認します。</p>
 
 <pre><code class="language-bash">% migu -u root sync migu_test schema.go
@@ -103,8 +103,8 @@ type User struct {
 +-------+------------------+------+-----+---------+-------+
 </code></pre>
 
-<p><code>age</code> フィールドが <code>int(11)</code> から <code>int(10) unsigned</code> に変わっているのが分かるでしょうか？
-このように、Migu ではスキーマ定義を変えてコマンドを実行すればマイグレーションができます。今までのようにマイグレーション用 SQL を書く必要はありません。
+<p><code>age</code> フィールドが <code>int(11)</code> から <code>int(10) unsigned</code> に変わっているのが分かるでしょうか？<br />
+このように、Migu ではスキーマ定義を変えてコマンドを実行すればマイグレーションができます。今までのようにマイグレーション用 SQL を書く必要はありません。<br />
 また、Migu の冪等性を確認するためにもう一度マイグレーションを実行してみます。</p>
 
 <pre><code class="language-bash">% migu -u root sync migu_test schema.go
@@ -136,8 +136,8 @@ func (u *User) IsAlice() bool {
 
 <h2 id="まとめ:4b4ff7f79111255303f954736a076f6f">まとめ</h2>
 
-<p>Migu を使うことで大量のマイグレーションファイルを書く必要が無くなり、DB スキーマの管理が非常に楽になる上に身長が 5 センチ伸び、恋人もできることがお分かりいただけたかと思います。
-とはいえ、まだまだ粗削りで足りない部分も多いので、これからもっと改良していく必要があります。
+<p>Migu を使うことで大量のマイグレーションファイルを書く必要が無くなり、DB スキーマの管理が非常に楽になる上に身長が 5 センチ伸び、恋人もできることがお分かりいただけたかと思います。<br />
+とはいえ、まだまだ粗削りで足りない部分も多いので、これからもっと改良していく必要があります。<br />
 というわけで、あなたの Pull Request をお待ちしております。</p>
 
 </article>

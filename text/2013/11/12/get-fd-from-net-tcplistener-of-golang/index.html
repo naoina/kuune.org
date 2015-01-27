@@ -36,8 +36,8 @@
   </nav>
   <h1>golang の net.TCPLister から file descriptor を取る</h1>
   <p>Created at: <time datetime="2013-11-12T23:57:53&#43;09:00">2013-11-12 23:57:53 &#43;0900</time></p>
-  <p>何故かは分かりませんが、golang は net.TCPListener の file descriptor が export されていません。
-通常は特に問題ないのですが、graceful restart を実装しようとした場合に困ったことになります。
+  <p>何故かは分かりませんが、golang は net.TCPListener の file descriptor が export されていません。<br />
+通常は特に問題ないのですが、graceful restart を実装しようとした場合に困ったことになります。<br />
 ちなみに <a href="http://golang.org/pkg/net/#TCPListener.File"><code>func (l *TCPListener) File() (f *os.File, err error)</code></a> というのもありますが、これは file descriptor を複製するので graceful restart には使えません。（同じポートを Listen することになるため、複製の時点で bad file descriptor になる）</p>
 
 <p>どうやって取るかというと、伝家の宝刀 reflect パッケージを使います。</p>

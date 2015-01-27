@@ -40,26 +40,26 @@
 
 <p>Twitter社製の <a href="http://twitter.github.io/flight/">Flight</a> という素晴らしいJavaScriptのフレームワークがありまして、このplogでも使っています。</p>
 
-<p>JavaScriptのテストはいつも <a href="http://visionmedia.github.io/mocha/">mocha</a> + <a href="https://github.com/LearnBoost/expect.js/">expect.js</a> でやっているのですが、今回だけ <a href="https://github.com/twitter/flight-jasmine">flight-jasmine</a> があるのでjasmineで書こうとしました。
+<p>JavaScriptのテストはいつも <a href="http://visionmedia.github.io/mocha/">mocha</a> + <a href="https://github.com/LearnBoost/expect.js/">expect.js</a> でやっているのですが、今回だけ <a href="https://github.com/twitter/flight-jasmine">flight-jasmine</a> があるのでjasmineで書こうとしました。<br />
 が、jasmineの非同期テストがあまりにもダサすぎて使う気にならなかったのでカッとなって作りました。</p>
 
 <ul>
-<li>plogのテスト書こう
-↓</li>
-<li>Flightのヘルパー関数書くの面倒
-↓</li>
-<li>flight-jasmine使おう
-↓</li>
-<li>jasmineの非同期テストダサすぎ
-↓</li>
-<li>そうだflight-mocha作ろう
-↓</li>
-<li>出来た←イマココ</li>
+<li>plogのテスト書こう<br />
+↓<br /></li>
+<li>Flightのヘルパー関数書くの面倒<br />
+↓<br /></li>
+<li>flight-jasmine使おう<br />
+↓<br /></li>
+<li>jasmineの非同期テストダサすぎ<br />
+↓<br /></li>
+<li>そうだflight-mocha作ろう<br />
+↓<br /></li>
+<li>出来た←イマココ<br /></li>
 </ul>
 
 <p>こんな感じです。</p>
 
-<p>また、現状ではFlightのイベント周りのテストは <a href="http://sinonjs.org/">sinon.js</a> あたりを使って自力でやる必要があります。
+<p>また、現状ではFlightのイベント周りのテストは <a href="http://sinonjs.org/">sinon.js</a> あたりを使って自力でやる必要があります。<br />
 なので、ここらへんをflight-mochaでうまくやれないかなと考えていますがそれはまた別のお話。</p>
 
 </article>
