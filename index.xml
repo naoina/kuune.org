@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>kuune.org</title>
-    <link>https://kuune.org/</link>
+    <link>http://kuune.org/</link>
     <description>Recent content on kuune.org</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,14 +10,14 @@
     
     
     <lastBuildDate>Fri, 07 Nov 2014 16:21:00 &#43;0900</lastBuildDate>
-    <atom:link href="https://kuune.org/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://kuune.org/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Golangでどんな json が返ってくるかわからない時に struct で定義するまでじゃないんだけど､ interface だと呼び出しが面倒なのどうしたらいいんだろう問題への一回答例</title>
-      <link>https://kuune.org/text/2014/11/07/json-struct-interface-in-golang/</link>
+      <link>http://kuune.org/text/2014/11/07/json-struct-interface-in-golang/</link>
       <pubDate>Fri, 07 Nov 2014 16:21:00 &#43;0900</pubDate>
       
-      <guid>https://kuune.org/text/2014/11/07/json-struct-interface-in-golang/</guid>
+      <guid>http://kuune.org/text/2014/11/07/json-struct-interface-in-golang/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://konboi.hatenablog.com/entry/2014/11/07/155418&#34;&gt;http://konboi.hatenablog.com/entry/2014/11/07/155418&lt;/a&gt; これへの自分なりの回答です。元ブログのタイトルは const になってますが、多分 struct のことですかね。&lt;/p&gt;
 
 &lt;p&gt;Golang では &lt;code&gt;var&lt;/code&gt; を使えば変数が定義できますが、このときに型を指定する必要があります。&lt;/p&gt;
@@ -68,10 +68,10 @@ func main() {
     
     <item>
       <title>Migu という golang 用 DB スキーマのマイグレーションツールを作った話</title>
-      <link>https://kuune.org/text/2014/10/29/migu/</link>
+      <link>http://kuune.org/text/2014/10/29/migu/</link>
       <pubDate>Wed, 29 Oct 2014 17:53:44 &#43;0900</pubDate>
       
-      <guid>https://kuune.org/text/2014/10/29/migu/</guid>
+      <guid>http://kuune.org/text/2014/10/29/migu/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/winebarrel/ridgepole&#34;&gt;Ridgepole&lt;/a&gt; インスパイアの golang 用 DB スキーマのマイグレーションツールを作りました。&lt;/p&gt;
@@ -180,10 +180,10 @@ func (u *User) IsAlice() bool {
     
     <item>
       <title>Travis-CI で Windows バイナリをテストする</title>
-      <link>https://kuune.org/text/2014/08/20/test-windows-binary-on-travis-ci/</link>
+      <link>http://kuune.org/text/2014/08/20/test-windows-binary-on-travis-ci/</link>
       <pubDate>Wed, 20 Aug 2014 13:55:22 &#43;0900</pubDate>
       
-      <guid>https://kuune.org/text/2014/08/20/test-windows-binary-on-travis-ci/</guid>
+      <guid>http://kuune.org/text/2014/08/20/test-windows-binary-on-travis-ci/</guid>
       <description>&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;en&#34;&gt;&lt;p&gt;travis-ciでapi-getでwine突っ込んでやったらwindows環境でのテストできるのでは？&lt;/p&gt;&amp;mdash; 7017 (@naoina) &lt;a href=&#34;https://twitter.com/naoina/statuses/498832759981240321&#34;&gt;August 11, 2014&lt;/a&gt;&lt;/blockquote&gt;&lt;br /&gt;
 &lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
@@ -218,10 +218,10 @@ script:
     
     <item>
       <title>Kocha v0.5 リリースしました</title>
-      <link>https://kuune.org/text/2014/07/24/kocha-v0.5/</link>
+      <link>http://kuune.org/text/2014/07/24/kocha-v0.5/</link>
       <pubDate>Thu, 24 Jul 2014 10:56:39 &#43;0900</pubDate>
       
-      <guid>https://kuune.org/text/2014/07/24/kocha-v0.5/</guid>
+      <guid>http://kuune.org/text/2014/07/24/kocha-v0.5/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;https://github.com/naoina/kocha&lt;/a&gt;&lt;/p&gt;
@@ -258,10 +258,10 @@ script:
     
     <item>
       <title>Gin Web Framework について</title>
-      <link>https://kuune.org/text/2014/07/01/gin-web-framework/</link>
+      <link>http://kuune.org/text/2014/07/01/gin-web-framework/</link>
       <pubDate>Tue, 01 Jul 2014 11:14:16 &#43;0900</pubDate>
       
-      <guid>https://kuune.org/text/2014/07/01/gin-web-framework/</guid>
+      <guid>http://kuune.org/text/2014/07/01/gin-web-framework/</guid>
       <description>&lt;p&gt;golang の新しい WEB アプリケーションフレームワークである &lt;a href=&#34;http://gin-gonic.github.io/gin/&#34;&gt;Gin Web Framework&lt;/a&gt; が出たらしいです。&lt;br /&gt;
 この Gin、スゴイことにあの &lt;a href=&#34;https://github.com/go-martini/martini&#34;&gt;Martini&lt;/a&gt; より 40 倍速いとの触れ込みです。&lt;br /&gt;
 ですが、この部分ちょっと違います。&lt;/p&gt;
@@ -287,10 +287,10 @@ github の starts 的にはマーケティングに成功してるっぽいで�
     
     <item>
       <title>使うエンジニア、作るエンジニア</title>
-      <link>https://kuune.org/text/2014/06/27/engineers/</link>
+      <link>http://kuune.org/text/2014/06/27/engineers/</link>
       <pubDate>Fri, 27 Jun 2014 09:22:12 &#43;0900</pubDate>
       
-      <guid>https://kuune.org/text/2014/06/27/engineers/</guid>
+      <guid>http://kuune.org/text/2014/06/27/engineers/</guid>
       <description>
 
 &lt;p&gt;ここでいう エンジニア とは ソフトウェアエンジニア のことです。&lt;/p&gt;
@@ -315,10 +315,10 @@ creator。&lt;/p&gt;
     
     <item>
       <title>ッターン！と箸の持ち方</title>
-      <link>https://kuune.org/text/2014/06/26/type-the-enter/</link>
+      <link>http://kuune.org/text/2014/06/26/type-the-enter/</link>
       <pubDate>Thu, 26 Jun 2014 19:44:34 &#43;0900</pubDate>
       
-      <guid>https://kuune.org/text/2014/06/26/type-the-enter/</guid>
+      <guid>http://kuune.org/text/2014/06/26/type-the-enter/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;/image/ac81835c-3ec9-570e-bd3d-f6ef7bba97db.gif&#34; alt=&#34;20100218_1708335.gif&#34; /&gt;
@@ -355,10 +355,10 @@ creator。&lt;/p&gt;
     
     <item>
       <title>Graceful shutdown と restart が出来る net/http コンパチのライブラリをつくった</title>
-      <link>https://kuune.org/text/2014/06/26/miyabi/</link>
+      <link>http://kuune.org/text/2014/06/26/miyabi/</link>
       <pubDate>Thu, 26 Jun 2014 12:00:43 &#43;0900</pubDate>
       
-      <guid>https://kuune.org/text/2014/06/26/miyabi/</guid>
+      <guid>http://kuune.org/text/2014/06/26/miyabi/</guid>
       <description>&lt;p&gt;Miyabi&lt;br /&gt;
 &lt;a href=&#34;https://github.com/naoina/miyabi&#34;&gt;https://github.com/naoina/miyabi&lt;/a&gt;&lt;/p&gt;
 
@@ -380,10 +380,10 @@ creator。&lt;/p&gt;
     
     <item>
       <title>Denco 技術解説</title>
-      <link>https://kuune.org/text/2014/06/17/commentary-of-denco/</link>
+      <link>http://kuune.org/text/2014/06/17/commentary-of-denco/</link>
       <pubDate>Tue, 17 Jun 2014 17:52:45 &#43;0900</pubDate>
       
-      <guid>https://kuune.org/text/2014/06/17/commentary-of-denco/</guid>
+      <guid>http://kuune.org/text/2014/06/17/commentary-of-denco/</guid>
       <description>
 
 &lt;p&gt;今回は Golang 用の URL ルーターである &lt;a href=&#34;https://github.com/naoina/denco&#34;&gt;Denco&lt;/a&gt; の技術解説をしていきます。&lt;br /&gt;
@@ -533,10 +533,10 @@ creator。&lt;/p&gt;
     
     <item>
       <title>世界最速だった URL ルーターをリリースしました</title>
-      <link>https://kuune.org/text/2014/06/12/denco/</link>
+      <link>http://kuune.org/text/2014/06/12/denco/</link>
       <pubDate>Thu, 12 Jun 2014 18:35:08 &#43;0900</pubDate>
       
-      <guid>https://kuune.org/text/2014/06/12/denco/</guid>
+      <guid>http://kuune.org/text/2014/06/12/denco/</guid>
       <description>
 
 &lt;p&gt;Golang 用 URL ルーター &lt;a href=&#34;https://github.com/naoina/denco&#34;&gt;Denco&lt;/a&gt; をリリースしました。&lt;br /&gt;
@@ -650,10 +650,10 @@ router.Lookup(&amp;quot;/user/naoina&amp;quot;) // &amp;quot;second&amp;quot;
     
     <item>
       <title>Kocha が v0.3 になりました</title>
-      <link>https://kuune.org/text/2014/03/14/kocha-v0.3/</link>
+      <link>http://kuune.org/text/2014/03/14/kocha-v0.3/</link>
       <pubDate>Fri, 14 Mar 2014 09:50:19 &#43;0900</pubDate>
       
-      <guid>https://kuune.org/text/2014/03/14/kocha-v0.3/</guid>
+      <guid>http://kuune.org/text/2014/03/14/kocha-v0.3/</guid>
       <description>
 
 &lt;p&gt;&lt;code&gt;go get&lt;/code&gt; でバージョン指定できないのにバージョン付ける意味あんのかよみたいな話はあると思いますが、Kocha &lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;https://github.com/naoina/kocha&lt;/a&gt; に v0.3 のタグを付けました。&lt;/p&gt;
@@ -735,10 +735,10 @@ router.Lookup(&amp;quot;/user/naoina&amp;quot;) // &amp;quot;second&amp;quot;
     
     <item>
       <title>最初に公式ドキュメントを当たるべきたった2つの理由</title>
-      <link>https://kuune.org/text/2014/03/14/why-you-should-read-official-docs-at-first/</link>
+      <link>http://kuune.org/text/2014/03/14/why-you-should-read-official-docs-at-first/</link>
       <pubDate>Fri, 14 Mar 2014 00:41:02 &#43;0900</pubDate>
       
-      <guid>https://kuune.org/text/2014/03/14/why-you-should-read-official-docs-at-first/</guid>
+      <guid>http://kuune.org/text/2014/03/14/why-you-should-read-official-docs-at-first/</guid>
       <description>
 
 &lt;ol&gt;
@@ -756,10 +756,10 @@ router.Lookup(&amp;quot;/user/naoina&amp;quot;) // &amp;quot;second&amp;quot;
     
     <item>
       <title>Golang についてそろそろ一言いっとくか</title>
-      <link>https://kuune.org/text/2014/02/25/say-a-word-to-golang/</link>
+      <link>http://kuune.org/text/2014/02/25/say-a-word-to-golang/</link>
       <pubDate>Tue, 25 Feb 2014 20:46:33 &#43;0900</pubDate>
       
-      <guid>https://kuune.org/text/2014/02/25/say-a-word-to-golang/</guid>
+      <guid>http://kuune.org/text/2014/02/25/say-a-word-to-golang/</guid>
       <description>&lt;p&gt;&lt;br&gt;&lt;br /&gt;
 &lt;span style=&#34;font-size:300%;font-weight:bold;&#34;&gt;最高！！！！&lt;/span&gt;&lt;/p&gt;
 
@@ -778,10 +778,10 @@ router.Lookup(&amp;quot;/user/naoina&amp;quot;) // &amp;quot;second&amp;quot;
     
     <item>
       <title>書いたコードを捨てる勇気</title>
-      <link>https://kuune.org/text/2014/02/21/discard-codes/</link>
+      <link>http://kuune.org/text/2014/02/21/discard-codes/</link>
       <pubDate>Fri, 21 Feb 2014 20:19:55 &#43;0900</pubDate>
       
-      <guid>https://kuune.org/text/2014/02/21/discard-codes/</guid>
+      <guid>http://kuune.org/text/2014/02/21/discard-codes/</guid>
       <description>&lt;p&gt;自分の書いたコードに執着せず、どれだけ簡単に捨てられるかがコードの良し悪しに関わってくると思っている。&lt;br /&gt;
 例えば 1 日かけて書いたコードを「クソだ」と言って捨てられるか、書いたばかりの 1000 行のコードを「これはダメ」と言って捨てられるかという話。&lt;br /&gt;
 コードを捨てない人はとにかくダメなものに継ぎはぎして更にダメなものを作ることに長けている。白に黒を混ぜると黒くなっていくし、黒に黒を足しても黒にしかならない。&lt;/p&gt;
@@ -792,10 +792,10 @@ router.Lookup(&amp;quot;/user/naoina&amp;quot;) // &amp;quot;second&amp;quot;
     
     <item>
       <title>UI ファーストという開発手法</title>
-      <link>https://kuune.org/text/2014/02/20/ui-first/</link>
+      <link>http://kuune.org/text/2014/02/20/ui-first/</link>
       <pubDate>Thu, 20 Feb 2014 22:28:50 &#43;0900</pubDate>
       
-      <guid>https://kuune.org/text/2014/02/20/ui-first/</guid>
+      <guid>http://kuune.org/text/2014/02/20/ui-first/</guid>
       <description>&lt;p&gt;ソフトウェアエンジニアは新しく何かを開発する際に、技術的に可能かどうか、どう実装すればいいか、みたいなのを先んじて考えがちな気がする。&lt;br /&gt;
 そういうボトムアップ的な思考は技術を知っているが故に出る自然な思考なのだが、私の経験上そういう思考で作られたものは大体使いづらい、いわゆる gomi が出来上がる。&lt;/p&gt;
 
