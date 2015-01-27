@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{ partial "head.html" . }}
+  <link rel="stylesheet" href="/css/main.css" media="all">
+</head>
+<body>
+  <div class="main">
+    <div class="inner">
+      <h1>{{ .Site.Title }}</h1>
+      <p>404 Page Not Found</p>
+      <p><a href="/">&larr;{{ .Site.Title }}</a></p>
+    </div>
+  </div>
+</body>
+</html>
