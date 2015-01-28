@@ -21,7 +21,7 @@
     
     
       <h4>Previous article</h4>
-      <p><a href="http://kuune.org/text/2014/11/07/json-struct-interface-in-golang">Golangでどんな json が返ってくるかわからない時に struct で定義するまでじゃないんだけど､ interface だと呼び出しが面倒なのどうしたらいいんだろう問題への一回答例</a></p>
+      <p><a href="http://kuune.org/text/2014/10/29/migu">Migu という golang 用 DB スキーマのマイグレーションツールを作った話</a></p>
     
     <h4>Links</h4>
     <ul class="links">
@@ -31,21 +31,53 @@
     </ul>
     <p><a href="http://kuune.org/text/index">Text index</a></p>
   </nav>
-  <h1><a href="http://kuune.org/text/2015/01/29/site-renewal" class="title-link">サイトをリニューアルした</a></h1>
-  <p>Created at: <time datetime="2015-01-29T01:06:42&#43;09:00">2015-01-29 01:06:42 &#43;0900</time></p>
-  <p>全面的に適当に作りなおしている（doing）。あとブログ的な何かは今後こちらに書いていく。<br />
-URL を見ると分かるが、blog ではなく text という呼称を使っている。blog というとちゃんと書かないといけないみたいなのが自分の中であって、text という呼称にすることによって何かを書くことへの障壁を下げた。</p>
+  <h1><a href="http://kuune.org/text/2014/11/07/json-struct-interface-in-golang" class="title-link">Golangでどんな json が返ってくるかわからない時に struct で定義するまでじゃないんだけど､ interface だと呼び出しが面倒なのどうしたらいいんだろう問題への一回答例</a></h1>
+  <p>Created at: <time datetime="2014-11-07T16:21:00&#43;09:00">2014-11-07 16:21:00 &#43;0900</time></p>
+  <p><a href="http://konboi.hatenablog.com/entry/2014/11/07/155418">http://konboi.hatenablog.com/entry/2014/11/07/155418</a> これへの自分なりの回答です。元ブログのタイトルは const になってますが、多分 struct のことですかね。</p>
 
-<p>技術的な話をすると、<a href="http://gohugo.io/">Hugo</a> という Go で作られた静的サイトジェネレーターを使って構築したものを GitHub Pages でホストしていて、</p>
+<p>Golang では <code>var</code> を使えば変数が定義できますが、このときに型を指定する必要があります。</p>
 
-<p><code>git push</code> → Travis-CI でビルド → Travis-CI が <code>gh-pages</code> に push → 公開</p>
+<pre><code class="language-go">var name string
+</code></pre>
 
-<p>みたいに デプロイを自動化してる。<br />
-Travis-CI が混んでる時はなかなか変更が反映されないという問題があるけど、まぁビルドが通ったら通知がくるようにしているし、そんなに急いで公開しないといけないものもないので許容できる。</p>
+<p>この型のところに struct を置いてやることができます。</p>
 
-<p>前のブログには Zenback とか AdSense とか貼ってたけど、割と目障りだったし、技術的な記事を読む人はそんなものクリックしないし、そもそも AdBlock とか使ってて見えてもいないだろうから外した。</p>
+<pre><code class="language-go">var user struct {
+    Name string
+    Age  int
+}
+</code></pre>
 
-<p>あと今のデザインの大枠は <a href="http://blog.golang.org/">http://blog.golang.org/</a> のパクリです。</p>
+<p>よく考えればまぁできますよねという感じです。<br />
+これを応用すると、元ブログの例は下記のように書けます。</p>
+
+<pre><code class="language-go">package main
+
+import (
+    &quot;bytes&quot;
+    &quot;encoding/json&quot;
+    &quot;fmt&quot;
+)
+
+func main() {
+    b := []byte(`{&quot;foo&quot;: &quot;bar&quot;, &quot;hoge&quot;: {&quot;fuga&quot;: &quot;hoga&quot;}}`)
+    dec := json.NewDecoder(bytes.NewReader(b))
+    var jsonData struct {
+        Foo  string `json:&quot;foo&quot;`
+        Hoge struct {
+            Fuga string `json:&quot;fuga&quot;`
+        } `json:&quot;hoge&quot;`
+    }
+    dec.Decode(&amp;jsonData)
+    fmt.Println(jsonData)
+    fmt.Println(jsonData.Hoge.Fuga)
+
+}
+</code></pre>
+
+<p><a href="http://play.golang.org/p/nTCdrMxYoQ">http://play.golang.org/p/nTCdrMxYoQ</a></p>
+
+<p>ただしこの方法は本当にどんな内容が返ってくるか分からない時には使えない（例えば返ってくる json が {&ldquo;foo&rdquo;: &ldquo;bar&rdquo;} なのか {&ldquo;bar&rdquo;: &ldquo;foo&rdquo;} なのか分からない時など）のでその時は元の記事のように <code>interface{}</code> で受け取って型アサーションしてやる必要があります。</p>
 
 </article>
 
@@ -53,8 +85,8 @@ Travis-CI が混んでる時はなかなか変更が反映されないという�
   <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'kuune'
-    , disqus_identifier = "/text/2015/01/29/site-renewal"
-    , disqus_title = "サイトをリニューアルした";
+    , disqus_identifier = "/text/2014/11/07/json-struct-interface-in-golang"
+    , disqus_title = "Golangでどんな json が返ってくるかわからない時に struct で定義するまでじゃないんだけど､ interface だと呼び出しが面倒なのどうしたらいいんだろう問題への一回答例";
 
   (function() {
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

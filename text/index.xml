@@ -9,30 +9,8 @@
     
     
     
-    <lastBuildDate>Thu, 29 Jan 2015 01:06:42 &#43;0900</lastBuildDate>
+    <lastBuildDate>Fri, 07 Nov 2014 16:21:00 &#43;0900</lastBuildDate>
     <atom:link href="http://kuune.org/text/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>サイトをリニューアルした</title>
-      <link>http://kuune.org/text/2015/01/29/site-renewal/</link>
-      <pubDate>Thu, 29 Jan 2015 01:06:42 &#43;0900</pubDate>
-      
-      <guid>http://kuune.org/text/2015/01/29/site-renewal/</guid>
-      <description>&lt;p&gt;全面的に適当に作りなおしている（doing）。あとブログ的な何かは今後こちらに書いていく。&lt;br /&gt;
-URL を見ると分かるが、blog ではなく text という呼称を使っている。blog というとちゃんと書かないといけないみたいなのが自分の中であって、text という呼称にすることによって何かを書くことへの障壁を下げた。&lt;/p&gt;
-
-&lt;p&gt;技術的な話をすると、&lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; という Go で作られた静的サイトジェネレーターを使って構築したものを GitHub Pages でホストしていて、&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;git push&lt;/code&gt; → Travis-CI でビルド → Travis-CI が &lt;code&gt;gh-pages&lt;/code&gt; に push → 公開&lt;/p&gt;
-
-&lt;p&gt;みたいに デプロイを自動化してる。&lt;br /&gt;
-Travis-CI が混んでる時はなかなか変更が反映されないという問題があるけど、まぁビルドが通ったら通知がくるようにしているし、そんなに急いで公開しないといけないものもないので許容できる。&lt;/p&gt;
-
-&lt;p&gt;前のブログには Zenback とか AdSense とか貼ってたけど、割と目障りだったし、技術的な記事を読む人はそんなものクリックしないし、そもそも AdBlock とか使ってて見えてもいないだろうから外した。&lt;/p&gt;
-
-&lt;p&gt;あと今のデザインの大枠は &lt;a href=&#34;http://blog.golang.org/&#34;&gt;http://blog.golang.org/&lt;/a&gt; のパクリです。&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>Golangでどんな json が返ってくるかわからない時に struct で定義するまでじゃないんだけど､ interface だと呼び出しが面倒なのどうしたらいいんだろう問題への一回答例</title>
@@ -809,6 +787,33 @@ router.Lookup(&amp;quot;/user/naoina&amp;quot;) // &amp;quot;second&amp;quot;
 コードを捨てない人はとにかくダメなものに継ぎはぎして更にダメなものを作ることに長けている。白に黒を混ぜると黒くなっていくし、黒に黒を足しても黒にしかならない。&lt;/p&gt;
 
 &lt;p&gt;とにかくコードを捨てろ。そしてコードを書け。そして捨てろ。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>UI ファーストという開発手法</title>
+      <link>http://kuune.org/text/2014/02/20/ui-first/</link>
+      <pubDate>Thu, 20 Feb 2014 22:28:50 &#43;0900</pubDate>
+      
+      <guid>http://kuune.org/text/2014/02/20/ui-first/</guid>
+      <description>&lt;p&gt;ソフトウェアエンジニアは新しく何かを開発する際に、技術的に可能かどうか、どう実装すればいいか、みたいなのを先んじて考えがちな気がする。&lt;br /&gt;
+そういうボトムアップ的な思考は技術を知っているが故に出る自然な思考なのだが、私の経験上そういう思考で作られたものは大体使いづらい、いわゆる gomi が出来上がる。&lt;/p&gt;
+
+&lt;p&gt;なぜか？それは UI を考える際に実現可能性や実装のしやすさを優先してしまうから。&lt;br /&gt;
+ここでいう UI とは WEB サービスやネイティブアプリなどに限らず、ライブラリなどであれば API を指す。&lt;/p&gt;
+
+&lt;p&gt;私は数年前から UI → 実装という開発順序で開発をしていて、それは以下のような感じ。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;まず実現可能性を窓から投げ捨てる&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;素晴らしいと思う UI を考える&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;その素晴らしい UI を実現するための実装方法を考える&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;こういう感じで進めると、ほとんどの場合、素晴らしい UI を実現するための方法がすごく煩雑になったり難しくなるのだけど、ここで UI を実装寄りにしてしまうと元の木阿弥で gomi が出来上がるので歯を食いしばって泣きながら実装する。&lt;br /&gt;
+最初に実現可能性を捨てて UI を考えると実装できない UI になると思うかも知れないが、まぁ大体なんとかなるし、なんとかするべきである。&lt;/p&gt;
+
+&lt;p&gt;ただ、素晴らしいと思っていた UI が実は gomi だったということはよくあるし、そういうのはゴミ箱にダンクシュートするしかない。&lt;/p&gt;
 </description>
     </item>
     
