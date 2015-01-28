@@ -34,7 +34,7 @@
     </ul>
     <p><a href="http://kuune.org/text/index">Text index</a></p>
   </nav>
-  <h1>golangで実行時に関数の引数の名前を取得する方法</h1>
+  <h1><a href="http://kuune.org/text/2013/10/21/how-to-get-argument-names-in-runtime" class="title-link">golangで実行時に関数の引数の名前を取得する方法</a></h1>
   <p>Created at: <time datetime="2013-10-21T23:40:16&#43;09:00">2013-10-21 23:40:16 &#43;0900</time></p>
   <p>golang には <code>reflect</code> というリフレクションライブラリがありますが、これは関数の引数の情報は型までしか取れないため、引数の名前が欲しい場合は使えません。</p>
 
@@ -103,6 +103,22 @@ func A(id int) {}
 <p>ただしこの方法の場合、golang のソースファイルかその内容の文字列が必要になるのでバイナリだけでは達成出来ないのが難です。</p>
 
 </article>
+
+<footer class="article-footer">
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'kuune'
+    , disqus_identifier = "/text/2013/10/21/how-to-get-argument-names-in-runtime"
+    , disqus_title = "golangで実行時に関数の引数の名前を取得する方法";
+
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+</footer>
 
     
   </div>

@@ -34,7 +34,7 @@
     </ul>
     <p><a href="http://kuune.org/text/index">Text index</a></p>
   </nav>
-  <h1>GroongaをTravis-CIで動かす方法</h1>
+  <h1><a href="http://kuune.org/text/2013/08/03/how-to-run-groonga-on-travis-ci" class="title-link">GroongaをTravis-CIで動かす方法</a></h1>
   <p>Created at: <time datetime="2013-08-03T18:35:25&#43;09:00">2013-08-03 18:35:25 &#43;0900</time></p>
   
 
@@ -108,6 +108,22 @@ before_script:
 <p>余談ですが、<code>groonga -d /tmp/test.db --log-path /tmp/groonga.log</code> などのように、<code>-d</code> や <code>-s</code> オプションの後に <code>--log-path</code> オプションを置くとログが出ない環境もありましたので、常に <code>--log-path</code> オプションを前に置くほうがいいです。（Arch Linux では出たが、Ubuntu 12.04 では出なかった）</p>
 
 </article>
+
+<footer class="article-footer">
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'kuune'
+    , disqus_identifier = "/text/2013/08/03/how-to-run-groonga-on-travis-ci"
+    , disqus_title = "GroongaをTravis-CIで動かす方法";
+
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+</footer>
 
     
   </div>

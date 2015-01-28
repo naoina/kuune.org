@@ -8,8 +8,20 @@ img {
     padding: 5% 15%;
     }
 
-    .nav {
+    .main .nav {
         float: right;
         max-width: 25%;
         margin-left: 1rem;
+    }
+
+    .main h1 {
+        font-size: 1.5em;
+        }
+
+        .main .title-link {
+            text-decoration: none;
+    }
+
+    .main .article-footer {
+        margin-top: 5rem;
 }

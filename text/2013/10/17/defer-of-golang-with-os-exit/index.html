@@ -34,7 +34,7 @@
     </ul>
     <p><a href="http://kuune.org/text/index">Text index</a></p>
   </nav>
-  <h1>golangのdeferはos.Exitした場合は実行されない件</h1>
+  <h1><a href="http://kuune.org/text/2013/10/17/defer-of-golang-with-os-exit" class="title-link">golangのdeferはos.Exitした場合は実行されない件</a></h1>
   <p>Created at: <time datetime="2013-10-17T12:57:11&#43;09:00">2013-10-17 12:57:11 &#43;0900</time></p>
   <p>golang の <code>defer</code> はてっきり(関数/メソッド)を抜けた際に必ず実行されるものだと思っていたが、どうやら違うらしい。</p>
 
@@ -64,6 +64,22 @@ func main() {
 </code></pre>
 
 </article>
+
+<footer class="article-footer">
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'kuune'
+    , disqus_identifier = "/text/2013/10/17/defer-of-golang-with-os-exit"
+    , disqus_title = "golangのdeferはos.Exitした場合は実行されない件";
+
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+</footer>
 
     
   </div>

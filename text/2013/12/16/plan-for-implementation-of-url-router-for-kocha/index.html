@@ -34,7 +34,7 @@
     </ul>
     <p><a href="http://kuune.org/text/index">Text index</a></p>
   </nav>
-  <h1>Kocha における URL ルーターの実装と予定</h1>
+  <h1><a href="http://kuune.org/text/2013/12/16/plan-for-implementation-of-url-router-for-kocha" class="title-link">Kocha における URL ルーターの実装と予定</a></h1>
   <p>Created at: <time datetime="2013-12-16T23:05:02&#43;09:00">2013-12-16 23:05:02 &#43;0900</time></p>
   <p>現在、<a href="https://github.com/naoina/kocha">Kocha</a> における URL ルーター(<code>/path/to/controller</code> とかの URL を特定のコントローラーにルーティングするアレ)の実装は素朴な実装で、ルートごとの正規表現を配列に持っていて、頭から順番にループを回して一致するものを探すようになっている。<br />
 非常に簡単な仕組みだが、O(N)なのでルートが増えると遅くなる。そこで下記の記事にあるような全部のルートを 1 つの正規表現でマッチさせる実装を試した。</p>
@@ -73,6 +73,22 @@
 <p>の 3 つを実装、ベンチマークして速いものを採用しようかと考えています。</p>
 
 </article>
+
+<footer class="article-footer">
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'kuune'
+    , disqus_identifier = "/text/2013/12/16/plan-for-implementation-of-url-router-for-kocha"
+    , disqus_title = "Kocha における URL ルーターの実装と予定";
+
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+</footer>
 
     
   </div>
