@@ -14,8 +14,12 @@ img {
         margin-left: 1rem;
     }
 
-    .main .title-link {
-        text-decoration: none;
+    .main h1 {
+        font-size: 1.5em;
+        }
+
+        .main .title-link {
+            text-decoration: none;
     }
 
     .main .article-footer {
