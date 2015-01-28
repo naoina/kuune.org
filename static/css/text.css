@@ -14,6 +14,10 @@ img {
         margin-left: 1rem;
     }
 
+    .main .title-link {
+        text-decoration: none;
+    }
+
     .main .article-footer {
         margin-top: 5rem;
 }
