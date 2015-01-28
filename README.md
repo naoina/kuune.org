@@ -15,4 +15,4 @@ go get -u github.com/spf13/hugo
 
 ## Create a text entry
 
-Run `hugo text/title-of-text.md`.
+Run `hugo new text/title-of-text.md`.
