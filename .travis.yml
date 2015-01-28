@@ -16,3 +16,7 @@ env:
   global:
   - DEPLOY_DIR=public
   - DEPLOY_KEY=deploy_key.pem
+notifications:
+  email:
+    on_success: always
+    on_failure: always
