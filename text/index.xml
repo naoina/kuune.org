@@ -6,16 +6,13 @@
     <description>Recent content in Texts on kuune.org</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    
-    
-    
-    <lastBuildDate>Thu, 29 Jan 2015 07:54:48 &#43;0900</lastBuildDate>
+    <lastBuildDate>Thu, 29 Jan 2015 07:54:48 +0900</lastBuildDate>
     <atom:link href="http://kuune.org/text/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>サイトをリニューアルした</title>
       <link>http://kuune.org/text/2015/01/29/site-renewal/</link>
-      <pubDate>Thu, 29 Jan 2015 07:54:48 &#43;0900</pubDate>
+      <pubDate>Thu, 29 Jan 2015 07:54:48 +0900</pubDate>
       
       <guid>http://kuune.org/text/2015/01/29/site-renewal/</guid>
       <description>&lt;p&gt;全面的に適当に作りなおしている（doing）。あとブログ的な何かは今後こちらに書いていく。&lt;br /&gt;
@@ -37,7 +34,7 @@ Travis-CI が混んでる時はなかなか変更が反映されないという�
     <item>
       <title>Golangでどんな json が返ってくるかわからない時に struct で定義するまでじゃないんだけど､ interface だと呼び出しが面倒なのどうしたらいいんだろう問題への一回答例</title>
       <link>http://kuune.org/text/2014/11/07/json-struct-interface-in-golang/</link>
-      <pubDate>Fri, 07 Nov 2014 16:21:00 &#43;0900</pubDate>
+      <pubDate>Fri, 07 Nov 2014 16:21:00 +0900</pubDate>
       
       <guid>http://kuune.org/text/2014/11/07/json-struct-interface-in-golang/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://konboi.hatenablog.com/entry/2014/11/07/155418&#34;&gt;http://konboi.hatenablog.com/entry/2014/11/07/155418&lt;/a&gt; これへの自分なりの回答です。元ブログのタイトルは const になってますが、多分 struct のことですかね。&lt;/p&gt;
@@ -91,7 +88,7 @@ func main() {
     <item>
       <title>Migu という golang 用 DB スキーマのマイグレーションツールを作った話</title>
       <link>http://kuune.org/text/2014/10/29/migu/</link>
-      <pubDate>Wed, 29 Oct 2014 17:53:44 &#43;0900</pubDate>
+      <pubDate>Wed, 29 Oct 2014 17:53:44 +0900</pubDate>
       
       <guid>http://kuune.org/text/2014/10/29/migu/</guid>
       <description>
@@ -203,7 +200,7 @@ func (u *User) IsAlice() bool {
     <item>
       <title>Travis-CI で Windows バイナリをテストする</title>
       <link>http://kuune.org/text/2014/08/20/test-windows-binary-on-travis-ci/</link>
-      <pubDate>Wed, 20 Aug 2014 13:55:22 &#43;0900</pubDate>
+      <pubDate>Wed, 20 Aug 2014 13:55:22 +0900</pubDate>
       
       <guid>http://kuune.org/text/2014/08/20/test-windows-binary-on-travis-ci/</guid>
       <description>&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;en&#34;&gt;&lt;p&gt;travis-ciでapi-getでwine突っ込んでやったらwindows環境でのテストできるのでは？&lt;/p&gt;&amp;mdash; 7017 (@naoina) &lt;a href=&#34;https://twitter.com/naoina/statuses/498832759981240321&#34;&gt;August 11, 2014&lt;/a&gt;&lt;/blockquote&gt;&lt;br /&gt;
@@ -241,7 +238,7 @@ script:
     <item>
       <title>Kocha v0.5 リリースしました</title>
       <link>http://kuune.org/text/2014/07/24/kocha-v0.5/</link>
-      <pubDate>Thu, 24 Jul 2014 10:56:39 &#43;0900</pubDate>
+      <pubDate>Thu, 24 Jul 2014 10:56:39 +0900</pubDate>
       
       <guid>http://kuune.org/text/2014/07/24/kocha-v0.5/</guid>
       <description>
@@ -281,7 +278,7 @@ script:
     <item>
       <title>Gin Web Framework について</title>
       <link>http://kuune.org/text/2014/07/01/gin-web-framework/</link>
-      <pubDate>Tue, 01 Jul 2014 11:14:16 &#43;0900</pubDate>
+      <pubDate>Tue, 01 Jul 2014 11:14:16 +0900</pubDate>
       
       <guid>http://kuune.org/text/2014/07/01/gin-web-framework/</guid>
       <description>&lt;p&gt;golang の新しい WEB アプリケーションフレームワークである &lt;a href=&#34;http://gin-gonic.github.io/gin/&#34;&gt;Gin Web Framework&lt;/a&gt; が出たらしいです。&lt;br /&gt;
@@ -310,7 +307,7 @@ github の starts 的にはマーケティングに成功してるっぽいで�
     <item>
       <title>使うエンジニア、作るエンジニア</title>
       <link>http://kuune.org/text/2014/06/27/engineers/</link>
-      <pubDate>Fri, 27 Jun 2014 09:22:12 &#43;0900</pubDate>
+      <pubDate>Fri, 27 Jun 2014 09:22:12 +0900</pubDate>
       
       <guid>http://kuune.org/text/2014/06/27/engineers/</guid>
       <description>
@@ -338,7 +335,7 @@ creator。&lt;/p&gt;
     <item>
       <title>ッターン！と箸の持ち方</title>
       <link>http://kuune.org/text/2014/06/26/type-the-enter/</link>
-      <pubDate>Thu, 26 Jun 2014 19:44:34 &#43;0900</pubDate>
+      <pubDate>Thu, 26 Jun 2014 19:44:34 +0900</pubDate>
       
       <guid>http://kuune.org/text/2014/06/26/type-the-enter/</guid>
       <description>
@@ -378,7 +375,7 @@ creator。&lt;/p&gt;
     <item>
       <title>Graceful shutdown と restart が出来る net/http コンパチのライブラリをつくった</title>
       <link>http://kuune.org/text/2014/06/26/miyabi/</link>
-      <pubDate>Thu, 26 Jun 2014 12:00:43 &#43;0900</pubDate>
+      <pubDate>Thu, 26 Jun 2014 12:00:43 +0900</pubDate>
       
       <guid>http://kuune.org/text/2014/06/26/miyabi/</guid>
       <description>&lt;p&gt;Miyabi&lt;br /&gt;
@@ -403,7 +400,7 @@ creator。&lt;/p&gt;
     <item>
       <title>Denco 技術解説</title>
       <link>http://kuune.org/text/2014/06/17/commentary-of-denco/</link>
-      <pubDate>Tue, 17 Jun 2014 17:52:45 &#43;0900</pubDate>
+      <pubDate>Tue, 17 Jun 2014 17:52:45 +0900</pubDate>
       
       <guid>http://kuune.org/text/2014/06/17/commentary-of-denco/</guid>
       <description>
@@ -556,7 +553,7 @@ creator。&lt;/p&gt;
     <item>
       <title>世界最速だった URL ルーターをリリースしました</title>
       <link>http://kuune.org/text/2014/06/12/denco/</link>
-      <pubDate>Thu, 12 Jun 2014 18:35:08 &#43;0900</pubDate>
+      <pubDate>Thu, 12 Jun 2014 18:35:08 +0900</pubDate>
       
       <guid>http://kuune.org/text/2014/06/12/denco/</guid>
       <description>
@@ -673,7 +670,7 @@ router.Lookup(&amp;quot;/user/naoina&amp;quot;) // &amp;quot;second&amp;quot;
     <item>
       <title>Kocha が v0.3 になりました</title>
       <link>http://kuune.org/text/2014/03/14/kocha-v0.3/</link>
-      <pubDate>Fri, 14 Mar 2014 09:50:19 &#43;0900</pubDate>
+      <pubDate>Fri, 14 Mar 2014 09:50:19 +0900</pubDate>
       
       <guid>http://kuune.org/text/2014/03/14/kocha-v0.3/</guid>
       <description>
@@ -758,7 +755,7 @@ router.Lookup(&amp;quot;/user/naoina&amp;quot;) // &amp;quot;second&amp;quot;
     <item>
       <title>最初に公式ドキュメントを当たるべきたった2つの理由</title>
       <link>http://kuune.org/text/2014/03/14/why-you-should-read-official-docs-at-first/</link>
-      <pubDate>Fri, 14 Mar 2014 00:41:02 &#43;0900</pubDate>
+      <pubDate>Fri, 14 Mar 2014 00:41:02 +0900</pubDate>
       
       <guid>http://kuune.org/text/2014/03/14/why-you-should-read-official-docs-at-first/</guid>
       <description>
@@ -779,7 +776,7 @@ router.Lookup(&amp;quot;/user/naoina&amp;quot;) // &amp;quot;second&amp;quot;
     <item>
       <title>Golang についてそろそろ一言いっとくか</title>
       <link>http://kuune.org/text/2014/02/25/say-a-word-to-golang/</link>
-      <pubDate>Tue, 25 Feb 2014 20:46:33 &#43;0900</pubDate>
+      <pubDate>Tue, 25 Feb 2014 20:46:33 +0900</pubDate>
       
       <guid>http://kuune.org/text/2014/02/25/say-a-word-to-golang/</guid>
       <description>&lt;p&gt;&lt;br&gt;&lt;br /&gt;
@@ -801,7 +798,7 @@ router.Lookup(&amp;quot;/user/naoina&amp;quot;) // &amp;quot;second&amp;quot;
     <item>
       <title>書いたコードを捨てる勇気</title>
       <link>http://kuune.org/text/2014/02/21/discard-codes/</link>
-      <pubDate>Fri, 21 Feb 2014 20:19:55 &#43;0900</pubDate>
+      <pubDate>Fri, 21 Feb 2014 20:19:55 +0900</pubDate>
       
       <guid>http://kuune.org/text/2014/02/21/discard-codes/</guid>
       <description>&lt;p&gt;自分の書いたコードに執着せず、どれだけ簡単に捨てられるかがコードの良し悪しに関わってくると思っている。&lt;br /&gt;

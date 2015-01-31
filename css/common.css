@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+body {
+    background: #fff;
+    color: #333;
+}
+
 ul {
     padding-left: 0;
 }
