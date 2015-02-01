@@ -2,7 +2,6 @@
 date = "2013-06-20T20:30:34+09:00"
 draft = false
 title = "Goodbye Bootstrap, Hello Pure"
-aliases = ["/2013/06/20/203034188220/"]
 
 +++
 

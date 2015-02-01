@@ -2,7 +2,6 @@
 date = "2013-05-24T20:10:14+09:00"
 draft = false
 title = "flight-mocha作りました"
-aliases = ["/2013/05/24/201014000000/"]
 
 +++
 

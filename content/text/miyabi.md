@@ -2,7 +2,6 @@
 date = "2014-06-26T12:00:43+09:00"
 draft = false
 title = "Graceful shutdown と restart が出来る net/http コンパチのライブラリをつくった"
-aliases = ["/2014/06/20/120043381627/"]
 
 +++
 

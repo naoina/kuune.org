@@ -2,7 +2,6 @@
 date = "2013-08-30T00:54:27+09:00"
 draft = false
 title = "Revel Boilerplate上げた"
-aliases = ["/2013/08/30/005427333016/"]
 
 +++
 

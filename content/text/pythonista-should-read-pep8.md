@@ -2,7 +2,6 @@
 date = "2013-06-03T12:22:56+09:00"
 draft = false
 title = "PythonistaはPEP8を読もう"
-aliases = ["/2013/06/03/122256000000/"]
 
 +++
 
