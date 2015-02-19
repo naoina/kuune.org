@@ -7,3 +7,4 @@
 {{ if .RSSlink }}<link rel="alternate" charset="UTF-8" type="application/rss+xml" title="{{ .Title }}" href="{{ .RSSlink }}">{{ end }}
 <link rel="stylesheet" href="/css/normalize.css" media="all">
 <link rel="stylesheet" href="/css/common.css" media="all">
+{{ partial "google-analytics.html" . }}
