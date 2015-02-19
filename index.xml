@@ -333,7 +333,7 @@ script:
 
 &lt;p&gt;まず、Martini と比べて &lt;strong&gt;何が&lt;/strong&gt; 40 倍速いのか、というところですが&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;/image/dd59ea0d-11d3-5dca-915f-ddb148cb4abc.png&#34; alt=&#34;20140701105236.png&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://kuune.org/image/dd59ea0d-11d3-5dca-915f-ddb148cb4abc.png&#34; alt=&#34;20140701105236.png&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;これ、HTTP ルーターの速度を測ってるんですね。速いですね。ちなみに &lt;em&gt;Check out the benchmark suite&lt;/em&gt; ってところからベンチマークリポジトリに飛べます。&lt;/p&gt;
@@ -386,7 +386,7 @@ creator。&lt;/p&gt;
       <guid>http://kuune.org/text/2014/06/26/type-the-enter/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;/image/ac81835c-3ec9-570e-bd3d-f6ef7bba97db.gif&#34; alt=&#34;20100218_1708335.gif&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://kuune.org/image/ac81835c-3ec9-570e-bd3d-f6ef7bba97db.gif&#34; alt=&#34;20100218_1708335.gif&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;キーボードの Enter を目一杯力を入れて叩く人いますよね。アレと箸の持ち方が似てるなと思い立ったのでこのポエムを書いてます。&lt;/p&gt;
@@ -433,7 +433,7 @@ creator。&lt;/p&gt;
 &lt;p&gt;Golang には既に graceful shutdown/restart をするようなものが色々とありますが、Miyabi は &lt;code&gt;net/http&lt;/code&gt; と完全に互換性があるように作っています。&lt;br /&gt;
 なので、単に &lt;code&gt;http.ListenAndServe&lt;/code&gt; を &lt;code&gt;miyabi.ListenAndServe&lt;/code&gt; に変えるだけで graceful shutdown/restart が出来るようになります。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;/image/2776dcd1-afa7-5a35-9cc5-7cbacae1acf4.gif&#34; alt=&#34;miyabi.gif&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://kuune.org/image/2776dcd1-afa7-5a35-9cc5-7cbacae1acf4.gif&#34; alt=&#34;miyabi.gif&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;注意点として、graceful restart を実現するにあたってサーバープロセスをフォークするようになっています。起動する毎に副作用によって挙動が変わるようなモノだとまともに動かないのではないかと思います。&lt;br /&gt;
