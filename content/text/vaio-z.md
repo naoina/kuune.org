@@ -42,4 +42,11 @@ title = "VAIO Z が届きました"
 
     * drm と i915 関連でエラーが出ている
 
+### 追記（2015-03-01T17:38:34+09:00）
+
+* linux-drm-intel-nightly を AUR から入れて使うようにしたら Hibernate が動くようになった
+
+    * カーネルバージョンは 4.0.0-rc1-drm_intel_nightly_20150301 になった
+    * 依然 Suspend は動かない
+
 あと何かあれば追記する。
