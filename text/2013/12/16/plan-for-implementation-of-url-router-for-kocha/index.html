@@ -29,24 +29,25 @@
 <body>
   <div class="main">
     
-      <article>
-  <nav class="nav">
-    
-      <h4>Next article</h4>
-      <p><a href="http://kuune.org/text/2014/01/08/create-url-router-for-golang">Golang 用 URL ルーター作った</a></p>
-    
-    
-      <h4>Previous article</h4>
-      <p><a href="http://kuune.org/text/2013/12/10/kocha-v0.1">Kocha v0.1 リリースしました</a></p>
-    
-    <h4>Links</h4>
-    <ul class="links">
-      <li><a href="http://kuune.org/">kuune.org</a></li>
-      <li><a href="https://twitter.com/naoina">Twitter</a></li>
-      <li><a href="https://github.com/naoina">GitHub</a></li>
-    </ul>
-    <p><a href="http://kuune.org/text/index">Text index</a></p>
-  </nav>
+      <nav class="nav">
+  
+    <h4>Next article</h4>
+    <p><a href="http://kuune.org/text/2014/01/08/create-url-router-for-golang">Golang 用 URL ルーター作った</a></p>
+  
+  
+    <h4>Previous article</h4>
+    <p><a href="http://kuune.org/text/2013/12/10/kocha-v0.1">Kocha v0.1 リリースしました</a></p>
+  
+  <h4>Links</h4>
+  <ul class="links">
+    <li><a href="http://kuune.org/">kuune.org</a></li>
+    <li><a href="https://twitter.com/naoina">Twitter</a></li>
+    <li><a href="https://github.com/naoina">GitHub</a></li>
+  </ul>
+  <p><a href="http://kuune.org/text/index">Text index</a></p>
+</nav>
+
+<article class="article">
   <h1><a href="http://kuune.org/text/2013/12/16/plan-for-implementation-of-url-router-for-kocha" class="title-link">Kocha における URL ルーターの実装と予定</a></h1>
   <p>Created at: <time datetime="2013-12-16T23:05:02&#43;09:00">2013-12-16 23:05:02 &#43;0900</time></p>
   <p>現在、<a href="https://github.com/naoina/kocha">Kocha</a> における URL ルーター(<code>/path/to/controller</code> とかの URL を特定のコントローラーにルーティングするアレ)の実装は素朴な実装で、ルートごとの正規表現を配列に持っていて、頭から順番にループを回して一致するものを探すようになっている。<br />

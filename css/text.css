@@ -20,4 +20,21 @@ img {
 
     .main .article-footer {
         margin-top: 5rem;
+    }
+
+    .main .article h2 {
+        margin-top: 2rem;
+        border-bottom: 2px solid #d8edf4;
+    }
+
+    .main .article ul {
+        padding-left: 1rem;
+    }
+
+    .main .article li {
+        list-style: disc;
+    }
+
+    .main .article li li {
+        list-style: circle;
 }

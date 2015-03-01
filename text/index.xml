@@ -6,8 +6,72 @@
     <description>Recent content in Texts on kuune.org</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Feb 2015 00:03:34 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2015 14:26:31 +0900</lastBuildDate>
     <atom:link href="http://kuune.org/text/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>VAIO Z が届きました</title>
+      <link>http://kuune.org/text/2015/03/01/vaio-z/</link>
+      <pubDate>Sun, 01 Mar 2015 14:26:31 +0900</pubDate>
+      
+      <guid>http://kuune.org/text/2015/03/01/vaio-z/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://kuune.org/image/vaio-z1.jpg&#34; alt=&#34;VAIO Z 1&#34; /&gt;
+&lt;br /&gt;
+&lt;img src=&#34;http://kuune.org/image/vaio-z2.jpg&#34; alt=&#34;VAIO Z 2&#34; /&gt;
+&lt;br /&gt;
+&lt;img src=&#34;http://kuune.org/image/vaio-z3.jpg&#34; alt=&#34;VAIO Z 3&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&#34;所感:82bf5d0ac258330d91f516bc4d88d318&#34;&gt;所感&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;キーボードの押下圧が軽いので良い&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;2 in 1 なのでタブレット形状にもなるが、タブレットとして使うには重い。&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;USB や電源など全ての差し込み口が固いので片側を押さえながら入れないと筐体が動く&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;電源ボタンも固いので以下同上&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;ペンでしかクリック（タップ？）できないのにペンをマウントするところが無い&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;arch-linux-での現状:82bf5d0ac258330d91f516bc4d88d318&#34;&gt;Arch Linux での現状&lt;/h2&gt;
+
+&lt;h3 id=&#34;動く:82bf5d0ac258330d91f516bc4d88d318&#34;&gt;動く&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;キーボード&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;内臓カメラ&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Touchpad（ただしポインタデバイスとしてのみ）&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Touchscreen（筆圧感知はテストしてない）&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;動かない:82bf5d0ac258330d91f516bc4d88d318&#34;&gt;動かない&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Touchpad が Touchpad として認識されない&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;つまり二本指でのスクロールができないゴミと化す&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Lenovo Yoga 3 でも同じっぽい&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Suspend から帰ってこない&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;黒い画面のまんま&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;backlight が暗いだけではない&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Hibernate から帰ってきたら Xorg の画面描画がおかしい&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;drm と i915 関連でエラーが出ている&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;あと何かあれば追記する。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>naoina/toml を TOML v0.4.0 に準拠させた</title>
@@ -795,27 +859,6 @@ router.Lookup(&amp;quot;/user/naoina&amp;quot;) // &amp;quot;second&amp;quot;
 
 &lt;p&gt;ある程度なにか WEB サービスが作れそうなぐらいにはなってきたかなという感じです。&lt;br /&gt;
 ですが、まだフォーム周りはまともに手を付けてないので、ここを何とかしたら自分自身でドッグフードを食べながらやっていこうかと考えています。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>最初に公式ドキュメントを当たるべきたった2つの理由</title>
-      <link>http://kuune.org/text/2014/03/14/why-you-should-read-official-docs-at-first/</link>
-      <pubDate>Fri, 14 Mar 2014 00:41:02 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/03/14/why-you-should-read-official-docs-at-first/</guid>
-      <description>
-
-&lt;ol&gt;
-&lt;li&gt;ブログ記事は基本更新されないので情報が古いことが多い&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;翻訳されたドキュメントは情報が古いことがとても多い&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;ブログ記事は生モノ。時期が経つほど腐る。&lt;/p&gt;
-
-&lt;h2 id=&#34;まとめ:89810c7e568092886620bdd6fe821f4e&#34;&gt;まとめ&lt;/h2&gt;
-
-&lt;p&gt;公式ドキュメント読まないソフトウェアエンジニヤーは何をやってもダメ。&lt;/p&gt;
 </description>
     </item>
     
