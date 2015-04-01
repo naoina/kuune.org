@@ -6,8 +6,26 @@
     <description>Recent content in Texts on kuune.org</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Mar 2015 14:26:31 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2015 23:22:40 +0900</lastBuildDate>
     <atom:link href="http://kuune.org/text/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ぼかにゅーを Kocha で再実装しました</title>
+      <link>http://kuune.org/text/2015/04/01/vocanew-kocha/</link>
+      <pubDate>Wed, 01 Apr 2015 23:22:40 +0900</pubDate>
+      
+      <guid>http://kuune.org/text/2015/04/01/vocanew-kocha/</guid>
+      <description>&lt;p&gt;先日 Kocha v0.7.0 をリリースしたんですが、今回そのテストとして &lt;a href=&#34;http://vocanew.kuune.org&#34;&gt;ぼかにゅー&lt;/a&gt; を Kocha で実装し直しました。&lt;br /&gt;
+ぼかにゅーの実装ははこれまで Symphony（PHP）→ Revel（Go）と来て今回で 3 度目の実装となります。&lt;br /&gt;
+今のところ大きな問題は起きておらずいい感じです。&lt;/p&gt;
+
+&lt;p&gt;また今回 Kocha で実装し直したのもあって、ぼかにゅーのサーバーサイド実装を GitHub にて公開することにしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/naoina/vocanew&#34;&gt;https://github.com/naoina/vocanew&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ちなみに公開したものはあくまで Kocha のリファレンス実装という位置づけなのでクローラーは含まれていません。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>VAIO Z (VJZ13A1) が届きました</title>
@@ -785,91 +803,6 @@ router.Lookup(&amp;quot;/user/naoina&amp;quot;) // &amp;quot;second&amp;quot;
 
 &lt;p&gt;私が調べた限りだと、ダブル配列を使った URL ルーターの実装というものがありませんでした。&lt;br /&gt;
 ですので、参考になるか分かりませんが、次回から Denco の技術解説みたいなのを書こうかなと考えています。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Kocha が v0.3 になりました</title>
-      <link>http://kuune.org/text/2014/03/14/kocha-v0.3/</link>
-      <pubDate>Fri, 14 Mar 2014 09:50:19 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/03/14/kocha-v0.3/</guid>
-      <description>
-
-&lt;p&gt;&lt;code&gt;go get&lt;/code&gt; でバージョン指定できないのにバージョン付ける意味あんのかよみたいな話はあると思いますが、Kocha &lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;https://github.com/naoina/kocha&lt;/a&gt; に v0.3 のタグを付けました。&lt;/p&gt;
-
-&lt;p&gt;主な変更点は&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;モデル、ORM、マイグレーションなどのデータベース周りのサポート&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;dev&lt;/code&gt; や &lt;code&gt;prod&lt;/code&gt; などの環境ごとの設定の廃止&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;です。&lt;/p&gt;
-
-&lt;h2 id=&#34;データベース周りのサポート:a76806e52f0d348474f1d7c3e490e072&#34;&gt;データベース周りのサポート&lt;/h2&gt;
-
-&lt;p&gt;モデルのジェネレーターや ORM、マイグレーションのサポートを追加しました。&lt;br /&gt;
-何故サポートなのかというと、Kocha 固有の ORM を使わないといけないわけではなく、自由に ORM が選べるような実装になっているからです。&lt;/p&gt;
-
-&lt;h3 id=&#34;モデル:a76806e52f0d348474f1d7c3e490e072&#34;&gt;モデル&lt;/h3&gt;
-
-&lt;p&gt;現状では &lt;a href=&#34;https://github.com/naoina/genmai&#34;&gt;genmai&lt;/a&gt; のみのサポートですが、簡単に他の ORM も追加できます。&lt;br /&gt;
-モデルのジェネレーターも特定の ORM のものを追加できるようにしていますが、まだ他の ORM 用の実装はしていません。気が向いたら &lt;a href=&#34;https://github.com/coopernurse/gorp&#34;&gt;gorp&lt;/a&gt; 用ぐらいは実装すると思います。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;kocha g model user name:string age:int
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;みたいにすると&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type User struct {
-    Id   int64  `db:&amp;quot;pk&amp;quot; json:&amp;quot;id&amp;quot;`
-    Name string `json:&amp;quot;name&amp;quot;`
-    Age  int    `json:&amp;quot;age&amp;quot;`
-
-    genmai.TimeStamp
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;というような struct が書かれたファイルが生成されます。ついでに ORM 固有のインスタンスを取得するヘルパーが書かれたファイルも生成されます。&lt;br /&gt;
-まぁここら辺に関してはドキュメント &lt;a href=&#34;http://naoina.github.io/kocha/docs/model.html&#34;&gt;http://naoina.github.io/kocha/docs/model.html&lt;/a&gt; にあっさりですが書いています。&lt;/p&gt;
-
-&lt;h3 id=&#34;マイグレーション:a76806e52f0d348474f1d7c3e490e072&#34;&gt;マイグレーション&lt;/h3&gt;
-
-&lt;p&gt;現時点で私が知っているマイグレーションツールといえば &lt;a href=&#34;https://bitbucket.org/liamstask/goose&#34;&gt;goose&lt;/a&gt; がありますが、ORM を使うときのデータベースの設定と、マイグレーションツールの設定が中身は同じなのに別々に管理しないといけないのが大変好ましくないと考えています。&lt;br /&gt;
-ということで、フレームワーク側でマイグレーションをサポートしました。Rails みたいですね。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;kocha g migration create_user_table
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;でマイグレーションするためのファイルが生成されます。ですが、中身は自分で書かないといけません。Rails みたいにマイグレーション名から自動でマイグレーションの中身を記述するみたいなことはしない方向です。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;kocha migrate up
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;で前方向のマイグレーションが走ります。戻したい時は&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;kocha migrate down
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;とすれば直近の 1 つのマイグレーションに対してロールバックする処理が走ります。まぁ実際の処理は全部ユーザー側で書かないといけないんですが。&lt;/p&gt;
-
-&lt;h2 id=&#34;環境ごとの設定の廃止:a76806e52f0d348474f1d7c3e490e072&#34;&gt;環境ごとの設定の廃止&lt;/h2&gt;
-
-&lt;p&gt;今まではアプリケーションのトップレベルディレクトリに &lt;code&gt;dev.go&lt;/code&gt; や &lt;code&gt;prod.go&lt;/code&gt;、&lt;code&gt;config/dev.go&lt;/code&gt; や &lt;code&gt;config/prod.go&lt;/code&gt; といった、いわゆる環境ごとの設定セットがありました。&lt;br /&gt;
-今回の v0.3 からこれを廃止して、設定は基本的に環境変数によって実行時に指定するように変更しました。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;KOCHA_DB_DRIVER=&amp;quot;mysql&amp;quot; KOCHA_DB_DSN=&amp;quot;user:password@/dbname&amp;quot; kocha run
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;という感じになります。一応何も指定しない場合のデフォルトは sqlite3 が指定されてます。&lt;br /&gt;
-この変更は &lt;a href=&#34;http://12factor.net/&#34;&gt;The Twelve-Factor App&lt;/a&gt; (&lt;a href=&#34;http://twelve-factor-ja.herokuapp.com/&#34;&gt;日本語訳&lt;/a&gt;) に影響されました。これの &lt;a href=&#34;http://12factor.net/config&#34;&gt;config&lt;/a&gt; (&lt;a href=&#34;http://twelve-factor-ja.herokuapp.com/config&#34;&gt;日本語訳&lt;/a&gt;) に沿った形にしたということになります。&lt;br /&gt;
-余談ですが、WEB 系開発者はすべからく The Twelve-Factor App を読むべきだと思います。&lt;/p&gt;
-
-&lt;h2 id=&#34;今後の予定:a76806e52f0d348474f1d7c3e490e072&#34;&gt;今後の予定&lt;/h2&gt;
-
-&lt;p&gt;ある程度なにか WEB サービスが作れそうなぐらいにはなってきたかなという感じです。&lt;br /&gt;
-ですが、まだフォーム周りはまともに手を付けてないので、ここを何とかしたら自分自身でドッグフードを食べながらやっていこうかと考えています。&lt;/p&gt;
 </description>
     </item>
     
