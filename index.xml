@@ -6,8 +6,23 @@
     <description>Recent content on kuune.org</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Dec 2015 22:55:30 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 09 Apr 2016 23:31:21 +0900</lastBuildDate>
     <atom:link href="http://kuune.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>MVNO デビューした</title>
+      <link>http://kuune.org/text/2016/04/09/mvno-debut/</link>
+      <pubDate>Sat, 09 Apr 2016 23:31:21 +0900</pubDate>
+      
+      <guid>http://kuune.org/text/2016/04/09/mvno-debut/</guid>
+      <description>&lt;p&gt;ついに MVNO デビューした。&lt;br /&gt;
+10 年ぐらい au ユーザーだったけど、ほとんど通話しないし、データ通信も調べたら 1 ヶ月 3GB 超えること無かったので乗り換える決心をした。&lt;br /&gt;
+端末は iPhone6s で、発売当日に機種変更してから 6 ヶ月即 SIM ロック解除したタイミングで &lt;a href=&#34;http://mineo.jp/&#34;&gt;mineo&lt;/a&gt; の D プラン（docomo 回線）に乗り換えた。&lt;br /&gt;
+どこでも良かったけど mineo にした理由は、SIM ロック解除した機種で D プラン使えるか分からなかったので、最悪 A プラン（au 回線）にできると思ったから。結果的に D プランで普通に使えたので杞憂に終わった。&lt;/p&gt;
+
+&lt;p&gt;端末代金の割賦金差し引いても月 5000 円以上安いので寿司を食うことも可能になった。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>物語シリーズ読み始めた</title>
@@ -126,7 +141,8 @@ alias r=&amp;quot;anyframe-widget-cd-ghq-repository-relative-path&amp;quot;
 &lt;li&gt;Let me see&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Could you write it down, please? / Could you type it into the chatbox?&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Could you repeat that, please?&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Can you please speak more slowly?&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Can you please speak more slowly?&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;辺りは用意しておかないとダメでした。&lt;/p&gt;
@@ -146,7 +162,8 @@ alias r=&amp;quot;anyframe-widget-cd-ghq-repository-relative-path&amp;quot;
 &lt;li&gt;日本では英語といえば北米英語を指すことが多い&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;リソースが多い&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;オンライン英会話で大多数を占めるフィリピン人の英語が北米英語&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;IT 系の技術文書は北米英語&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;IT 系の技術文書は北米英語&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;といった理由から、英国英語を学ぶ理由が特にないのであれば北米英語版を選びましょう。&lt;/p&gt;
@@ -231,7 +248,8 @@ CD だけでなく DVD も付いているので、口の形が見れるのはす
 &lt;li&gt;2 in 1 なのでタブレット形状にもなるが、タブレットとして使うには重い。&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;USB や電源など全ての差し込み口が固いので片側を押さえながら入れないと筐体が動く&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;電源ボタンも固いので以下同上&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;ペンでしかクリック（タップ？）できないのにペンをマウントするところが無い&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;ペンでしかクリック（タップ？）できないのにペンをマウントするところが無い&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;arch-linux-での現状:82bf5d0ac258330d91f516bc4d88d318&#34;&gt;Arch Linux での現状&lt;/h2&gt;
@@ -242,7 +260,8 @@ CD だけでなく DVD も付いているので、口の形が見れるのはす
 &lt;li&gt;キーボード&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;内臓カメラ&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Touchpad（ただしポインタデバイスとしてのみ）&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Touchscreen（筆圧感知はテストしてない）&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Touchscreen（筆圧感知はテストしてない）&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;動かない:82bf5d0ac258330d91f516bc4d88d318&#34;&gt;動かない&lt;/h3&gt;
@@ -252,20 +271,23 @@ CD だけでなく DVD も付いているので、口の形が見れるのはす
 
 &lt;ul&gt;
 &lt;li&gt;つまり二本指でのスクロールができないゴミと化す&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Lenovo Yoga 3 でも同じっぽい&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Lenovo Yoga 3 でも同じっぽい&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Suspend から帰ってこない&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;黒い画面のまんま&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;backlight が暗いだけではない&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;backlight が暗いだけではない&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Hibernate から帰ってきたら Xorg の画面描画がおかしい&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;drm と i915 関連でエラーが出ている&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;drm と i915 関連でエラーが出ている&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -276,7 +298,8 @@ CD だけでなく DVD も付いているので、口の形が見れるのはす
 
 &lt;ul&gt;
 &lt;li&gt;カーネルバージョンは 4.0.0-rc1-drm_intel_nightly_20150301 になった&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;依然 Suspend は動かない&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;依然 Suspend は動かない&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -621,34 +644,6 @@ github の starts 的にはマーケティングに成功してるっぽいで�
 
 &lt;p&gt;余談ですが、HttpRouter は &lt;a href=&#34;https://github.com/julienschmidt/httprouter/issues/12&#34;&gt;https://github.com/julienschmidt/httprouter/issues/12&lt;/a&gt; みたいなのがあるので、実用できるのか微妙な気がしています。&lt;br /&gt;
 ちなみに私も &lt;a href=&#34;https://github.com/naoina/denco&#34;&gt;Denco&lt;/a&gt; という HTTP ルーターを作ってまして、興味があれば &lt;a href=&#34;http://naoina.plog.la/2014/06/12/183508686252&#34;&gt;前の記事&lt;/a&gt; をご覧ください。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>使うエンジニア、作るエンジニア</title>
-      <link>http://kuune.org/text/2014/06/27/engineers/</link>
-      <pubDate>Fri, 27 Jun 2014 09:22:12 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/06/27/engineers/</guid>
-      <description>
-
-&lt;p&gt;ここでいう エンジニア とは ソフトウェアエンジニア のことです。&lt;/p&gt;
-
-&lt;h2 id=&#34;使うエンジニア:dc54b6b4f578cbd01428b90e24adf075&#34;&gt;使うエンジニア&lt;/h2&gt;
-
-&lt;p&gt;既存のものを組み合わせて作る。&lt;br /&gt;
-足りないものや不満があるものに関しては、無いものは仕方ないと割り切る。あるいは出てくるまで待つ。&lt;br /&gt;
-builder。&lt;/p&gt;
-
-&lt;h2 id=&#34;作るエンジニア:dc54b6b4f578cbd01428b90e24adf075&#34;&gt;作るエンジニア&lt;/h2&gt;
-
-&lt;p&gt;既存のものを組み合わせて作る。&lt;br /&gt;
-足りないものや不満があるものに関しては、自分で作ってしまうか、改善するための パッチ/プルリクエスト を送る。&lt;br /&gt;
-creator。&lt;/p&gt;
-
-&lt;h2 id=&#34;言いたいこと:dc54b6b4f578cbd01428b90e24adf075&#34;&gt;言いたいこと&lt;/h2&gt;
-
-&lt;p&gt;不満不平を言うだけでなく、それを解決、改善するようなモノを作ろう。ソフトウェアエンジニアは変えられる力を持っているのだから。&lt;/p&gt;
 </description>
     </item>
     
