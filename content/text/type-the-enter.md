@@ -2,6 +2,7 @@
 date = "2014-06-26T19:44:34+09:00"
 draft = false
 title = "ッターン！と箸の持ち方"
+tags = ["misc"]
 
 +++
 

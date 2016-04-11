@@ -2,6 +2,7 @@
 date = "2013-08-03T18:35:25+09:00"
 draft = false
 title = "GroongaをTravis-CIで動かす方法"
+tags = ["groonga"]
 
 +++
 

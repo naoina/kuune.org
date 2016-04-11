@@ -2,6 +2,7 @@
 date = "2013-06-21T15:03:13+09:00"
 draft = false
 title = "私がUS配列を使う理由、または昔話"
+tags = ["misc"]
 
 +++
 

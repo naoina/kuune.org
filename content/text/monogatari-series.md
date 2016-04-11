@@ -2,6 +2,7 @@
 date = "2015-12-14T22:55:30+09:00"
 draft = false
 title = "物語シリーズ読み始めた"
+tags = ["misc"]
 
 +++
 

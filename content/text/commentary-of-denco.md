@@ -2,6 +2,7 @@
 date = "2014-06-17T17:52:45+09:00"
 draft = false
 title = "Denco 技術解説"
+tags = ["go", "golang", "denco"]
 
 +++
 

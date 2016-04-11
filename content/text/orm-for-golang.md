@@ -2,6 +2,7 @@
 date = "2014-02-17T12:17:43+09:00"
 draft = false
 title = "おれのかんがえたさいきょうの ORM for Golang"
+tags = ["go", "golang", "genmai", "orm"]
 
 +++
 

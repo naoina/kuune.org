@@ -2,6 +2,7 @@
 date = "2015-12-09T22:54:32+09:00"
 draft = false
 title = "Custom anyframe-widget-cd-ghq-repository"
+tags = ["zsh", "anyframe", "ghq"]
 
 +++
 

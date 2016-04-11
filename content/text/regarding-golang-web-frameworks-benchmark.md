@@ -2,6 +2,7 @@
 date = "2015-02-11T14:18:11+09:00"
 draft = false
 title = "golang web frameworks benchmark 02/2015 について"
+tags = ["go", "golang"]
 
 +++
 

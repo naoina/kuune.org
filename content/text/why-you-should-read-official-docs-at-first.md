@@ -2,6 +2,7 @@
 date = "2014-03-14T00:41:02+09:00"
 draft = false
 title = "最初に公式ドキュメントを当たるべきたった2つの理由"
+tags = ["programming"]
 
 +++
 

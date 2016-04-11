@@ -2,6 +2,7 @@
 date = "2015-03-01T14:26:31+09:00"
 draft = false
 title = "VAIO Z (VJZ13A1) が届きました"
+tags = ["linux", "vaio"]
 
 +++
 
