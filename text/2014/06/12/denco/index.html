@@ -57,12 +57,12 @@
 ですが、HttpRouter ではできないことが Denco にできたりしますしおすし。<br />
 ベンチマークは <a href="https://github.com/julienschmidt/go-http-routing-benchmark">https://github.com/julienschmidt/go-http-routing-benchmark</a> からどうぞ。</p>
 
-<h2 id="denco-とは:1d2dcdaa7033e85236908854dc845bef">Denco とは</h2>
+<h2 id="denco-とは:20">Denco とは</h2>
 
 <p>既に開発していた <a href="https://github.com/naoina/kocha-urlrouter">kocha-urlrouter</a> のダブル配列実装をベースに色々と手を加えたものになります。<br />
 速度を重視して開発してましたが、前述の通り HttpRouter に追いぬかれました。</p>
 
-<h2 id="使い方:1d2dcdaa7033e85236908854dc845bef">使い方</h2>
+<h2 id="使い方:20">使い方</h2>
 
 <p>下記のように使います。</p>
 
@@ -137,7 +137,7 @@ func main() {
 
 <p>これはそもそも <a href="https://github.com/naoina/kocha">Kocha</a> で使うために書き始めたものなので上記のようになっています。</p>
 
-<h2 id="vs-httprouter:1d2dcdaa7033e85236908854dc845bef">vs HttpRouter</h2>
+<h2 id="vs-httprouter:20">vs HttpRouter</h2>
 
 <p>再び最速の座を手に入れるべく頑張っていますが、現状では HttpRouter とほぼダブルスコアです。。。社会は厳しい！<br />
 ですが、Denco にしかできないことがあります。<br />
@@ -154,12 +154,35 @@ router.Lookup(&quot;/user/naoina&quot;) // &quot;second&quot;
 
 <p>まぁ、負け惜しみです。</p>
 
-<h2 id="まとめ:1d2dcdaa7033e85236908854dc845bef">まとめ</h2>
+<h2 id="まとめ:20">まとめ</h2>
 
 <p>私が調べた限りだと、ダブル配列を使った URL ルーターの実装というものがありませんでした。<br />
 ですので、参考になるか分かりませんが、次回から Denco の技術解説みたいなのを書こうかなと考えています。</p>
 
 </article>
+
+<footer class="tags-footer">
+  <span>
+    
+      tags:
+    
+  </span>
+  <ul class="tags">
+    
+      <li class="tag">
+        <a href="http://kuune.org/tags/go">go</a>
+      </li>
+    
+      <li class="tag">
+        <a href="http://kuune.org/tags/golang">golang</a>
+      </li>
+    
+      <li class="tag">
+        <a href="http://kuune.org/tags/denco">denco</a>
+      </li>
+    
+  </ul>
+</footer>
 
 <footer class="article-footer">
   <div id="disqus_thread"></div>

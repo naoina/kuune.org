@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Toml on kuune.org</title>
+    <link>http://kuune.org/tags/toml/</link>
+    <description>Recent content in Toml on kuune.org</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Feb 2015 00:03:34 +0900</lastBuildDate>
+    <atom:link href="http://kuune.org/tags/toml/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>naoina/toml を TOML v0.4.0 に準拠させた</title>
+      <link>http://kuune.org/text/2015/02/16/toml-v0.4.0/</link>
+      <pubDate>Mon, 16 Feb 2015 00:03:34 +0900</pubDate>
+      
+      <guid>http://kuune.org/text/2015/02/16/toml-v0.4.0/</guid>
+      <description>&lt;p&gt;以前 golang 用の TOML パーサー( &lt;a href=&#34;https://github.com/naoina/toml&#34;&gt;https://github.com/naoina/toml&lt;/a&gt; )を作りましたが、今回これを TOML 0.4.0 に準拠させていくつかのバグを修正しました。&lt;br /&gt;
+golang 用の TOML パーサーには他に &lt;a href=&#34;https://github.com/BurntSushi/toml&#34;&gt;https://github.com/BurntSushi/toml&lt;/a&gt; がありますが、これと違う点としては、パーサーを &lt;a href=&#34;http://ja.wikipedia.org/wiki/Parsing_Expression_Grammar&#34;&gt;PEG&lt;/a&gt; から生成しているのと、TOML ファイルにエラーがある場合のメッセージを分かりやすくするようにしている点です。&lt;/p&gt;
+
+&lt;p&gt;あと、現在はデコーダーしか実装していないので TOML ファイルから Go の struct にマッピングはできますが、逆に Go の struct から TOML ファイルを生成することはできません。&lt;br /&gt;
+別にエンコーダーの実装が難しいというわけではなくて、単に必要に迫られてないので実装してないだけです。issues か pull request がきたら実装すると思います。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

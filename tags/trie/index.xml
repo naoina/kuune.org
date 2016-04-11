@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Trie on kuune.org</title>
+    <link>http://kuune.org/tags/trie/</link>
+    <description>Recent content in Trie on kuune.org</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Jan 2014 23:36:36 +0900</lastBuildDate>
+    <atom:link href="http://kuune.org/tags/trie/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Golang 用 URL ルーター作った</title>
+      <link>http://kuune.org/text/2014/01/08/create-url-router-for-golang/</link>
+      <pubDate>Wed, 08 Jan 2014 23:36:36 +0900</pubDate>
+      
+      <guid>http://kuune.org/text/2014/01/08/create-url-router-for-golang/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/naoina/kocha-urlrouter&#34;&gt;https://github.com/naoina/kocha-urlrouter&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これ &lt;a href=&#34;http://naoina.plog.la/2013/12/16/230502728087&#34;&gt;http://naoina.plog.la/2013/12/16/230502728087&lt;/a&gt; の最後に書いた URL ルーターの実装をした。&lt;br /&gt;
+Kocha で使う用にひと通り実装したものを別ライブラリとして切り出したものになる。&lt;br /&gt;
+使い方は README.md みれば多分分かると思う。&lt;br /&gt;
+Golang の標準ライブラリの &lt;code&gt;database/sql&lt;/code&gt; と同じようなコンパイルタイムプラグインの方式を取っているので、色んな URL ルーターの実装ができ、用途によって切り替えるとかできる。&lt;br /&gt;
+現在の実装は ダブル配列 と 正規表現 の 2 つがある。ダブル配列は構築は遅いが lookup が速い。ベンチマークを取ると分かるが、私の環境だと正規表現実装と比べて、ルート数が 100 の場合は約 17 倍、ルート数 700 の場合だと約 110 倍速い。&lt;/p&gt;
+
+&lt;h2 id=&#34;golang-界隈の-web-フレームワークにおける-url-ルーターの状況:32&#34;&gt;Golang 界隈の WEB フレームワークにおける URL ルーターの状況&lt;/h2&gt;
+
+&lt;p&gt;Golang で作られている WEB フレームワークには &lt;a href=&#34;https://github.com/robfig/revel&#34;&gt;Revel&lt;/a&gt;、&lt;a href=&#34;https://github.com/astaxie/beego/&#34;&gt;beego&lt;/a&gt;、&lt;a href=&#34;https://github.com/codegangsta/martini&#34;&gt;Martini&lt;/a&gt;、URL ルーターは &lt;a href=&#34;https://github.com/gorilla/mux&#34;&gt;gorilla/mux&lt;/a&gt; などがありますが、これらの URL ルーターの実装は&lt;del&gt;全て、ループを回して正規表現などでマッチングする方法を取っています&lt;/del&gt;(勘違いしてましたが、Revel は Trie により実装でした)。つまりルートの数が増えれば増えるほど遅くなります。&lt;br /&gt;
+これらのフレームワークが何故この方法を取っているのかは知りませんが、実装が簡単なのと、URL ルーターがまだそこまでパフォーマンスに与える影響がない（他の部分の方が重い）からですかね。。。&lt;/p&gt;
+
+&lt;h2 id=&#34;閑話休題:32&#34;&gt;閑話休題&lt;/h2&gt;
+
+&lt;p&gt;これ作るために色々調べてて、割と Trie というか、そのへんに興味出てきたので、今後はダブル配列の末尾文字列圧縮や三分探索木、 LOUDS、ウェーブレット行列での実装とかも入れたいですね。&lt;/p&gt;
+
+&lt;h3 id=&#34;追記1:32&#34;&gt;追記1&lt;/h3&gt;
+
+&lt;p&gt;三分探索木の実装を入れたらダブル配列より速くなったしにたい。&lt;/p&gt;
+
+&lt;h3 id=&#34;追記2:32&#34;&gt;追記2&lt;/h3&gt;
+
+&lt;p&gt;ダブル配列速くしたので、速度はダブル配列の方がちょっとだけ速くなった。メモリ効率はダブル配列の方が約 2 倍から 3 倍程度良いが、構築は三分探索木の方が約 2 倍速い。&lt;br /&gt;
+というか、URL ルーターとして使う文には何万件とか入れないだろうし、メモリプロファイルとった限りでは三分探索木でも 700 件で 3MB ぐらいしか使ってないし、ダブル配列を使う意義とは。。。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
