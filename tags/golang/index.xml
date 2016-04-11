@@ -234,27 +234,27 @@ func (u *User) IsAlice() bool {
 &lt;p&gt;前のバージョンとは非互換になってます。というか v1.0 まではバンバン非互換の変更入れていくつもりなので、まともに使うのはオススメしません。&lt;br /&gt;
 ですが、もしそれでも Kocha を使いたいという場合は、人柱になって最新のバージョンを追いつつ使うか、&lt;a href=&#34;http://labix.org/gopkg.in&#34;&gt;gopkg.in&lt;/a&gt; を使ったりしてバージョンを固定して使うことをおすすめします。&lt;/p&gt;
 
-&lt;h2 id=&#34;v0-5-での変更点:15&#34;&gt;v0.5 での変更点&lt;/h2&gt;
+&lt;h2 id=&#34;v0-5-での変更点:16&#34;&gt;v0.5 での変更点&lt;/h2&gt;
 
-&lt;h3 id=&#34;url-ルーターを-denco-にしました:15&#34;&gt;URL ルーターを denco にしました&lt;/h3&gt;
+&lt;h3 id=&#34;url-ルーターを-denco-にしました:16&#34;&gt;URL ルーターを denco にしました&lt;/h3&gt;
 
 &lt;p&gt;以前までの URL ルーターを別に切り出して改良した &lt;a href=&#34;https://github.com/naoina/denco&#34;&gt;Denco&lt;/a&gt; を使うようにしました。&lt;br /&gt;
 これにより URL ルーティングのパフォーマンスが上がり、メモリ使用量も大幅に改善されています。&lt;/p&gt;
 
-&lt;h3 id=&#34;net-http-互換として使えるようになりました:15&#34;&gt;net/http 互換として使えるようになりました&lt;/h3&gt;
+&lt;h3 id=&#34;net-http-互換として使えるようになりました:16&#34;&gt;net/http 互換として使えるようになりました&lt;/h3&gt;
 
 &lt;p&gt;今までは Kocha で作ったものは Kocha でしか動かせませんでしたが、内外的に大幅に変更を加えて &lt;a href=&#34;http://golang.org/pkg/net/http/#Handler&#34;&gt;http.Handler&lt;/a&gt; インターフェースを実装しました。&lt;br /&gt;
 これによって他の &lt;code&gt;net/http&lt;/code&gt; 用ライブラリ（ミドルウェアとして処理を挟むものなど）と組み合わせて使えるようになりました。&lt;br /&gt;
 これは &lt;a href=&#34;http://naoina.github.io/kocha/docs/advanced.html&#34;&gt;http://naoina.github.io/kocha/docs/advanced.html&lt;/a&gt; に軽く書いています。&lt;br /&gt;
 なお v0.5 における非互換性は大体この変更のせいです。&lt;/p&gt;
 
-&lt;h3 id=&#34;go-1-3-以降のみをサポートします:15&#34;&gt;Go 1.3 以降のみをサポートします&lt;/h3&gt;
+&lt;h3 id=&#34;go-1-3-以降のみをサポートします:16&#34;&gt;Go 1.3 以降のみをサポートします&lt;/h3&gt;
 
 &lt;p&gt;golang はどんどん開発が進んでいるので敢えて古いものを使う必要は今のところ無いので新しいもの使っていきましょう。&lt;/p&gt;
 
 &lt;p&gt;というのは建前で、実際のところは Kocha の graceful restart の機能を &lt;a href=&#34;https://github.com/naoina/miyabi&#34;&gt;miyabi&lt;/a&gt; というライブラリとして再実装し直して Kocha で使っているのですが、この miyabi が Go 1.3 で &lt;code&gt;net/http&lt;/code&gt; に導入された機能を使っているからです。&lt;/p&gt;
 
-&lt;h2 id=&#34;今後の予定:15&#34;&gt;今後の予定&lt;/h2&gt;
+&lt;h2 id=&#34;今後の予定:16&#34;&gt;今後の予定&lt;/h2&gt;
 
 &lt;p&gt;ログ周りの再設計をします。後は session による flash 機構の実装をしようと思います。&lt;br /&gt;
 そこまでできたら &lt;a href=&#34;http://vocanew.kuune.org&#34;&gt;ぼかにゅー&lt;/a&gt; や、この plog.la を Kocha で実装して、実際に使う際に必要な機能やデバッグをしていこうと考えています。&lt;/p&gt;
@@ -325,7 +325,7 @@ github の starts 的にはマーケティングに成功してるっぽいで�
 その前にひとつ、お知らせがあります。Denco はこのたび URL ルーターから URL ルーター兼 HTTP request multiplexer となりました。つまり、&lt;a href=&#34;http://golang.org/pkg/net/http/#ServeMux&#34;&gt;http.ServeMux&lt;/a&gt; の代わりとして使えるようになりました。&lt;br /&gt;
 詳しくは &lt;a href=&#34;https://github.com/naoina/denco/blob/master/README.md&#34;&gt;README&lt;/a&gt; を参照してください。&lt;/p&gt;
 
-&lt;h2 id=&#34;基本戦略:22&#34;&gt;基本戦略&lt;/h2&gt;
+&lt;h2 id=&#34;基本戦略:21&#34;&gt;基本戦略&lt;/h2&gt;
 
 &lt;p&gt;まず始めに、Denco のルーティングは静的パス（&lt;code&gt;/user/alice&lt;/code&gt; みたいなの）とパラメーター付きパス（&lt;code&gt;/user/:name&lt;/code&gt; みたいなの）で使用するアルゴリズムを変えています。&lt;br /&gt;
 静的パスの場合は Go の map を使い、パラメーター付きパスの場合はパラメーターを扱えるように拡張したダブル配列を使います。これは、静的パスの場合、ダブル配列で処理するより Go の map を使ったほうが速いからです。&lt;br /&gt;
@@ -335,17 +335,17 @@ github の starts 的にはマーケティングに成功してるっぽいで�
 詳しい概要については &lt;a href=&#34;http://nanika.osonae.com/DArray/dary.html&#34;&gt;http://nanika.osonae.com/DArray/dary.html&lt;/a&gt; や &lt;a href=&#34;http://d.hatena.ne.jp/takeda25/20120219/1329634865&#34;&gt;http://d.hatena.ne.jp/takeda25/20120219/1329634865&lt;/a&gt; を参照してください。&lt;br /&gt;
 以下からはダブル配列を理解している前提での解説になります。&lt;/p&gt;
 
-&lt;h2 id=&#34;拡張ダブル配列:22&#34;&gt;拡張ダブル配列&lt;/h2&gt;
+&lt;h2 id=&#34;拡張ダブル配列:21&#34;&gt;拡張ダブル配列&lt;/h2&gt;
 
 &lt;p&gt;さて、ダブル配列は速い Trie の実装ではありますが、静的な文字列に対するものなのでパラメーター付きパスのような特定の文字に意味を持たせるということがそのままではできません。&lt;br /&gt;
 そこで、Denco では構築時およびルックアップ時にメタ文字である &lt;code&gt;:&lt;/code&gt; と &lt;code&gt;*&lt;/code&gt; を特別扱いするようにダブル配列を拡張しています。&lt;/p&gt;
 
-&lt;h3 id=&#34;シングルパラメーター:22&#34;&gt;シングルパラメーター&lt;/h3&gt;
+&lt;h3 id=&#34;シングルパラメーター:21&#34;&gt;シングルパラメーター&lt;/h3&gt;
 
 &lt;p&gt;まず Denco の仕様として &lt;code&gt;/user/:name/:id&lt;/code&gt; などの &lt;code&gt;:name&lt;/code&gt; や &lt;code&gt;:id&lt;/code&gt; の部分は任意の文字列にマッチします。マッチする長さは次の &lt;code&gt;/&lt;/code&gt; が現れるまでか、終端までです。&lt;br /&gt;
 例えば &lt;code&gt;/user/:name/:id&lt;/code&gt; に対して &lt;code&gt;/user/alice/1&lt;/code&gt; でマッチを試みた場合、&lt;code&gt;:name&lt;/code&gt; には &lt;code&gt;alice&lt;/code&gt; が、&lt;code&gt;:id&lt;/code&gt; には &lt;code&gt;1&lt;/code&gt; がマッチします。&lt;/p&gt;
 
-&lt;h4 id=&#34;構築:22&#34;&gt;構築&lt;/h4&gt;
+&lt;h4 id=&#34;構築:21&#34;&gt;構築&lt;/h4&gt;
 
 &lt;p&gt;まず構築に使用する文字列は &lt;strong&gt;レコード&lt;/strong&gt; と呼びます。レコードには文字列の他にパラメーター名を保持するスライスをフィールドとして持たせます。&lt;br /&gt;
 ダブル配列の構築では先頭から 1 文字ずつ見て構築していくのですが、Denco ではこのとき、&lt;code&gt;:&lt;/code&gt; という文字が現れた場合、次の &lt;code&gt;/&lt;/code&gt; の前、または終端まで読み込みます。&lt;br /&gt;
@@ -359,7 +359,7 @@ github の starts 的にはマーケティングに成功してるっぽいで�
 &lt;p&gt;レコードの終端まで処理が終わればレコードに対するデータを実際に保持するノードを生成し、そのノードにパラメーター名を保持するスライスをレコードからコピーします。&lt;br /&gt;
 このノードは専用の配列に格納され、ルックアップに成功した場合に対応するノードが取り出されますが、今回は割愛します。&lt;/p&gt;
 
-&lt;h4 id=&#34;ルックアップ:22&#34;&gt;ルックアップ&lt;/h4&gt;
+&lt;h4 id=&#34;ルックアップ:21&#34;&gt;ルックアップ&lt;/h4&gt;
 
 &lt;p&gt;まず、&lt;code&gt;/user/:name/:id&lt;/code&gt; というレコードは &lt;code&gt;/user/:/:&lt;/code&gt; として構築されています。これに対して &lt;code&gt;/user/alice/1&lt;/code&gt; という文字列のルックアップを試みると以下のようになります。&lt;/p&gt;
 
@@ -418,9 +418,9 @@ github の starts 的にはマーケティングに成功してるっぽいで�
 最後まで読んだので終了 → /user/alice/1 はマッチ、&amp;quot;name&amp;quot; パラメーターの値は &amp;quot;alice&amp;quot;、&amp;quot;id&amp;quot; パラメーターの値は &amp;quot;1&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;ワイルドカードパラメーター:22&#34;&gt;ワイルドカードパラメーター&lt;/h3&gt;
+&lt;h3 id=&#34;ワイルドカードパラメーター:21&#34;&gt;ワイルドカードパラメーター&lt;/h3&gt;
 
-&lt;h4 id=&#34;構築-1:22&#34;&gt;構築&lt;/h4&gt;
+&lt;h4 id=&#34;構築-1:21&#34;&gt;構築&lt;/h4&gt;
 
 &lt;p&gt;ほぼシングルパラメーターと同様ですが &lt;code&gt;*&lt;/code&gt; という文字が現れた場合、ワイルドカードパラメーターとして扱います。&lt;br /&gt;
 シングルパラメーターのときは次の &lt;code&gt;/&lt;/code&gt; の前、または終端まで読み込みますが、Denco のワイルドカードパラメーターの場合は常に終端まで読み込みます。&lt;br /&gt;
@@ -429,7 +429,7 @@ github の starts 的にはマーケティングに成功してるっぽいで�
 &lt;p&gt;また、参照時に使用する BASE/CHECK の配列の要素にはワイルドカードパラメーターであるというフラグを立てます。&lt;br /&gt;
 &lt;code&gt;/static/*filepath&lt;/code&gt; というレコードを構築すると &lt;code&gt;/static/*&lt;/code&gt; として構築されます。&lt;/p&gt;
 
-&lt;h4 id=&#34;ルックアップ-1:22&#34;&gt;ルックアップ&lt;/h4&gt;
+&lt;h4 id=&#34;ルックアップ-1:21&#34;&gt;ルックアップ&lt;/h4&gt;
 
 &lt;p&gt;シングルパラメーターでのルックアップとほぼ同様ですが、失敗した際にワイルドカードパラメーターの場合は常に終端まで読み込まれ、それがパラメーターの値になります。&lt;br /&gt;
 &lt;code&gt;/static/image/logo.png&lt;/code&gt; という文字列をルックアップすると以下のようになります。&lt;/p&gt;
@@ -459,7 +459,7 @@ github の starts 的にはマーケティングに成功してるっぽいで�
 &lt;p&gt;シングルパラメーターとワイルドカードパラメーターの優先順位は シングルパラメーター &amp;gt; ワイルドカードパラメーター です。&lt;br /&gt;
 例えば &lt;code&gt;/user/:name&lt;/code&gt; と &lt;code&gt;/user/*any&lt;/code&gt; というレコードがあった場合、&lt;code&gt;/user/alice&lt;/code&gt; は &lt;code&gt;/user/:name&lt;/code&gt; にマッチします。&lt;/p&gt;
 
-&lt;h2 id=&#34;まとめ:22&#34;&gt;まとめ&lt;/h2&gt;
+&lt;h2 id=&#34;まとめ:21&#34;&gt;まとめ&lt;/h2&gt;
 
 &lt;p&gt;Denco ではどのようにしてダブル配列を拡張してパラメーターを扱えるようにしているかをざっくりと解説しました。&lt;br /&gt;
 実際には今回解説した処理に加えてバックトラックによるパラメーターマッチをしています。バックトラックを行うことによって &lt;code&gt;/user/:name/:id&lt;/code&gt; と &lt;code&gt;/user/alice/:id&lt;/code&gt; のようなレコードを一緒に扱うことができるようになっています。&lt;br /&gt;
@@ -480,12 +480,12 @@ github の starts 的にはマーケティングに成功してるっぽいで�
 ですが、HttpRouter ではできないことが Denco にできたりしますしおすし。&lt;br /&gt;
 ベンチマークは &lt;a href=&#34;https://github.com/julienschmidt/go-http-routing-benchmark&#34;&gt;https://github.com/julienschmidt/go-http-routing-benchmark&lt;/a&gt; からどうぞ。&lt;/p&gt;
 
-&lt;h2 id=&#34;denco-とは:20&#34;&gt;Denco とは&lt;/h2&gt;
+&lt;h2 id=&#34;denco-とは:22&#34;&gt;Denco とは&lt;/h2&gt;
 
 &lt;p&gt;既に開発していた &lt;a href=&#34;https://github.com/naoina/kocha-urlrouter&#34;&gt;kocha-urlrouter&lt;/a&gt; のダブル配列実装をベースに色々と手を加えたものになります。&lt;br /&gt;
 速度を重視して開発してましたが、前述の通り HttpRouter に追いぬかれました。&lt;/p&gt;
 
-&lt;h2 id=&#34;使い方:20&#34;&gt;使い方&lt;/h2&gt;
+&lt;h2 id=&#34;使い方:22&#34;&gt;使い方&lt;/h2&gt;
 
 &lt;p&gt;下記のように使います。&lt;/p&gt;
 
@@ -560,7 +560,7 @@ func main() {
 
 &lt;p&gt;これはそもそも &lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;Kocha&lt;/a&gt; で使うために書き始めたものなので上記のようになっています。&lt;/p&gt;
 
-&lt;h2 id=&#34;vs-httprouter:20&#34;&gt;vs HttpRouter&lt;/h2&gt;
+&lt;h2 id=&#34;vs-httprouter:22&#34;&gt;vs HttpRouter&lt;/h2&gt;
 
 &lt;p&gt;再び最速の座を手に入れるべく頑張っていますが、現状では HttpRouter とほぼダブルスコアです。。。社会は厳しい！&lt;br /&gt;
 ですが、Denco にしかできないことがあります。&lt;br /&gt;
@@ -577,7 +577,7 @@ router.Lookup(&amp;quot;/user/naoina&amp;quot;) // &amp;quot;second&amp;quot;
 
 &lt;p&gt;まぁ、負け惜しみです。&lt;/p&gt;
 
-&lt;h2 id=&#34;まとめ:20&#34;&gt;まとめ&lt;/h2&gt;
+&lt;h2 id=&#34;まとめ:22&#34;&gt;まとめ&lt;/h2&gt;
 
 &lt;p&gt;私が調べた限りだと、ダブル配列を使った URL ルーターの実装というものがありませんでした。&lt;br /&gt;
 ですので、参考になるか分かりませんが、次回から Denco の技術解説みたいなのを書こうかなと考えています。&lt;/p&gt;
@@ -604,12 +604,12 @@ router.Lookup(&amp;quot;/user/naoina&amp;quot;) // &amp;quot;second&amp;quot;
 
 &lt;p&gt;です。&lt;/p&gt;
 
-&lt;h2 id=&#34;データベース周りのサポート:21&#34;&gt;データベース周りのサポート&lt;/h2&gt;
+&lt;h2 id=&#34;データベース周りのサポート:23&#34;&gt;データベース周りのサポート&lt;/h2&gt;
 
 &lt;p&gt;モデルのジェネレーターや ORM、マイグレーションのサポートを追加しました。&lt;br /&gt;
 何故サポートなのかというと、Kocha 固有の ORM を使わないといけないわけではなく、自由に ORM が選べるような実装になっているからです。&lt;/p&gt;
 
-&lt;h3 id=&#34;モデル:21&#34;&gt;モデル&lt;/h3&gt;
+&lt;h3 id=&#34;モデル:23&#34;&gt;モデル&lt;/h3&gt;
 
 &lt;p&gt;現状では &lt;a href=&#34;https://github.com/naoina/genmai&#34;&gt;genmai&lt;/a&gt; のみのサポートですが、簡単に他の ORM も追加できます。&lt;br /&gt;
 モデルのジェネレーターも特定の ORM のものを追加できるようにしていますが、まだ他の ORM 用の実装はしていません。気が向いたら &lt;a href=&#34;https://github.com/coopernurse/gorp&#34;&gt;gorp&lt;/a&gt; 用ぐらいは実装すると思います。&lt;/p&gt;
@@ -631,7 +631,7 @@ router.Lookup(&amp;quot;/user/naoina&amp;quot;) // &amp;quot;second&amp;quot;
 &lt;p&gt;というような struct が書かれたファイルが生成されます。ついでに ORM 固有のインスタンスを取得するヘルパーが書かれたファイルも生成されます。&lt;br /&gt;
 まぁここら辺に関してはドキュメント &lt;a href=&#34;http://naoina.github.io/kocha/docs/model.html&#34;&gt;http://naoina.github.io/kocha/docs/model.html&lt;/a&gt; にあっさりですが書いています。&lt;/p&gt;
 
-&lt;h3 id=&#34;マイグレーション:21&#34;&gt;マイグレーション&lt;/h3&gt;
+&lt;h3 id=&#34;マイグレーション:23&#34;&gt;マイグレーション&lt;/h3&gt;
 
 &lt;p&gt;現時点で私が知っているマイグレーションツールといえば &lt;a href=&#34;https://bitbucket.org/liamstask/goose&#34;&gt;goose&lt;/a&gt; がありますが、ORM を使うときのデータベースの設定と、マイグレーションツールの設定が中身は同じなのに別々に管理しないといけないのが大変好ましくないと考えています。&lt;br /&gt;
 ということで、フレームワーク側でマイグレーションをサポートしました。Rails みたいですね。&lt;/p&gt;
@@ -651,7 +651,7 @@ router.Lookup(&amp;quot;/user/naoina&amp;quot;) // &amp;quot;second&amp;quot;
 
 &lt;p&gt;とすれば直近の 1 つのマイグレーションに対してロールバックする処理が走ります。まぁ実際の処理は全部ユーザー側で書かないといけないんですが。&lt;/p&gt;
 
-&lt;h2 id=&#34;環境ごとの設定の廃止:21&#34;&gt;環境ごとの設定の廃止&lt;/h2&gt;
+&lt;h2 id=&#34;環境ごとの設定の廃止:23&#34;&gt;環境ごとの設定の廃止&lt;/h2&gt;
 
 &lt;p&gt;今まではアプリケーションのトップレベルディレクトリに &lt;code&gt;dev.go&lt;/code&gt; や &lt;code&gt;prod.go&lt;/code&gt;、&lt;code&gt;config/dev.go&lt;/code&gt; や &lt;code&gt;config/prod.go&lt;/code&gt; といった、いわゆる環境ごとの設定セットがありました。&lt;br /&gt;
 今回の v0.3 からこれを廃止して、設定は基本的に環境変数によって実行時に指定するように変更しました。&lt;/p&gt;
@@ -663,7 +663,7 @@ router.Lookup(&amp;quot;/user/naoina&amp;quot;) // &amp;quot;second&amp;quot;
 この変更は &lt;a href=&#34;http://12factor.net/&#34;&gt;The Twelve-Factor App&lt;/a&gt; (&lt;a href=&#34;http://twelve-factor-ja.herokuapp.com/&#34;&gt;日本語訳&lt;/a&gt;) に影響されました。これの &lt;a href=&#34;http://12factor.net/config&#34;&gt;config&lt;/a&gt; (&lt;a href=&#34;http://twelve-factor-ja.herokuapp.com/config&#34;&gt;日本語訳&lt;/a&gt;) に沿った形にしたということになります。&lt;br /&gt;
 余談ですが、WEB 系開発者はすべからく The Twelve-Factor App を読むべきだと思います。&lt;/p&gt;
 
-&lt;h2 id=&#34;今後の予定:21&#34;&gt;今後の予定&lt;/h2&gt;
+&lt;h2 id=&#34;今後の予定:23&#34;&gt;今後の予定&lt;/h2&gt;
 
 &lt;p&gt;ある程度なにか WEB サービスが作れそうなぐらいにはなってきたかなという感じです。&lt;br /&gt;
 ですが、まだフォーム周りはまともに手を付けてないので、ここを何とかしたら自分自身でドッグフードを食べながらやっていこうかと考えています。&lt;/p&gt;
@@ -712,35 +712,35 @@ Golang とは Go言語 のことで、Go だとググラビリティが低すぎ
 実際 WEB 開発に於いてのアドバンテージは無いに等しいし、静的型付けが必要であれば、Java があり、Scala があり、Play Framework がある。Golang である必要が無い。&lt;br /&gt;
 ではなぜ私は Golang の WEB アプリケーションフレームワークを作っているのだろうか。もちろん明確な理由がいくつかある。&lt;/p&gt;
 
-&lt;h2 id=&#34;速い:26&#34;&gt;速い&lt;/h2&gt;
+&lt;h2 id=&#34;速い:25&#34;&gt;速い&lt;/h2&gt;
 
 &lt;p&gt;Golang はバイナリにコンパイルされるため実行速度が速い。単純に考えて、仮に Rails や Django の 10 倍の速度が出るとすると、10 台のサーバーが 1 台にできる。&lt;br /&gt;
 もちろん実際にはネットワークなども絡むためそう単純ではないのだが、それでもサーバーの台数は減らせるものと思われる。&lt;/p&gt;
 
-&lt;h2 id=&#34;適度に固く-書きやすく読みやすい:26&#34;&gt;適度に固く、書きやすく読みやすい&lt;/h2&gt;
+&lt;h2 id=&#34;適度に固く-書きやすく読みやすい:25&#34;&gt;適度に固く、書きやすく読みやすい&lt;/h2&gt;
 
 &lt;p&gt;私見だが、Golang は C 言語以上 Python 未満という位置づけの言語のような印象である。&lt;br /&gt;
 型システムがあるためそれなりに固くできるが、動的型付け言語のような書きやすさや読みやすさもそれなりにある。要はバランスが取れている。&lt;/p&gt;
 
-&lt;h2 id=&#34;バイナリにコンパイルされる:26&#34;&gt;バイナリにコンパイルされる&lt;/h2&gt;
+&lt;h2 id=&#34;バイナリにコンパイルされる:25&#34;&gt;バイナリにコンパイルされる&lt;/h2&gt;
 
 &lt;p&gt;これまでは Golang 自体の利点であったが、これが Kocha を開発している一番の理由である。&lt;br /&gt;
 ではなぜバイナリにコンパイルされることが嬉しいのかであるが、理由は 2 つある。&lt;/p&gt;
 
-&lt;h3 id=&#34;1-デプロイの容易さ:26&#34;&gt;1. デプロイの容易さ&lt;/h3&gt;
+&lt;h3 id=&#34;1-デプロイの容易さ:25&#34;&gt;1. デプロイの容易さ&lt;/h3&gt;
 
 &lt;p&gt;Golang は動作に必要なライブラリは全てコンパイル時に静的リンクされるため、サーバー側に依存ライブラリを入れる必要が無くなる。&lt;br /&gt;
 また Kocha ではオールインワンバイナリと呼んでいるが、テンプレートファイルや静的ファイルを全て 1 つのバイナリにまとめる機能がある。&lt;br /&gt;
 オールインワンバイナリの場合、コンパイルされた 1 つの実行ファイルのみをデプロイすればいいためデプロイツールを使う必要は無く、単に rsync や scp で転送すれば良いだけになる。&lt;br /&gt;
 余談であるが、Kocha は Graceful restart が可能なので、サービスを停止することなくデプロイが可能である。&lt;/p&gt;
 
-&lt;h3 id=&#34;2-オンプレミスの想定:26&#34;&gt;2. オンプレミスの想定&lt;/h3&gt;
+&lt;h3 id=&#34;2-オンプレミスの想定:25&#34;&gt;2. オンプレミスの想定&lt;/h3&gt;
 
 &lt;p&gt;例えば自社のとある ASP のサービスを Rails で開発、運用しているとしよう。ここでとある顧客にオンプレミスで提供することになった。&lt;br /&gt;
 その場合、オンプレミスなのでソースコードがそのまま顧客のサーバーに置かれるということになる。&lt;br /&gt;
 もちろん契約書などで縛るのだろうが、実際にソースコードの閲覧、変更などが可能であるため、技術、ひいては資産の流出になり得るのではないかということを思うわけである。&lt;/p&gt;
 
-&lt;h2 id=&#34;まとめ:26&#34;&gt;まとめ&lt;/h2&gt;
+&lt;h2 id=&#34;まとめ:25&#34;&gt;まとめ&lt;/h2&gt;
 
 &lt;p&gt;以上が、私が Golang の WEB アプリケーションフレームワークを開発する理由である。&lt;br /&gt;
 ただ、私は Golang に魅了された 1 人であり、結局のところ Golang で WEB 開発をしたいと思っているのが最大の理由であることも否定できない。&lt;/p&gt;
@@ -906,20 +906,20 @@ Kocha で使う用にひと通り実装したものを別ライブラリとし�
 Golang の標準ライブラリの &lt;code&gt;database/sql&lt;/code&gt; と同じようなコンパイルタイムプラグインの方式を取っているので、色んな URL ルーターの実装ができ、用途によって切り替えるとかできる。&lt;br /&gt;
 現在の実装は ダブル配列 と 正規表現 の 2 つがある。ダブル配列は構築は遅いが lookup が速い。ベンチマークを取ると分かるが、私の環境だと正規表現実装と比べて、ルート数が 100 の場合は約 17 倍、ルート数 700 の場合だと約 110 倍速い。&lt;/p&gt;
 
-&lt;h2 id=&#34;golang-界隈の-web-フレームワークにおける-url-ルーターの状況:32&#34;&gt;Golang 界隈の WEB フレームワークにおける URL ルーターの状況&lt;/h2&gt;
+&lt;h2 id=&#34;golang-界隈の-web-フレームワークにおける-url-ルーターの状況:31&#34;&gt;Golang 界隈の WEB フレームワークにおける URL ルーターの状況&lt;/h2&gt;
 
 &lt;p&gt;Golang で作られている WEB フレームワークには &lt;a href=&#34;https://github.com/robfig/revel&#34;&gt;Revel&lt;/a&gt;、&lt;a href=&#34;https://github.com/astaxie/beego/&#34;&gt;beego&lt;/a&gt;、&lt;a href=&#34;https://github.com/codegangsta/martini&#34;&gt;Martini&lt;/a&gt;、URL ルーターは &lt;a href=&#34;https://github.com/gorilla/mux&#34;&gt;gorilla/mux&lt;/a&gt; などがありますが、これらの URL ルーターの実装は&lt;del&gt;全て、ループを回して正規表現などでマッチングする方法を取っています&lt;/del&gt;(勘違いしてましたが、Revel は Trie により実装でした)。つまりルートの数が増えれば増えるほど遅くなります。&lt;br /&gt;
 これらのフレームワークが何故この方法を取っているのかは知りませんが、実装が簡単なのと、URL ルーターがまだそこまでパフォーマンスに与える影響がない（他の部分の方が重い）からですかね。。。&lt;/p&gt;
 
-&lt;h2 id=&#34;閑話休題:32&#34;&gt;閑話休題&lt;/h2&gt;
+&lt;h2 id=&#34;閑話休題:31&#34;&gt;閑話休題&lt;/h2&gt;
 
 &lt;p&gt;これ作るために色々調べてて、割と Trie というか、そのへんに興味出てきたので、今後はダブル配列の末尾文字列圧縮や三分探索木、 LOUDS、ウェーブレット行列での実装とかも入れたいですね。&lt;/p&gt;
 
-&lt;h3 id=&#34;追記1:32&#34;&gt;追記1&lt;/h3&gt;
+&lt;h3 id=&#34;追記1:31&#34;&gt;追記1&lt;/h3&gt;
 
 &lt;p&gt;三分探索木の実装を入れたらダブル配列より速くなったしにたい。&lt;/p&gt;
 
-&lt;h3 id=&#34;追記2:32&#34;&gt;追記2&lt;/h3&gt;
+&lt;h3 id=&#34;追記2:31&#34;&gt;追記2&lt;/h3&gt;
 
 &lt;p&gt;ダブル配列速くしたので、速度はダブル配列の方がちょっとだけ速くなった。メモリ効率はダブル配列の方が約 2 倍から 3 倍程度良いが、構築は三分探索木の方が約 2 倍速い。&lt;br /&gt;
 というか、URL ルーターとして使う文には何万件とか入れないだろうし、メモリプロファイルとった限りでは三分探索木でも 700 件で 3MB ぐらいしか使ってないし、ダブル配列を使う意義とは。。。&lt;/p&gt;

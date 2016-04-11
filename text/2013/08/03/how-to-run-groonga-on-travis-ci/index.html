@@ -58,7 +58,7 @@
 pyroonga でも Travis-CI を使おうと思ったのですがそのままでは動かなかったので四苦八苦しながら動かしました。<br />
 最終的な <code>.travis.yml</code> は <a href="https://github.com/naoina/pyroonga/blob/develop/.travis.yml">https://github.com/naoina/pyroonga/blob/develop/.travis.yml</a> ですが、これに至るまでにハマったところを書いていきます。</p>
 
-<h2 id="travis-ci-ではランタイムのバージョンを複数指定しても同じvm上で並列にテストが走る:44">Travis-CI ではランタイムのバージョンを複数指定しても同じVM上で並列にテストが走る</h2>
+<h2 id="travis-ci-ではランタイムのバージョンを複数指定しても同じvm上で並列にテストが走る:43">Travis-CI ではランタイムのバージョンを複数指定しても同じVM上で並列にテストが走る</h2>
 
 <p>初めにハマったのがこれです。Travis-CI を使うときは</p>
 
@@ -77,7 +77,7 @@ pyroonga の場合はテストケースごとに 「groonga データベース�
 <p>対策としては、テーブル名を全てユニークにするなどしました。<br />
 また、groonga データベースの作成と groonga サーバーの起動は予め1回のみ行なってテストを走らせるという方式に変更しました。</p>
 
-<h2 id="groonga-が起動しない:44">Groonga が起動しない</h2>
+<h2 id="groonga-が起動しない:43">Groonga が起動しない</h2>
 
 <p>以下のように .travis.yml を書いていたら何故か groonga が起動しないという現象がありました。</p>
 

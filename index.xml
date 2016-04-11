@@ -6,13 +6,13 @@
     <description>Recent content on kuune.org</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Apr 2016 11:27:02 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 11 Apr 2016 23:48:02 +0900</lastBuildDate>
     <atom:link href="http://kuune.org/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>家庭用シュレッダーのススメ</title>
       <link>http://kuune.org/text/2016/04/11/shredder/</link>
-      <pubDate>Mon, 11 Apr 2016 11:27:02 +0900</pubDate>
+      <pubDate>Mon, 11 Apr 2016 23:48:02 +0900</pubDate>
       
       <guid>http://kuune.org/text/2016/04/11/shredder/</guid>
       <description>
@@ -637,27 +637,27 @@ script:
 &lt;p&gt;前のバージョンとは非互換になってます。というか v1.0 まではバンバン非互換の変更入れていくつもりなので、まともに使うのはオススメしません。&lt;br /&gt;
 ですが、もしそれでも Kocha を使いたいという場合は、人柱になって最新のバージョンを追いつつ使うか、&lt;a href=&#34;http://labix.org/gopkg.in&#34;&gt;gopkg.in&lt;/a&gt; を使ったりしてバージョンを固定して使うことをおすすめします。&lt;/p&gt;
 
-&lt;h2 id=&#34;v0-5-での変更点:15&#34;&gt;v0.5 での変更点&lt;/h2&gt;
+&lt;h2 id=&#34;v0-5-での変更点:16&#34;&gt;v0.5 での変更点&lt;/h2&gt;
 
-&lt;h3 id=&#34;url-ルーターを-denco-にしました:15&#34;&gt;URL ルーターを denco にしました&lt;/h3&gt;
+&lt;h3 id=&#34;url-ルーターを-denco-にしました:16&#34;&gt;URL ルーターを denco にしました&lt;/h3&gt;
 
 &lt;p&gt;以前までの URL ルーターを別に切り出して改良した &lt;a href=&#34;https://github.com/naoina/denco&#34;&gt;Denco&lt;/a&gt; を使うようにしました。&lt;br /&gt;
 これにより URL ルーティングのパフォーマンスが上がり、メモリ使用量も大幅に改善されています。&lt;/p&gt;
 
-&lt;h3 id=&#34;net-http-互換として使えるようになりました:15&#34;&gt;net/http 互換として使えるようになりました&lt;/h3&gt;
+&lt;h3 id=&#34;net-http-互換として使えるようになりました:16&#34;&gt;net/http 互換として使えるようになりました&lt;/h3&gt;
 
 &lt;p&gt;今までは Kocha で作ったものは Kocha でしか動かせませんでしたが、内外的に大幅に変更を加えて &lt;a href=&#34;http://golang.org/pkg/net/http/#Handler&#34;&gt;http.Handler&lt;/a&gt; インターフェースを実装しました。&lt;br /&gt;
 これによって他の &lt;code&gt;net/http&lt;/code&gt; 用ライブラリ（ミドルウェアとして処理を挟むものなど）と組み合わせて使えるようになりました。&lt;br /&gt;
 これは &lt;a href=&#34;http://naoina.github.io/kocha/docs/advanced.html&#34;&gt;http://naoina.github.io/kocha/docs/advanced.html&lt;/a&gt; に軽く書いています。&lt;br /&gt;
 なお v0.5 における非互換性は大体この変更のせいです。&lt;/p&gt;
 
-&lt;h3 id=&#34;go-1-3-以降のみをサポートします:15&#34;&gt;Go 1.3 以降のみをサポートします&lt;/h3&gt;
+&lt;h3 id=&#34;go-1-3-以降のみをサポートします:16&#34;&gt;Go 1.3 以降のみをサポートします&lt;/h3&gt;
 
 &lt;p&gt;golang はどんどん開発が進んでいるので敢えて古いものを使う必要は今のところ無いので新しいもの使っていきましょう。&lt;/p&gt;
 
 &lt;p&gt;というのは建前で、実際のところは Kocha の graceful restart の機能を &lt;a href=&#34;https://github.com/naoina/miyabi&#34;&gt;miyabi&lt;/a&gt; というライブラリとして再実装し直して Kocha で使っているのですが、この miyabi が Go 1.3 で &lt;code&gt;net/http&lt;/code&gt; に導入された機能を使っているからです。&lt;/p&gt;
 
-&lt;h2 id=&#34;今後の予定:15&#34;&gt;今後の予定&lt;/h2&gt;
+&lt;h2 id=&#34;今後の予定:16&#34;&gt;今後の予定&lt;/h2&gt;
 
 &lt;p&gt;ログ周りの再設計をします。後は session による flash 機構の実装をしようと思います。&lt;br /&gt;
 そこまでできたら &lt;a href=&#34;http://vocanew.kuune.org&#34;&gt;ぼかにゅー&lt;/a&gt; や、この plog.la を Kocha で実装して、実際に使う際に必要な機能やデバッグをしていこうと考えています。&lt;/p&gt;

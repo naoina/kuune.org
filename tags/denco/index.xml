@@ -21,7 +21,7 @@
 その前にひとつ、お知らせがあります。Denco はこのたび URL ルーターから URL ルーター兼 HTTP request multiplexer となりました。つまり、&lt;a href=&#34;http://golang.org/pkg/net/http/#ServeMux&#34;&gt;http.ServeMux&lt;/a&gt; の代わりとして使えるようになりました。&lt;br /&gt;
 詳しくは &lt;a href=&#34;https://github.com/naoina/denco/blob/master/README.md&#34;&gt;README&lt;/a&gt; を参照してください。&lt;/p&gt;
 
-&lt;h2 id=&#34;基本戦略:22&#34;&gt;基本戦略&lt;/h2&gt;
+&lt;h2 id=&#34;基本戦略:21&#34;&gt;基本戦略&lt;/h2&gt;
 
 &lt;p&gt;まず始めに、Denco のルーティングは静的パス（&lt;code&gt;/user/alice&lt;/code&gt; みたいなの）とパラメーター付きパス（&lt;code&gt;/user/:name&lt;/code&gt; みたいなの）で使用するアルゴリズムを変えています。&lt;br /&gt;
 静的パスの場合は Go の map を使い、パラメーター付きパスの場合はパラメーターを扱えるように拡張したダブル配列を使います。これは、静的パスの場合、ダブル配列で処理するより Go の map を使ったほうが速いからです。&lt;br /&gt;
@@ -31,17 +31,17 @@
 詳しい概要については &lt;a href=&#34;http://nanika.osonae.com/DArray/dary.html&#34;&gt;http://nanika.osonae.com/DArray/dary.html&lt;/a&gt; や &lt;a href=&#34;http://d.hatena.ne.jp/takeda25/20120219/1329634865&#34;&gt;http://d.hatena.ne.jp/takeda25/20120219/1329634865&lt;/a&gt; を参照してください。&lt;br /&gt;
 以下からはダブル配列を理解している前提での解説になります。&lt;/p&gt;
 
-&lt;h2 id=&#34;拡張ダブル配列:22&#34;&gt;拡張ダブル配列&lt;/h2&gt;
+&lt;h2 id=&#34;拡張ダブル配列:21&#34;&gt;拡張ダブル配列&lt;/h2&gt;
 
 &lt;p&gt;さて、ダブル配列は速い Trie の実装ではありますが、静的な文字列に対するものなのでパラメーター付きパスのような特定の文字に意味を持たせるということがそのままではできません。&lt;br /&gt;
 そこで、Denco では構築時およびルックアップ時にメタ文字である &lt;code&gt;:&lt;/code&gt; と &lt;code&gt;*&lt;/code&gt; を特別扱いするようにダブル配列を拡張しています。&lt;/p&gt;
 
-&lt;h3 id=&#34;シングルパラメーター:22&#34;&gt;シングルパラメーター&lt;/h3&gt;
+&lt;h3 id=&#34;シングルパラメーター:21&#34;&gt;シングルパラメーター&lt;/h3&gt;
 
 &lt;p&gt;まず Denco の仕様として &lt;code&gt;/user/:name/:id&lt;/code&gt; などの &lt;code&gt;:name&lt;/code&gt; や &lt;code&gt;:id&lt;/code&gt; の部分は任意の文字列にマッチします。マッチする長さは次の &lt;code&gt;/&lt;/code&gt; が現れるまでか、終端までです。&lt;br /&gt;
 例えば &lt;code&gt;/user/:name/:id&lt;/code&gt; に対して &lt;code&gt;/user/alice/1&lt;/code&gt; でマッチを試みた場合、&lt;code&gt;:name&lt;/code&gt; には &lt;code&gt;alice&lt;/code&gt; が、&lt;code&gt;:id&lt;/code&gt; には &lt;code&gt;1&lt;/code&gt; がマッチします。&lt;/p&gt;
 
-&lt;h4 id=&#34;構築:22&#34;&gt;構築&lt;/h4&gt;
+&lt;h4 id=&#34;構築:21&#34;&gt;構築&lt;/h4&gt;
 
 &lt;p&gt;まず構築に使用する文字列は &lt;strong&gt;レコード&lt;/strong&gt; と呼びます。レコードには文字列の他にパラメーター名を保持するスライスをフィールドとして持たせます。&lt;br /&gt;
 ダブル配列の構築では先頭から 1 文字ずつ見て構築していくのですが、Denco ではこのとき、&lt;code&gt;:&lt;/code&gt; という文字が現れた場合、次の &lt;code&gt;/&lt;/code&gt; の前、または終端まで読み込みます。&lt;br /&gt;
@@ -55,7 +55,7 @@
 &lt;p&gt;レコードの終端まで処理が終わればレコードに対するデータを実際に保持するノードを生成し、そのノードにパラメーター名を保持するスライスをレコードからコピーします。&lt;br /&gt;
 このノードは専用の配列に格納され、ルックアップに成功した場合に対応するノードが取り出されますが、今回は割愛します。&lt;/p&gt;
 
-&lt;h4 id=&#34;ルックアップ:22&#34;&gt;ルックアップ&lt;/h4&gt;
+&lt;h4 id=&#34;ルックアップ:21&#34;&gt;ルックアップ&lt;/h4&gt;
 
 &lt;p&gt;まず、&lt;code&gt;/user/:name/:id&lt;/code&gt; というレコードは &lt;code&gt;/user/:/:&lt;/code&gt; として構築されています。これに対して &lt;code&gt;/user/alice/1&lt;/code&gt; という文字列のルックアップを試みると以下のようになります。&lt;/p&gt;
 
@@ -114,9 +114,9 @@
 最後まで読んだので終了 → /user/alice/1 はマッチ、&amp;quot;name&amp;quot; パラメーターの値は &amp;quot;alice&amp;quot;、&amp;quot;id&amp;quot; パラメーターの値は &amp;quot;1&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;ワイルドカードパラメーター:22&#34;&gt;ワイルドカードパラメーター&lt;/h3&gt;
+&lt;h3 id=&#34;ワイルドカードパラメーター:21&#34;&gt;ワイルドカードパラメーター&lt;/h3&gt;
 
-&lt;h4 id=&#34;構築-1:22&#34;&gt;構築&lt;/h4&gt;
+&lt;h4 id=&#34;構築-1:21&#34;&gt;構築&lt;/h4&gt;
 
 &lt;p&gt;ほぼシングルパラメーターと同様ですが &lt;code&gt;*&lt;/code&gt; という文字が現れた場合、ワイルドカードパラメーターとして扱います。&lt;br /&gt;
 シングルパラメーターのときは次の &lt;code&gt;/&lt;/code&gt; の前、または終端まで読み込みますが、Denco のワイルドカードパラメーターの場合は常に終端まで読み込みます。&lt;br /&gt;
@@ -125,7 +125,7 @@
 &lt;p&gt;また、参照時に使用する BASE/CHECK の配列の要素にはワイルドカードパラメーターであるというフラグを立てます。&lt;br /&gt;
 &lt;code&gt;/static/*filepath&lt;/code&gt; というレコードを構築すると &lt;code&gt;/static/*&lt;/code&gt; として構築されます。&lt;/p&gt;
 
-&lt;h4 id=&#34;ルックアップ-1:22&#34;&gt;ルックアップ&lt;/h4&gt;
+&lt;h4 id=&#34;ルックアップ-1:21&#34;&gt;ルックアップ&lt;/h4&gt;
 
 &lt;p&gt;シングルパラメーターでのルックアップとほぼ同様ですが、失敗した際にワイルドカードパラメーターの場合は常に終端まで読み込まれ、それがパラメーターの値になります。&lt;br /&gt;
 &lt;code&gt;/static/image/logo.png&lt;/code&gt; という文字列をルックアップすると以下のようになります。&lt;/p&gt;
@@ -155,7 +155,7 @@
 &lt;p&gt;シングルパラメーターとワイルドカードパラメーターの優先順位は シングルパラメーター &amp;gt; ワイルドカードパラメーター です。&lt;br /&gt;
 例えば &lt;code&gt;/user/:name&lt;/code&gt; と &lt;code&gt;/user/*any&lt;/code&gt; というレコードがあった場合、&lt;code&gt;/user/alice&lt;/code&gt; は &lt;code&gt;/user/:name&lt;/code&gt; にマッチします。&lt;/p&gt;
 
-&lt;h2 id=&#34;まとめ:22&#34;&gt;まとめ&lt;/h2&gt;
+&lt;h2 id=&#34;まとめ:21&#34;&gt;まとめ&lt;/h2&gt;
 
 &lt;p&gt;Denco ではどのようにしてダブル配列を拡張してパラメーターを扱えるようにしているかをざっくりと解説しました。&lt;br /&gt;
 実際には今回解説した処理に加えてバックトラックによるパラメーターマッチをしています。バックトラックを行うことによって &lt;code&gt;/user/:name/:id&lt;/code&gt; と &lt;code&gt;/user/alice/:id&lt;/code&gt; のようなレコードを一緒に扱うことができるようになっています。&lt;br /&gt;
@@ -176,12 +176,12 @@
 ですが、HttpRouter ではできないことが Denco にできたりしますしおすし。&lt;br /&gt;
 ベンチマークは &lt;a href=&#34;https://github.com/julienschmidt/go-http-routing-benchmark&#34;&gt;https://github.com/julienschmidt/go-http-routing-benchmark&lt;/a&gt; からどうぞ。&lt;/p&gt;
 
-&lt;h2 id=&#34;denco-とは:20&#34;&gt;Denco とは&lt;/h2&gt;
+&lt;h2 id=&#34;denco-とは:22&#34;&gt;Denco とは&lt;/h2&gt;
 
 &lt;p&gt;既に開発していた &lt;a href=&#34;https://github.com/naoina/kocha-urlrouter&#34;&gt;kocha-urlrouter&lt;/a&gt; のダブル配列実装をベースに色々と手を加えたものになります。&lt;br /&gt;
 速度を重視して開発してましたが、前述の通り HttpRouter に追いぬかれました。&lt;/p&gt;
 
-&lt;h2 id=&#34;使い方:20&#34;&gt;使い方&lt;/h2&gt;
+&lt;h2 id=&#34;使い方:22&#34;&gt;使い方&lt;/h2&gt;
 
 &lt;p&gt;下記のように使います。&lt;/p&gt;
 
@@ -256,7 +256,7 @@ func main() {
 
 &lt;p&gt;これはそもそも &lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;Kocha&lt;/a&gt; で使うために書き始めたものなので上記のようになっています。&lt;/p&gt;
 
-&lt;h2 id=&#34;vs-httprouter:20&#34;&gt;vs HttpRouter&lt;/h2&gt;
+&lt;h2 id=&#34;vs-httprouter:22&#34;&gt;vs HttpRouter&lt;/h2&gt;
 
 &lt;p&gt;再び最速の座を手に入れるべく頑張っていますが、現状では HttpRouter とほぼダブルスコアです。。。社会は厳しい！&lt;br /&gt;
 ですが、Denco にしかできないことがあります。&lt;br /&gt;
@@ -273,7 +273,7 @@ router.Lookup(&amp;quot;/user/naoina&amp;quot;) // &amp;quot;second&amp;quot;
 
 &lt;p&gt;まぁ、負け惜しみです。&lt;/p&gt;
 
-&lt;h2 id=&#34;まとめ:20&#34;&gt;まとめ&lt;/h2&gt;
+&lt;h2 id=&#34;まとめ:22&#34;&gt;まとめ&lt;/h2&gt;
 
 &lt;p&gt;私が調べた限りだと、ダブル配列を使った URL ルーターの実装というものがありませんでした。&lt;br /&gt;
 ですので、参考になるか分かりませんが、次回から Denco の技術解説みたいなのを書こうかなと考えています。&lt;/p&gt;

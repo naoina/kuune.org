@@ -57,27 +57,27 @@
 <p>前のバージョンとは非互換になってます。というか v1.0 まではバンバン非互換の変更入れていくつもりなので、まともに使うのはオススメしません。<br />
 ですが、もしそれでも Kocha を使いたいという場合は、人柱になって最新のバージョンを追いつつ使うか、<a href="http://labix.org/gopkg.in">gopkg.in</a> を使ったりしてバージョンを固定して使うことをおすすめします。</p>
 
-<h2 id="v0-5-での変更点:15">v0.5 での変更点</h2>
+<h2 id="v0-5-での変更点:16">v0.5 での変更点</h2>
 
-<h3 id="url-ルーターを-denco-にしました:15">URL ルーターを denco にしました</h3>
+<h3 id="url-ルーターを-denco-にしました:16">URL ルーターを denco にしました</h3>
 
 <p>以前までの URL ルーターを別に切り出して改良した <a href="https://github.com/naoina/denco">Denco</a> を使うようにしました。<br />
 これにより URL ルーティングのパフォーマンスが上がり、メモリ使用量も大幅に改善されています。</p>
 
-<h3 id="net-http-互換として使えるようになりました:15">net/http 互換として使えるようになりました</h3>
+<h3 id="net-http-互換として使えるようになりました:16">net/http 互換として使えるようになりました</h3>
 
 <p>今までは Kocha で作ったものは Kocha でしか動かせませんでしたが、内外的に大幅に変更を加えて <a href="http://golang.org/pkg/net/http/#Handler">http.Handler</a> インターフェースを実装しました。<br />
 これによって他の <code>net/http</code> 用ライブラリ（ミドルウェアとして処理を挟むものなど）と組み合わせて使えるようになりました。<br />
 これは <a href="http://naoina.github.io/kocha/docs/advanced.html">http://naoina.github.io/kocha/docs/advanced.html</a> に軽く書いています。<br />
 なお v0.5 における非互換性は大体この変更のせいです。</p>
 
-<h3 id="go-1-3-以降のみをサポートします:15">Go 1.3 以降のみをサポートします</h3>
+<h3 id="go-1-3-以降のみをサポートします:16">Go 1.3 以降のみをサポートします</h3>
 
 <p>golang はどんどん開発が進んでいるので敢えて古いものを使う必要は今のところ無いので新しいもの使っていきましょう。</p>
 
 <p>というのは建前で、実際のところは Kocha の graceful restart の機能を <a href="https://github.com/naoina/miyabi">miyabi</a> というライブラリとして再実装し直して Kocha で使っているのですが、この miyabi が Go 1.3 で <code>net/http</code> に導入された機能を使っているからです。</p>
 
-<h2 id="今後の予定:15">今後の予定</h2>
+<h2 id="今後の予定:16">今後の予定</h2>
 
 <p>ログ周りの再設計をします。後は session による flash 機構の実装をしようと思います。<br />
 そこまでできたら <a href="http://vocanew.kuune.org">ぼかにゅー</a> や、この plog.la を Kocha で実装して、実際に使う際に必要な機能やデバッグをしていこうと考えています。</p>
