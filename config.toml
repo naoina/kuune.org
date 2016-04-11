@@ -10,5 +10,8 @@ canonifyurls = true
 [permalinks]
   text = "/:section/:year/:month/:day/:filename/"
 
+[taxonomies]
+tag = "tags"
+
 [blackfriday]
   extensions = ["hardLineBreak"]
