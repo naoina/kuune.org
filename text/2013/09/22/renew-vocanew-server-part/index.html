@@ -56,12 +56,12 @@
 
 <p>今回のリニューアルの動機は色々ありますが、一番は <a href="http://robfig.github.io/revel/">Revel</a> を使ってみたかったからです。Powered by Golangです。</p>
 
-<h2 id="開発環境:41">開発環境</h2>
+<h2 id="開発環境:40">開発環境</h2>
 
 <p>今回の開発環境は Revel + Grunt + Bower で行いました。多少手を加えてますが <a href="https://github.com/naoina/revel-boilerplate">https://github.com/naoina/revel-boilerplate</a> と同じような構成になっています。<br />
 軽く説明すると、CSSはSCSSで書いてから <a href="https://github.com/ai/autoprefixer">autoprefixer</a> を通ってコンパイル後にminify、JavaScriptはRequireJSを使って <a href="https://github.com/jrburke/almond">almond</a> でRequireJSも含めて1ファイルにしてminifyします。これらはGruntタスクで行うので自動です。</p>
 
-<h2 id="revelについて:41">Revelについて</h2>
+<h2 id="revelについて:40">Revelについて</h2>
 
 <p>RevelはGo言語で書かれているWAFです。<br />
 フルスタックを謳っていますが、現在はまだフルスタックと言えるような感じではないので色々と自前で実装するかライブラリを引っ張ってくる必要があります。例えば、ORMやメール送信の処理などは現時点では無いです。<br />
@@ -69,11 +69,11 @@
 まぁgorpはORM-ishなので完全なORMではないですが。。。（SELECT文は生のSQLで書く必要があったりする）<br />
 また、RSSフィードの生成には <a href="https://github.com/gorilla/feeds">gorilla/feeds</a> を使っています。</p>
 
-<h2 id="運用構成:41">運用構成</h2>
+<h2 id="運用構成:40">運用構成</h2>
 
 <p>よくある構成の、nginxからリバースプロキシでAppサーバーに繋ぐという構成です。キャッシュサーバーは今のところありません。</p>
 
-<h2 id="所感:41">所感</h2>
+<h2 id="所感:40">所感</h2>
 
 <p>現在はまだGo言語とRevelを使ってウェブサイトを作るのはオススメしません。DjangoやRailsなどの方が当然ですが断然便利です。<br />
 具体的には認証機構（Djangoのdjango.contrib.auth、Railsのdevise的なもの）が無いのと、Revelは標準でGo言語の <code>text/template</code> を使いますが、これはレイアウト的な機能が無いので使いづらいというのが大きいです。<br />
@@ -87,7 +87,9 @@
 <footer class="tags-footer">
   <span>
     
-      tag:
+      
+        tag:
+      
     
   </span>
   <ul class="tags">
