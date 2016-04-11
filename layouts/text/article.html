@@ -24,10 +24,12 @@
 
 <footer class="tags-footer">
   <span>
-    {{ if len .Params.tags | eq 1 }}
-      tag:
-    {{ else }}
-      tags:
+    {{ if .Params.tags }}
+      {{ if len .Params.tags | eq 1 }}
+        tag:
+      {{ else }}
+        tags:
+      {{ end }}
     {{ end }}
   </span>
   <ul class="tags">
