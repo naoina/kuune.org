@@ -54,22 +54,22 @@
 
 <p>最近 <a href="https://quip.com/Ha0bAfeh1ZVY">golang web frameworks benchmark 02/2015</a> という記事が出回っていて大変遺憾なので、件の記事がいかにゴミかをつらつらと書いていきます。</p>
 
-<h3 id="ace-と-gin-は-httprouter-を使っている:10">ace と Gin は HttpRouter を使っている</h3>
+<h3 id="ace-と-gin-は-httprouter-を使っている">ace と Gin は HttpRouter を使っている</h3>
 
 <p>HttpRouter が king of performance なのはまぁいいです。<br />
 ですが、2 番目に位置づけている ace と Gin は HttpRouter を使っていることについて言及がありません。</p>
 
-<h3 id="goji-を-3-番目-にしている理由がベンチマークと関係ない:10">Goji を 3 番目 にしている理由がベンチマークと関係ない</h3>
+<h3 id="goji-を-3-番目-にしている理由がベンチマークと関係ない">Goji を 3 番目 にしている理由がベンチマークと関係ない</h3>
 
 <p>タイトルに golang web frameworks benchmark 02/2015 と付けているにも関わらず Goji を 3 番目にしている理由がベンチマークと関係ない「安定している」です。<br />
 しかもベンチマークを見てもらえば分かりますが、別に 3 番目に速いというわけでもないです。</p>
 
-<h3 id="denco-に言及がない:10">Denco に言及がない</h3>
+<h3 id="denco-に言及がない">Denco に言及がない</h3>
 
 <p>手前味噌ですが、自分が作っている <a href="https://github.com/naoina/denco">Denco</a> という URL ルーターについて、ベンチマークでも安定して上位にいるにも関わらず一切の言及がありません。<br />
 前述した ace と Gin が HttpRouter を使っているということを鑑みると、このベンチマークは実質 HttpRouter 系 vs Denco という構図になります。</p>
 
-<h3 id="まとめ:10">まとめ</h3>
+<h3 id="まとめ">まとめ</h3>
 
 <p>調べもしないで恣意的にしか書けないならベンチマークを持ち出すな。<br />
 という文句を英語で書いて広めたいけどそんな英語力無いから日本語で書いた。</p>

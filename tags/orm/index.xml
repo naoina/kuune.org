@@ -25,7 +25,7 @@
 
 &lt;p&gt;ORM というよりはクエリビルダーに近いので、SQL に耐性のない者は死ぬ。&lt;/p&gt;
 
-&lt;h2 id=&#34;使い方:28&#34;&gt;使い方&lt;/h2&gt;
+&lt;h2 id=&#34;使い方&#34;&gt;使い方&lt;/h2&gt;
 
 &lt;p&gt;まずテーブルを定義して&lt;/p&gt;
 
@@ -97,7 +97,7 @@ fmt.Printf(&amp;quot;%v\n&amp;quot;, users)
 
 &lt;p&gt;現状はこういう API が良いと思って実装してるけど、Rails みたいなもっとリッチな ORM が欲しくなったらこれの上に構築すると思う。&lt;/p&gt;
 
-&lt;h2 id=&#34;余談:28&#34;&gt;余談&lt;/h2&gt;
+&lt;h2 id=&#34;余談&#34;&gt;余談&lt;/h2&gt;
 
 &lt;p&gt;これ完全に &lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;Kocha&lt;/a&gt; のモデルレイヤーのために作った。Kocha (紅&lt;strong&gt;茶&lt;/strong&gt;) だから Genmai (玄米&lt;strong&gt;茶&lt;/strong&gt;)。&lt;/p&gt;
 </description>

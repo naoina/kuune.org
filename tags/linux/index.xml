@@ -21,7 +21,7 @@
 &lt;img src=&#34;http://kuune.org/image/vaio-z2.jpg&#34; alt=&#34;VAIO Z 2&#34; /&gt;&lt;br /&gt;
 &lt;img src=&#34;http://kuune.org/image/vaio-z3.jpg&#34; alt=&#34;VAIO Z 3&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;所感:9&#34;&gt;所感&lt;/h2&gt;
+&lt;h2 id=&#34;所感&#34;&gt;所感&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;キーボードの押下圧が軽いので良い&lt;br /&gt;&lt;/li&gt;
@@ -32,9 +32,9 @@
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;arch-linux-での現状:9&#34;&gt;Arch Linux での現状&lt;/h2&gt;
+&lt;h2 id=&#34;arch-linux-での現状&#34;&gt;Arch Linux での現状&lt;/h2&gt;
 
-&lt;h3 id=&#34;動く:9&#34;&gt;動く&lt;/h3&gt;
+&lt;h3 id=&#34;動く&#34;&gt;動く&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;キーボード&lt;br /&gt;&lt;/li&gt;
@@ -44,7 +44,7 @@
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;動かない:9&#34;&gt;動かない&lt;/h3&gt;
+&lt;h3 id=&#34;動かない&#34;&gt;動かない&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Touchpad が Touchpad として認識されない&lt;/p&gt;
@@ -71,7 +71,7 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;追記-2015-03-01t17-38-34-09-00:9&#34;&gt;追記（2015-03-01T17:38:34+09:00）&lt;/h3&gt;
+&lt;h3 id=&#34;追記-2015-03-01t17-38-34-09-00&#34;&gt;追記（2015-03-01T17:38:34+09:00）&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;linux-drm-intel-nightly を AUR から入れて使うようにしたら Hibernate が動くようになった&lt;/p&gt;

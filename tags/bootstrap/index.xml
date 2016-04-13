@@ -21,28 +21,28 @@
 といっても、Pure は Bootstrap みたいにオールインワンではなくベースの部分を提供してくれるだけなので、割と自前で CSS を書きました。&lt;br /&gt;
 あとどうでもいいですが実際に書いたのは SCSS です。&lt;/p&gt;
 
-&lt;h2 id=&#34;bootstrapはオワコン:47&#34;&gt;Bootstrapはオワコン&lt;/h2&gt;
+&lt;h2 id=&#34;bootstrapはオワコン&#34;&gt;Bootstrapはオワコン&lt;/h2&gt;
 
 &lt;p&gt;近年、新しく出てくる何かしらのWEBサービスは Bootstrap を使ってることが多く、大体ひと目で「あっ！このサイトブートストラップだ！」って分かるわけです。&lt;br /&gt;
-使う方は非常に楽でいいのですが、さすがに Bootstrap のサイトが多いので食傷気味になるわけです。ああここもか・・・みたいな。&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:47:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:47:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;br /&gt;
+使う方は非常に楽でいいのですが、さすがに Bootstrap のサイトが多いので食傷気味になるわけです。ああここもか・・・みたいな。&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;br /&gt;
 それに加えて、フラットデザインの台頭で Bootstrap はオワコン化すると思うのでさっさとやったほうがいいと思ってゴッソリ置き換えた次第です。&lt;br /&gt;
 まぁ Bootstrap はなんだかんだで便利だし、&lt;a href=&#34;http://bootswatch.com/cosmo/&#34;&gt;http://bootswatch.com/cosmo/&lt;/a&gt; 使えばフラットデザインできるので実際オワコン化するかは分からないですが。&lt;/p&gt;
 
-&lt;h2 id=&#34;pureを選んだ理由:47&#34;&gt;Pureを選んだ理由&lt;/h2&gt;
+&lt;h2 id=&#34;pureを選んだ理由&#34;&gt;Pureを選んだ理由&lt;/h2&gt;
 
 &lt;p&gt;Pure を選んだ理由は、単に Pure のサイトがフラットデザインっぽかったのでこれ使えばフラットデザインにできるんだろうなって思ったからです。&lt;br /&gt;
 実際にはそんなことはなかったですが、レスポンシブ対応グリッド、フォームとメニューが良しなになってくれるだけで随分楽だと思います。&lt;br /&gt;
 あとは自分の中で必要最小限のものでよかったというのもあります。個人的にオールインワンのものは応用を利かせにくくて好きじゃないので。&lt;/p&gt;
 
-&lt;h2 id=&#34;まとめ:47&#34;&gt;まとめ&lt;/h2&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 
 &lt;p&gt;Bootstrap で満足してるなら Pure 使わなくてもいいし、CSS をある程度分かってないと Pure を使うのは難しい。&lt;/p&gt;
 
-&lt;h2 id=&#34;蛇足:47&#34;&gt;蛇足&lt;/h2&gt;
+&lt;h2 id=&#34;蛇足&#34;&gt;蛇足&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;ついでにスマートフォン対応もしました。&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;ついでに Web Clip&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:47:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:47:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; にも対応しました。&lt;br /&gt;
+&lt;li&gt;ついでに Web Clip&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; にも対応しました。&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
@@ -50,10 +50,10 @@
 &lt;hr /&gt;
 
 &lt;ol&gt;
-&lt;li id=&#34;fn:47:1&#34;&gt;フラットデザインもすでに流行りまくってて食傷気味という話もありますが&lt;br /&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:47:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:47:2&#34;&gt;iPhone とかでホーム画面にWEBページへのショートカット置けるアレ&lt;br /&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:47:2&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:1&#34;&gt;フラットデザインもすでに流行りまくってて食傷気味という話もありますが&lt;br /&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;iPhone とかでホーム画面にWEBページへのショートカット置けるアレ&lt;br /&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

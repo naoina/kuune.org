@@ -24,7 +24,7 @@
 &lt;p&gt;Migu は Ridgepole と同様に（バグが無い限り）冪等性が保証されています。&lt;br /&gt;
 Ridgepole と違うところは、スキーマ定義を DSL ではなくて golang の struct で定義するところです。こうすることによって、モデル定義 ＝ スキーマ定義となるので DRY になります。&lt;/p&gt;
 
-&lt;h2 id=&#34;使い方:13&#34;&gt;使い方&lt;/h2&gt;
+&lt;h2 id=&#34;使い方&#34;&gt;使い方&lt;/h2&gt;
 
 &lt;p&gt;下記を &lt;code&gt;schema.go&lt;/code&gt; というファイル名で保存します。ファイル名は何でもいいんですが、ここでは &lt;code&gt;schema.go&lt;/code&gt; を使います。package 名も何でも構いません。&lt;/p&gt;
 
@@ -113,7 +113,7 @@ func (u *User) IsAlice() bool {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;まとめ:13&#34;&gt;まとめ&lt;/h2&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 
 &lt;p&gt;Migu を使うことで大量のマイグレーションファイルを書く必要が無くなり、DB スキーマの管理が非常に楽になる上に身長が 5 センチ伸び、恋人もできることがお分かりいただけたかと思います。&lt;br /&gt;
 とはいえ、まだまだ粗削りで足りない部分も多いので、これからもっと改良していく必要があります。&lt;br /&gt;

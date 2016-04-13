@@ -23,7 +23,7 @@
 pyroonga でも Travis-CI を使おうと思ったのですがそのままでは動かなかったので四苦八苦しながら動かしました。&lt;br /&gt;
 最終的な &lt;code&gt;.travis.yml&lt;/code&gt; は &lt;a href=&#34;https://github.com/naoina/pyroonga/blob/develop/.travis.yml&#34;&gt;https://github.com/naoina/pyroonga/blob/develop/.travis.yml&lt;/a&gt; ですが、これに至るまでにハマったところを書いていきます。&lt;/p&gt;
 
-&lt;h2 id=&#34;travis-ci-ではランタイムのバージョンを複数指定しても同じvm上で並列にテストが走る:41&#34;&gt;Travis-CI ではランタイムのバージョンを複数指定しても同じVM上で並列にテストが走る&lt;/h2&gt;
+&lt;h2 id=&#34;travis-ci-ではランタイムのバージョンを複数指定しても同じvm上で並列にテストが走る&#34;&gt;Travis-CI ではランタイムのバージョンを複数指定しても同じVM上で並列にテストが走る&lt;/h2&gt;
 
 &lt;p&gt;初めにハマったのがこれです。Travis-CI を使うときは&lt;/p&gt;
 
@@ -42,7 +42,7 @@ pyroonga の場合はテストケースごとに 「groonga データベース�
 &lt;p&gt;対策としては、テーブル名を全てユニークにするなどしました。&lt;br /&gt;
 また、groonga データベースの作成と groonga サーバーの起動は予め1回のみ行なってテストを走らせるという方式に変更しました。&lt;/p&gt;
 
-&lt;h2 id=&#34;groonga-が起動しない:41&#34;&gt;Groonga が起動しない&lt;/h2&gt;
+&lt;h2 id=&#34;groonga-が起動しない&#34;&gt;Groonga が起動しない&lt;/h2&gt;
 
 &lt;p&gt;以下のように .travis.yml を書いていたら何故か groonga が起動しないという現象がありました。&lt;/p&gt;
 

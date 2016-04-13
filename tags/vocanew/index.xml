@@ -39,12 +39,12 @@
 
 &lt;p&gt;今回のリニューアルの動機は色々ありますが、一番は &lt;a href=&#34;http://robfig.github.io/revel/&#34;&gt;Revel&lt;/a&gt; を使ってみたかったからです。Powered by Golangです。&lt;/p&gt;
 
-&lt;h2 id=&#34;開発環境:40&#34;&gt;開発環境&lt;/h2&gt;
+&lt;h2 id=&#34;開発環境&#34;&gt;開発環境&lt;/h2&gt;
 
 &lt;p&gt;今回の開発環境は Revel + Grunt + Bower で行いました。多少手を加えてますが &lt;a href=&#34;https://github.com/naoina/revel-boilerplate&#34;&gt;https://github.com/naoina/revel-boilerplate&lt;/a&gt; と同じような構成になっています。&lt;br /&gt;
 軽く説明すると、CSSはSCSSで書いてから &lt;a href=&#34;https://github.com/ai/autoprefixer&#34;&gt;autoprefixer&lt;/a&gt; を通ってコンパイル後にminify、JavaScriptはRequireJSを使って &lt;a href=&#34;https://github.com/jrburke/almond&#34;&gt;almond&lt;/a&gt; でRequireJSも含めて1ファイルにしてminifyします。これらはGruntタスクで行うので自動です。&lt;/p&gt;
 
-&lt;h2 id=&#34;revelについて:40&#34;&gt;Revelについて&lt;/h2&gt;
+&lt;h2 id=&#34;revelについて&#34;&gt;Revelについて&lt;/h2&gt;
 
 &lt;p&gt;RevelはGo言語で書かれているWAFです。&lt;br /&gt;
 フルスタックを謳っていますが、現在はまだフルスタックと言えるような感じではないので色々と自前で実装するかライブラリを引っ張ってくる必要があります。例えば、ORMやメール送信の処理などは現時点では無いです。&lt;br /&gt;
@@ -52,11 +52,11 @@
 まぁgorpはORM-ishなので完全なORMではないですが。。。（SELECT文は生のSQLで書く必要があったりする）&lt;br /&gt;
 また、RSSフィードの生成には &lt;a href=&#34;https://github.com/gorilla/feeds&#34;&gt;gorilla/feeds&lt;/a&gt; を使っています。&lt;/p&gt;
 
-&lt;h2 id=&#34;運用構成:40&#34;&gt;運用構成&lt;/h2&gt;
+&lt;h2 id=&#34;運用構成&#34;&gt;運用構成&lt;/h2&gt;
 
 &lt;p&gt;よくある構成の、nginxからリバースプロキシでAppサーバーに繋ぐという構成です。キャッシュサーバーは今のところありません。&lt;/p&gt;
 
-&lt;h2 id=&#34;所感:40&#34;&gt;所感&lt;/h2&gt;
+&lt;h2 id=&#34;所感&#34;&gt;所感&lt;/h2&gt;
 
 &lt;p&gt;現在はまだGo言語とRevelを使ってウェブサイトを作るのはオススメしません。DjangoやRailsなどの方が当然ですが断然便利です。&lt;br /&gt;
 具体的には認証機構（Djangoのdjango.contrib.auth、Railsのdevise的なもの）が無いのと、Revelは標準でGo言語の &lt;code&gt;text/template&lt;/code&gt; を使いますが、これはレイアウト的な機能が無いので使いづらいというのが大きいです。&lt;br /&gt;
@@ -91,7 +91,7 @@ UIの主な変更点は以下です。&lt;/p&gt;
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;全面的なデザインの刷新:42&#34;&gt;全面的なデザインの刷新&lt;/h2&gt;
+&lt;h2 id=&#34;全面的なデザインの刷新&#34;&gt;全面的なデザインの刷新&lt;/h2&gt;
 
 &lt;p&gt;デザインは最近のトレンドともいえるフラットなデザインとしました。&lt;br /&gt;
 フラットデザインはシンプルだからといっても、全然簡単ではないので割と何回かゴッソリ調整し直したりもしました。&lt;br /&gt;
@@ -102,23 +102,23 @@ UIの主な変更点は以下です。&lt;/p&gt;
 &lt;p&gt;この部分の文字のinvertです。多分ほとんどの人がどうでもいいところだと思いますはい。&lt;br /&gt;
 ちなみに今回のデザインは画像を一切使っていません。&lt;a href=&#34;http://fortawesome.github.io/Font-Awesome/&#34;&gt;Font-Awesome&lt;/a&gt; あるし、CSS3で表現力上がったし、最近は画像使ったら負けだと思うようになりました。&lt;/p&gt;
 
-&lt;h2 id=&#34;スマートフォン対応:42&#34;&gt;スマートフォン対応&lt;/h2&gt;
+&lt;h2 id=&#34;スマートフォン対応&#34;&gt;スマートフォン対応&lt;/h2&gt;
 
 &lt;p&gt;当方iPhoneしか持っていないのでiPhoneでしか動作確認してません。&lt;br /&gt;
 &lt;a href=&#34;http://getbootstrap.com/&#34;&gt;Bootstrap3&lt;/a&gt; を使っているのですが、サイドバーを固定幅にするために半分ぐらいは独自でCSS書いてたりするので恩恵があるやらないやらよくわからないことになってます。&lt;br /&gt;
 また、JavaScriptでメニューの開閉などを行なっていますが、知ってる人は当然のように知っている &lt;code&gt;touchstart&lt;/code&gt; イベントで処理してるのでレスポンスは良いです。&lt;/p&gt;
 
-&lt;h2 id=&#34;詳細検索uiの撤廃:42&#34;&gt;詳細検索UIの撤廃&lt;/h2&gt;
+&lt;h2 id=&#34;詳細検索uiの撤廃&#34;&gt;詳細検索UIの撤廃&lt;/h2&gt;
 
 &lt;p&gt;以前は複数のボーカロイドの曲を検索できるチェックボックスをつけていましたが、今回のデザインを考えた限りでは良いUIが思いつかなかったので取り払いました。&lt;br /&gt;
 機能自体は残しているので以前と同様に &lt;a href=&#34;http://vocanew.kuune.org/?miku&amp;amp;rin&amp;amp;luka&#34;&gt;http://vocanew.kuune.org/?miku&amp;amp;rin&amp;amp;luka&lt;/a&gt; というURLを叩くと複数のボーカロイドの曲が取れます。&lt;br /&gt;
 良いUIが思い付けば再度UIを付けますが、予定は未定です。&lt;/p&gt;
 
-&lt;h2 id=&#34;動画紹介文の全文表示:42&#34;&gt;動画紹介文の全文表示&lt;/h2&gt;
+&lt;h2 id=&#34;動画紹介文の全文表示&#34;&gt;動画紹介文の全文表示&lt;/h2&gt;
 
 &lt;p&gt;これはオマケですね。以前は長い動画説明文を &lt;code&gt;...&lt;/code&gt; で省略していましたが、BootstrapのCollapseでそれなりなUIが作れそうなのでやりましたという感じです。&lt;/p&gt;
 
-&lt;h2 id=&#34;最後に:42&#34;&gt;最後に&lt;/h2&gt;
+&lt;h2 id=&#34;最後に&#34;&gt;最後に&lt;/h2&gt;
 
 &lt;p&gt;この記事を書いてて思い出しましたが、以前あったRSSフィードを実装するのを忘れてました。そのうちやります。&lt;br /&gt;
 次回はサーバーサイドなどの内部的なことを書きます。&lt;/p&gt;
