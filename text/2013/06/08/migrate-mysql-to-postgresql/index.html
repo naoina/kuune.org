@@ -29,25 +29,7 @@
 <body>
   <div class="main">
     
-      <nav class="nav">
-  
-    <h4>Next article</h4>
-    <p><a href="http://kuune.org/text/2013/06/14/add-image-upload-feature/">画像ファイルのアップロード機能が付きました</a></p>
-  
-  
-    <h4>Previous article</h4>
-    <p><a href="http://kuune.org/text/2013/06/03/pythonista-should-read-pep8/">PythonistaはPEP8を読もう</a></p>
-  
-  <h4>Links</h4>
-  <ul class="links">
-    <li><a href="http://kuune.org/">kuune.org</a></li>
-    <li><a href="https://twitter.com/naoina">Twitter</a></li>
-    <li><a href="https://github.com/naoina">GitHub</a></li>
-  </ul>
-  <p><a href="http://kuune.org/text/index/">Text index</a></p>
-</nav>
-
-<section itemscope itemtype="http://schema.org/BlogPosting">
+      <section itemscope itemtype="http://schema.org/BlogPosting">
   <article class="article">
     <header>
       <h1 itemprop="name headline"><a href="http://kuune.org/text/2013/06/08/migrate-mysql-to-postgresql/" class="title-link" itemprop="url">MySQLからPostgreSQLに移行しました</a></h1>
@@ -55,6 +37,7 @@
       <meta itemprop="dateModified" content="2013-06-08T01:26:46&#43;09:00">
       <meta itemprop="datePublished" content="2013-06-08">
     </header>
+
     <div itemprop="articleBody"><p>plogのデータベースエンジンは開発環境ではSQLite3、プロダクションではMySQL 5.6を使用していましたが、現在DjangoのDateTimeFieldがマイクロ秒をサポートしていなかったためPostgreSQLに変更しました。<br />
 この変更に際して、データをMySQLからPostgreSQLにマイグレーションする必要がありましたので、ググって出てきた下記ブログを参考にマイグレーションを行いました。</p>
 
@@ -62,16 +45,45 @@
 
 <p>古い記事ですが、このまんまでエラーも出ず幸い苦も無くマイグレーションができ、現在はPostgreSQLで稼働しています。</p>
 </div>
+
+    <footer class="tags-footer">
+      <span>
+        
+      </span>
+      <ul class="tags">
+        
+      </ul>
+    </footer>
   </article>
 
-  <footer class="tags-footer">
-    <span>
+  <aside class="sidenav">
+    <nav class="nav">
       
-    </span>
-    <ul class="tags">
+        <h4>Next article</h4>
+        <p><a href="http://kuune.org/text/2013/06/14/add-image-upload-feature/">画像ファイルのアップロード機能が付きました</a></p>
       
+      
+        <h4>Previous article</h4>
+        <p><a href="http://kuune.org/text/2013/06/03/pythonista-should-read-pep8/">PythonistaはPEP8を読もう</a></p>
+      
+    </nav>
+
+    <h4>Profile</h4>
+    <div itemprop="author publisher" itemscope itemtype="http://schema.org/Person">
+      <img src="http://kuune.org/image/thumbnail_s.png" alt="naoina" width="60" height="60" itemprop="image">
+      <div class="author-info">
+        <strong itemprop="name">naoina</strong>
+      </div>
+    </div>
+
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="http://kuune.org/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
     </ul>
-  </footer>
+    <p><a href="http://kuune.org/text/index/">Text index</a></p>
+  </aside>
 
   <footer class="article-footer">
     <div id="disqus_thread"></div>

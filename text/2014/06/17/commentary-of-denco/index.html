@@ -29,25 +29,7 @@
 <body>
   <div class="main">
     
-      <nav class="nav">
-  
-    <h4>Next article</h4>
-    <p><a href="http://kuune.org/text/2014/06/26/miyabi/">Graceful shutdown と restart が出来る net/http コンパチのライブラリをつくった</a></p>
-  
-  
-    <h4>Previous article</h4>
-    <p><a href="http://kuune.org/text/2014/06/12/denco/">世界最速だった URL ルーターをリリースしました</a></p>
-  
-  <h4>Links</h4>
-  <ul class="links">
-    <li><a href="http://kuune.org/">kuune.org</a></li>
-    <li><a href="https://twitter.com/naoina">Twitter</a></li>
-    <li><a href="https://github.com/naoina">GitHub</a></li>
-  </ul>
-  <p><a href="http://kuune.org/text/index/">Text index</a></p>
-</nav>
-
-<section itemscope itemtype="http://schema.org/BlogPosting">
+      <section itemscope itemtype="http://schema.org/BlogPosting">
   <article class="article">
     <header>
       <h1 itemprop="name headline"><a href="http://kuune.org/text/2014/06/17/commentary-of-denco/" class="title-link" itemprop="url">Denco 技術解説</a></h1>
@@ -55,6 +37,7 @@
       <meta itemprop="dateModified" content="2014-06-17T17:52:45&#43;09:00">
       <meta itemprop="datePublished" content="2014-06-17">
     </header>
+
     <div itemprop="articleBody">
 
 <p>今回は Golang 用の URL ルーターである <a href="https://github.com/naoina/denco">Denco</a> の技術解説をしていきます。<br />
@@ -201,32 +184,61 @@
 実際には今回解説した処理に加えてバックトラックによるパラメーターマッチをしています。バックトラックを行うことによって <code>/user/:name/:id</code> と <code>/user/alice/:id</code> のようなレコードを一緒に扱うことができるようになっています。<br />
 興味があればソースを読んでみてください。</p>
 </div>
+
+    <footer class="tags-footer">
+      <span>
+        
+          
+            tags:
+          
+        
+      </span>
+      <ul class="tags">
+        
+          <li class="tag" itemprop="keywords">
+            <a href="http://kuune.org/tags/go">go</a>
+          </li>
+        
+          <li class="tag" itemprop="keywords">
+            <a href="http://kuune.org/tags/golang">golang</a>
+          </li>
+        
+          <li class="tag" itemprop="keywords">
+            <a href="http://kuune.org/tags/denco">denco</a>
+          </li>
+        
+      </ul>
+    </footer>
   </article>
 
-  <footer class="tags-footer">
-    <span>
+  <aside class="sidenav">
+    <nav class="nav">
       
-        
-          tags:
-        
+        <h4>Next article</h4>
+        <p><a href="http://kuune.org/text/2014/06/26/miyabi/">Graceful shutdown と restart が出来る net/http コンパチのライブラリをつくった</a></p>
       
-    </span>
-    <ul class="tags">
       
-        <li class="tag" itemprop="keywords">
-          <a href="http://kuune.org/tags/go">go</a>
-        </li>
+        <h4>Previous article</h4>
+        <p><a href="http://kuune.org/text/2014/06/12/denco/">世界最速だった URL ルーターをリリースしました</a></p>
       
-        <li class="tag" itemprop="keywords">
-          <a href="http://kuune.org/tags/golang">golang</a>
-        </li>
-      
-        <li class="tag" itemprop="keywords">
-          <a href="http://kuune.org/tags/denco">denco</a>
-        </li>
-      
+    </nav>
+
+    <h4>Profile</h4>
+    <div itemprop="author publisher" itemscope itemtype="http://schema.org/Person">
+      <img src="http://kuune.org/image/thumbnail_s.png" alt="naoina" width="60" height="60" itemprop="image">
+      <div class="author-info">
+        <strong itemprop="name">naoina</strong>
+      </div>
+    </div>
+
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="http://kuune.org/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
     </ul>
-  </footer>
+    <p><a href="http://kuune.org/text/index/">Text index</a></p>
+  </aside>
 
   <footer class="article-footer">
     <div id="disqus_thread"></div>

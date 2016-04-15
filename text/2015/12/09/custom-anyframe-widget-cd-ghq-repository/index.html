@@ -29,25 +29,7 @@
 <body>
   <div class="main">
     
-      <nav class="nav">
-  
-    <h4>Next article</h4>
-    <p><a href="http://kuune.org/text/2015/12/14/skateboard/">スケートボードを始めた</a></p>
-  
-  
-    <h4>Previous article</h4>
-    <p><a href="http://kuune.org/text/2015/05/17/learning-english/"> 私の英語学習の教材について</a></p>
-  
-  <h4>Links</h4>
-  <ul class="links">
-    <li><a href="http://kuune.org/">kuune.org</a></li>
-    <li><a href="https://twitter.com/naoina">Twitter</a></li>
-    <li><a href="https://github.com/naoina">GitHub</a></li>
-  </ul>
-  <p><a href="http://kuune.org/text/index/">Text index</a></p>
-</nav>
-
-<section itemscope itemtype="http://schema.org/BlogPosting">
+      <section itemscope itemtype="http://schema.org/BlogPosting">
   <article class="article">
     <header>
       <h1 itemprop="name headline"><a href="http://kuune.org/text/2015/12/09/custom-anyframe-widget-cd-ghq-repository/" class="title-link" itemprop="url">Custom anyframe-widget-cd-ghq-repository</a></h1>
@@ -55,6 +37,7 @@
       <meta itemprop="dateModified" content="2015-12-09T22:54:32&#43;09:00">
       <meta itemprop="datePublished" content="2015-12-09">
     </header>
+
     <div itemprop="articleBody"><p>zsh には <a href="https://github.com/mollifier/anyframe">anyframe</a> という <a href="https://github.com/peco/peco">peco</a>/<a href="https://github.com/mooz/percol">percol</a>/<a href="https://github.com/junegunn/fzf">fzf</a> を便利に使うためのライブラリがあって、中でも <strong>anyframe-widget-cd-ghq-repository</strong> を便利に、それはもう便利に使っていました。<br />
 ですが、中で <code>ghq list --full-path</code> を使っていて自分のリポジトリを絞り込もうと思っても簡潔にできなかったので自前で plugin 書かきました。</p>
 
@@ -84,32 +67,61 @@ alias r=&quot;anyframe-widget-cd-ghq-repository-relative-path&quot;
 
 <p><a href="https://github.com/mollifier/anyframe">anyframe</a> は自前で plugin を簡単に書けるのでいいですね。</p>
 </div>
+
+    <footer class="tags-footer">
+      <span>
+        
+          
+            tags:
+          
+        
+      </span>
+      <ul class="tags">
+        
+          <li class="tag" itemprop="keywords">
+            <a href="http://kuune.org/tags/zsh">zsh</a>
+          </li>
+        
+          <li class="tag" itemprop="keywords">
+            <a href="http://kuune.org/tags/anyframe">anyframe</a>
+          </li>
+        
+          <li class="tag" itemprop="keywords">
+            <a href="http://kuune.org/tags/ghq">ghq</a>
+          </li>
+        
+      </ul>
+    </footer>
   </article>
 
-  <footer class="tags-footer">
-    <span>
+  <aside class="sidenav">
+    <nav class="nav">
       
-        
-          tags:
-        
+        <h4>Next article</h4>
+        <p><a href="http://kuune.org/text/2015/12/14/skateboard/">スケートボードを始めた</a></p>
       
-    </span>
-    <ul class="tags">
       
-        <li class="tag" itemprop="keywords">
-          <a href="http://kuune.org/tags/zsh">zsh</a>
-        </li>
+        <h4>Previous article</h4>
+        <p><a href="http://kuune.org/text/2015/05/17/learning-english/"> 私の英語学習の教材について</a></p>
       
-        <li class="tag" itemprop="keywords">
-          <a href="http://kuune.org/tags/anyframe">anyframe</a>
-        </li>
-      
-        <li class="tag" itemprop="keywords">
-          <a href="http://kuune.org/tags/ghq">ghq</a>
-        </li>
-      
+    </nav>
+
+    <h4>Profile</h4>
+    <div itemprop="author publisher" itemscope itemtype="http://schema.org/Person">
+      <img src="http://kuune.org/image/thumbnail_s.png" alt="naoina" width="60" height="60" itemprop="image">
+      <div class="author-info">
+        <strong itemprop="name">naoina</strong>
+      </div>
+    </div>
+
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="http://kuune.org/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
     </ul>
-  </footer>
+    <p><a href="http://kuune.org/text/index/">Text index</a></p>
+  </aside>
 
   <footer class="article-footer">
     <div id="disqus_thread"></div>

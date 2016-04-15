@@ -6,13 +6,7 @@ img {
 }
 
 .main {
-    padding: 5% 15%;
-    }
-
-    .main .nav {
-        float: right;
-        max-width: 25%;
-        margin-left: 1rem;
+    padding: 0 5%;
     }
 
     .main h1 {
@@ -58,10 +52,27 @@ img {
 
     .main .tags-header h1 {
         display: inline-block;
+    }
+
+    .author-info {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 5px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .main {
-        padding: 5%;
+        padding: 0 15%;
+        }
+
+        .main .article {
+            float: left;
+            width: 75%;
+            margin-right: 2rem;
+        }
+
+        .main .sidenav {
+            float: left;
+            width: 22%;
     }
 }

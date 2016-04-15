@@ -29,25 +29,7 @@
 <body>
   <div class="main">
     
-      <nav class="nav">
-  
-    <h4>Next article</h4>
-    <p><a href="http://kuune.org/text/2015/01/29/site-renewal/">サイトをリニューアルした</a></p>
-  
-  
-    <h4>Previous article</h4>
-    <p><a href="http://kuune.org/text/2014/10/29/migu/">Migu という golang 用 DB スキーマのマイグレーションツールを作った話</a></p>
-  
-  <h4>Links</h4>
-  <ul class="links">
-    <li><a href="http://kuune.org/">kuune.org</a></li>
-    <li><a href="https://twitter.com/naoina">Twitter</a></li>
-    <li><a href="https://github.com/naoina">GitHub</a></li>
-  </ul>
-  <p><a href="http://kuune.org/text/index/">Text index</a></p>
-</nav>
-
-<section itemscope itemtype="http://schema.org/BlogPosting">
+      <section itemscope itemtype="http://schema.org/BlogPosting">
   <article class="article">
     <header>
       <h1 itemprop="name headline"><a href="http://kuune.org/text/2014/11/07/json-struct-interface-in-golang/" class="title-link" itemprop="url">Golangでどんな json が返ってくるかわからない時に struct で定義するまでじゃないんだけど､ interface だと呼び出しが面倒なのどうしたらいいんだろう問題への一回答例</a></h1>
@@ -55,6 +37,7 @@
       <meta itemprop="dateModified" content="2014-11-07T16:21:00&#43;09:00">
       <meta itemprop="datePublished" content="2014-11-07">
     </header>
+
     <div itemprop="articleBody"><p><a href="http://konboi.hatenablog.com/entry/2014/11/07/155418">http://konboi.hatenablog.com/entry/2014/11/07/155418</a> これへの自分なりの回答です。元ブログのタイトルは const になってますが、多分 struct のことですかね。</p>
 
 <p>Golang では <code>var</code> を使えば変数が定義できますが、このときに型を指定する必要があります。</p>
@@ -101,28 +84,57 @@ func main() {
 
 <p>ただしこの方法は本当にどんな内容が返ってくるか分からない時には使えない（例えば返ってくる json が {&ldquo;foo&rdquo;: &ldquo;bar&rdquo;} なのか {&ldquo;bar&rdquo;: &ldquo;foo&rdquo;} なのか分からない時など）のでその時は元の記事のように <code>interface{}</code> で受け取って型アサーションしてやる必要があります。</p>
 </div>
+
+    <footer class="tags-footer">
+      <span>
+        
+          
+            tags:
+          
+        
+      </span>
+      <ul class="tags">
+        
+          <li class="tag" itemprop="keywords">
+            <a href="http://kuune.org/tags/go">go</a>
+          </li>
+        
+          <li class="tag" itemprop="keywords">
+            <a href="http://kuune.org/tags/golang">golang</a>
+          </li>
+        
+      </ul>
+    </footer>
   </article>
 
-  <footer class="tags-footer">
-    <span>
+  <aside class="sidenav">
+    <nav class="nav">
       
-        
-          tags:
-        
+        <h4>Next article</h4>
+        <p><a href="http://kuune.org/text/2015/01/29/site-renewal/">サイトをリニューアルした</a></p>
       
-    </span>
-    <ul class="tags">
       
-        <li class="tag" itemprop="keywords">
-          <a href="http://kuune.org/tags/go">go</a>
-        </li>
+        <h4>Previous article</h4>
+        <p><a href="http://kuune.org/text/2014/10/29/migu/">Migu という golang 用 DB スキーマのマイグレーションツールを作った話</a></p>
       
-        <li class="tag" itemprop="keywords">
-          <a href="http://kuune.org/tags/golang">golang</a>
-        </li>
-      
+    </nav>
+
+    <h4>Profile</h4>
+    <div itemprop="author publisher" itemscope itemtype="http://schema.org/Person">
+      <img src="http://kuune.org/image/thumbnail_s.png" alt="naoina" width="60" height="60" itemprop="image">
+      <div class="author-info">
+        <strong itemprop="name">naoina</strong>
+      </div>
+    </div>
+
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="http://kuune.org/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
     </ul>
-  </footer>
+    <p><a href="http://kuune.org/text/index/">Text index</a></p>
+  </aside>
 
   <footer class="article-footer">
     <div id="disqus_thread"></div>

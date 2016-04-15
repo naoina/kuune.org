@@ -29,25 +29,7 @@
 <body>
   <div class="main">
     
-      <nav class="nav">
-  
-    <h4>Next article</h4>
-    <p><a href="http://kuune.org/text/2013/11/26/for-all-it-officials/">無料サポートだと思われてしまっている全てのIT関係者へ</a></p>
-  
-  
-    <h4>Previous article</h4>
-    <p><a href="http://kuune.org/text/2013/10/22/implementation-of-to-camel-case-in-golang/">toCamelCaseの実装 in golang</a></p>
-  
-  <h4>Links</h4>
-  <ul class="links">
-    <li><a href="http://kuune.org/">kuune.org</a></li>
-    <li><a href="https://twitter.com/naoina">Twitter</a></li>
-    <li><a href="https://github.com/naoina">GitHub</a></li>
-  </ul>
-  <p><a href="http://kuune.org/text/index/">Text index</a></p>
-</nav>
-
-<section itemscope itemtype="http://schema.org/BlogPosting">
+      <section itemscope itemtype="http://schema.org/BlogPosting">
   <article class="article">
     <header>
       <h1 itemprop="name headline"><a href="http://kuune.org/text/2013/11/12/get-fd-from-net-tcplistener-of-golang/" class="title-link" itemprop="url">golang の net.TCPLister から file descriptor を取る</a></h1>
@@ -55,6 +37,7 @@
       <meta itemprop="dateModified" content="2013-11-12T23:57:53&#43;09:00">
       <meta itemprop="datePublished" content="2013-11-12">
     </header>
+
     <div itemprop="articleBody"><p>何故かは分かりませんが、golang は net.TCPListener の file descriptor が export されていません。<br />
 通常は特に問題ないのですが、graceful restart を実装しようとした場合に困ったことになります。<br />
 ちなみに <a href="http://golang.org/pkg/net/#TCPListener.File"><code>func (l *TCPListener) File() (f *os.File, err error)</code></a> というのもありますが、これは file descriptor を複製するので graceful restart には使えません。（同じポートを Listen することになるため、複製の時点で bad file descriptor になる）</p>
@@ -86,28 +69,57 @@ func main() {
 
 <p>この unexported なフィールドから取得するの、すごく気持ち悪いんですが他に方法ないんですかね。。。</p>
 </div>
+
+    <footer class="tags-footer">
+      <span>
+        
+          
+            tags:
+          
+        
+      </span>
+      <ul class="tags">
+        
+          <li class="tag" itemprop="keywords">
+            <a href="http://kuune.org/tags/go">go</a>
+          </li>
+        
+          <li class="tag" itemprop="keywords">
+            <a href="http://kuune.org/tags/golang">golang</a>
+          </li>
+        
+      </ul>
+    </footer>
   </article>
 
-  <footer class="tags-footer">
-    <span>
+  <aside class="sidenav">
+    <nav class="nav">
       
-        
-          tags:
-        
+        <h4>Next article</h4>
+        <p><a href="http://kuune.org/text/2013/11/26/for-all-it-officials/">無料サポートだと思われてしまっている全てのIT関係者へ</a></p>
       
-    </span>
-    <ul class="tags">
       
-        <li class="tag" itemprop="keywords">
-          <a href="http://kuune.org/tags/go">go</a>
-        </li>
+        <h4>Previous article</h4>
+        <p><a href="http://kuune.org/text/2013/10/22/implementation-of-to-camel-case-in-golang/">toCamelCaseの実装 in golang</a></p>
       
-        <li class="tag" itemprop="keywords">
-          <a href="http://kuune.org/tags/golang">golang</a>
-        </li>
-      
+    </nav>
+
+    <h4>Profile</h4>
+    <div itemprop="author publisher" itemscope itemtype="http://schema.org/Person">
+      <img src="http://kuune.org/image/thumbnail_s.png" alt="naoina" width="60" height="60" itemprop="image">
+      <div class="author-info">
+        <strong itemprop="name">naoina</strong>
+      </div>
+    </div>
+
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="http://kuune.org/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
     </ul>
-  </footer>
+    <p><a href="http://kuune.org/text/index/">Text index</a></p>
+  </aside>
 
   <footer class="article-footer">
     <div id="disqus_thread"></div>

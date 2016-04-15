@@ -29,25 +29,7 @@
 <body>
   <div class="main">
     
-      <nav class="nav">
-  
-    <h4>Next article</h4>
-    <p><a href="http://kuune.org/text/2013/08/30/revel-boilerplate-upload-to-github/">Revel Boilerplate上げた</a></p>
-  
-  
-    <h4>Previous article</h4>
-    <p><a href="http://kuune.org/text/2013/06/21/why-i-use-us-layout-keyboard-or-reminisce/">私がUS配列を使う理由、または昔話</a></p>
-  
-  <h4>Links</h4>
-  <ul class="links">
-    <li><a href="http://kuune.org/">kuune.org</a></li>
-    <li><a href="https://twitter.com/naoina">Twitter</a></li>
-    <li><a href="https://github.com/naoina">GitHub</a></li>
-  </ul>
-  <p><a href="http://kuune.org/text/index/">Text index</a></p>
-</nav>
-
-<section itemscope itemtype="http://schema.org/BlogPosting">
+      <section itemscope itemtype="http://schema.org/BlogPosting">
   <article class="article">
     <header>
       <h1 itemprop="name headline"><a href="http://kuune.org/text/2013/08/03/how-to-run-groonga-on-travis-ci/" class="title-link" itemprop="url">GroongaをTravis-CIで動かす方法</a></h1>
@@ -55,6 +37,7 @@
       <meta itemprop="dateModified" content="2013-08-03T18:35:25&#43;09:00">
       <meta itemprop="datePublished" content="2013-08-03">
     </header>
+
     <div itemprop="articleBody">
 
 <p>最近このブログに全文検索を付けるべく pyroonga の開発を再開しました、どうも私です。</p>
@@ -126,24 +109,53 @@ before_script:
 
 <p>余談ですが、<code>groonga -d /tmp/test.db --log-path /tmp/groonga.log</code> などのように、<code>-d</code> や <code>-s</code> オプションの後に <code>--log-path</code> オプションを置くとログが出ない環境もありましたので、常に <code>--log-path</code> オプションを前に置くほうがいいです。（Arch Linux では出たが、Ubuntu 12.04 では出なかった）</p>
 </div>
+
+    <footer class="tags-footer">
+      <span>
+        
+          
+            tag:
+          
+        
+      </span>
+      <ul class="tags">
+        
+          <li class="tag" itemprop="keywords">
+            <a href="http://kuune.org/tags/groonga">groonga</a>
+          </li>
+        
+      </ul>
+    </footer>
   </article>
 
-  <footer class="tags-footer">
-    <span>
+  <aside class="sidenav">
+    <nav class="nav">
       
-        
-          tag:
-        
+        <h4>Next article</h4>
+        <p><a href="http://kuune.org/text/2013/08/30/revel-boilerplate-upload-to-github/">Revel Boilerplate上げた</a></p>
       
-    </span>
-    <ul class="tags">
       
-        <li class="tag" itemprop="keywords">
-          <a href="http://kuune.org/tags/groonga">groonga</a>
-        </li>
+        <h4>Previous article</h4>
+        <p><a href="http://kuune.org/text/2013/06/21/why-i-use-us-layout-keyboard-or-reminisce/">私がUS配列を使う理由、または昔話</a></p>
       
+    </nav>
+
+    <h4>Profile</h4>
+    <div itemprop="author publisher" itemscope itemtype="http://schema.org/Person">
+      <img src="http://kuune.org/image/thumbnail_s.png" alt="naoina" width="60" height="60" itemprop="image">
+      <div class="author-info">
+        <strong itemprop="name">naoina</strong>
+      </div>
+    </div>
+
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="http://kuune.org/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
     </ul>
-  </footer>
+    <p><a href="http://kuune.org/text/index/">Text index</a></p>
+  </aside>
 
   <footer class="article-footer">
     <div id="disqus_thread"></div>

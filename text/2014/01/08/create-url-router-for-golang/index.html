@@ -29,25 +29,7 @@
 <body>
   <div class="main">
     
-      <nav class="nav">
-  
-    <h4>Next article</h4>
-    <p><a href="http://kuune.org/text/2014/01/20/write-library-of-feature-toggle/">FeatureToggle ライブラリ書いた</a></p>
-  
-  
-    <h4>Previous article</h4>
-    <p><a href="http://kuune.org/text/2013/12/16/plan-for-implementation-of-url-router-for-kocha/">Kocha における URL ルーターの実装と予定</a></p>
-  
-  <h4>Links</h4>
-  <ul class="links">
-    <li><a href="http://kuune.org/">kuune.org</a></li>
-    <li><a href="https://twitter.com/naoina">Twitter</a></li>
-    <li><a href="https://github.com/naoina">GitHub</a></li>
-  </ul>
-  <p><a href="http://kuune.org/text/index/">Text index</a></p>
-</nav>
-
-<section itemscope itemtype="http://schema.org/BlogPosting">
+      <section itemscope itemtype="http://schema.org/BlogPosting">
   <article class="article">
     <header>
       <h1 itemprop="name headline"><a href="http://kuune.org/text/2014/01/08/create-url-router-for-golang/" class="title-link" itemprop="url">Golang 用 URL ルーター作った</a></h1>
@@ -55,6 +37,7 @@
       <meta itemprop="dateModified" content="2014-01-08T23:36:36&#43;09:00">
       <meta itemprop="datePublished" content="2014-01-08">
     </header>
+
     <div itemprop="articleBody">
 
 <p><a href="https://github.com/naoina/kocha-urlrouter">https://github.com/naoina/kocha-urlrouter</a></p>
@@ -83,32 +66,61 @@ Golang の標準ライブラリの <code>database/sql</code> と同じような�
 <p>ダブル配列速くしたので、速度はダブル配列の方がちょっとだけ速くなった。メモリ効率はダブル配列の方が約 2 倍から 3 倍程度良いが、構築は三分探索木の方が約 2 倍速い。<br />
 というか、URL ルーターとして使う文には何万件とか入れないだろうし、メモリプロファイルとった限りでは三分探索木でも 700 件で 3MB ぐらいしか使ってないし、ダブル配列を使う意義とは。。。</p>
 </div>
+
+    <footer class="tags-footer">
+      <span>
+        
+          
+            tags:
+          
+        
+      </span>
+      <ul class="tags">
+        
+          <li class="tag" itemprop="keywords">
+            <a href="http://kuune.org/tags/go">go</a>
+          </li>
+        
+          <li class="tag" itemprop="keywords">
+            <a href="http://kuune.org/tags/golang">golang</a>
+          </li>
+        
+          <li class="tag" itemprop="keywords">
+            <a href="http://kuune.org/tags/trie">trie</a>
+          </li>
+        
+      </ul>
+    </footer>
   </article>
 
-  <footer class="tags-footer">
-    <span>
+  <aside class="sidenav">
+    <nav class="nav">
       
-        
-          tags:
-        
+        <h4>Next article</h4>
+        <p><a href="http://kuune.org/text/2014/01/20/write-library-of-feature-toggle/">FeatureToggle ライブラリ書いた</a></p>
       
-    </span>
-    <ul class="tags">
       
-        <li class="tag" itemprop="keywords">
-          <a href="http://kuune.org/tags/go">go</a>
-        </li>
+        <h4>Previous article</h4>
+        <p><a href="http://kuune.org/text/2013/12/16/plan-for-implementation-of-url-router-for-kocha/">Kocha における URL ルーターの実装と予定</a></p>
       
-        <li class="tag" itemprop="keywords">
-          <a href="http://kuune.org/tags/golang">golang</a>
-        </li>
-      
-        <li class="tag" itemprop="keywords">
-          <a href="http://kuune.org/tags/trie">trie</a>
-        </li>
-      
+    </nav>
+
+    <h4>Profile</h4>
+    <div itemprop="author publisher" itemscope itemtype="http://schema.org/Person">
+      <img src="http://kuune.org/image/thumbnail_s.png" alt="naoina" width="60" height="60" itemprop="image">
+      <div class="author-info">
+        <strong itemprop="name">naoina</strong>
+      </div>
+    </div>
+
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="http://kuune.org/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
     </ul>
-  </footer>
+    <p><a href="http://kuune.org/text/index/">Text index</a></p>
+  </aside>
 
   <footer class="article-footer">
     <div id="disqus_thread"></div>

@@ -29,25 +29,7 @@
 <body>
   <div class="main">
     
-      <nav class="nav">
-  
-    <h4>Next article</h4>
-    <p><a href="http://kuune.org/text/2015/03/01/vaio-z/">VAIO Z (VJZ13A1) が届きました</a></p>
-  
-  
-    <h4>Previous article</h4>
-    <p><a href="http://kuune.org/text/2015/02/11/regarding-golang-web-frameworks-benchmark/">golang web frameworks benchmark 02/2015 について</a></p>
-  
-  <h4>Links</h4>
-  <ul class="links">
-    <li><a href="http://kuune.org/">kuune.org</a></li>
-    <li><a href="https://twitter.com/naoina">Twitter</a></li>
-    <li><a href="https://github.com/naoina">GitHub</a></li>
-  </ul>
-  <p><a href="http://kuune.org/text/index/">Text index</a></p>
-</nav>
-
-<section itemscope itemtype="http://schema.org/BlogPosting">
+      <section itemscope itemtype="http://schema.org/BlogPosting">
   <article class="article">
     <header>
       <h1 itemprop="name headline"><a href="http://kuune.org/text/2015/02/16/toml-v0.4.0/" class="title-link" itemprop="url">naoina/toml を TOML v0.4.0 に準拠させた</a></h1>
@@ -55,38 +37,68 @@
       <meta itemprop="dateModified" content="2015-02-16T00:03:34&#43;09:00">
       <meta itemprop="datePublished" content="2015-02-16">
     </header>
+
     <div itemprop="articleBody"><p>以前 golang 用の TOML パーサー( <a href="https://github.com/naoina/toml">https://github.com/naoina/toml</a> )を作りましたが、今回これを TOML 0.4.0 に準拠させていくつかのバグを修正しました。<br />
 golang 用の TOML パーサーには他に <a href="https://github.com/BurntSushi/toml">https://github.com/BurntSushi/toml</a> がありますが、これと違う点としては、パーサーを <a href="http://ja.wikipedia.org/wiki/Parsing_Expression_Grammar">PEG</a> から生成しているのと、TOML ファイルにエラーがある場合のメッセージを分かりやすくするようにしている点です。</p>
 
 <p>あと、現在はデコーダーしか実装していないので TOML ファイルから Go の struct にマッピングはできますが、逆に Go の struct から TOML ファイルを生成することはできません。<br />
 別にエンコーダーの実装が難しいというわけではなくて、単に必要に迫られてないので実装してないだけです。issues か pull request がきたら実装すると思います。</p>
 </div>
+
+    <footer class="tags-footer">
+      <span>
+        
+          
+            tags:
+          
+        
+      </span>
+      <ul class="tags">
+        
+          <li class="tag" itemprop="keywords">
+            <a href="http://kuune.org/tags/go">go</a>
+          </li>
+        
+          <li class="tag" itemprop="keywords">
+            <a href="http://kuune.org/tags/golang">golang</a>
+          </li>
+        
+          <li class="tag" itemprop="keywords">
+            <a href="http://kuune.org/tags/toml">toml</a>
+          </li>
+        
+      </ul>
+    </footer>
   </article>
 
-  <footer class="tags-footer">
-    <span>
+  <aside class="sidenav">
+    <nav class="nav">
       
-        
-          tags:
-        
+        <h4>Next article</h4>
+        <p><a href="http://kuune.org/text/2015/03/01/vaio-z/">VAIO Z (VJZ13A1) が届きました</a></p>
       
-    </span>
-    <ul class="tags">
       
-        <li class="tag" itemprop="keywords">
-          <a href="http://kuune.org/tags/go">go</a>
-        </li>
+        <h4>Previous article</h4>
+        <p><a href="http://kuune.org/text/2015/02/11/regarding-golang-web-frameworks-benchmark/">golang web frameworks benchmark 02/2015 について</a></p>
       
-        <li class="tag" itemprop="keywords">
-          <a href="http://kuune.org/tags/golang">golang</a>
-        </li>
-      
-        <li class="tag" itemprop="keywords">
-          <a href="http://kuune.org/tags/toml">toml</a>
-        </li>
-      
+    </nav>
+
+    <h4>Profile</h4>
+    <div itemprop="author publisher" itemscope itemtype="http://schema.org/Person">
+      <img src="http://kuune.org/image/thumbnail_s.png" alt="naoina" width="60" height="60" itemprop="image">
+      <div class="author-info">
+        <strong itemprop="name">naoina</strong>
+      </div>
+    </div>
+
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="http://kuune.org/">kuune.org</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
     </ul>
-  </footer>
+    <p><a href="http://kuune.org/text/index/">Text index</a></p>
+  </aside>
 
   <footer class="article-footer">
     <div id="disqus_thread"></div>
