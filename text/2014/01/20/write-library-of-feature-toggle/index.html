@@ -47,10 +47,15 @@
   <p><a href="http://kuune.org/text/index/">Text index</a></p>
 </nav>
 
-<article class="article">
-  <h1><a href="http://kuune.org/text/2014/01/20/write-library-of-feature-toggle/" class="title-link">FeatureToggle ライブラリ書いた</a></h1>
-  <p>Created at: <time datetime="2014-01-20T09:31:19&#43;09:00">2014-01-20 09:31:19 &#43;0900</time></p>
-  <p><a href="https://github.com/naoina/gocchan">https://github.com/naoina/gocchan</a></p>
+<section itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="article">
+    <header>
+      <h1 itemprop="name headline"><a href="http://kuune.org/text/2014/01/20/write-library-of-feature-toggle/" class="title-link" itemprop="url">FeatureToggle ライブラリ書いた</a></h1>
+      <p>Created at: <time datetime="2014-01-20T09:31:19&#43;09:00" itemprop="dateCreated">2014-01-20 09:31:19 &#43;0900</time></p>
+      <meta itemprop="dateModified" content="2014-01-20T09:31:19&#43;09:00">
+      <meta itemprop="datePublished" content="2014-01-20">
+    </header>
+    <div itemprop="articleBody"><p><a href="https://github.com/naoina/gocchan">https://github.com/naoina/gocchan</a></p>
 
 <p>FeatureToggle とはなんぞや？という方は <a href="http://martinfowler.com/bliki/FeatureToggle.html">http://martinfowler.com/bliki/FeatureToggle.html</a> とか見てください。日本語の情報はかなり少ないようです。</p>
 
@@ -90,36 +95,36 @@ func main() {
 <code>Invoke</code> の第 1 引数には任意のオブジェクトが渡せ、それが <code>ActiveIf</code> や Feature function (この例でいうと <code>ExecMyFeature</code>) に渡されますので、これを使って自由に機能を追加できます。</p>
 
 <p>まぁこれだけのライブラリですが、FeatureToggle 用途として普通に使えるんじゃないかと思います。</p>
+</div>
+  </article>
 
-</article>
-
-<footer class="tags-footer">
-  <span>
-    
+  <footer class="tags-footer">
+    <span>
       
-        tags:
+        
+          tags:
+        
       
-    
-  </span>
-  <ul class="tags">
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/go">go</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/golang">golang</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/gocchan">gocchan</a>
-      </li>
-    
-  </ul>
-</footer>
+    </span>
+    <ul class="tags">
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/go">go</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/golang">golang</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/gocchan">gocchan</a>
+        </li>
+      
+    </ul>
+  </footer>
 
-<footer class="article-footer">
-  <div id="disqus_thread"></div>
+  <footer class="article-footer">
+    <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'kuune'
     , disqus_identifier = "/text/2014/01/20/write-library-of-feature-toggle/"
@@ -132,7 +137,8 @@ func main() {
   })();
 </script>
 
-</footer>
+  </footer>
+</section>
 
     
   </div>

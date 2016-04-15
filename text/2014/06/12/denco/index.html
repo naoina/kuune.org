@@ -47,10 +47,15 @@
   <p><a href="http://kuune.org/text/index/">Text index</a></p>
 </nav>
 
-<article class="article">
-  <h1><a href="http://kuune.org/text/2014/06/12/denco/" class="title-link">世界最速だった URL ルーターをリリースしました</a></h1>
-  <p>Created at: <time datetime="2014-06-12T18:35:08&#43;09:00">2014-06-12 18:35:08 &#43;0900</time></p>
-  
+<section itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="article">
+    <header>
+      <h1 itemprop="name headline"><a href="http://kuune.org/text/2014/06/12/denco/" class="title-link" itemprop="url">世界最速だった URL ルーターをリリースしました</a></h1>
+      <p>Created at: <time datetime="2014-06-12T18:35:08&#43;09:00" itemprop="dateCreated">2014-06-12 18:35:08 &#43;0900</time></p>
+      <meta itemprop="dateModified" content="2014-06-12T18:35:08&#43;09:00">
+      <meta itemprop="datePublished" content="2014-06-12">
+    </header>
+    <div itemprop="articleBody">
 
 <p>Golang 用 URL ルーター <a href="https://github.com/naoina/denco">Denco</a> をリリースしました。<br />
 ちょっと前までは最速でしたが、<a href="https://github.com/julienschmidt/httprouter">HttpRouter</a> の作者によって高速にバックミラーから消し去られました。<br />
@@ -158,36 +163,36 @@ router.Lookup(&quot;/user/naoina&quot;) // &quot;second&quot;
 
 <p>私が調べた限りだと、ダブル配列を使った URL ルーターの実装というものがありませんでした。<br />
 ですので、参考になるか分かりませんが、次回から Denco の技術解説みたいなのを書こうかなと考えています。</p>
+</div>
+  </article>
 
-</article>
-
-<footer class="tags-footer">
-  <span>
-    
+  <footer class="tags-footer">
+    <span>
       
-        tags:
+        
+          tags:
+        
       
-    
-  </span>
-  <ul class="tags">
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/go">go</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/golang">golang</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/denco">denco</a>
-      </li>
-    
-  </ul>
-</footer>
+    </span>
+    <ul class="tags">
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/go">go</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/golang">golang</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/denco">denco</a>
+        </li>
+      
+    </ul>
+  </footer>
 
-<footer class="article-footer">
-  <div id="disqus_thread"></div>
+  <footer class="article-footer">
+    <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'kuune'
     , disqus_identifier = "/text/2014/06/12/denco/"
@@ -200,7 +205,8 @@ router.Lookup(&quot;/user/naoina&quot;) // &quot;second&quot;
   })();
 </script>
 
-</footer>
+  </footer>
+</section>
 
     
   </div>

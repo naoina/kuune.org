@@ -47,10 +47,15 @@
   <p><a href="http://kuune.org/text/index/">Text index</a></p>
 </nav>
 
-<article class="article">
-  <h1><a href="http://kuune.org/text/2015/04/01/vocanew-kocha/" class="title-link">ぼかにゅーを Kocha で再実装しました</a></h1>
-  <p>Created at: <time datetime="2015-04-01T23:22:40&#43;09:00">2015-04-01 23:22:40 &#43;0900</time></p>
-  <p>先日 Kocha v0.7.0 をリリースしたんですが、今回そのテストとして <a href="http://vocanew.kuune.org">ぼかにゅー</a> を Kocha で実装し直しました。<br />
+<section itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="article">
+    <header>
+      <h1 itemprop="name headline"><a href="http://kuune.org/text/2015/04/01/vocanew-kocha/" class="title-link" itemprop="url">ぼかにゅーを Kocha で再実装しました</a></h1>
+      <p>Created at: <time datetime="2015-04-01T23:22:40&#43;09:00" itemprop="dateCreated">2015-04-01 23:22:40 &#43;0900</time></p>
+      <meta itemprop="dateModified" content="2015-04-01T23:22:40&#43;09:00">
+      <meta itemprop="datePublished" content="2015-04-01">
+    </header>
+    <div itemprop="articleBody"><p>先日 Kocha v0.7.0 をリリースしたんですが、今回そのテストとして <a href="http://vocanew.kuune.org">ぼかにゅー</a> を Kocha で実装し直しました。<br />
 ぼかにゅーの実装ははこれまで Symphony（PHP）→ Revel（Go）と来て今回で 3 度目の実装となります。<br />
 今のところ大きな問題は起きておらずいい感じです。</p>
 
@@ -59,28 +64,28 @@
 <p><a href="https://github.com/naoina/vocanew">https://github.com/naoina/vocanew</a></p>
 
 <p>ちなみに公開したものはあくまで Kocha のリファレンス実装という位置づけなのでクローラーは含まれていません。</p>
+</div>
+  </article>
 
-</article>
-
-<footer class="tags-footer">
-  <span>
-    
+  <footer class="tags-footer">
+    <span>
       
-        tag:
+        
+          tag:
+        
       
-    
-  </span>
-  <ul class="tags">
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/vocanew">vocanew</a>
-      </li>
-    
-  </ul>
-</footer>
+    </span>
+    <ul class="tags">
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/vocanew">vocanew</a>
+        </li>
+      
+    </ul>
+  </footer>
 
-<footer class="article-footer">
-  <div id="disqus_thread"></div>
+  <footer class="article-footer">
+    <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'kuune'
     , disqus_identifier = "/text/2015/04/01/vocanew-kocha/"
@@ -93,7 +98,8 @@
   })();
 </script>
 
-</footer>
+  </footer>
+</section>
 
     
   </div>

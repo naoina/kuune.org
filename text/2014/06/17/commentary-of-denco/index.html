@@ -47,10 +47,15 @@
   <p><a href="http://kuune.org/text/index/">Text index</a></p>
 </nav>
 
-<article class="article">
-  <h1><a href="http://kuune.org/text/2014/06/17/commentary-of-denco/" class="title-link">Denco 技術解説</a></h1>
-  <p>Created at: <time datetime="2014-06-17T17:52:45&#43;09:00">2014-06-17 17:52:45 &#43;0900</time></p>
-  
+<section itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="article">
+    <header>
+      <h1 itemprop="name headline"><a href="http://kuune.org/text/2014/06/17/commentary-of-denco/" class="title-link" itemprop="url">Denco 技術解説</a></h1>
+      <p>Created at: <time datetime="2014-06-17T17:52:45&#43;09:00" itemprop="dateCreated">2014-06-17 17:52:45 &#43;0900</time></p>
+      <meta itemprop="dateModified" content="2014-06-17T17:52:45&#43;09:00">
+      <meta itemprop="datePublished" content="2014-06-17">
+    </header>
+    <div itemprop="articleBody">
 
 <p>今回は Golang 用の URL ルーターである <a href="https://github.com/naoina/denco">Denco</a> の技術解説をしていきます。<br />
 その前にひとつ、お知らせがあります。Denco はこのたび URL ルーターから URL ルーター兼 HTTP request multiplexer となりました。つまり、<a href="http://golang.org/pkg/net/http/#ServeMux">http.ServeMux</a> の代わりとして使えるようになりました。<br />
@@ -195,36 +200,36 @@
 <p>Denco ではどのようにしてダブル配列を拡張してパラメーターを扱えるようにしているかをざっくりと解説しました。<br />
 実際には今回解説した処理に加えてバックトラックによるパラメーターマッチをしています。バックトラックを行うことによって <code>/user/:name/:id</code> と <code>/user/alice/:id</code> のようなレコードを一緒に扱うことができるようになっています。<br />
 興味があればソースを読んでみてください。</p>
+</div>
+  </article>
 
-</article>
-
-<footer class="tags-footer">
-  <span>
-    
+  <footer class="tags-footer">
+    <span>
       
-        tags:
+        
+          tags:
+        
       
-    
-  </span>
-  <ul class="tags">
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/go">go</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/golang">golang</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/denco">denco</a>
-      </li>
-    
-  </ul>
-</footer>
+    </span>
+    <ul class="tags">
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/go">go</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/golang">golang</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/denco">denco</a>
+        </li>
+      
+    </ul>
+  </footer>
 
-<footer class="article-footer">
-  <div id="disqus_thread"></div>
+  <footer class="article-footer">
+    <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'kuune'
     , disqus_identifier = "/text/2014/06/17/commentary-of-denco/"
@@ -237,7 +242,8 @@
   })();
 </script>
 
-</footer>
+  </footer>
+</section>
 
     
   </div>

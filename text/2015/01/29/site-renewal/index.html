@@ -47,10 +47,15 @@
   <p><a href="http://kuune.org/text/index/">Text index</a></p>
 </nav>
 
-<article class="article">
-  <h1><a href="http://kuune.org/text/2015/01/29/site-renewal/" class="title-link">サイトをリニューアルした</a></h1>
-  <p>Created at: <time datetime="2015-01-29T07:54:48&#43;09:00">2015-01-29 07:54:48 &#43;0900</time></p>
-  <p>全面的に適当に作りなおしている（doing）。あとブログ的な何かは今後こちらに書いていく。<br />
+<section itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="article">
+    <header>
+      <h1 itemprop="name headline"><a href="http://kuune.org/text/2015/01/29/site-renewal/" class="title-link" itemprop="url">サイトをリニューアルした</a></h1>
+      <p>Created at: <time datetime="2015-01-29T07:54:48&#43;09:00" itemprop="dateCreated">2015-01-29 07:54:48 &#43;0900</time></p>
+      <meta itemprop="dateModified" content="2015-01-29T07:54:48&#43;09:00">
+      <meta itemprop="datePublished" content="2015-01-29">
+    </header>
+    <div itemprop="articleBody"><p>全面的に適当に作りなおしている（doing）。あとブログ的な何かは今後こちらに書いていく。<br />
 URL を見ると分かるが、blog ではなく text という呼称を使っている。blog というとちゃんと書かないといけないみたいなのが自分の中であって、text という呼称にすることによって何かを書くことへの障壁を下げた。</p>
 
 <p>技術的な話をすると、<a href="http://gohugo.io/">Hugo</a> という Go で作られた静的サイトジェネレーターを使って構築したものを GitHub Pages でホストしていて、</p>
@@ -63,28 +68,28 @@ Travis-CI が混んでる時はなかなか変更が反映されないという�
 <p>前のブログには Zenback とか AdSense とか貼ってたけど、割と目障りだったし、技術的な記事を読む人はそんなものクリックしないし、そもそも AdBlock とか使ってて見えてもいないだろうから外した。</p>
 
 <p>あと今のデザインの大枠は <a href="http://blog.golang.org/">http://blog.golang.org/</a> のパクリです。</p>
+</div>
+  </article>
 
-</article>
-
-<footer class="tags-footer">
-  <span>
-    
+  <footer class="tags-footer">
+    <span>
       
-        tag:
+        
+          tag:
+        
       
-    
-  </span>
-  <ul class="tags">
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/misc">misc</a>
-      </li>
-    
-  </ul>
-</footer>
+    </span>
+    <ul class="tags">
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/misc">misc</a>
+        </li>
+      
+    </ul>
+  </footer>
 
-<footer class="article-footer">
-  <div id="disqus_thread"></div>
+  <footer class="article-footer">
+    <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'kuune'
     , disqus_identifier = "/text/2015/01/29/site-renewal/"
@@ -97,7 +102,8 @@ Travis-CI が混んでる時はなかなか変更が反映されないという�
   })();
 </script>
 
-</footer>
+  </footer>
+</section>
 
     
   </div>

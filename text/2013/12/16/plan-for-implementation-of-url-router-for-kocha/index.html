@@ -47,10 +47,15 @@
   <p><a href="http://kuune.org/text/index/">Text index</a></p>
 </nav>
 
-<article class="article">
-  <h1><a href="http://kuune.org/text/2013/12/16/plan-for-implementation-of-url-router-for-kocha/" class="title-link">Kocha における URL ルーターの実装と予定</a></h1>
-  <p>Created at: <time datetime="2013-12-16T23:05:02&#43;09:00">2013-12-16 23:05:02 &#43;0900</time></p>
-  <p>現在、<a href="https://github.com/naoina/kocha">Kocha</a> における URL ルーター(<code>/path/to/controller</code> とかの URL を特定のコントローラーにルーティングするアレ)の実装は素朴な実装で、ルートごとの正規表現を配列に持っていて、頭から順番にループを回して一致するものを探すようになっている。<br />
+<section itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="article">
+    <header>
+      <h1 itemprop="name headline"><a href="http://kuune.org/text/2013/12/16/plan-for-implementation-of-url-router-for-kocha/" class="title-link" itemprop="url">Kocha における URL ルーターの実装と予定</a></h1>
+      <p>Created at: <time datetime="2013-12-16T23:05:02&#43;09:00" itemprop="dateCreated">2013-12-16 23:05:02 &#43;0900</time></p>
+      <meta itemprop="dateModified" content="2013-12-16T23:05:02&#43;09:00">
+      <meta itemprop="datePublished" content="2013-12-16">
+    </header>
+    <div itemprop="articleBody"><p>現在、<a href="https://github.com/naoina/kocha">Kocha</a> における URL ルーター(<code>/path/to/controller</code> とかの URL を特定のコントローラーにルーティングするアレ)の実装は素朴な実装で、ルートごとの正規表現を配列に持っていて、頭から順番にループを回して一致するものを探すようになっている。<br />
 非常に簡単な仕組みだが、O(N)なのでルートが増えると遅くなる。そこで下記の記事にあるような全部のルートを 1 つの正規表現でマッチさせる実装を試した。</p>
 
 <p><a href="http://r7kamura.github.io/2013/11/27/rack-multiplexer.html">http://r7kamura.github.io/2013/11/27/rack-multiplexer.html</a></p>
@@ -87,36 +92,36 @@
 </ul>
 
 <p>の 3 つを実装、ベンチマークして速いものを採用しようかと考えています。</p>
+</div>
+  </article>
 
-</article>
-
-<footer class="tags-footer">
-  <span>
-    
+  <footer class="tags-footer">
+    <span>
       
-        tags:
+        
+          tags:
+        
       
-    
-  </span>
-  <ul class="tags">
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/go">go</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/golang">golang</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/kocha">kocha</a>
-      </li>
-    
-  </ul>
-</footer>
+    </span>
+    <ul class="tags">
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/go">go</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/golang">golang</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/kocha">kocha</a>
+        </li>
+      
+    </ul>
+  </footer>
 
-<footer class="article-footer">
-  <div id="disqus_thread"></div>
+  <footer class="article-footer">
+    <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'kuune'
     , disqus_identifier = "/text/2013/12/16/plan-for-implementation-of-url-router-for-kocha/"
@@ -129,7 +134,8 @@
   })();
 </script>
 
-</footer>
+  </footer>
+</section>
 
     
   </div>

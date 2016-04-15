@@ -47,10 +47,15 @@
   <p><a href="http://kuune.org/text/index/">Text index</a></p>
 </nav>
 
-<article class="article">
-  <h1><a href="http://kuune.org/text/2014/02/17/orm-for-golang/" class="title-link">おれのかんがえたさいきょうの ORM for Golang</a></h1>
-  <p>Created at: <time datetime="2014-02-17T12:17:43&#43;09:00">2014-02-17 12:17:43 &#43;0900</time></p>
-  
+<section itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="article">
+    <header>
+      <h1 itemprop="name headline"><a href="http://kuune.org/text/2014/02/17/orm-for-golang/" class="title-link" itemprop="url">おれのかんがえたさいきょうの ORM for Golang</a></h1>
+      <p>Created at: <time datetime="2014-02-17T12:17:43&#43;09:00" itemprop="dateCreated">2014-02-17 12:17:43 &#43;0900</time></p>
+      <meta itemprop="dateModified" content="2014-02-17T12:17:43&#43;09:00">
+      <meta itemprop="datePublished" content="2014-02-17">
+    </header>
+    <div itemprop="articleBody">
 
 <p>既存の ORM はその ORM 独自の記法なりメソッド（Find とか Save とか）がどういう SQL 相当のものなのかを覚える必要がある。<br />
 また、各 ORM ごとにそれが異なるため潰しが効かない。だけど <a href="https://github.com/coopernurse/gorp">gorp</a> のように SQL を文字列で書きたいわけじゃない。<br />
@@ -135,40 +140,40 @@ fmt.Printf(&quot;%v\n&quot;, users)
 <h2 id="余談">余談</h2>
 
 <p>これ完全に <a href="https://github.com/naoina/kocha">Kocha</a> のモデルレイヤーのために作った。Kocha (紅<strong>茶</strong>) だから Genmai (玄米<strong>茶</strong>)。</p>
+</div>
+  </article>
 
-</article>
-
-<footer class="tags-footer">
-  <span>
-    
+  <footer class="tags-footer">
+    <span>
       
-        tags:
+        
+          tags:
+        
       
-    
-  </span>
-  <ul class="tags">
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/go">go</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/golang">golang</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/genmai">genmai</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/orm">orm</a>
-      </li>
-    
-  </ul>
-</footer>
+    </span>
+    <ul class="tags">
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/go">go</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/golang">golang</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/genmai">genmai</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/orm">orm</a>
+        </li>
+      
+    </ul>
+  </footer>
 
-<footer class="article-footer">
-  <div id="disqus_thread"></div>
+  <footer class="article-footer">
+    <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'kuune'
     , disqus_identifier = "/text/2014/02/17/orm-for-golang/"
@@ -181,7 +186,8 @@ fmt.Printf(&quot;%v\n&quot;, users)
   })();
 </script>
 
-</footer>
+  </footer>
+</section>
 
     
   </div>

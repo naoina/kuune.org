@@ -47,10 +47,15 @@
   <p><a href="http://kuune.org/text/index/">Text index</a></p>
 </nav>
 
-<article class="article">
-  <h1><a href="http://kuune.org/text/2014/11/07/json-struct-interface-in-golang/" class="title-link">Golangでどんな json が返ってくるかわからない時に struct で定義するまでじゃないんだけど､ interface だと呼び出しが面倒なのどうしたらいいんだろう問題への一回答例</a></h1>
-  <p>Created at: <time datetime="2014-11-07T16:21:00&#43;09:00">2014-11-07 16:21:00 &#43;0900</time></p>
-  <p><a href="http://konboi.hatenablog.com/entry/2014/11/07/155418">http://konboi.hatenablog.com/entry/2014/11/07/155418</a> これへの自分なりの回答です。元ブログのタイトルは const になってますが、多分 struct のことですかね。</p>
+<section itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="article">
+    <header>
+      <h1 itemprop="name headline"><a href="http://kuune.org/text/2014/11/07/json-struct-interface-in-golang/" class="title-link" itemprop="url">Golangでどんな json が返ってくるかわからない時に struct で定義するまでじゃないんだけど､ interface だと呼び出しが面倒なのどうしたらいいんだろう問題への一回答例</a></h1>
+      <p>Created at: <time datetime="2014-11-07T16:21:00&#43;09:00" itemprop="dateCreated">2014-11-07 16:21:00 &#43;0900</time></p>
+      <meta itemprop="dateModified" content="2014-11-07T16:21:00&#43;09:00">
+      <meta itemprop="datePublished" content="2014-11-07">
+    </header>
+    <div itemprop="articleBody"><p><a href="http://konboi.hatenablog.com/entry/2014/11/07/155418">http://konboi.hatenablog.com/entry/2014/11/07/155418</a> これへの自分なりの回答です。元ブログのタイトルは const になってますが、多分 struct のことですかね。</p>
 
 <p>Golang では <code>var</code> を使えば変数が定義できますが、このときに型を指定する必要があります。</p>
 
@@ -95,32 +100,32 @@ func main() {
 <p><a href="http://play.golang.org/p/nTCdrMxYoQ">http://play.golang.org/p/nTCdrMxYoQ</a></p>
 
 <p>ただしこの方法は本当にどんな内容が返ってくるか分からない時には使えない（例えば返ってくる json が {&ldquo;foo&rdquo;: &ldquo;bar&rdquo;} なのか {&ldquo;bar&rdquo;: &ldquo;foo&rdquo;} なのか分からない時など）のでその時は元の記事のように <code>interface{}</code> で受け取って型アサーションしてやる必要があります。</p>
+</div>
+  </article>
 
-</article>
-
-<footer class="tags-footer">
-  <span>
-    
+  <footer class="tags-footer">
+    <span>
       
-        tags:
+        
+          tags:
+        
       
-    
-  </span>
-  <ul class="tags">
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/go">go</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/golang">golang</a>
-      </li>
-    
-  </ul>
-</footer>
+    </span>
+    <ul class="tags">
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/go">go</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/golang">golang</a>
+        </li>
+      
+    </ul>
+  </footer>
 
-<footer class="article-footer">
-  <div id="disqus_thread"></div>
+  <footer class="article-footer">
+    <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'kuune'
     , disqus_identifier = "/text/2014/11/07/json-struct-interface-in-golang/"
@@ -133,7 +138,8 @@ func main() {
   })();
 </script>
 
-</footer>
+  </footer>
+</section>
 
     
   </div>

@@ -47,10 +47,15 @@
   <p><a href="http://kuune.org/text/index/">Text index</a></p>
 </nav>
 
-<article class="article">
-  <h1><a href="http://kuune.org/text/2013/10/21/how-to-get-argument-names-in-runtime/" class="title-link">golangで実行時に関数の引数の名前を取得する方法</a></h1>
-  <p>Created at: <time datetime="2013-10-21T23:40:16&#43;09:00">2013-10-21 23:40:16 &#43;0900</time></p>
-  <p>golang には <code>reflect</code> というリフレクションライブラリがありますが、これは関数の引数の情報は型までしか取れないため、引数の名前が欲しい場合は使えません。</p>
+<section itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="article">
+    <header>
+      <h1 itemprop="name headline"><a href="http://kuune.org/text/2013/10/21/how-to-get-argument-names-in-runtime/" class="title-link" itemprop="url">golangで実行時に関数の引数の名前を取得する方法</a></h1>
+      <p>Created at: <time datetime="2013-10-21T23:40:16&#43;09:00" itemprop="dateCreated">2013-10-21 23:40:16 &#43;0900</time></p>
+      <meta itemprop="dateModified" content="2013-10-21T23:40:16&#43;09:00">
+      <meta itemprop="datePublished" content="2013-10-21">
+    </header>
+    <div itemprop="articleBody"><p>golang には <code>reflect</code> というリフレクションライブラリがありますが、これは関数の引数の情報は型までしか取れないため、引数の名前が欲しい場合は使えません。</p>
 
 <pre><code class="language-go">package main
 
@@ -115,32 +120,32 @@ func A(id int) {}
 <p><a href="http://play.golang.org/p/5B7kAf-v-Y">http://play.golang.org/p/5B7kAf-v-Y</a></p>
 
 <p>ただしこの方法の場合、golang のソースファイルかその内容の文字列が必要になるのでバイナリだけでは達成出来ないのが難です。</p>
+</div>
+  </article>
 
-</article>
-
-<footer class="tags-footer">
-  <span>
-    
+  <footer class="tags-footer">
+    <span>
       
-        tags:
+        
+          tags:
+        
       
-    
-  </span>
-  <ul class="tags">
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/go">go</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/golang">golang</a>
-      </li>
-    
-  </ul>
-</footer>
+    </span>
+    <ul class="tags">
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/go">go</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/golang">golang</a>
+        </li>
+      
+    </ul>
+  </footer>
 
-<footer class="article-footer">
-  <div id="disqus_thread"></div>
+  <footer class="article-footer">
+    <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'kuune'
     , disqus_identifier = "/text/2013/10/21/how-to-get-argument-names-in-runtime/"
@@ -153,7 +158,8 @@ func A(id int) {}
   })();
 </script>
 
-</footer>
+  </footer>
+</section>
 
     
   </div>

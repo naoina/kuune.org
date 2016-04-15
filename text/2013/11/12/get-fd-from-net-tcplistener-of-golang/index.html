@@ -47,10 +47,15 @@
   <p><a href="http://kuune.org/text/index/">Text index</a></p>
 </nav>
 
-<article class="article">
-  <h1><a href="http://kuune.org/text/2013/11/12/get-fd-from-net-tcplistener-of-golang/" class="title-link">golang の net.TCPLister から file descriptor を取る</a></h1>
-  <p>Created at: <time datetime="2013-11-12T23:57:53&#43;09:00">2013-11-12 23:57:53 &#43;0900</time></p>
-  <p>何故かは分かりませんが、golang は net.TCPListener の file descriptor が export されていません。<br />
+<section itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="article">
+    <header>
+      <h1 itemprop="name headline"><a href="http://kuune.org/text/2013/11/12/get-fd-from-net-tcplistener-of-golang/" class="title-link" itemprop="url">golang の net.TCPLister から file descriptor を取る</a></h1>
+      <p>Created at: <time datetime="2013-11-12T23:57:53&#43;09:00" itemprop="dateCreated">2013-11-12 23:57:53 &#43;0900</time></p>
+      <meta itemprop="dateModified" content="2013-11-12T23:57:53&#43;09:00">
+      <meta itemprop="datePublished" content="2013-11-12">
+    </header>
+    <div itemprop="articleBody"><p>何故かは分かりませんが、golang は net.TCPListener の file descriptor が export されていません。<br />
 通常は特に問題ないのですが、graceful restart を実装しようとした場合に困ったことになります。<br />
 ちなみに <a href="http://golang.org/pkg/net/#TCPListener.File"><code>func (l *TCPListener) File() (f *os.File, err error)</code></a> というのもありますが、これは file descriptor を複製するので graceful restart には使えません。（同じポートを Listen することになるため、複製の時点で bad file descriptor になる）</p>
 
@@ -80,32 +85,32 @@ func main() {
 </code></pre>
 
 <p>この unexported なフィールドから取得するの、すごく気持ち悪いんですが他に方法ないんですかね。。。</p>
+</div>
+  </article>
 
-</article>
-
-<footer class="tags-footer">
-  <span>
-    
+  <footer class="tags-footer">
+    <span>
       
-        tags:
+        
+          tags:
+        
       
-    
-  </span>
-  <ul class="tags">
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/go">go</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/golang">golang</a>
-      </li>
-    
-  </ul>
-</footer>
+    </span>
+    <ul class="tags">
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/go">go</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/golang">golang</a>
+        </li>
+      
+    </ul>
+  </footer>
 
-<footer class="article-footer">
-  <div id="disqus_thread"></div>
+  <footer class="article-footer">
+    <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'kuune'
     , disqus_identifier = "/text/2013/11/12/get-fd-from-net-tcplistener-of-golang/"
@@ -118,7 +123,8 @@ func main() {
   })();
 </script>
 
-</footer>
+  </footer>
+</section>
 
     
   </div>

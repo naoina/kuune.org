@@ -47,10 +47,15 @@
   <p><a href="http://kuune.org/text/index/">Text index</a></p>
 </nav>
 
-<article class="article">
-  <h1><a href="http://kuune.org/text/2014/02/20/ui-first/" class="title-link">UI ファーストという開発手法</a></h1>
-  <p>Created at: <time datetime="2014-02-20T22:28:50&#43;09:00">2014-02-20 22:28:50 &#43;0900</time></p>
-  <p>ソフトウェアエンジニアは新しく何かを開発する際に、技術的に可能かどうか、どう実装すればいいか、みたいなのを先んじて考えがちな気がする。<br />
+<section itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="article">
+    <header>
+      <h1 itemprop="name headline"><a href="http://kuune.org/text/2014/02/20/ui-first/" class="title-link" itemprop="url">UI ファーストという開発手法</a></h1>
+      <p>Created at: <time datetime="2014-02-20T22:28:50&#43;09:00" itemprop="dateCreated">2014-02-20 22:28:50 &#43;0900</time></p>
+      <meta itemprop="dateModified" content="2014-02-20T22:28:50&#43;09:00">
+      <meta itemprop="datePublished" content="2014-02-20">
+    </header>
+    <div itemprop="articleBody"><p>ソフトウェアエンジニアは新しく何かを開発する際に、技術的に可能かどうか、どう実装すればいいか、みたいなのを先んじて考えがちな気がする。<br />
 そういうボトムアップ的な思考は技術を知っているが故に出る自然な思考なのだが、私の経験上そういう思考で作られたものは大体使いづらい、いわゆる gomi が出来上がる。</p>
 
 <p>なぜか？それは UI を考える際に実現可能性や実装のしやすさを優先してしまうから。<br />
@@ -69,28 +74,28 @@
 最初に実現可能性を捨てて UI を考えると実装できない UI になると思うかも知れないが、まぁ大体なんとかなるし、なんとかするべきである。</p>
 
 <p>ただ、素晴らしいと思っていた UI が実は gomi だったということはよくあるし、そういうのはゴミ箱にダンクシュートするしかない。</p>
+</div>
+  </article>
 
-</article>
-
-<footer class="tags-footer">
-  <span>
-    
+  <footer class="tags-footer">
+    <span>
       
-        tag:
+        
+          tag:
+        
       
-    
-  </span>
-  <ul class="tags">
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/programming">programming</a>
-      </li>
-    
-  </ul>
-</footer>
+    </span>
+    <ul class="tags">
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/programming">programming</a>
+        </li>
+      
+    </ul>
+  </footer>
 
-<footer class="article-footer">
-  <div id="disqus_thread"></div>
+  <footer class="article-footer">
+    <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'kuune'
     , disqus_identifier = "/text/2014/02/20/ui-first/"
@@ -103,7 +108,8 @@
   })();
 </script>
 
-</footer>
+  </footer>
+</section>
 
     
   </div>

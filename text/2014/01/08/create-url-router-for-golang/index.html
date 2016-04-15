@@ -47,10 +47,15 @@
   <p><a href="http://kuune.org/text/index/">Text index</a></p>
 </nav>
 
-<article class="article">
-  <h1><a href="http://kuune.org/text/2014/01/08/create-url-router-for-golang/" class="title-link">Golang 用 URL ルーター作った</a></h1>
-  <p>Created at: <time datetime="2014-01-08T23:36:36&#43;09:00">2014-01-08 23:36:36 &#43;0900</time></p>
-  
+<section itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="article">
+    <header>
+      <h1 itemprop="name headline"><a href="http://kuune.org/text/2014/01/08/create-url-router-for-golang/" class="title-link" itemprop="url">Golang 用 URL ルーター作った</a></h1>
+      <p>Created at: <time datetime="2014-01-08T23:36:36&#43;09:00" itemprop="dateCreated">2014-01-08 23:36:36 &#43;0900</time></p>
+      <meta itemprop="dateModified" content="2014-01-08T23:36:36&#43;09:00">
+      <meta itemprop="datePublished" content="2014-01-08">
+    </header>
+    <div itemprop="articleBody">
 
 <p><a href="https://github.com/naoina/kocha-urlrouter">https://github.com/naoina/kocha-urlrouter</a></p>
 
@@ -77,36 +82,36 @@ Golang の標準ライブラリの <code>database/sql</code> と同じような�
 
 <p>ダブル配列速くしたので、速度はダブル配列の方がちょっとだけ速くなった。メモリ効率はダブル配列の方が約 2 倍から 3 倍程度良いが、構築は三分探索木の方が約 2 倍速い。<br />
 というか、URL ルーターとして使う文には何万件とか入れないだろうし、メモリプロファイルとった限りでは三分探索木でも 700 件で 3MB ぐらいしか使ってないし、ダブル配列を使う意義とは。。。</p>
+</div>
+  </article>
 
-</article>
-
-<footer class="tags-footer">
-  <span>
-    
+  <footer class="tags-footer">
+    <span>
       
-        tags:
+        
+          tags:
+        
       
-    
-  </span>
-  <ul class="tags">
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/go">go</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/golang">golang</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/trie">trie</a>
-      </li>
-    
-  </ul>
-</footer>
+    </span>
+    <ul class="tags">
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/go">go</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/golang">golang</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/trie">trie</a>
+        </li>
+      
+    </ul>
+  </footer>
 
-<footer class="article-footer">
-  <div id="disqus_thread"></div>
+  <footer class="article-footer">
+    <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'kuune'
     , disqus_identifier = "/text/2014/01/08/create-url-router-for-golang/"
@@ -119,7 +124,8 @@ Golang の標準ライブラリの <code>database/sql</code> と同じような�
   })();
 </script>
 
-</footer>
+  </footer>
+</section>
 
     
   </div>

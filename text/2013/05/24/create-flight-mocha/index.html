@@ -47,10 +47,15 @@
   <p><a href="http://kuune.org/text/index/">Text index</a></p>
 </nav>
 
-<article class="article">
-  <h1><a href="http://kuune.org/text/2013/05/24/create-flight-mocha/" class="title-link">flight-mocha作りました</a></h1>
-  <p>Created at: <time datetime="2013-05-24T20:10:14&#43;09:00">2013-05-24 20:10:14 &#43;0900</time></p>
-  <p><a href="https://github.com/naoina/flight-mocha">https://github.com/naoina/flight-mocha</a></p>
+<section itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="article">
+    <header>
+      <h1 itemprop="name headline"><a href="http://kuune.org/text/2013/05/24/create-flight-mocha/" class="title-link" itemprop="url">flight-mocha作りました</a></h1>
+      <p>Created at: <time datetime="2013-05-24T20:10:14&#43;09:00" itemprop="dateCreated">2013-05-24 20:10:14 &#43;0900</time></p>
+      <meta itemprop="dateModified" content="2013-05-24T20:10:14&#43;09:00">
+      <meta itemprop="datePublished" content="2013-05-24">
+    </header>
+    <div itemprop="articleBody"><p><a href="https://github.com/naoina/flight-mocha">https://github.com/naoina/flight-mocha</a></p>
 
 <p>Twitter社製の <a href="http://twitter.github.io/flight/">Flight</a> という素晴らしいJavaScriptのフレームワークがありまして、このplogでも使っています。</p>
 
@@ -76,36 +81,36 @@
 
 <p>また、現状ではFlightのイベント周りのテストは <a href="http://sinonjs.org/">sinon.js</a> あたりを使って自力でやる必要があります。<br />
 なので、ここらへんをflight-mochaでうまくやれないかなと考えていますがそれはまた別のお話。</p>
+</div>
+  </article>
 
-</article>
-
-<footer class="tags-footer">
-  <span>
-    
+  <footer class="tags-footer">
+    <span>
       
-        tags:
+        
+          tags:
+        
       
-    
-  </span>
-  <ul class="tags">
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/flight">flight</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/javascript">javascript</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/mocha">mocha</a>
-      </li>
-    
-  </ul>
-</footer>
+    </span>
+    <ul class="tags">
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/flight">flight</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/javascript">javascript</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/mocha">mocha</a>
+        </li>
+      
+    </ul>
+  </footer>
 
-<footer class="article-footer">
-  <div id="disqus_thread"></div>
+  <footer class="article-footer">
+    <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'kuune'
     , disqus_identifier = "/text/2013/05/24/create-flight-mocha/"
@@ -118,7 +123,8 @@
   })();
 </script>
 
-</footer>
+  </footer>
+</section>
 
     
   </div>

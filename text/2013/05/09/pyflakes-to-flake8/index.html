@@ -47,10 +47,15 @@
   <p><a href="http://kuune.org/text/index/">Text index</a></p>
 </nav>
 
-<article class="article">
-  <h1><a href="http://kuune.org/text/2013/05/09/pyflakes-to-flake8/" class="title-link">pyflakes から flake8 に乗り換えて幸せになった話</a></h1>
-  <p>Created at: <time datetime="2013-05-09T23:37:20&#43;09:00">2013-05-09 23:37:20 &#43;0900</time></p>
-  <p>Python のコードチェッカーはいくつかありますが、私は設定無しで実用になる <a href="https://pypi.python.org/pypi/pyflakes">pyflakes</a> を使っていました。<br />
+<section itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="article">
+    <header>
+      <h1 itemprop="name headline"><a href="http://kuune.org/text/2013/05/09/pyflakes-to-flake8/" class="title-link" itemprop="url">pyflakes から flake8 に乗り換えて幸せになった話</a></h1>
+      <p>Created at: <time datetime="2013-05-09T23:37:20&#43;09:00" itemprop="dateCreated">2013-05-09 23:37:20 &#43;0900</time></p>
+      <meta itemprop="dateModified" content="2013-05-09T23:37:20&#43;09:00">
+      <meta itemprop="datePublished" content="2013-05-09">
+    </header>
+    <div itemprop="articleBody"><p>Python のコードチェッカーはいくつかありますが、私は設定無しで実用になる <a href="https://pypi.python.org/pypi/pyflakes">pyflakes</a> を使っていました。<br />
 しかし、最近 Django を使っていて settings.py を production や development に分ける際に</p>
 
 <pre><code class="language-python">from plog.settings.base import *
@@ -77,32 +82,32 @@ flake8 では前述の pyflakes の警告を以下のようにして抑制する
 また、 flake8 は設定ファイルで常に特定のエラーや警告を制御することもでき、大変幸せになれます。</p>
 
 <p>さらに幸せを享受したい場合は <a href="http://flake8.readthedocs.org/en/latest/">http://flake8.readthedocs.org/en/latest/</a> の公式ドキュメントを読んでください。</p>
+</div>
+  </article>
 
-</article>
-
-<footer class="tags-footer">
-  <span>
-    
+  <footer class="tags-footer">
+    <span>
       
-        tags:
+        
+          tags:
+        
       
-    
-  </span>
-  <ul class="tags">
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/python">python</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/flake8">flake8</a>
-      </li>
-    
-  </ul>
-</footer>
+    </span>
+    <ul class="tags">
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/python">python</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/flake8">flake8</a>
+        </li>
+      
+    </ul>
+  </footer>
 
-<footer class="article-footer">
-  <div id="disqus_thread"></div>
+  <footer class="article-footer">
+    <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'kuune'
     , disqus_identifier = "/text/2013/05/09/pyflakes-to-flake8/"
@@ -115,7 +120,8 @@ flake8 では前述の pyflakes の警告を以下のようにして抑制する
   })();
 </script>
 
-</footer>
+  </footer>
+</section>
 
     
   </div>

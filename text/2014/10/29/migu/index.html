@@ -47,10 +47,15 @@
   <p><a href="http://kuune.org/text/index/">Text index</a></p>
 </nav>
 
-<article class="article">
-  <h1><a href="http://kuune.org/text/2014/10/29/migu/" class="title-link">Migu という golang 用 DB スキーマのマイグレーションツールを作った話</a></h1>
-  <p>Created at: <time datetime="2014-10-29T17:53:44&#43;09:00">2014-10-29 17:53:44 &#43;0900</time></p>
-  
+<section itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="article">
+    <header>
+      <h1 itemprop="name headline"><a href="http://kuune.org/text/2014/10/29/migu/" class="title-link" itemprop="url">Migu という golang 用 DB スキーマのマイグレーションツールを作った話</a></h1>
+      <p>Created at: <time datetime="2014-10-29T17:53:44&#43;09:00" itemprop="dateCreated">2014-10-29 17:53:44 &#43;0900</time></p>
+      <meta itemprop="dateModified" content="2014-10-29T17:53:44&#43;09:00">
+      <meta itemprop="datePublished" content="2014-10-29">
+    </header>
+    <div itemprop="articleBody">
 
 <p><a href="https://github.com/winebarrel/ridgepole">Ridgepole</a> インスパイアの golang 用 DB スキーマのマイグレーションツールを作りました。</p>
 
@@ -153,36 +158,36 @@ func (u *User) IsAlice() bool {
 <p>Migu を使うことで大量のマイグレーションファイルを書く必要が無くなり、DB スキーマの管理が非常に楽になる上に身長が 5 センチ伸び、恋人もできることがお分かりいただけたかと思います。<br />
 とはいえ、まだまだ粗削りで足りない部分も多いので、これからもっと改良していく必要があります。<br />
 というわけで、あなたの Pull Request をお待ちしております。</p>
+</div>
+  </article>
 
-</article>
-
-<footer class="tags-footer">
-  <span>
-    
+  <footer class="tags-footer">
+    <span>
       
-        tags:
+        
+          tags:
+        
       
-    
-  </span>
-  <ul class="tags">
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/go">go</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/golang">golang</a>
-      </li>
-    
-      <li class="tag">
-        <a href="http://kuune.org/tags/migu">migu</a>
-      </li>
-    
-  </ul>
-</footer>
+    </span>
+    <ul class="tags">
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/go">go</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/golang">golang</a>
+        </li>
+      
+        <li class="tag" itemprop="keywords">
+          <a href="http://kuune.org/tags/migu">migu</a>
+        </li>
+      
+    </ul>
+  </footer>
 
-<footer class="article-footer">
-  <div id="disqus_thread"></div>
+  <footer class="article-footer">
+    <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'kuune'
     , disqus_identifier = "/text/2014/10/29/migu/"
@@ -195,7 +200,8 @@ func (u *User) IsAlice() bool {
   })();
 </script>
 
-</footer>
+  </footer>
+</section>
 
     
   </div>
