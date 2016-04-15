@@ -16,31 +16,37 @@
   <p><a href="{{ .RelRef "index.md" }}">Text index</a></p>
 </nav>
 
-<article class="article">
-  <h1><a href="{{ .RelPermalink }}" class="title-link">{{ .Title }}</a></h1>
-  <p>Created at: <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02 15:04:05 -0700" }}</time></p>
-  {{ .Content }}
-</article>
+<section itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="article">
+    <header>
+      <h1 itemprop="name headline"><a href="{{ .RelPermalink }}" class="title-link" itemprop="url">{{ .Title }}</a></h1>
+      <p>Created at: <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="dateCreated">{{ .Date.Format "2006-01-02 15:04:05 -0700" }}</time></p>
+      <meta itemprop="dateModified" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+      <meta itemprop="datePublished" content="{{ .Date.Format "2006-01-02"}}">
+    </header>
+    <div itemprop="articleBody">{{ .Content }}</div>
+  </article>
 
-<footer class="tags-footer">
-  <span>
-    {{ if .Params.tags }}
-      {{ if len .Params.tags | eq 1 }}
-        tag:
-      {{ else }}
-        tags:
+  <footer class="tags-footer">
+    <span>
+      {{ if .Params.tags }}
+        {{ if len .Params.tags | eq 1 }}
+          tag:
+        {{ else }}
+          tags:
+        {{ end }}
       {{ end }}
-    {{ end }}
-  </span>
-  <ul class="tags">
-    {{ range .Params.tags }}
-      <li class="tag">
-        <a href="/tags/{{ . | urlize }}">{{ . }}</a>
-      </li>
-    {{ end }}
-  </ul>
-</footer>
+    </span>
+    <ul class="tags">
+      {{ range .Params.tags }}
+        <li class="tag" itemprop="keywords">
+          <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </footer>
 
-<footer class="article-footer">
-  {{ partial "disqus" . }}
-</footer>
+  <footer class="article-footer">
+    {{ partial "disqus" . }}
+  </footer>
+</section>
