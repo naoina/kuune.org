@@ -1,21 +1,3 @@
-<nav class="nav">
-  {{ if .NextInSection }}
-    <h4>Next article</h4>
-    <p><a href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a></p>
-  {{ end }}
-  {{ if .PrevInSection }}
-    <h4>Previous article</h4>
-    <p><a href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a></p>
-  {{ end }}
-  <h4>Links</h4>
-  <ul class="links">
-    <li><a href="/">{{ .Site.Title }}</a></li>
-    <li><a href="https://twitter.com/naoina">Twitter</a></li>
-    <li><a href="https://github.com/naoina">GitHub</a></li>
-  </ul>
-  <p><a href="{{ .RelRef "index.md" }}">Text index</a></p>
-</nav>
-
 <section itemscope itemtype="http://schema.org/BlogPosting">
   <article class="article">
     <header>
@@ -24,27 +6,46 @@
       <meta itemprop="dateModified" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
       <meta itemprop="datePublished" content="{{ .Date.Format "2006-01-02"}}">
     </header>
+
     <div itemprop="articleBody">{{ .Content }}</div>
+
+    <footer class="tags-footer">
+      <span>
+        {{ if .Params.tags }}
+          {{ if len .Params.tags | eq 1 }}
+            tag:
+          {{ else }}
+            tags:
+          {{ end }}
+        {{ end }}
+      </span>
+      <ul class="tags">
+        {{ range .Params.tags }}
+          <li class="tag" itemprop="keywords">
+            <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    </footer>
   </article>
 
-  <footer class="tags-footer">
-    <span>
-      {{ if .Params.tags }}
-        {{ if len .Params.tags | eq 1 }}
-          tag:
-        {{ else }}
-          tags:
-        {{ end }}
-      {{ end }}
-    </span>
-    <ul class="tags">
-      {{ range .Params.tags }}
-        <li class="tag" itemprop="keywords">
-          <a href="/tags/{{ . | urlize }}">{{ . }}</a>
-        </li>
-      {{ end }}
+  <nav class="nav">
+    {{ if .NextInSection }}
+      <h4>Next article</h4>
+      <p><a href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a></p>
+    {{ end }}
+    {{ if .PrevInSection }}
+      <h4>Previous article</h4>
+      <p><a href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a></p>
+    {{ end }}
+    <h4>Links</h4>
+    <ul class="links">
+      <li><a href="/">{{ .Site.Title }}</a></li>
+      <li><a href="https://twitter.com/naoina">Twitter</a></li>
+      <li><a href="https://github.com/naoina">GitHub</a></li>
     </ul>
-  </footer>
+    <p><a href="{{ .RelRef "index.md" }}">Text index</a></p>
+  </nav>
 
   <footer class="article-footer">
     {{ partial "disqus" . }}
