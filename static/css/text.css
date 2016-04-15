@@ -52,6 +52,12 @@ img {
 
     .main .tags-header h1 {
         display: inline-block;
+    }
+
+    .author-info {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 5px;
 }
 
 @media (min-width: 768px) {
@@ -65,7 +71,7 @@ img {
             margin-right: 2rem;
         }
 
-        .main .nav {
+        .main .sidenav {
             float: left;
             width: 22%;
     }
