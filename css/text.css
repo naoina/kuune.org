@@ -37,7 +37,6 @@ img {
     .main code {
         color: #333;
         background: #f8f8f8;
-        padding: .2em .3em;
     }
 
     .main .tags {
@@ -58,6 +57,10 @@ img {
         display: inline-block;
         vertical-align: top;
         margin-left: 5px;
+    }
+
+    .article-logo {
+        border: none;
 }
 
 @media (min-width: 768px) {

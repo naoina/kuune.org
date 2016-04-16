@@ -5,6 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="msapplication-config" content="none">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta property="og:title" content="Denco 技術解説">
+<meta property="og:url" content="http://kuune.org/text/2014/06/17/commentary-of-denco/">
+
+<meta property="fb:app_id" content="1711329939155199">
 <title>Denco 技術解説 | kuune.org</title>
 <link rel="canonical" href="http://kuune.org/text/2014/06/17/commentary-of-denco/">
 
@@ -22,6 +26,9 @@
 </script>
 
 
+  
+  <meta property="og:type" content="article">
+  
   <link rel="stylesheet" href="http://kuune.org/css/text.css" media="all">
   <link rel="stylesheet" href="http://kuune.org/css/github.min.css" media="all">
   <script src="http://kuune.org/js/highlight.pack.js" onload="hljs.initHighlighting();" async></script>
@@ -39,6 +46,8 @@
     </header>
 
     <div itemprop="articleBody">
+      
+      
 
 <p>今回は Golang 用の URL ルーターである <a href="https://github.com/naoina/denco">Denco</a> の技術解説をしていきます。<br />
 その前にひとつ、お知らせがあります。Denco はこのたび URL ルーターから URL ルーター兼 HTTP request multiplexer となりました。つまり、<a href="http://golang.org/pkg/net/http/#ServeMux">http.ServeMux</a> の代わりとして使えるようになりました。<br />
@@ -183,7 +192,8 @@
 <p>Denco ではどのようにしてダブル配列を拡張してパラメーターを扱えるようにしているかをざっくりと解説しました。<br />
 実際には今回解説した処理に加えてバックトラックによるパラメーターマッチをしています。バックトラックを行うことによって <code>/user/:name/:id</code> と <code>/user/alice/:id</code> のようなレコードを一緒に扱うことができるようになっています。<br />
 興味があればソースを読んでみてください。</p>
-</div>
+
+    </div>
 
     <footer class="tags-footer">
       <span>
