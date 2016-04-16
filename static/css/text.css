@@ -57,6 +57,10 @@ img {
         display: inline-block;
         vertical-align: top;
         margin-left: 5px;
+    }
+
+    .article-logo {
+        border: none;
 }
 
 @media (min-width: 768px) {

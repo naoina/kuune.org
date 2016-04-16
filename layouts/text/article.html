@@ -7,7 +7,12 @@
       <meta itemprop="datePublished" content="{{ .Date.Format "2006-01-02"}}">
     </header>
 
-    <div itemprop="articleBody">{{ .Content }}</div>
+    <div itemprop="articleBody">
+      {{ if .Params.logo }}
+        <img src="/image/{{ .Params.logo }}" alt="" class="article-logo" itemprop="image">
+      {{ end }}
+      {{ .Content }}
+    </div>
 
     <footer class="tags-footer">
       <span>
