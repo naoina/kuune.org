@@ -2,6 +2,11 @@
 <html>
 <head>
   {{ partial "head.html" . }}
+  {{ if eq .Status "index" }}
+  <meta property="og:type" content="website">
+  {{ else }}
+  <meta property="og:type" content="article">
+  {{ end }}
   <link rel="stylesheet" href="/css/text.css" media="all">
   <link rel="stylesheet" href="/css/github.min.css" media="all">
   <script src="/js/highlight.pack.js" onload="hljs.initHighlighting();" async></script>
