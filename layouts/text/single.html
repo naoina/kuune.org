@@ -6,6 +6,14 @@
   <meta property="og:type" content="website">
   {{ else }}
   <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@naoina">
+  <meta name="twitter:description" content="{{ substr .Summary 0 100 }}">
+  {{ if .Params.logosmall }}
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}image/{{ .Params.logosmall }}">
+  {{ else }}
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}image/thumbnail.png">
+  {{ end }}
   {{ end }}
   <link rel="stylesheet" href="/css/text.css" media="all">
   <link rel="stylesheet" href="/css/github.min.css" media="all">
