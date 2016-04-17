@@ -22,6 +22,10 @@ li {
     list-style: none;
 }
 
+.clear {
+    clear: both;
+}
+
 .fa-twitter-square {
     color: #55acee;
 }

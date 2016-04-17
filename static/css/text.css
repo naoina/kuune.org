@@ -14,10 +14,6 @@ img {
         font-size: 1.5em;
         }
 
-    .main .article-footer {
-        margin-top: 5rem;
-    }
-
     .main .article h2 {
         margin-top: 2rem;
         border-bottom: 2px solid #d8edf4;
@@ -71,6 +67,10 @@ img {
 .social-btn {
     display: inline-block;
     margin-right: 5px;
+}
+
+.footer-ad {
+    max-width: 336px;
 }
 
 @media (min-width: 768px) {
