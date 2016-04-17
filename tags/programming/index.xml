@@ -1,105 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Programming on kuune.org</title>
-    <link>http://kuune.org/tags/programming/</link>
-    <description>Recent content in Programming on kuune.org</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 27 Jun 2014 09:22:12 +0900</lastBuildDate>
-    <atom:link href="http://kuune.org/tags/programming/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>使うエンジニア、作るエンジニア</title>
-      <link>http://kuune.org/text/2014/06/27/engineers/</link>
-      <pubDate>Fri, 27 Jun 2014 09:22:12 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/06/27/engineers/</guid>
-      <description>
-
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on kuune.org</title><link>http://kuune.org/tags/programming/</link><description>Recent content in Programming on kuune.org</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 27 Jun 2014 09:22:12 +0900</lastBuildDate><atom:link href="http://kuune.org/tags/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>使うエンジニア、作るエンジニア</title><link>http://kuune.org/text/2014/06/27/engineers/</link><pubDate>Fri, 27 Jun 2014 09:22:12 +0900</pubDate><guid>http://kuune.org/text/2014/06/27/engineers/</guid><description>
 &lt;p&gt;ここでいう エンジニア とは ソフトウェアエンジニア のことです。&lt;/p&gt;
-
 &lt;h2 id=&#34;使うエンジニア&#34;&gt;使うエンジニア&lt;/h2&gt;
-
 &lt;p&gt;既存のものを組み合わせて作る。&lt;br /&gt;
 足りないものや不満があるものに関しては、無いものは仕方ないと割り切る。あるいは出てくるまで待つ。&lt;br /&gt;
 builder。&lt;/p&gt;
-
 &lt;h2 id=&#34;作るエンジニア&#34;&gt;作るエンジニア&lt;/h2&gt;
-
 &lt;p&gt;既存のものを組み合わせて作る。&lt;br /&gt;
 足りないものや不満があるものに関しては、自分で作ってしまうか、改善するための パッチ/プルリクエスト を送る。&lt;br /&gt;
 creator。&lt;/p&gt;
-
 &lt;h2 id=&#34;言いたいこと&#34;&gt;言いたいこと&lt;/h2&gt;
-
-&lt;p&gt;不満不平を言うだけでなく、それを解決、改善するようなモノを作ろう。ソフトウェアエンジニアは変えられる力を持っているのだから。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>最初に公式ドキュメントを当たるべきたった2つの理由</title>
-      <link>http://kuune.org/text/2014/03/14/why-you-should-read-official-docs-at-first/</link>
-      <pubDate>Fri, 14 Mar 2014 00:41:02 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/03/14/why-you-should-read-official-docs-at-first/</guid>
-      <description>
-
+&lt;p&gt;不満不平を言うだけでなく、それを解決、改善するようなモノを作ろう。ソフトウェアエンジニアは変えられる力を持っているのだから。&lt;/p&gt;</description></item><item><title>最初に公式ドキュメントを当たるべきたった2つの理由</title><link>http://kuune.org/text/2014/03/14/why-you-should-read-official-docs-at-first/</link><pubDate>Fri, 14 Mar 2014 00:41:02 +0900</pubDate><guid>http://kuune.org/text/2014/03/14/why-you-should-read-official-docs-at-first/</guid><description>
 &lt;ol&gt;
 &lt;li&gt;ブログ記事は基本更新されないので情報が古いことが多い&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;翻訳されたドキュメントは情報が古いことがとても多い&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;ブログ記事は生モノ。時期が経つほど腐る。&lt;/p&gt;
-
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
-
-&lt;p&gt;公式ドキュメント読まないソフトウェアエンジニヤーは何をやってもダメ。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>書いたコードを捨てる勇気</title>
-      <link>http://kuune.org/text/2014/02/21/discard-codes/</link>
-      <pubDate>Fri, 21 Feb 2014 20:19:55 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/02/21/discard-codes/</guid>
-      <description>&lt;p&gt;自分の書いたコードに執着せず、どれだけ簡単に捨てられるかがコードの良し悪しに関わってくると思っている。&lt;br /&gt;
+&lt;p&gt;公式ドキュメント読まないソフトウェアエンジニヤーは何をやってもダメ。&lt;/p&gt;</description></item><item><title>書いたコードを捨てる勇気</title><link>http://kuune.org/text/2014/02/21/discard-codes/</link><pubDate>Fri, 21 Feb 2014 20:19:55 +0900</pubDate><guid>http://kuune.org/text/2014/02/21/discard-codes/</guid><description>&lt;p&gt;自分の書いたコードに執着せず、どれだけ簡単に捨てられるかがコードの良し悪しに関わってくると思っている。&lt;br /&gt;
 例えば 1 日かけて書いたコードを「クソだ」と言って捨てられるか、書いたばかりの 1000 行のコードを「これはダメ」と言って捨てられるかという話。&lt;br /&gt;
 コードを捨てない人はとにかくダメなものに継ぎはぎして更にダメなものを作ることに長けている。白に黒を混ぜると黒くなっていくし、黒に黒を足しても黒にしかならない。&lt;/p&gt;
-
-&lt;p&gt;とにかくコードを捨てろ。そしてコードを書け。そして捨てろ。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>UI ファーストという開発手法</title>
-      <link>http://kuune.org/text/2014/02/20/ui-first/</link>
-      <pubDate>Thu, 20 Feb 2014 22:28:50 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/02/20/ui-first/</guid>
-      <description>&lt;p&gt;ソフトウェアエンジニアは新しく何かを開発する際に、技術的に可能かどうか、どう実装すればいいか、みたいなのを先んじて考えがちな気がする。&lt;br /&gt;
+&lt;p&gt;とにかくコードを捨てろ。そしてコードを書け。そして捨てろ。&lt;/p&gt;</description></item><item><title>UI ファーストという開発手法</title><link>http://kuune.org/text/2014/02/20/ui-first/</link><pubDate>Thu, 20 Feb 2014 22:28:50 +0900</pubDate><guid>http://kuune.org/text/2014/02/20/ui-first/</guid><description>&lt;p&gt;ソフトウェアエンジニアは新しく何かを開発する際に、技術的に可能かどうか、どう実装すればいいか、みたいなのを先んじて考えがちな気がする。&lt;br /&gt;
 そういうボトムアップ的な思考は技術を知っているが故に出る自然な思考なのだが、私の経験上そういう思考で作られたものは大体使いづらい、いわゆる gomi が出来上がる。&lt;/p&gt;
-
 &lt;p&gt;なぜか？それは UI を考える際に実現可能性や実装のしやすさを優先してしまうから。&lt;br /&gt;
 ここでいう UI とは WEB サービスやネイティブアプリなどに限らず、ライブラリなどであれば API を指す。&lt;/p&gt;
-
 &lt;p&gt;私は数年前から UI → 実装という開発順序で開発をしていて、それは以下のような感じ。&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;まず実現可能性を窓から投げ捨てる&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;素晴らしいと思う UI を考える&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;その素晴らしい UI を実現するための実装方法を考える&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;こういう感じで進めると、ほとんどの場合、素晴らしい UI を実現するための方法がすごく煩雑になったり難しくなるのだけど、ここで UI を実装寄りにしてしまうと元の木阿弥で gomi が出来上がるので歯を食いしばって泣きながら実装する。&lt;br /&gt;
 最初に実現可能性を捨てて UI を考えると実装できない UI になると思うかも知れないが、まぁ大体なんとかなるし、なんとかするべきである。&lt;/p&gt;
-
-&lt;p&gt;ただ、素晴らしいと思っていた UI が実は gomi だったということはよくあるし、そういうのはゴミ箱にダンクシュートするしかない。&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;ただ、素晴らしいと思っていた UI が実は gomi だったということはよくあるし、そういうのはゴミ箱にダンクシュートするしかない。&lt;/p&gt;</description></item></channel></rss>

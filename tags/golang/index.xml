@@ -1,370 +1,198 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Golang on kuune.org</title>
-    <link>http://kuune.org/tags/golang/</link>
-    <description>Recent content in Golang on kuune.org</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 16 Feb 2015 00:03:34 +0900</lastBuildDate>
-    <atom:link href="http://kuune.org/tags/golang/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>naoina/toml を TOML v0.4.0 に準拠させた</title>
-      <link>http://kuune.org/text/2015/02/16/toml-v0.4.0/</link>
-      <pubDate>Mon, 16 Feb 2015 00:03:34 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2015/02/16/toml-v0.4.0/</guid>
-      <description>&lt;p&gt;以前 golang 用の TOML パーサー( &lt;a href=&#34;https://github.com/naoina/toml&#34;&gt;https://github.com/naoina/toml&lt;/a&gt; )を作りましたが、今回これを TOML 0.4.0 に準拠させていくつかのバグを修正しました。&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Golang on kuune.org</title><link>http://kuune.org/tags/golang/</link><description>Recent content in Golang on kuune.org</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 16 Feb 2015 00:03:34 +0900</lastBuildDate><atom:link href="http://kuune.org/tags/golang/index.xml" rel="self" type="application/rss+xml"/><item><title>naoina/toml を TOML v0.4.0 に準拠させた</title><link>http://kuune.org/text/2015/02/16/toml-v0.4.0/</link><pubDate>Mon, 16 Feb 2015 00:03:34 +0900</pubDate><guid>http://kuune.org/text/2015/02/16/toml-v0.4.0/</guid><description>&lt;p&gt;以前 golang 用の TOML パーサー( &lt;a href=&#34;https://github.com/naoina/toml&#34;&gt;https://github.com/naoina/toml&lt;/a&gt; )を作りましたが、今回これを TOML 0.4.0 に準拠させていくつかのバグを修正しました。&lt;br /&gt;
 golang 用の TOML パーサーには他に &lt;a href=&#34;https://github.com/BurntSushi/toml&#34;&gt;https://github.com/BurntSushi/toml&lt;/a&gt; がありますが、これと違う点としては、パーサーを &lt;a href=&#34;http://ja.wikipedia.org/wiki/Parsing_Expression_Grammar&#34;&gt;PEG&lt;/a&gt; から生成しているのと、TOML ファイルにエラーがある場合のメッセージを分かりやすくするようにしている点です。&lt;/p&gt;
-
 &lt;p&gt;あと、現在はデコーダーしか実装していないので TOML ファイルから Go の struct にマッピングはできますが、逆に Go の struct から TOML ファイルを生成することはできません。&lt;br /&gt;
-別にエンコーダーの実装が難しいというわけではなくて、単に必要に迫られてないので実装してないだけです。issues か pull request がきたら実装すると思います。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>golang web frameworks benchmark 02/2015 について</title>
-      <link>http://kuune.org/text/2015/02/11/regarding-golang-web-frameworks-benchmark/</link>
-      <pubDate>Wed, 11 Feb 2015 14:18:11 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2015/02/11/regarding-golang-web-frameworks-benchmark/</guid>
-      <description>
-
+別にエンコーダーの実装が難しいというわけではなくて、単に必要に迫られてないので実装してないだけです。issues か pull request がきたら実装すると思います。&lt;/p&gt;</description></item><item><title>golang web frameworks benchmark 02/2015 について</title><link>http://kuune.org/text/2015/02/11/regarding-golang-web-frameworks-benchmark/</link><pubDate>Wed, 11 Feb 2015 14:18:11 +0900</pubDate><guid>http://kuune.org/text/2015/02/11/regarding-golang-web-frameworks-benchmark/</guid><description>
 &lt;p&gt;最近 &lt;a href=&#34;https://quip.com/Ha0bAfeh1ZVY&#34;&gt;golang web frameworks benchmark 02/2015&lt;/a&gt; という記事が出回っていて大変遺憾なので、件の記事がいかにゴミかをつらつらと書いていきます。&lt;/p&gt;
-
 &lt;h3 id=&#34;ace-と-gin-は-httprouter-を使っている&#34;&gt;ace と Gin は HttpRouter を使っている&lt;/h3&gt;
-
 &lt;p&gt;HttpRouter が king of performance なのはまぁいいです。&lt;br /&gt;
 ですが、2 番目に位置づけている ace と Gin は HttpRouter を使っていることについて言及がありません。&lt;/p&gt;
-
 &lt;h3 id=&#34;goji-を-3-番目-にしている理由がベンチマークと関係ない&#34;&gt;Goji を 3 番目 にしている理由がベンチマークと関係ない&lt;/h3&gt;
-
 &lt;p&gt;タイトルに golang web frameworks benchmark 02/2015 と付けているにも関わらず Goji を 3 番目にしている理由がベンチマークと関係ない「安定している」です。&lt;br /&gt;
 しかもベンチマークを見てもらえば分かりますが、別に 3 番目に速いというわけでもないです。&lt;/p&gt;
-
 &lt;h3 id=&#34;denco-に言及がない&#34;&gt;Denco に言及がない&lt;/h3&gt;
-
 &lt;p&gt;手前味噌ですが、自分が作っている &lt;a href=&#34;https://github.com/naoina/denco&#34;&gt;Denco&lt;/a&gt; という URL ルーターについて、ベンチマークでも安定して上位にいるにも関わらず一切の言及がありません。&lt;br /&gt;
 前述した ace と Gin が HttpRouter を使っているということを鑑みると、このベンチマークは実質 HttpRouter 系 vs Denco という構図になります。&lt;/p&gt;
-
 &lt;h3 id=&#34;まとめ&#34;&gt;まとめ&lt;/h3&gt;
-
 &lt;p&gt;調べもしないで恣意的にしか書けないならベンチマークを持ち出すな。&lt;br /&gt;
-という文句を英語で書いて広めたいけどそんな英語力無いから日本語で書いた。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Golangでどんな json が返ってくるかわからない時に struct で定義するまでじゃないんだけど､ interface だと呼び出しが面倒なのどうしたらいいんだろう問題への一回答例</title>
-      <link>http://kuune.org/text/2014/11/07/json-struct-interface-in-golang/</link>
-      <pubDate>Fri, 07 Nov 2014 16:21:00 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/11/07/json-struct-interface-in-golang/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://konboi.hatenablog.com/entry/2014/11/07/155418&#34;&gt;http://konboi.hatenablog.com/entry/2014/11/07/155418&lt;/a&gt; これへの自分なりの回答です。元ブログのタイトルは const になってますが、多分 struct のことですかね。&lt;/p&gt;
-
+という文句を英語で書いて広めたいけどそんな英語力無いから日本語で書いた。&lt;/p&gt;</description></item><item><title>Golangでどんな json が返ってくるかわからない時に struct で定義するまでじゃないんだけど､ interface だと呼び出しが面倒なのどうしたらいいんだろう問題への一回答例</title><link>http://kuune.org/text/2014/11/07/json-struct-interface-in-golang/</link><pubDate>Fri, 07 Nov 2014 16:21:00 +0900</pubDate><guid>http://kuune.org/text/2014/11/07/json-struct-interface-in-golang/</guid><description>&lt;p&gt;&lt;a href=&#34;http://konboi.hatenablog.com/entry/2014/11/07/155418&#34;&gt;http://konboi.hatenablog.com/entry/2014/11/07/155418&lt;/a&gt; これへの自分なりの回答です。元ブログのタイトルは const になってますが、多分 struct のことですかね。&lt;/p&gt;
 &lt;p&gt;Golang では &lt;code&gt;var&lt;/code&gt; を使えば変数が定義できますが、このときに型を指定する必要があります。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;var name string
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;この型のところに struct を置いてやることができます。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;var user struct {
-    Name string
-    Age  int
+Name string
+Age int
 }
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;よく考えればまぁできますよねという感じです。&lt;br /&gt;
 これを応用すると、元ブログの例は下記のように書けます。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
-
 import (
-    &amp;quot;bytes&amp;quot;
-    &amp;quot;encoding/json&amp;quot;
-    &amp;quot;fmt&amp;quot;
+&amp;quot;bytes&amp;quot;
+&amp;quot;encoding/json&amp;quot;
+&amp;quot;fmt&amp;quot;
 )
-
 func main() {
-    b := []byte(`{&amp;quot;foo&amp;quot;: &amp;quot;bar&amp;quot;, &amp;quot;hoge&amp;quot;: {&amp;quot;fuga&amp;quot;: &amp;quot;hoga&amp;quot;}}`)
-    dec := json.NewDecoder(bytes.NewReader(b))
-    var jsonData struct {
-        Foo  string `json:&amp;quot;foo&amp;quot;`
-        Hoge struct {
-            Fuga string `json:&amp;quot;fuga&amp;quot;`
-        } `json:&amp;quot;hoge&amp;quot;`
-    }
-    dec.Decode(&amp;amp;jsonData)
-    fmt.Println(jsonData)
-    fmt.Println(jsonData.Hoge.Fuga)
-
+b := []byte(`{&amp;quot;foo&amp;quot;: &amp;quot;bar&amp;quot;, &amp;quot;hoge&amp;quot;: {&amp;quot;fuga&amp;quot;: &amp;quot;hoga&amp;quot;}}`)
+dec := json.NewDecoder(bytes.NewReader(b))
+var jsonData struct {
+Foo string `json:&amp;quot;foo&amp;quot;`
+Hoge struct {
+Fuga string `json:&amp;quot;fuga&amp;quot;`
+} `json:&amp;quot;hoge&amp;quot;`
+}
+dec.Decode(&amp;amp;jsonData)
+fmt.Println(jsonData)
+fmt.Println(jsonData.Hoge.Fuga)
 }
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;&lt;a href=&#34;http://play.golang.org/p/nTCdrMxYoQ&#34;&gt;http://play.golang.org/p/nTCdrMxYoQ&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ただしこの方法は本当にどんな内容が返ってくるか分からない時には使えない（例えば返ってくる json が {&amp;ldquo;foo&amp;rdquo;: &amp;ldquo;bar&amp;rdquo;} なのか {&amp;ldquo;bar&amp;rdquo;: &amp;ldquo;foo&amp;rdquo;} なのか分からない時など）のでその時は元の記事のように &lt;code&gt;interface{}&lt;/code&gt; で受け取って型アサーションしてやる必要があります。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Migu という golang 用 DB スキーマのマイグレーションツールを作った話</title>
-      <link>http://kuune.org/text/2014/10/29/migu/</link>
-      <pubDate>Wed, 29 Oct 2014 17:53:44 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/10/29/migu/</guid>
-      <description>
-
+&lt;p&gt;ただしこの方法は本当にどんな内容が返ってくるか分からない時には使えない（例えば返ってくる json が {&amp;ldquo;foo&amp;rdquo;: &amp;ldquo;bar&amp;rdquo;} なのか {&amp;ldquo;bar&amp;rdquo;: &amp;ldquo;foo&amp;rdquo;} なのか分からない時など）のでその時は元の記事のように &lt;code&gt;interface{}&lt;/code&gt; で受け取って型アサーションしてやる必要があります。&lt;/p&gt;</description></item><item><title>Migu という golang 用 DB スキーマのマイグレーションツールを作った話</title><link>http://kuune.org/text/2014/10/29/migu/</link><pubDate>Wed, 29 Oct 2014 17:53:44 +0900</pubDate><guid>http://kuune.org/text/2014/10/29/migu/</guid><description>
 &lt;p&gt;&lt;a href=&#34;https://github.com/winebarrel/ridgepole&#34;&gt;Ridgepole&lt;/a&gt; インスパイアの golang 用 DB スキーマのマイグレーションツールを作りました。&lt;/p&gt;
-
 &lt;p&gt;&lt;a href=&#34;https://github.com/naoina/migu&#34;&gt;https://github.com/naoina/migu&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;Migu は Ridgepole と同様に（バグが無い限り）冪等性が保証されています。&lt;br /&gt;
 Ridgepole と違うところは、スキーマ定義を DSL ではなくて golang の struct で定義するところです。こうすることによって、モデル定義 ＝ スキーマ定義となるので DRY になります。&lt;/p&gt;
-
 &lt;h2 id=&#34;使い方&#34;&gt;使い方&lt;/h2&gt;
-
 &lt;p&gt;下記を &lt;code&gt;schema.go&lt;/code&gt; というファイル名で保存します。ファイル名は何でもいいんですが、ここでは &lt;code&gt;schema.go&lt;/code&gt; を使います。package 名も何でも構いません。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package schema
-
 type User struct {
-    Name string
-    Age  int
+Name string
+Age int
 }
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;次に &lt;code&gt;migu_test&lt;/code&gt; というデータベースを &lt;code&gt;mysqladmin&lt;/code&gt; コマンドで作成します。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mysqladmin -u root create migu_test
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;ここでは MySQL のパスワード無しの &lt;code&gt;root&lt;/code&gt; ユーザーでログインすることを想定しています。&lt;br /&gt;
 データベースを作成したら &lt;code&gt;migu&lt;/code&gt; コマンドでマイグレーションを実行します。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;migu -u root sync migu_test schema.go
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;実行した結果、下記のように &lt;code&gt;migu_test&lt;/code&gt; に &lt;code&gt;user&lt;/code&gt; テーブルが作成されます。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;% mysql -u root migu_test -e &#39;desc user&#39;
 +-------+--------------+------+-----+---------+-------+
-| Field | Type         | Null | Key | Default | Extra |
+| Field | Type | Null | Key | Default | Extra |
 +-------+--------------+------+-----+---------+-------+
-| name  | varchar(255) | NO   |     | NULL    |       |
-| age   | int(11)      | NO   |     | NULL    |       |
+| name | varchar(255) | NO | | NULL | |
+| age | int(11) | NO | | NULL | |
 +-------+--------------+------+-----+---------+-------+
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;ではここから更に Migu のマイグレーションを試していきます。&lt;br /&gt;
 先ほどの &lt;code&gt;schema.go&lt;/code&gt; を下記のように変更します。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package schema
-
 type User struct {
-    Name string
-    Age  uint
+Name string
+Age uint
 }
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;&lt;code&gt;Age int&lt;/code&gt; を &lt;code&gt;Age uint&lt;/code&gt; に変えました。&lt;br /&gt;
 では再度 &lt;code&gt;migu&lt;/code&gt; コマンドでマイグレーションを実行して結果を確認します。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;% migu -u root sync migu_test schema.go
 % mysql -u root migu_test -e &#39;desc user&#39;
 +-------+------------------+------+-----+---------+-------+
-| Field | Type             | Null | Key | Default | Extra |
+| Field | Type | Null | Key | Default | Extra |
 +-------+------------------+------+-----+---------+-------+
-| name  | varchar(255)     | NO   |     | NULL    |       |
-| age   | int(10) unsigned | NO   |     | NULL    |       |
+| name | varchar(255) | NO | | NULL | |
+| age | int(10) unsigned | NO | | NULL | |
 +-------+------------------+------+-----+---------+-------+
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;&lt;code&gt;age&lt;/code&gt; フィールドが &lt;code&gt;int(11)&lt;/code&gt; から &lt;code&gt;int(10) unsigned&lt;/code&gt; に変わっているのが分かるでしょうか？&lt;br /&gt;
 このように、Migu ではスキーマ定義を変えてコマンドを実行すればマイグレーションができます。今までのようにマイグレーション用 SQL を書く必要はありません。&lt;br /&gt;
 また、Migu の冪等性を確認するためにもう一度マイグレーションを実行してみます。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;% migu -u root sync migu_test schema.go
 % mysql -u root migu_test -e &#39;desc user&#39;
 +-------+------------------+------+-----+---------+-------+
-| Field | Type             | Null | Key | Default | Extra |
+| Field | Type | Null | Key | Default | Extra |
 +-------+------------------+------+-----+---------+-------+
-| name  | varchar(255)     | NO   |     | NULL    |       |
-| age   | int(10) unsigned | NO   |     | NULL    |       |
+| name | varchar(255) | NO | | NULL | |
+| age | int(10) unsigned | NO | | NULL | |
 +-------+------------------+------+-----+---------+-------+
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;変わっていませんね。&lt;/p&gt;
-
 &lt;p&gt;ちなみに golang は同じパッケージ内であれば struct 本体とメソッドが別々のファイルにあってもいいので、下記のようにスキーマ定義とモデルの実装を分離することができます。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;// schema.go
 type User struct {
-    Name string
-    Age  int
+Name string
+Age int
 }
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;// user.go
 func (u *User) IsAlice() bool {
-    return u.Name == &amp;quot;alice&amp;quot;
+return u.Name == &amp;quot;alice&amp;quot;
 }
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
-
 &lt;p&gt;Migu を使うことで大量のマイグレーションファイルを書く必要が無くなり、DB スキーマの管理が非常に楽になる上に身長が 5 センチ伸び、恋人もできることがお分かりいただけたかと思います。&lt;br /&gt;
 とはいえ、まだまだ粗削りで足りない部分も多いので、これからもっと改良していく必要があります。&lt;br /&gt;
-というわけで、あなたの Pull Request をお待ちしております。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Kocha v0.5 リリースしました</title>
-      <link>http://kuune.org/text/2014/07/24/kocha-v0.5/</link>
-      <pubDate>Thu, 24 Jul 2014 10:56:39 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/07/24/kocha-v0.5/</guid>
-      <description>
-
+というわけで、あなたの Pull Request をお待ちしております。&lt;/p&gt;</description></item><item><title>Kocha v0.5 リリースしました</title><link>http://kuune.org/text/2014/07/24/kocha-v0.5/</link><pubDate>Thu, 24 Jul 2014 10:56:39 +0900</pubDate><guid>http://kuune.org/text/2014/07/24/kocha-v0.5/</guid><description>
 &lt;p&gt;&lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;https://github.com/naoina/kocha&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;前のバージョンとは非互換になってます。というか v1.0 まではバンバン非互換の変更入れていくつもりなので、まともに使うのはオススメしません。&lt;br /&gt;
 ですが、もしそれでも Kocha を使いたいという場合は、人柱になって最新のバージョンを追いつつ使うか、&lt;a href=&#34;http://labix.org/gopkg.in&#34;&gt;gopkg.in&lt;/a&gt; を使ったりしてバージョンを固定して使うことをおすすめします。&lt;/p&gt;
-
 &lt;h2 id=&#34;v0-5-での変更点&#34;&gt;v0.5 での変更点&lt;/h2&gt;
-
 &lt;h3 id=&#34;url-ルーターを-denco-にしました&#34;&gt;URL ルーターを denco にしました&lt;/h3&gt;
-
 &lt;p&gt;以前までの URL ルーターを別に切り出して改良した &lt;a href=&#34;https://github.com/naoina/denco&#34;&gt;Denco&lt;/a&gt; を使うようにしました。&lt;br /&gt;
 これにより URL ルーティングのパフォーマンスが上がり、メモリ使用量も大幅に改善されています。&lt;/p&gt;
-
 &lt;h3 id=&#34;net-http-互換として使えるようになりました&#34;&gt;net/http 互換として使えるようになりました&lt;/h3&gt;
-
 &lt;p&gt;今までは Kocha で作ったものは Kocha でしか動かせませんでしたが、内外的に大幅に変更を加えて &lt;a href=&#34;http://golang.org/pkg/net/http/#Handler&#34;&gt;http.Handler&lt;/a&gt; インターフェースを実装しました。&lt;br /&gt;
 これによって他の &lt;code&gt;net/http&lt;/code&gt; 用ライブラリ（ミドルウェアとして処理を挟むものなど）と組み合わせて使えるようになりました。&lt;br /&gt;
 これは &lt;a href=&#34;http://naoina.github.io/kocha/docs/advanced.html&#34;&gt;http://naoina.github.io/kocha/docs/advanced.html&lt;/a&gt; に軽く書いています。&lt;br /&gt;
 なお v0.5 における非互換性は大体この変更のせいです。&lt;/p&gt;
-
 &lt;h3 id=&#34;go-1-3-以降のみをサポートします&#34;&gt;Go 1.3 以降のみをサポートします&lt;/h3&gt;
-
 &lt;p&gt;golang はどんどん開発が進んでいるので敢えて古いものを使う必要は今のところ無いので新しいもの使っていきましょう。&lt;/p&gt;
-
 &lt;p&gt;というのは建前で、実際のところは Kocha の graceful restart の機能を &lt;a href=&#34;https://github.com/naoina/miyabi&#34;&gt;miyabi&lt;/a&gt; というライブラリとして再実装し直して Kocha で使っているのですが、この miyabi が Go 1.3 で &lt;code&gt;net/http&lt;/code&gt; に導入された機能を使っているからです。&lt;/p&gt;
-
 &lt;h2 id=&#34;今後の予定&#34;&gt;今後の予定&lt;/h2&gt;
-
 &lt;p&gt;ログ周りの再設計をします。後は session による flash 機構の実装をしようと思います。&lt;br /&gt;
-そこまでできたら &lt;a href=&#34;http://vocanew.kuune.org&#34;&gt;ぼかにゅー&lt;/a&gt; や、この plog.la を Kocha で実装して、実際に使う際に必要な機能やデバッグをしていこうと考えています。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Gin Web Framework について</title>
-      <link>http://kuune.org/text/2014/07/01/gin-web-framework/</link>
-      <pubDate>Tue, 01 Jul 2014 11:14:16 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/07/01/gin-web-framework/</guid>
-      <description>&lt;p&gt;golang の新しい WEB アプリケーションフレームワークである &lt;a href=&#34;http://gin-gonic.github.io/gin/&#34;&gt;Gin Web Framework&lt;/a&gt; が出たらしいです。&lt;br /&gt;
+そこまでできたら &lt;a href=&#34;http://vocanew.kuune.org&#34;&gt;ぼかにゅー&lt;/a&gt; や、この plog.la を Kocha で実装して、実際に使う際に必要な機能やデバッグをしていこうと考えています。&lt;/p&gt;</description></item><item><title>Gin Web Framework について</title><link>http://kuune.org/text/2014/07/01/gin-web-framework/</link><pubDate>Tue, 01 Jul 2014 11:14:16 +0900</pubDate><guid>http://kuune.org/text/2014/07/01/gin-web-framework/</guid><description>&lt;p&gt;golang の新しい WEB アプリケーションフレームワークである &lt;a href=&#34;http://gin-gonic.github.io/gin/&#34;&gt;Gin Web Framework&lt;/a&gt; が出たらしいです。&lt;br /&gt;
 この Gin、スゴイことにあの &lt;a href=&#34;https://github.com/go-martini/martini&#34;&gt;Martini&lt;/a&gt; より 40 倍速いとの触れ込みです。&lt;br /&gt;
 ですが、この部分ちょっと違います。&lt;/p&gt;
-
 &lt;p&gt;まず、Martini と比べて &lt;strong&gt;何が&lt;/strong&gt; 40 倍速いのか、というところですが&lt;/p&gt;
-
 &lt;p&gt;&lt;img src=&#34;http://kuune.org/image/dd59ea0d-11d3-5dca-915f-ddb148cb4abc.png&#34; alt=&#34;20140701105236.png&#34; /&gt;&lt;/p&gt;
-
 &lt;p&gt;これ、HTTP ルーターの速度を測ってるんですね。速いですね。ちなみに &lt;em&gt;Check out the benchmark suite&lt;/em&gt; ってところからベンチマークリポジトリに飛べます。&lt;/p&gt;
-
 &lt;p&gt;で、ここからが本題です。&lt;br /&gt;
 Gin の HTTP ルーターは実は自前ではなく &lt;a href=&#34;https://github.com/julienschmidt/httprouter&#34;&gt;HttpRouter&lt;/a&gt; という他の方が作った爆速の HTTP ルーターを使っています。&lt;br /&gt;
 つまり、Martini より 40 倍速いのは Gin 本体ではなく HttpRouter ということです。これはちゃんと &lt;a href=&#34;http://gin-gonic.github.io/gin/#features&#34;&gt;ここ&lt;/a&gt; の &lt;em&gt;Low Overhead Powerful API&lt;/em&gt; にも明記されています。&lt;br /&gt;
 ソースコードをざっと読んだ限りだと HttpRouter をチューニングして使っているということもなさそうなので、Gin 自体が Martini よりも 40 倍速いというのとはちょっと違うと思います。&lt;br /&gt;
 多分 Martini よりも速い部分はあるのでしょうが、40 times faster の大部分は HttpRouter が持っていると思います。&lt;br /&gt;
 github の starts 的にはマーケティングに成功してるっぽいですが、他人のプロダクトに乗っかってそれを広告に使うというのは私個人としては正直気持ち悪いです。&lt;/p&gt;
-
 &lt;p&gt;余談ですが、HttpRouter は &lt;a href=&#34;https://github.com/julienschmidt/httprouter/issues/12&#34;&gt;https://github.com/julienschmidt/httprouter/issues/12&lt;/a&gt; みたいなのがあるので、実用できるのか微妙な気がしています。&lt;br /&gt;
-ちなみに私も &lt;a href=&#34;https://github.com/naoina/denco&#34;&gt;Denco&lt;/a&gt; という HTTP ルーターを作ってまして、興味があれば &lt;a href=&#34;http://naoina.plog.la/2014/06/12/183508686252&#34;&gt;前の記事&lt;/a&gt; をご覧ください。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Graceful shutdown と restart が出来る net/http コンパチのライブラリをつくった</title>
-      <link>http://kuune.org/text/2014/06/26/miyabi/</link>
-      <pubDate>Thu, 26 Jun 2014 12:00:43 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/06/26/miyabi/</guid>
-      <description>&lt;p&gt;Miyabi&lt;br /&gt;
+ちなみに私も &lt;a href=&#34;https://github.com/naoina/denco&#34;&gt;Denco&lt;/a&gt; という HTTP ルーターを作ってまして、興味があれば &lt;a href=&#34;http://naoina.plog.la/2014/06/12/183508686252&#34;&gt;前の記事&lt;/a&gt; をご覧ください。&lt;/p&gt;</description></item><item><title>Graceful shutdown と restart が出来る net/http コンパチのライブラリをつくった</title><link>http://kuune.org/text/2014/06/26/miyabi/</link><pubDate>Thu, 26 Jun 2014 12:00:43 +0900</pubDate><guid>http://kuune.org/text/2014/06/26/miyabi/</guid><description>&lt;p&gt;Miyabi&lt;br /&gt;
 &lt;a href=&#34;https://github.com/naoina/miyabi&#34;&gt;https://github.com/naoina/miyabi&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;Graceful shutdown/restart というのは HTTP サーバーにおいて、張られたソケットをいきなり切ってサーバーを終了するのではなく、すでに accept されているソケットに対する処理を終えてから終了または再起動することをいいます。&lt;br /&gt;
 これによってダウンタイム無しでサーバーの再起動ができるようになります。&lt;/p&gt;
-
 &lt;p&gt;Golang には既に graceful shutdown/restart をするようなものが色々とありますが、Miyabi は &lt;code&gt;net/http&lt;/code&gt; と完全に互換性があるように作っています。&lt;br /&gt;
 なので、単に &lt;code&gt;http.ListenAndServe&lt;/code&gt; を &lt;code&gt;miyabi.ListenAndServe&lt;/code&gt; に変えるだけで graceful shutdown/restart が出来るようになります。&lt;/p&gt;
-
 &lt;p&gt;&lt;img src=&#34;http://kuune.org/image/2776dcd1-afa7-5a35-9cc5-7cbacae1acf4.gif&#34; alt=&#34;miyabi.gif&#34; /&gt;&lt;/p&gt;
-
 &lt;p&gt;注意点として、graceful restart を実現するにあたってサーバープロセスをフォークするようになっています。起動する毎に副作用によって挙動が変わるようなモノだとまともに動かないのではないかと思います。&lt;br /&gt;
 また、先日リリースされた Go 1.3 の機能を使っているので 1.2.x 以下では動作しません。みなさん既に Go 1.3 もしくは tip を使っているはずなので問題ないでしょう。&lt;/p&gt;
-
-&lt;p&gt;それでは、よい Golang 日和を。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Denco 技術解説</title>
-      <link>http://kuune.org/text/2014/06/17/commentary-of-denco/</link>
-      <pubDate>Tue, 17 Jun 2014 17:52:45 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/06/17/commentary-of-denco/</guid>
-      <description>
-
+&lt;p&gt;それでは、よい Golang 日和を。&lt;/p&gt;</description></item><item><title>Denco 技術解説</title><link>http://kuune.org/text/2014/06/17/commentary-of-denco/</link><pubDate>Tue, 17 Jun 2014 17:52:45 +0900</pubDate><guid>http://kuune.org/text/2014/06/17/commentary-of-denco/</guid><description>
 &lt;p&gt;今回は Golang 用の URL ルーターである &lt;a href=&#34;https://github.com/naoina/denco&#34;&gt;Denco&lt;/a&gt; の技術解説をしていきます。&lt;br /&gt;
 その前にひとつ、お知らせがあります。Denco はこのたび URL ルーターから URL ルーター兼 HTTP request multiplexer となりました。つまり、&lt;a href=&#34;http://golang.org/pkg/net/http/#ServeMux&#34;&gt;http.ServeMux&lt;/a&gt; の代わりとして使えるようになりました。&lt;br /&gt;
 詳しくは &lt;a href=&#34;https://github.com/naoina/denco/blob/master/README.md&#34;&gt;README&lt;/a&gt; を参照してください。&lt;/p&gt;
-
 &lt;h2 id=&#34;基本戦略&#34;&gt;基本戦略&lt;/h2&gt;
-
 &lt;p&gt;まず始めに、Denco のルーティングは静的パス（&lt;code&gt;/user/alice&lt;/code&gt; みたいなの）とパラメーター付きパス（&lt;code&gt;/user/:name&lt;/code&gt; みたいなの）で使用するアルゴリズムを変えています。&lt;br /&gt;
 静的パスの場合は Go の map を使い、パラメーター付きパスの場合はパラメーターを扱えるように拡張したダブル配列を使います。これは、静的パスの場合、ダブル配列で処理するより Go の map を使ったほうが速いからです。&lt;br /&gt;
 ですが、パラメーター付きパスは Go の map では扱えないので、拡張したダブル配列を使うことになります。今回はこのダブル配列の拡張についての解説です。&lt;/p&gt;
-
 &lt;p&gt;ダブル配列というのは &lt;a href=&#34;http://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A9%E3%82%A4%E6%9C%A8&#34;&gt;Trie&lt;/a&gt; という主に文字列検索に使われるデータ構造の実装方法のひとつで、Trie の実装の中では最速の部類に入るものです。&lt;br /&gt;
 詳しい概要については &lt;a href=&#34;http://nanika.osonae.com/DArray/dary.html&#34;&gt;http://nanika.osonae.com/DArray/dary.html&lt;/a&gt; や &lt;a href=&#34;http://d.hatena.ne.jp/takeda25/20120219/1329634865&#34;&gt;http://d.hatena.ne.jp/takeda25/20120219/1329634865&lt;/a&gt; を参照してください。&lt;br /&gt;
 以下からはダブル配列を理解している前提での解説になります。&lt;/p&gt;
-
 &lt;h2 id=&#34;拡張ダブル配列&#34;&gt;拡張ダブル配列&lt;/h2&gt;
-
 &lt;p&gt;さて、ダブル配列は速い Trie の実装ではありますが、静的な文字列に対するものなのでパラメーター付きパスのような特定の文字に意味を持たせるということがそのままではできません。&lt;br /&gt;
 そこで、Denco では構築時およびルックアップ時にメタ文字である &lt;code&gt;:&lt;/code&gt; と &lt;code&gt;*&lt;/code&gt; を特別扱いするようにダブル配列を拡張しています。&lt;/p&gt;
-
 &lt;h3 id=&#34;シングルパラメーター&#34;&gt;シングルパラメーター&lt;/h3&gt;
-
 &lt;p&gt;まず Denco の仕様として &lt;code&gt;/user/:name/:id&lt;/code&gt; などの &lt;code&gt;:name&lt;/code&gt; や &lt;code&gt;:id&lt;/code&gt; の部分は任意の文字列にマッチします。マッチする長さは次の &lt;code&gt;/&lt;/code&gt; が現れるまでか、終端までです。&lt;br /&gt;
 例えば &lt;code&gt;/user/:name/:id&lt;/code&gt; に対して &lt;code&gt;/user/alice/1&lt;/code&gt; でマッチを試みた場合、&lt;code&gt;:name&lt;/code&gt; には &lt;code&gt;alice&lt;/code&gt; が、&lt;code&gt;:id&lt;/code&gt; には &lt;code&gt;1&lt;/code&gt; がマッチします。&lt;/p&gt;
-
 &lt;h4 id=&#34;構築&#34;&gt;構築&lt;/h4&gt;
-
 &lt;p&gt;まず構築に使用する文字列は &lt;strong&gt;レコード&lt;/strong&gt; と呼びます。レコードには文字列の他にパラメーター名を保持するスライスをフィールドとして持たせます。&lt;br /&gt;
 ダブル配列の構築では先頭から 1 文字ずつ見て構築していくのですが、Denco ではこのとき、&lt;code&gt;:&lt;/code&gt; という文字が現れた場合、次の &lt;code&gt;/&lt;/code&gt; の前、または終端まで読み込みます。&lt;br /&gt;
 &lt;code&gt;/user/:name/:id&lt;/code&gt; であれば、最初の &lt;code&gt;:&lt;/code&gt; が現れたとき &lt;code&gt;:&lt;/code&gt; から次の &lt;code&gt;/&lt;/code&gt; の前まで読み込み、&lt;code&gt;:name&lt;/code&gt; という文字列を得ます。&lt;/p&gt;
-
 &lt;p&gt;&lt;code&gt;:&lt;/code&gt; はメタ文字なので、そのあとの &lt;code&gt;name&lt;/code&gt; が実際のパラメーターの名前になります。こうして得たパラメーターの名前をレコードのパラメーター名を保持するスライスに追加します。&lt;br /&gt;
 また、レコード自体は参照時には使用しなくなるので、参照時に使用する BASE/CHECK の配列の要素にシングルパラメーターであるというフラグを立てておきます。&lt;br /&gt;
 これで構築におけるシングルパラメーターの処理は終了なので、通常のダブル配列の構築に戻ります。&lt;br /&gt;
 &lt;code&gt;/user/:name/:id&lt;/code&gt; というレコードを構築すると、上記処理によって &lt;code&gt;/user/:/:&lt;/code&gt; として構築され、&lt;code&gt;:&lt;/code&gt; の位置に対応する BASE/CHECK 配列の要素にはシングルパラメーターであるというフラグが立っていることになります。&lt;/p&gt;
-
 &lt;p&gt;レコードの終端まで処理が終わればレコードに対するデータを実際に保持するノードを生成し、そのノードにパラメーター名を保持するスライスをレコードからコピーします。&lt;br /&gt;
 このノードは専用の配列に格納され、ルックアップに成功した場合に対応するノードが取り出されますが、今回は割愛します。&lt;/p&gt;
-
 &lt;h4 id=&#34;ルックアップ&#34;&gt;ルックアップ&lt;/h4&gt;
-
 &lt;p&gt;まず、&lt;code&gt;/user/:name/:id&lt;/code&gt; というレコードは &lt;code&gt;/user/:/:&lt;/code&gt; として構築されています。これに対して &lt;code&gt;/user/alice/1&lt;/code&gt; という文字列のルックアップを試みると以下のようになります。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;/user/:/:
-
 /
 /u
 /us
@@ -373,10 +201,8 @@ github の starts 的にはマーケティングに成功してるっぽいで�
 /user/
 /user/a ← a と : は違うので失敗！
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;始めは BASE/CHECK 配列を使って普通にダブル配列のルックアップをしていきます。すると上記のように &lt;code&gt;:&lt;/code&gt; の場所で失敗します。&lt;br /&gt;
 通常のダブル配列ならば失敗した時点でその文字列は無いということになるのですが、Denco では下記のように処理を続けます。&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;失敗した時点での BASE/CHECK 配列の要素のシングルパラメーターかどうかのフラグを調べる&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;シングルパラメーターでない場合、後述するワイルドカードパラメーターのチェックに移る&lt;br /&gt;&lt;/li&gt;
@@ -386,9 +212,7 @@ github の starts 的にはマーケティングに成功してるっぽいで�
 &lt;li&gt;上記を繰り返し、最後まで読んだら終了&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;/user/:/:
-
 /
 /u
 /us
@@ -396,46 +220,30 @@ github の starts 的にはマーケティングに成功してるっぽいで�
 /user
 /user/
 /user/a ←失敗！
-
-      v ←現在位置
+v ←現在位置
 /user/a → 現在の位置がシングルパラメーターであるかをチェック
-
-  ↓ /user/: の部分にあたるので現在位置はシングルパラメーター
-
+↓ /user/: の部分にあたるので現在位置はシングルパラメーター
 /user/alice → &amp;quot;alice&amp;quot; を読み込みパラメーターとする
-
-           v ←再開位置
+v ←再開位置
 /user/alice/
 /user/alice/1 ←失敗！
-
-            v ←現在位置
+v ←現在位置
 /user/alice/1 → 現在の位置がシングルパラメーターであるかをチェック
-
-    ↓ /user/:/: の部分にあたるので現在位置はシングルパラメーター
-
+↓ /user/:/: の部分にあたるので現在位置はシングルパラメーター
 /user/alice/1 → &amp;quot;1&amp;quot; を読み込みパラメーターとする
-
 最後まで読んだので終了 → /user/alice/1 はマッチ、&amp;quot;name&amp;quot; パラメーターの値は &amp;quot;alice&amp;quot;、&amp;quot;id&amp;quot; パラメーターの値は &amp;quot;1&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h3 id=&#34;ワイルドカードパラメーター&#34;&gt;ワイルドカードパラメーター&lt;/h3&gt;
-
 &lt;h4 id=&#34;構築-1&#34;&gt;構築&lt;/h4&gt;
-
 &lt;p&gt;ほぼシングルパラメーターと同様ですが &lt;code&gt;*&lt;/code&gt; という文字が現れた場合、ワイルドカードパラメーターとして扱います。&lt;br /&gt;
 シングルパラメーターのときは次の &lt;code&gt;/&lt;/code&gt; の前、または終端まで読み込みますが、Denco のワイルドカードパラメーターの場合は常に終端まで読み込みます。&lt;br /&gt;
 ですので、&lt;code&gt;/static/*filepath&lt;/code&gt; というレコードの場合 &lt;code&gt;filepath&lt;/code&gt; がパラメーターの名前になりますが、&lt;code&gt;/static/*filepath/robots.txt&lt;/code&gt; とあった場合は &lt;code&gt;filepath/robots.txt&lt;/code&gt; が名前になってしまいますので注意してください。&lt;/p&gt;
-
 &lt;p&gt;また、参照時に使用する BASE/CHECK の配列の要素にはワイルドカードパラメーターであるというフラグを立てます。&lt;br /&gt;
 &lt;code&gt;/static/*filepath&lt;/code&gt; というレコードを構築すると &lt;code&gt;/static/*&lt;/code&gt; として構築されます。&lt;/p&gt;
-
 &lt;h4 id=&#34;ルックアップ-1&#34;&gt;ルックアップ&lt;/h4&gt;
-
 &lt;p&gt;シングルパラメーターでのルックアップとほぼ同様ですが、失敗した際にワイルドカードパラメーターの場合は常に終端まで読み込まれ、それがパラメーターの値になります。&lt;br /&gt;
 &lt;code&gt;/static/image/logo.png&lt;/code&gt; という文字列をルックアップすると以下のようになります。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;/static/*filepath
-
 /
 /s
 /st
@@ -445,56 +253,33 @@ github の starts 的にはマーケティングに成功してるっぽいで�
 /static
 /static/
 /static/i ←失敗！
-
-        v ←現在位置
+v ←現在位置
 /static/i → 現在の位置がワイルドカードパラメーターであるかをチェック
-
-    ↓ /static/* の部分にあたるので現在位置はワイルドカードパラメーター
-
+↓ /static/* の部分にあたるので現在位置はワイルドカードパラメーター
 /static/image/logo.png → &amp;quot;image/logo.png&amp;quot; を読み込みパラメーターとする
-
 最後まで読んだので終了 → /static/image/logo.png はマッチ、&amp;quot;filepath&amp;quot; パラメーターの値は &amp;quot;image/logo.png&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;シングルパラメーターとワイルドカードパラメーターの優先順位は シングルパラメーター &amp;gt; ワイルドカードパラメーター です。&lt;br /&gt;
 例えば &lt;code&gt;/user/:name&lt;/code&gt; と &lt;code&gt;/user/*any&lt;/code&gt; というレコードがあった場合、&lt;code&gt;/user/alice&lt;/code&gt; は &lt;code&gt;/user/:name&lt;/code&gt; にマッチします。&lt;/p&gt;
-
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
-
 &lt;p&gt;Denco ではどのようにしてダブル配列を拡張してパラメーターを扱えるようにしているかをざっくりと解説しました。&lt;br /&gt;
 実際には今回解説した処理に加えてバックトラックによるパラメーターマッチをしています。バックトラックを行うことによって &lt;code&gt;/user/:name/:id&lt;/code&gt; と &lt;code&gt;/user/alice/:id&lt;/code&gt; のようなレコードを一緒に扱うことができるようになっています。&lt;br /&gt;
-興味があればソースを読んでみてください。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>世界最速だった URL ルーターをリリースしました</title>
-      <link>http://kuune.org/text/2014/06/12/denco/</link>
-      <pubDate>Thu, 12 Jun 2014 18:35:08 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/06/12/denco/</guid>
-      <description>
-
+興味があればソースを読んでみてください。&lt;/p&gt;</description></item><item><title>世界最速だった URL ルーターをリリースしました</title><link>http://kuune.org/text/2014/06/12/denco/</link><pubDate>Thu, 12 Jun 2014 18:35:08 +0900</pubDate><guid>http://kuune.org/text/2014/06/12/denco/</guid><description>
 &lt;p&gt;Golang 用 URL ルーター &lt;a href=&#34;https://github.com/naoina/denco&#34;&gt;Denco&lt;/a&gt; をリリースしました。&lt;br /&gt;
 ちょっと前までは最速でしたが、&lt;a href=&#34;https://github.com/julienschmidt/httprouter&#34;&gt;HttpRouter&lt;/a&gt; の作者によって高速にバックミラーから消し去られました。&lt;br /&gt;
 ですが、HttpRouter ではできないことが Denco にできたりしますしおすし。&lt;br /&gt;
 ベンチマークは &lt;a href=&#34;https://github.com/julienschmidt/go-http-routing-benchmark&#34;&gt;https://github.com/julienschmidt/go-http-routing-benchmark&lt;/a&gt; からどうぞ。&lt;/p&gt;
-
 &lt;h2 id=&#34;denco-とは&#34;&gt;Denco とは&lt;/h2&gt;
-
 &lt;p&gt;既に開発していた &lt;a href=&#34;https://github.com/naoina/kocha-urlrouter&#34;&gt;kocha-urlrouter&lt;/a&gt; のダブル配列実装をベースに色々と手を加えたものになります。&lt;br /&gt;
 速度を重視して開発してましたが、前述の通り HttpRouter に追いぬかれました。&lt;/p&gt;
-
 &lt;h2 id=&#34;使い方&#34;&gt;使い方&lt;/h2&gt;
-
 &lt;p&gt;下記のように使います。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;router := denco.New()
 router.Build([]denco.Record{
-    {&amp;quot;/&amp;quot;, &amp;quot;root&amp;quot;},
-    {&amp;quot;/user/:id&amp;quot;, 1024},
-    {&amp;quot;/user/:name/:id&amp;quot;, []string{&amp;quot;username&amp;quot;}},
-    {&amp;quot;/static/*filepath&amp;quot;, &amp;quot;static&amp;quot;},
+{&amp;quot;/&amp;quot;, &amp;quot;root&amp;quot;},
+{&amp;quot;/user/:id&amp;quot;, 1024},
+{&amp;quot;/user/:name/:id&amp;quot;, []string{&amp;quot;username&amp;quot;}},
+{&amp;quot;/static/*filepath&amp;quot;, &amp;quot;static&amp;quot;},
 })
 data, params, found := router.Lookup(&amp;quot;/&amp;quot;)
 fmt.Printf(&amp;quot;%v\n&amp;quot;, data.(string))
@@ -503,428 +288,257 @@ fmt.Printf(&amp;quot;%v, %v = %v\n&amp;quot;, data.(int), params[0].Name, params
 data, params, found = router.Lookup(&amp;quot;/user/naoina/2&amp;quot;)
 fmt.Printf(&amp;quot;%v\n&amp;quot;, data.([]string))
 for _, v := range params {
-    fmt.Printf(&amp;quot;%v = %v\n&amp;quot;, v.Name, v.Value)
+fmt.Printf(&amp;quot;%v = %v\n&amp;quot;, v.Name, v.Value)
 }
 data, params, found = router.Lookup(&amp;quot;/static/path/to/other&amp;quot;)
 fmt.Printf(&amp;quot;%v, %v = %v\n&amp;quot;, data, params[0].Name, params[0].Value)
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;README にも書いてあるんですが、Go の &lt;a href=&#34;http://golang.org/pkg/net/http/#ServeMux&#34;&gt;http.ServeMux&lt;/a&gt; を置き換えるものではないので、&lt;a href=&#34;http://golang.org/pkg/net/http/#Handler&#34;&gt;http.Handler&lt;/a&gt;  インターフェースは提供していません。&lt;br /&gt;
+&lt;p&gt;README にも書いてあるんですが、Go の &lt;a href=&#34;http://golang.org/pkg/net/http/#ServeMux&#34;&gt;http.ServeMux&lt;/a&gt; を置き換えるものではないので、&lt;a href=&#34;http://golang.org/pkg/net/http/#Handler&#34;&gt;http.Handler&lt;/a&gt; インターフェースは提供していません。&lt;br /&gt;
 ですので、HandlerFunc などを呼ぶためのグルーコードを書く必要があります。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
-
 import (
-    &amp;quot;fmt&amp;quot;
-    &amp;quot;log&amp;quot;
-    &amp;quot;net/http&amp;quot;
-
-    &amp;quot;github.com/naoina/denco&amp;quot;
+&amp;quot;fmt&amp;quot;
+&amp;quot;log&amp;quot;
+&amp;quot;net/http&amp;quot;
+&amp;quot;github.com/naoina/denco&amp;quot;
 )
-
 type handler struct {
-    router *denco.Router
+router *denco.Router
 }
-
 type handlerFunc func(http.ResponseWriter, *http.Request, []denco.Param)
-
 func (h *handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-    m, params, found := h.router.Lookup(r.RequestURI)
-    if !found {
-        panic(&amp;quot;route not found&amp;quot;)
-    }
-    m.(handlerFunc)(w, r, params)
+m, params, found := h.router.Lookup(r.RequestURI)
+if !found {
+panic(&amp;quot;route not found&amp;quot;)
 }
-
+m.(handlerFunc)(w, r, params)
+}
 func Index(w http.ResponseWriter, r *http.Request, _ []denco.Param) {
-    fmt.Fprint(w, &amp;quot;Welcome!\n&amp;quot;)
+fmt.Fprint(w, &amp;quot;Welcome!\n&amp;quot;)
 }
-
 func Hello(w http.ResponseWriter, r *http.Request, params []denco.Param) {
-    fmt.Fprintf(w, &amp;quot;hello, %s!\n&amp;quot;, params)
+fmt.Fprintf(w, &amp;quot;hello, %s!\n&amp;quot;, params)
 }
-
 func main() {
-    router := denco.New()
-    if err := router.Build([]denco.Record{
-        {&amp;quot;/&amp;quot;, handlerFunc(Index)},
-        {&amp;quot;/hello/naoina&amp;quot;, handlerFunc(Hello)},
-        {&amp;quot;/hello/:name&amp;quot;, handlerFunc(Hello)},
-    }); err != nil {
-        panic(err)
-    }
-    h := &amp;amp;handler{router}
-    log.Fatal(http.ListenAndServe(&amp;quot;:8080&amp;quot;, h))
+router := denco.New()
+if err := router.Build([]denco.Record{
+{&amp;quot;/&amp;quot;, handlerFunc(Index)},
+{&amp;quot;/hello/naoina&amp;quot;, handlerFunc(Hello)},
+{&amp;quot;/hello/:name&amp;quot;, handlerFunc(Hello)},
+}); err != nil {
+panic(err)
+}
+h := &amp;amp;handler{router}
+log.Fatal(http.ListenAndServe(&amp;quot;:8080&amp;quot;, h))
 }
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;これはそもそも &lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;Kocha&lt;/a&gt; で使うために書き始めたものなので上記のようになっています。&lt;/p&gt;
-
 &lt;h2 id=&#34;vs-httprouter&#34;&gt;vs HttpRouter&lt;/h2&gt;
-
 &lt;p&gt;再び最速の座を手に入れるべく頑張っていますが、現状では HttpRouter とほぼダブルスコアです。。。社会は厳しい！&lt;br /&gt;
 ですが、Denco にしかできないことがあります。&lt;br /&gt;
 例えば、HttpRouter では &lt;code&gt;/user/:name&lt;/code&gt; と &lt;code&gt;/user/naoina&lt;/code&gt; など、パラメーター付きパスと静的パスがかぶるようなルートが一緒に使えず、構築時に panic するようになっていますが、Denco だと問題ありません。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;router.Build([]denco.Record{
-    {&amp;quot;/user/:name&amp;quot;, &amp;quot;first&amp;quot;},
-    {&amp;quot;/user/naoina&amp;quot;, &amp;quot;second&amp;quot;},
+{&amp;quot;/user/:name&amp;quot;, &amp;quot;first&amp;quot;},
+{&amp;quot;/user/naoina&amp;quot;, &amp;quot;second&amp;quot;},
 })
 router.Lookup(&amp;quot;/user/hoge&amp;quot;) // &amp;quot;first&amp;quot;
 router.Lookup(&amp;quot;/user/foo&amp;quot;) // &amp;quot;first&amp;quot;
 router.Lookup(&amp;quot;/user/naoina&amp;quot;) // &amp;quot;second&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;まぁ、負け惜しみです。&lt;/p&gt;
-
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
-
 &lt;p&gt;私が調べた限りだと、ダブル配列を使った URL ルーターの実装というものがありませんでした。&lt;br /&gt;
-ですので、参考になるか分かりませんが、次回から Denco の技術解説みたいなのを書こうかなと考えています。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Kocha が v0.3 になりました</title>
-      <link>http://kuune.org/text/2014/03/14/kocha-v0.3/</link>
-      <pubDate>Fri, 14 Mar 2014 09:50:19 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/03/14/kocha-v0.3/</guid>
-      <description>
-
+ですので、参考になるか分かりませんが、次回から Denco の技術解説みたいなのを書こうかなと考えています。&lt;/p&gt;</description></item><item><title>Kocha が v0.3 になりました</title><link>http://kuune.org/text/2014/03/14/kocha-v0.3/</link><pubDate>Fri, 14 Mar 2014 09:50:19 +0900</pubDate><guid>http://kuune.org/text/2014/03/14/kocha-v0.3/</guid><description>
 &lt;p&gt;&lt;code&gt;go get&lt;/code&gt; でバージョン指定できないのにバージョン付ける意味あんのかよみたいな話はあると思いますが、Kocha &lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;https://github.com/naoina/kocha&lt;/a&gt; に v0.3 のタグを付けました。&lt;/p&gt;
-
 &lt;p&gt;主な変更点は&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;モデル、ORM、マイグレーションなどのデータベース周りのサポート&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;dev&lt;/code&gt; や &lt;code&gt;prod&lt;/code&gt; などの環境ごとの設定の廃止&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;です。&lt;/p&gt;
-
 &lt;h2 id=&#34;データベース周りのサポート&#34;&gt;データベース周りのサポート&lt;/h2&gt;
-
 &lt;p&gt;モデルのジェネレーターや ORM、マイグレーションのサポートを追加しました。&lt;br /&gt;
 何故サポートなのかというと、Kocha 固有の ORM を使わないといけないわけではなく、自由に ORM が選べるような実装になっているからです。&lt;/p&gt;
-
 &lt;h3 id=&#34;モデル&#34;&gt;モデル&lt;/h3&gt;
-
 &lt;p&gt;現状では &lt;a href=&#34;https://github.com/naoina/genmai&#34;&gt;genmai&lt;/a&gt; のみのサポートですが、簡単に他の ORM も追加できます。&lt;br /&gt;
 モデルのジェネレーターも特定の ORM のものを追加できるようにしていますが、まだ他の ORM 用の実装はしていません。気が向いたら &lt;a href=&#34;https://github.com/coopernurse/gorp&#34;&gt;gorp&lt;/a&gt; 用ぐらいは実装すると思います。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;kocha g model user name:string age:int
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;みたいにすると&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type User struct {
-    Id   int64  `db:&amp;quot;pk&amp;quot; json:&amp;quot;id&amp;quot;`
-    Name string `json:&amp;quot;name&amp;quot;`
-    Age  int    `json:&amp;quot;age&amp;quot;`
-
-    genmai.TimeStamp
+Id int64 `db:&amp;quot;pk&amp;quot; json:&amp;quot;id&amp;quot;`
+Name string `json:&amp;quot;name&amp;quot;`
+Age int `json:&amp;quot;age&amp;quot;`
+genmai.TimeStamp
 }
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;というような struct が書かれたファイルが生成されます。ついでに ORM 固有のインスタンスを取得するヘルパーが書かれたファイルも生成されます。&lt;br /&gt;
 まぁここら辺に関してはドキュメント &lt;a href=&#34;http://naoina.github.io/kocha/docs/model.html&#34;&gt;http://naoina.github.io/kocha/docs/model.html&lt;/a&gt; にあっさりですが書いています。&lt;/p&gt;
-
 &lt;h3 id=&#34;マイグレーション&#34;&gt;マイグレーション&lt;/h3&gt;
-
 &lt;p&gt;現時点で私が知っているマイグレーションツールといえば &lt;a href=&#34;https://bitbucket.org/liamstask/goose&#34;&gt;goose&lt;/a&gt; がありますが、ORM を使うときのデータベースの設定と、マイグレーションツールの設定が中身は同じなのに別々に管理しないといけないのが大変好ましくないと考えています。&lt;br /&gt;
 ということで、フレームワーク側でマイグレーションをサポートしました。Rails みたいですね。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;kocha g migration create_user_table
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;でマイグレーションするためのファイルが生成されます。ですが、中身は自分で書かないといけません。Rails みたいにマイグレーション名から自動でマイグレーションの中身を記述するみたいなことはしない方向です。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;kocha migrate up
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;で前方向のマイグレーションが走ります。戻したい時は&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;kocha migrate down
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;とすれば直近の 1 つのマイグレーションに対してロールバックする処理が走ります。まぁ実際の処理は全部ユーザー側で書かないといけないんですが。&lt;/p&gt;
-
 &lt;h2 id=&#34;環境ごとの設定の廃止&#34;&gt;環境ごとの設定の廃止&lt;/h2&gt;
-
 &lt;p&gt;今まではアプリケーションのトップレベルディレクトリに &lt;code&gt;dev.go&lt;/code&gt; や &lt;code&gt;prod.go&lt;/code&gt;、&lt;code&gt;config/dev.go&lt;/code&gt; や &lt;code&gt;config/prod.go&lt;/code&gt; といった、いわゆる環境ごとの設定セットがありました。&lt;br /&gt;
 今回の v0.3 からこれを廃止して、設定は基本的に環境変数によって実行時に指定するように変更しました。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;KOCHA_DB_DRIVER=&amp;quot;mysql&amp;quot; KOCHA_DB_DSN=&amp;quot;user:password@/dbname&amp;quot; kocha run
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;という感じになります。一応何も指定しない場合のデフォルトは sqlite3 が指定されてます。&lt;br /&gt;
 この変更は &lt;a href=&#34;http://12factor.net/&#34;&gt;The Twelve-Factor App&lt;/a&gt; (&lt;a href=&#34;http://twelve-factor-ja.herokuapp.com/&#34;&gt;日本語訳&lt;/a&gt;) に影響されました。これの &lt;a href=&#34;http://12factor.net/config&#34;&gt;config&lt;/a&gt; (&lt;a href=&#34;http://twelve-factor-ja.herokuapp.com/config&#34;&gt;日本語訳&lt;/a&gt;) に沿った形にしたということになります。&lt;br /&gt;
 余談ですが、WEB 系開発者はすべからく The Twelve-Factor App を読むべきだと思います。&lt;/p&gt;
-
 &lt;h2 id=&#34;今後の予定&#34;&gt;今後の予定&lt;/h2&gt;
-
 &lt;p&gt;ある程度なにか WEB サービスが作れそうなぐらいにはなってきたかなという感じです。&lt;br /&gt;
-ですが、まだフォーム周りはまともに手を付けてないので、ここを何とかしたら自分自身でドッグフードを食べながらやっていこうかと考えています。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Golang についてそろそろ一言いっとくか</title>
-      <link>http://kuune.org/text/2014/02/25/say-a-word-to-golang/</link>
-      <pubDate>Tue, 25 Feb 2014 20:46:33 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/02/25/say-a-word-to-golang/</guid>
-      <description>&lt;p&gt;&lt;br&gt;&lt;br /&gt;
+ですが、まだフォーム周りはまともに手を付けてないので、ここを何とかしたら自分自身でドッグフードを食べながらやっていこうかと考えています。&lt;/p&gt;</description></item><item><title>Golang についてそろそろ一言いっとくか</title><link>http://kuune.org/text/2014/02/25/say-a-word-to-golang/</link><pubDate>Tue, 25 Feb 2014 20:46:33 +0900</pubDate><guid>http://kuune.org/text/2014/02/25/say-a-word-to-golang/</guid><description>&lt;p&gt;&lt;br&gt;&lt;br /&gt;
 &lt;span style=&#34;font-size:300%;font-weight:bold;&#34;&gt;最高！！！！&lt;/span&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;br&gt;&lt;br /&gt;
 &lt;br&gt;&lt;/p&gt;
-
 &lt;p&gt;以下不満&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;struct がどの interface を実装してるか分からない&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;reflect&lt;/code&gt; 使っても struct にフィールドとかメソッドを動的に生やせない&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;時間が絡むテストが必要になるたびに &lt;code&gt;var now = time.Now&lt;/code&gt; とかやって &lt;code&gt;now&lt;/code&gt; にモック当てるの辛い&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>私が Golang の WEB アプリケーションフレームワークを開発する理由</title>
-      <link>http://kuune.org/text/2014/02/18/reason-for-develop-waf-for-golang/</link>
-      <pubDate>Tue, 18 Feb 2014 23:09:59 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/02/18/reason-for-develop-waf-for-golang/</guid>
-      <description>
-
+&lt;/ul&gt;</description></item><item><title>私が Golang の WEB アプリケーションフレームワークを開発する理由</title><link>http://kuune.org/text/2014/02/18/reason-for-develop-waf-for-golang/</link><pubDate>Tue, 18 Feb 2014 23:09:59 +0900</pubDate><guid>http://kuune.org/text/2014/02/18/reason-for-develop-waf-for-golang/</guid><description>
 &lt;p&gt;私が今現在最も使っている言語が Golang で、最も注力しているものが &lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;Kocha&lt;/a&gt; という WEB アプリケーションフレームワーク開発である。&lt;br /&gt;
 Golang とは Go言語 のことで、Go だとググラビリティが低すぎるため Golang と書いている。&lt;/p&gt;
-
 &lt;p&gt;さて、Golang の WEB アプリケーションフレームワークを作っていると言うと大抵の人がこのようなことを言う。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;「Go で WEB (サービス|アプリ)を作ろうとは思わない。」
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;なぜだろうか。Golang が静的型付け言語で事前にコンパイルが必要であり、Rails や Django に比べてアドバンテージが無いからだろうか。&lt;br /&gt;
 実際 WEB 開発に於いてのアドバンテージは無いに等しいし、静的型付けが必要であれば、Java があり、Scala があり、Play Framework がある。Golang である必要が無い。&lt;br /&gt;
 ではなぜ私は Golang の WEB アプリケーションフレームワークを作っているのだろうか。もちろん明確な理由がいくつかある。&lt;/p&gt;
-
 &lt;h2 id=&#34;速い&#34;&gt;速い&lt;/h2&gt;
-
 &lt;p&gt;Golang はバイナリにコンパイルされるため実行速度が速い。単純に考えて、仮に Rails や Django の 10 倍の速度が出るとすると、10 台のサーバーが 1 台にできる。&lt;br /&gt;
 もちろん実際にはネットワークなども絡むためそう単純ではないのだが、それでもサーバーの台数は減らせるものと思われる。&lt;/p&gt;
-
 &lt;h2 id=&#34;適度に固く-書きやすく読みやすい&#34;&gt;適度に固く、書きやすく読みやすい&lt;/h2&gt;
-
 &lt;p&gt;私見だが、Golang は C 言語以上 Python 未満という位置づけの言語のような印象である。&lt;br /&gt;
 型システムがあるためそれなりに固くできるが、動的型付け言語のような書きやすさや読みやすさもそれなりにある。要はバランスが取れている。&lt;/p&gt;
-
 &lt;h2 id=&#34;バイナリにコンパイルされる&#34;&gt;バイナリにコンパイルされる&lt;/h2&gt;
-
 &lt;p&gt;これまでは Golang 自体の利点であったが、これが Kocha を開発している一番の理由である。&lt;br /&gt;
 ではなぜバイナリにコンパイルされることが嬉しいのかであるが、理由は 2 つある。&lt;/p&gt;
-
 &lt;h3 id=&#34;1-デプロイの容易さ&#34;&gt;1. デプロイの容易さ&lt;/h3&gt;
-
 &lt;p&gt;Golang は動作に必要なライブラリは全てコンパイル時に静的リンクされるため、サーバー側に依存ライブラリを入れる必要が無くなる。&lt;br /&gt;
 また Kocha ではオールインワンバイナリと呼んでいるが、テンプレートファイルや静的ファイルを全て 1 つのバイナリにまとめる機能がある。&lt;br /&gt;
 オールインワンバイナリの場合、コンパイルされた 1 つの実行ファイルのみをデプロイすればいいためデプロイツールを使う必要は無く、単に rsync や scp で転送すれば良いだけになる。&lt;br /&gt;
 余談であるが、Kocha は Graceful restart が可能なので、サービスを停止することなくデプロイが可能である。&lt;/p&gt;
-
 &lt;h3 id=&#34;2-オンプレミスの想定&#34;&gt;2. オンプレミスの想定&lt;/h3&gt;
-
 &lt;p&gt;例えば自社のとある ASP のサービスを Rails で開発、運用しているとしよう。ここでとある顧客にオンプレミスで提供することになった。&lt;br /&gt;
 その場合、オンプレミスなのでソースコードがそのまま顧客のサーバーに置かれるということになる。&lt;br /&gt;
 もちろん契約書などで縛るのだろうが、実際にソースコードの閲覧、変更などが可能であるため、技術、ひいては資産の流出になり得るのではないかということを思うわけである。&lt;/p&gt;
-
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
-
 &lt;p&gt;以上が、私が Golang の WEB アプリケーションフレームワークを開発する理由である。&lt;br /&gt;
-ただ、私は Golang に魅了された 1 人であり、結局のところ Golang で WEB 開発をしたいと思っているのが最大の理由であることも否定できない。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>おれのかんがえたさいきょうの ORM for Golang</title>
-      <link>http://kuune.org/text/2014/02/17/orm-for-golang/</link>
-      <pubDate>Mon, 17 Feb 2014 12:17:43 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/02/17/orm-for-golang/</guid>
-      <description>
-
+ただ、私は Golang に魅了された 1 人であり、結局のところ Golang で WEB 開発をしたいと思っているのが最大の理由であることも否定できない。&lt;/p&gt;</description></item><item><title>おれのかんがえたさいきょうの ORM for Golang</title><link>http://kuune.org/text/2014/02/17/orm-for-golang/</link><pubDate>Mon, 17 Feb 2014 12:17:43 +0900</pubDate><guid>http://kuune.org/text/2014/02/17/orm-for-golang/</guid><description>
 &lt;p&gt;既存の ORM はその ORM 独自の記法なりメソッド（Find とか Save とか）がどういう SQL 相当のものなのかを覚える必要がある。&lt;br /&gt;
 また、各 ORM ごとにそれが異なるため潰しが効かない。だけど &lt;a href=&#34;https://github.com/coopernurse/gorp&#34;&gt;gorp&lt;/a&gt; のように SQL を文字列で書きたいわけじゃない。&lt;br /&gt;
 ということで作った。&lt;/p&gt;
-
 &lt;p&gt;Genmai &lt;a href=&#34;https://github.com/naoina/genmai&#34;&gt;https://github.com/naoina/genmai&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;ORM というよりはクエリビルダーに近いので、SQL に耐性のない者は死ぬ。&lt;/p&gt;
-
 &lt;h2 id=&#34;使い方&#34;&gt;使い方&lt;/h2&gt;
-
 &lt;p&gt;まずテーブルを定義して&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
-
 import (
-    &amp;quot;fmt&amp;quot;
-
-    _ &amp;quot;github.com/mattn/go-sqlite3&amp;quot;
-    &amp;quot;github.com/naoina/genmai&amp;quot;
+&amp;quot;fmt&amp;quot;
+_ &amp;quot;github.com/mattn/go-sqlite3&amp;quot;
+&amp;quot;github.com/naoina/genmai&amp;quot;
 )
-
 type User struct {
-    Id   int64  `db:&amp;quot;pk&amp;quot;`
-    Name string `default:&amp;quot;&amp;quot;`
+Id int64 `db:&amp;quot;pk&amp;quot;`
+Name string `default:&amp;quot;&amp;quot;`
 }
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;テーブルをデータベース上に作成する。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;db, err := genmai.New(&amp;amp;genmai.SQLite3Dialect{}, &amp;quot;:memory:&amp;quot;)
 if err != nil {
-    panic(err)
+panic(err)
 }
 // CREATE TABLE IF NOT EXISTS &amp;quot;user&amp;quot; (
-//     &amp;quot;id&amp;quot; integer PRIMARY KEY AUTOINCREMENT,
-//     &amp;quot;name&amp;quot; text
+// &amp;quot;id&amp;quot; integer PRIMARY KEY AUTOINCREMENT,
+// &amp;quot;name&amp;quot; text
 // );
 if err := db.CreateTableIfNotExists(&amp;amp;User{}); err != nil {
-    panic(err)
+panic(err)
 }
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;レコードをデータベースに入れて&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;records := []User{
-    {Name: &amp;quot;alice&amp;quot;},
-    {Name: &amp;quot;bob&amp;quot;},
+{Name: &amp;quot;alice&amp;quot;},
+{Name: &amp;quot;bob&amp;quot;},
 }
 // INSERT INTO &amp;quot;user&amp;quot; (&amp;quot;name&amp;quot;) VALUES (&amp;quot;alice&amp;quot;), (&amp;quot;bob&amp;quot;);
 if _, err := db.Insert(records); err != nil {
-    panic(err)
+panic(err)
 }
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;入れたデータを取り出す。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;var users []User
 // SELECT &amp;quot;user&amp;quot;.* FROM &amp;quot;user&amp;quot;;
 if err := db.Select(&amp;amp;users); err != nil {
-    panic(err)
+panic(err)
 }
 fmt.Printf(&amp;quot;%v\n&amp;quot;, users)
 // Output: [{1 alice} {2 bob}]
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;&lt;code&gt;Select&lt;/code&gt; の条件を指定する場合は &lt;code&gt;db.Where&lt;/code&gt; が使える。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;var users []User
 // SELECT &amp;quot;user&amp;quot;.* FROM &amp;quot;user&amp;quot; WHERE &amp;quot;user&amp;quot;.&amp;quot;id&amp;quot; = 1;
 if err := db.Select(&amp;amp;users, db.Where(&amp;quot;id&amp;quot;, &amp;quot;=&amp;quot;, 1)); err != nil {
-    panic(err)
+panic(err)
 }
 fmt.Printf(&amp;quot;%v\n&amp;quot;, users)
 // Output: [{1 alice}]
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;他にもひと通り基本的な SQL の句に対応していて、&lt;a href=&#34;https://github.com/naoina/genmai/blob/master/README.md&#34;&gt;README.md&lt;/a&gt; や &lt;a href=&#34;http://godoc.org/github.com/naoina/genmai#pkg-examples&#34;&gt;Examples&lt;/a&gt; 見るのが早いです。&lt;/p&gt;
-
 &lt;p&gt;現状はこういう API が良いと思って実装してるけど、Rails みたいなもっとリッチな ORM が欲しくなったらこれの上に構築すると思う。&lt;/p&gt;
-
 &lt;h2 id=&#34;余談&#34;&gt;余談&lt;/h2&gt;
-
-&lt;p&gt;これ完全に &lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;Kocha&lt;/a&gt; のモデルレイヤーのために作った。Kocha (紅&lt;strong&gt;茶&lt;/strong&gt;) だから Genmai (玄米&lt;strong&gt;茶&lt;/strong&gt;)。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>FeatureToggle ライブラリ書いた</title>
-      <link>http://kuune.org/text/2014/01/20/write-library-of-feature-toggle/</link>
-      <pubDate>Mon, 20 Jan 2014 09:31:19 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/01/20/write-library-of-feature-toggle/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/naoina/gocchan&#34;&gt;https://github.com/naoina/gocchan&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;これ完全に &lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;Kocha&lt;/a&gt; のモデルレイヤーのために作った。Kocha (紅&lt;strong&gt;茶&lt;/strong&gt;) だから Genmai (玄米&lt;strong&gt;茶&lt;/strong&gt;)。&lt;/p&gt;</description></item><item><title>FeatureToggle ライブラリ書いた</title><link>http://kuune.org/text/2014/01/20/write-library-of-feature-toggle/</link><pubDate>Mon, 20 Jan 2014 09:31:19 +0900</pubDate><guid>http://kuune.org/text/2014/01/20/write-library-of-feature-toggle/</guid><description>&lt;p&gt;&lt;a href=&#34;https://github.com/naoina/gocchan&#34;&gt;https://github.com/naoina/gocchan&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;FeatureToggle とはなんぞや？という方は &lt;a href=&#34;http://martinfowler.com/bliki/FeatureToggle.html&#34;&gt;http://martinfowler.com/bliki/FeatureToggle.html&lt;/a&gt; とか見てください。日本語の情報はかなり少ないようです。&lt;/p&gt;
-
 &lt;p&gt;今回作ったのは Gocchan という golang 用 FeatureToggle ライブラリです。読みは「ごっちゃん」です。Go の channel とは一切関係ないです。&lt;br /&gt;
 Ruby on Rails 用のそういったライブラリとして &lt;a href=&#34;https://github.com/cookpad/chanko&#34;&gt;Chanko&lt;/a&gt; というのがあるのですが、まぁ名前や機能はそこから来てます。&lt;/p&gt;
-
 &lt;p&gt;使い方は以下のような感じです。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
-
 import &amp;quot;github.com/naoina/gocchan&amp;quot;
-
 type MyFeature struct {}
-
 func (f *MyFeature) ActiveIf(context interface{}, options ...interface{}) bool {
-    return true
+return true
 }
-
 func (f *MyFeature) ExecMyFeature(context interface{}) {
-    // do something.
+// do something.
 }
-
 func init() {
-    gocchan.AddFeature(&amp;quot;name of feature&amp;quot;, &amp;amp;MyFeature{})
+gocchan.AddFeature(&amp;quot;name of feature&amp;quot;, &amp;amp;MyFeature{})
 }
-
 func main() {
-    gocchan.Invoke(&amp;quot;context&amp;quot;, &amp;quot;name of feature&amp;quot;, &amp;quot;ExecMyFeature&amp;quot;, func() {
-        // default processes.
-    })
+gocchan.Invoke(&amp;quot;context&amp;quot;, &amp;quot;name of feature&amp;quot;, &amp;quot;ExecMyFeature&amp;quot;, func() {
+// default processes.
+})
 }
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;この例でいうと、&lt;code&gt;ActiveIf&lt;/code&gt; が &lt;code&gt;true&lt;/code&gt; を返した場合に &lt;code&gt;ExecMyFeature&lt;/code&gt; が実行され、&lt;code&gt;false&lt;/code&gt; を返した場合は &lt;code&gt;Invoke&lt;/code&gt; に渡した関数（デフォルト関数）が実行されます。&lt;br /&gt;
 例えば &lt;code&gt;ActiveIf&lt;/code&gt; の返す値を設定ファイルや DB から持ってくるようにしていれば、まさに FeatureToggle として機能します。&lt;br /&gt;
 また、Chanko と同様に、&lt;code&gt;Invoke&lt;/code&gt; の中（&lt;code&gt;ExecMyFeature&lt;/code&gt; メソッドの中など) でエラーが発生した場合もデフォルト関数が呼ばれます。ですので、単なるフラグを使って if-else で分岐するよりも安全です。&lt;br /&gt;
 &lt;code&gt;Invoke&lt;/code&gt; の第 1 引数には任意のオブジェクトが渡せ、それが &lt;code&gt;ActiveIf&lt;/code&gt; や Feature function (この例でいうと &lt;code&gt;ExecMyFeature&lt;/code&gt;) に渡されますので、これを使って自由に機能を追加できます。&lt;/p&gt;
-
-&lt;p&gt;まぁこれだけのライブラリですが、FeatureToggle 用途として普通に使えるんじゃないかと思います。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Golang 用 URL ルーター作った</title>
-      <link>http://kuune.org/text/2014/01/08/create-url-router-for-golang/</link>
-      <pubDate>Wed, 08 Jan 2014 23:36:36 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/01/08/create-url-router-for-golang/</guid>
-      <description>
-
+&lt;p&gt;まぁこれだけのライブラリですが、FeatureToggle 用途として普通に使えるんじゃないかと思います。&lt;/p&gt;</description></item><item><title>Golang 用 URL ルーター作った</title><link>http://kuune.org/text/2014/01/08/create-url-router-for-golang/</link><pubDate>Wed, 08 Jan 2014 23:36:36 +0900</pubDate><guid>http://kuune.org/text/2014/01/08/create-url-router-for-golang/</guid><description>
 &lt;p&gt;&lt;a href=&#34;https://github.com/naoina/kocha-urlrouter&#34;&gt;https://github.com/naoina/kocha-urlrouter&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;これ &lt;a href=&#34;http://naoina.plog.la/2013/12/16/230502728087&#34;&gt;http://naoina.plog.la/2013/12/16/230502728087&lt;/a&gt; の最後に書いた URL ルーターの実装をした。&lt;br /&gt;
 Kocha で使う用にひと通り実装したものを別ライブラリとして切り出したものになる。&lt;br /&gt;
 使い方は README.md みれば多分分かると思う。&lt;br /&gt;
 Golang の標準ライブラリの &lt;code&gt;database/sql&lt;/code&gt; と同じようなコンパイルタイムプラグインの方式を取っているので、色んな URL ルーターの実装ができ、用途によって切り替えるとかできる。&lt;br /&gt;
 現在の実装は ダブル配列 と 正規表現 の 2 つがある。ダブル配列は構築は遅いが lookup が速い。ベンチマークを取ると分かるが、私の環境だと正規表現実装と比べて、ルート数が 100 の場合は約 17 倍、ルート数 700 の場合だと約 110 倍速い。&lt;/p&gt;
-
 &lt;h2 id=&#34;golang-界隈の-web-フレームワークにおける-url-ルーターの状況&#34;&gt;Golang 界隈の WEB フレームワークにおける URL ルーターの状況&lt;/h2&gt;
-
 &lt;p&gt;Golang で作られている WEB フレームワークには &lt;a href=&#34;https://github.com/robfig/revel&#34;&gt;Revel&lt;/a&gt;、&lt;a href=&#34;https://github.com/astaxie/beego/&#34;&gt;beego&lt;/a&gt;、&lt;a href=&#34;https://github.com/codegangsta/martini&#34;&gt;Martini&lt;/a&gt;、URL ルーターは &lt;a href=&#34;https://github.com/gorilla/mux&#34;&gt;gorilla/mux&lt;/a&gt; などがありますが、これらの URL ルーターの実装は&lt;del&gt;全て、ループを回して正規表現などでマッチングする方法を取っています&lt;/del&gt;(勘違いしてましたが、Revel は Trie により実装でした)。つまりルートの数が増えれば増えるほど遅くなります。&lt;br /&gt;
 これらのフレームワークが何故この方法を取っているのかは知りませんが、実装が簡単なのと、URL ルーターがまだそこまでパフォーマンスに与える影響がない（他の部分の方が重い）からですかね。。。&lt;/p&gt;
-
 &lt;h2 id=&#34;閑話休題&#34;&gt;閑話休題&lt;/h2&gt;
-
 &lt;p&gt;これ作るために色々調べてて、割と Trie というか、そのへんに興味出てきたので、今後はダブル配列の末尾文字列圧縮や三分探索木、 LOUDS、ウェーブレット行列での実装とかも入れたいですね。&lt;/p&gt;
-
 &lt;h3 id=&#34;追記1&#34;&gt;追記1&lt;/h3&gt;
-
 &lt;p&gt;三分探索木の実装を入れたらダブル配列より速くなったしにたい。&lt;/p&gt;
-
 &lt;h3 id=&#34;追記2&#34;&gt;追記2&lt;/h3&gt;
-
 &lt;p&gt;ダブル配列速くしたので、速度はダブル配列の方がちょっとだけ速くなった。メモリ効率はダブル配列の方が約 2 倍から 3 倍程度良いが、構築は三分探索木の方が約 2 倍速い。&lt;br /&gt;
-というか、URL ルーターとして使う文には何万件とか入れないだろうし、メモリプロファイルとった限りでは三分探索木でも 700 件で 3MB ぐらいしか使ってないし、ダブル配列を使う意義とは。。。&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+というか、URL ルーターとして使う文には何万件とか入れないだろうし、メモリプロファイルとった限りでは三分探索木でも 700 件で 3MB ぐらいしか使ってないし、ダブル配列を使う意義とは。。。&lt;/p&gt;</description></item></channel></rss>

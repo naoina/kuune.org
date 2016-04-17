@@ -1,107 +1,64 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Genmai on kuune.org</title>
-    <link>http://kuune.org/tags/genmai/</link>
-    <description>Recent content in Genmai on kuune.org</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 17 Feb 2014 12:17:43 +0900</lastBuildDate>
-    <atom:link href="http://kuune.org/tags/genmai/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>おれのかんがえたさいきょうの ORM for Golang</title>
-      <link>http://kuune.org/text/2014/02/17/orm-for-golang/</link>
-      <pubDate>Mon, 17 Feb 2014 12:17:43 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2014/02/17/orm-for-golang/</guid>
-      <description>
-
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Genmai on kuune.org</title><link>http://kuune.org/tags/genmai/</link><description>Recent content in Genmai on kuune.org</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 17 Feb 2014 12:17:43 +0900</lastBuildDate><atom:link href="http://kuune.org/tags/genmai/index.xml" rel="self" type="application/rss+xml"/><item><title>おれのかんがえたさいきょうの ORM for Golang</title><link>http://kuune.org/text/2014/02/17/orm-for-golang/</link><pubDate>Mon, 17 Feb 2014 12:17:43 +0900</pubDate><guid>http://kuune.org/text/2014/02/17/orm-for-golang/</guid><description>
 &lt;p&gt;既存の ORM はその ORM 独自の記法なりメソッド（Find とか Save とか）がどういう SQL 相当のものなのかを覚える必要がある。&lt;br /&gt;
 また、各 ORM ごとにそれが異なるため潰しが効かない。だけど &lt;a href=&#34;https://github.com/coopernurse/gorp&#34;&gt;gorp&lt;/a&gt; のように SQL を文字列で書きたいわけじゃない。&lt;br /&gt;
 ということで作った。&lt;/p&gt;
-
 &lt;p&gt;Genmai &lt;a href=&#34;https://github.com/naoina/genmai&#34;&gt;https://github.com/naoina/genmai&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;ORM というよりはクエリビルダーに近いので、SQL に耐性のない者は死ぬ。&lt;/p&gt;
-
 &lt;h2 id=&#34;使い方&#34;&gt;使い方&lt;/h2&gt;
-
 &lt;p&gt;まずテーブルを定義して&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
-
 import (
-    &amp;quot;fmt&amp;quot;
-
-    _ &amp;quot;github.com/mattn/go-sqlite3&amp;quot;
-    &amp;quot;github.com/naoina/genmai&amp;quot;
+&amp;quot;fmt&amp;quot;
+_ &amp;quot;github.com/mattn/go-sqlite3&amp;quot;
+&amp;quot;github.com/naoina/genmai&amp;quot;
 )
-
 type User struct {
-    Id   int64  `db:&amp;quot;pk&amp;quot;`
-    Name string `default:&amp;quot;&amp;quot;`
+Id int64 `db:&amp;quot;pk&amp;quot;`
+Name string `default:&amp;quot;&amp;quot;`
 }
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;テーブルをデータベース上に作成する。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;db, err := genmai.New(&amp;amp;genmai.SQLite3Dialect{}, &amp;quot;:memory:&amp;quot;)
 if err != nil {
-    panic(err)
+panic(err)
 }
 // CREATE TABLE IF NOT EXISTS &amp;quot;user&amp;quot; (
-//     &amp;quot;id&amp;quot; integer PRIMARY KEY AUTOINCREMENT,
-//     &amp;quot;name&amp;quot; text
+// &amp;quot;id&amp;quot; integer PRIMARY KEY AUTOINCREMENT,
+// &amp;quot;name&amp;quot; text
 // );
 if err := db.CreateTableIfNotExists(&amp;amp;User{}); err != nil {
-    panic(err)
+panic(err)
 }
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;レコードをデータベースに入れて&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;records := []User{
-    {Name: &amp;quot;alice&amp;quot;},
-    {Name: &amp;quot;bob&amp;quot;},
+{Name: &amp;quot;alice&amp;quot;},
+{Name: &amp;quot;bob&amp;quot;},
 }
 // INSERT INTO &amp;quot;user&amp;quot; (&amp;quot;name&amp;quot;) VALUES (&amp;quot;alice&amp;quot;), (&amp;quot;bob&amp;quot;);
 if _, err := db.Insert(records); err != nil {
-    panic(err)
+panic(err)
 }
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;入れたデータを取り出す。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;var users []User
 // SELECT &amp;quot;user&amp;quot;.* FROM &amp;quot;user&amp;quot;;
 if err := db.Select(&amp;amp;users); err != nil {
-    panic(err)
+panic(err)
 }
 fmt.Printf(&amp;quot;%v\n&amp;quot;, users)
 // Output: [{1 alice} {2 bob}]
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;&lt;code&gt;Select&lt;/code&gt; の条件を指定する場合は &lt;code&gt;db.Where&lt;/code&gt; が使える。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;var users []User
 // SELECT &amp;quot;user&amp;quot;.* FROM &amp;quot;user&amp;quot; WHERE &amp;quot;user&amp;quot;.&amp;quot;id&amp;quot; = 1;
 if err := db.Select(&amp;amp;users, db.Where(&amp;quot;id&amp;quot;, &amp;quot;=&amp;quot;, 1)); err != nil {
-    panic(err)
+panic(err)
 }
 fmt.Printf(&amp;quot;%v\n&amp;quot;, users)
 // Output: [{1 alice}]
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;他にもひと通り基本的な SQL の句に対応していて、&lt;a href=&#34;https://github.com/naoina/genmai/blob/master/README.md&#34;&gt;README.md&lt;/a&gt; や &lt;a href=&#34;http://godoc.org/github.com/naoina/genmai#pkg-examples&#34;&gt;Examples&lt;/a&gt; 見るのが早いです。&lt;/p&gt;
-
 &lt;p&gt;現状はこういう API が良いと思って実装してるけど、Rails みたいなもっとリッチな ORM が欲しくなったらこれの上に構築すると思う。&lt;/p&gt;
-
 &lt;h2 id=&#34;余談&#34;&gt;余談&lt;/h2&gt;
-
-&lt;p&gt;これ完全に &lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;Kocha&lt;/a&gt; のモデルレイヤーのために作った。Kocha (紅&lt;strong&gt;茶&lt;/strong&gt;) だから Genmai (玄米&lt;strong&gt;茶&lt;/strong&gt;)。&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;これ完全に &lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;Kocha&lt;/a&gt; のモデルレイヤーのために作った。Kocha (紅&lt;strong&gt;茶&lt;/strong&gt;) だから Genmai (玄米&lt;strong&gt;茶&lt;/strong&gt;)。&lt;/p&gt;</description></item></channel></rss>

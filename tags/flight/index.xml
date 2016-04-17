@@ -1,27 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Flight on kuune.org</title>
-    <link>http://kuune.org/tags/flight/</link>
-    <description>Recent content in Flight on kuune.org</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 24 May 2013 20:10:14 +0900</lastBuildDate>
-    <atom:link href="http://kuune.org/tags/flight/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>flight-mocha作りました</title>
-      <link>http://kuune.org/text/2013/05/24/create-flight-mocha/</link>
-      <pubDate>Fri, 24 May 2013 20:10:14 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2013/05/24/create-flight-mocha/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/naoina/flight-mocha&#34;&gt;https://github.com/naoina/flight-mocha&lt;/a&gt;&lt;/p&gt;
-
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Flight on kuune.org</title><link>http://kuune.org/tags/flight/</link><description>Recent content in Flight on kuune.org</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 24 May 2013 20:10:14 +0900</lastBuildDate><atom:link href="http://kuune.org/tags/flight/index.xml" rel="self" type="application/rss+xml"/><item><title>flight-mocha作りました</title><link>http://kuune.org/text/2013/05/24/create-flight-mocha/</link><pubDate>Fri, 24 May 2013 20:10:14 +0900</pubDate><guid>http://kuune.org/text/2013/05/24/create-flight-mocha/</guid><description>&lt;p&gt;&lt;a href=&#34;https://github.com/naoina/flight-mocha&#34;&gt;https://github.com/naoina/flight-mocha&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Twitter社製の &lt;a href=&#34;http://twitter.github.io/flight/&#34;&gt;Flight&lt;/a&gt; という素晴らしいJavaScriptのフレームワークがありまして、このplogでも使っています。&lt;/p&gt;
-
 &lt;p&gt;JavaScriptのテストはいつも &lt;a href=&#34;http://visionmedia.github.io/mocha/&#34;&gt;mocha&lt;/a&gt; + &lt;a href=&#34;https://github.com/LearnBoost/expect.js/&#34;&gt;expect.js&lt;/a&gt; でやっているのですが、今回だけ &lt;a href=&#34;https://github.com/twitter/flight-jasmine&#34;&gt;flight-jasmine&lt;/a&gt; があるのでjasmineで書こうとしました。&lt;br /&gt;
 が、jasmineの非同期テストがあまりにもダサすぎて使う気にならなかったのでカッとなって作りました。&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;plogのテスト書こう&lt;br /&gt;
 ↓&lt;br /&gt;&lt;/li&gt;
@@ -36,13 +16,6 @@
 &lt;li&gt;出来た←イマココ&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;こんな感じです。&lt;/p&gt;
-
 &lt;p&gt;また、現状ではFlightのイベント周りのテストは &lt;a href=&#34;http://sinonjs.org/&#34;&gt;sinon.js&lt;/a&gt; あたりを使って自力でやる必要があります。&lt;br /&gt;
-なので、ここらへんをflight-mochaでうまくやれないかなと考えていますがそれはまた別のお話。&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+なので、ここらへんをflight-mochaでうまくやれないかなと考えていますがそれはまた別のお話。&lt;/p&gt;</description></item></channel></rss>

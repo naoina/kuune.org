@@ -1,92 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Groonga on kuune.org</title>
-    <link>http://kuune.org/tags/groonga/</link>
-    <description>Recent content in Groonga on kuune.org</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 03 Aug 2013 18:35:25 +0900</lastBuildDate>
-    <atom:link href="http://kuune.org/tags/groonga/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>GroongaをTravis-CIで動かす方法</title>
-      <link>http://kuune.org/text/2013/08/03/how-to-run-groonga-on-travis-ci/</link>
-      <pubDate>Sat, 03 Aug 2013 18:35:25 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2013/08/03/how-to-run-groonga-on-travis-ci/</guid>
-      <description>
-
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Groonga on kuune.org</title><link>http://kuune.org/tags/groonga/</link><description>Recent content in Groonga on kuune.org</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 03 Aug 2013 18:35:25 +0900</lastBuildDate><atom:link href="http://kuune.org/tags/groonga/index.xml" rel="self" type="application/rss+xml"/><item><title>GroongaをTravis-CIで動かす方法</title><link>http://kuune.org/text/2013/08/03/how-to-run-groonga-on-travis-ci/</link><pubDate>Sat, 03 Aug 2013 18:35:25 +0900</pubDate><guid>http://kuune.org/text/2013/08/03/how-to-run-groonga-on-travis-ci/</guid><description>
 &lt;p&gt;最近このブログに全文検索を付けるべく pyroonga の開発を再開しました、どうも私です。&lt;/p&gt;
-
 &lt;p&gt;さて、開発用リポジトリに GitHub をお使いの方は &lt;a href=&#34;https://travis-ci.org/&#34;&gt;Travis-CI&lt;/a&gt; を使っておられるかと思います。&lt;br /&gt;
 pyroonga でも Travis-CI を使おうと思ったのですがそのままでは動かなかったので四苦八苦しながら動かしました。&lt;br /&gt;
 最終的な &lt;code&gt;.travis.yml&lt;/code&gt; は &lt;a href=&#34;https://github.com/naoina/pyroonga/blob/develop/.travis.yml&#34;&gt;https://github.com/naoina/pyroonga/blob/develop/.travis.yml&lt;/a&gt; ですが、これに至るまでにハマったところを書いていきます。&lt;/p&gt;
-
 &lt;h2 id=&#34;travis-ci-ではランタイムのバージョンを複数指定しても同じvm上で並列にテストが走る&#34;&gt;Travis-CI ではランタイムのバージョンを複数指定しても同じVM上で並列にテストが走る&lt;/h2&gt;
-
 &lt;p&gt;初めにハマったのがこれです。Travis-CI を使うときは&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;language: python
 python:
- - &amp;quot;2.6&amp;quot;
- - &amp;quot;2.7&amp;quot;
- - &amp;quot;3.3&amp;quot;
+- &amp;quot;2.6&amp;quot;
+- &amp;quot;2.7&amp;quot;
+- &amp;quot;3.3&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;のように複数バージョンを指定することがありますが、これらは同じ Travis-CI の VM 上で並列に実行されます。&lt;br /&gt;
 どういうことかというと、普通に MySQL などのデータストレージを使ったテストを書いた場合、DB 名やテーブル名が同じだと更新や取得の結果が毎回変わり得るということです。&lt;br /&gt;
 pyroonga の場合はテストケースごとに 「groonga データベースの作成 → groonga サーバー起動 → データベースの削除」ということをやっていたため、&lt;br /&gt;
 並列で実行した場合にテスト結果が変わるという現象になりました。&lt;/p&gt;
-
 &lt;p&gt;対策としては、テーブル名を全てユニークにするなどしました。&lt;br /&gt;
 また、groonga データベースの作成と groonga サーバーの起動は予め1回のみ行なってテストを走らせるという方式に変更しました。&lt;/p&gt;
-
 &lt;h2 id=&#34;groonga-が起動しない&#34;&gt;Groonga が起動しない&lt;/h2&gt;
-
 &lt;p&gt;以下のように .travis.yml を書いていたら何故か groonga が起動しないという現象がありました。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;language: python
 python:
- - &amp;quot;2.6&amp;quot;
- - &amp;quot;2.7&amp;quot;
- - &amp;quot;3.3&amp;quot;
+- &amp;quot;2.6&amp;quot;
+- &amp;quot;2.7&amp;quot;
+- &amp;quot;3.3&amp;quot;
 before_install:
- - curl https://raw.github.com/groonga/groonga/master/data/travis/setup.sh | sh
+- curl https://raw.github.com/groonga/groonga/master/data/travis/setup.sh | sh
 before_script:
- - groonga -n /tmp/test.db quit
- - groonga -d /tmp/test.db
+- groonga -n /tmp/test.db quit
+- groonga -d /tmp/test.db
 script: python setup.py testall
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;そこで、 groonga のログを出すように&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;......
 before_script:
- ......
- - groonga --log-path /tmp/groonga.log -d /tmp/test.db
- - cat /tmp/groonga.log
- ......
+......
+- groonga --log-path /tmp/groonga.log -d /tmp/test.db
+- cat /tmp/groonga.log
+......
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;としてみました。するとログの中に&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;syscall error &#39;gethostbyname&#39; (Success)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;というものがありました。まぁ名前解決が出来てなくて起動できてないとわかったわけです。&lt;br /&gt;
 ですので、最終的に&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;......
 - groonga -i localhost -d /tmp/test.db
 ......
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;というように修正して Travis-CI で Groonga を起動してのテストができるようになりました。&lt;/p&gt;
-
-&lt;p&gt;余談ですが、&lt;code&gt;groonga -d /tmp/test.db --log-path /tmp/groonga.log&lt;/code&gt; などのように、&lt;code&gt;-d&lt;/code&gt; や &lt;code&gt;-s&lt;/code&gt; オプションの後に &lt;code&gt;--log-path&lt;/code&gt; オプションを置くとログが出ない環境もありましたので、常に &lt;code&gt;--log-path&lt;/code&gt; オプションを前に置くほうがいいです。（Arch Linux では出たが、Ubuntu 12.04 では出なかった）&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;余談ですが、&lt;code&gt;groonga -d /tmp/test.db --log-path /tmp/groonga.log&lt;/code&gt; などのように、&lt;code&gt;-d&lt;/code&gt; や &lt;code&gt;-s&lt;/code&gt; オプションの後に &lt;code&gt;--log-path&lt;/code&gt; オプションを置くとログが出ない環境もありましたので、常に &lt;code&gt;--log-path&lt;/code&gt; オプションを前に置くほうがいいです。（Arch Linux では出たが、Ubuntu 12.04 では出なかった）&lt;/p&gt;</description></item></channel></rss>

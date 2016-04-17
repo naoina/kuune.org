@@ -1,50 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Ghq on kuune.org</title>
-    <link>http://kuune.org/tags/ghq/</link>
-    <description>Recent content in Ghq on kuune.org</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 09 Dec 2015 22:54:32 +0900</lastBuildDate>
-    <atom:link href="http://kuune.org/tags/ghq/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Custom anyframe-widget-cd-ghq-repository</title>
-      <link>http://kuune.org/text/2015/12/09/custom-anyframe-widget-cd-ghq-repository/</link>
-      <pubDate>Wed, 09 Dec 2015 22:54:32 +0900</pubDate>
-      
-      <guid>http://kuune.org/text/2015/12/09/custom-anyframe-widget-cd-ghq-repository/</guid>
-      <description>&lt;p&gt;zsh には &lt;a href=&#34;https://github.com/mollifier/anyframe&#34;&gt;anyframe&lt;/a&gt; という &lt;a href=&#34;https://github.com/peco/peco&#34;&gt;peco&lt;/a&gt;/&lt;a href=&#34;https://github.com/mooz/percol&#34;&gt;percol&lt;/a&gt;/&lt;a href=&#34;https://github.com/junegunn/fzf&#34;&gt;fzf&lt;/a&gt; を便利に使うためのライブラリがあって、中でも &lt;strong&gt;anyframe-widget-cd-ghq-repository&lt;/strong&gt; を便利に、それはもう便利に使っていました。&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ghq on kuune.org</title><link>http://kuune.org/tags/ghq/</link><description>Recent content in Ghq on kuune.org</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 09 Dec 2015 22:54:32 +0900</lastBuildDate><atom:link href="http://kuune.org/tags/ghq/index.xml" rel="self" type="application/rss+xml"/><item><title>Custom anyframe-widget-cd-ghq-repository</title><link>http://kuune.org/text/2015/12/09/custom-anyframe-widget-cd-ghq-repository/</link><pubDate>Wed, 09 Dec 2015 22:54:32 +0900</pubDate><guid>http://kuune.org/text/2015/12/09/custom-anyframe-widget-cd-ghq-repository/</guid><description>&lt;p&gt;zsh には &lt;a href=&#34;https://github.com/mollifier/anyframe&#34;&gt;anyframe&lt;/a&gt; という &lt;a href=&#34;https://github.com/peco/peco&#34;&gt;peco&lt;/a&gt;/&lt;a href=&#34;https://github.com/mooz/percol&#34;&gt;percol&lt;/a&gt;/&lt;a href=&#34;https://github.com/junegunn/fzf&#34;&gt;fzf&lt;/a&gt; を便利に使うためのライブラリがあって、中でも &lt;strong&gt;anyframe-widget-cd-ghq-repository&lt;/strong&gt; を便利に、それはもう便利に使っていました。&lt;br /&gt;
 ですが、中で &lt;code&gt;ghq list --full-path&lt;/code&gt; を使っていて自分のリポジトリを絞り込もうと思っても簡潔にできなかったので自前で plugin 書かきました。&lt;/p&gt;
-
 &lt;p&gt;自分はユーザー名をハンドルそのままの &lt;code&gt;naoina&lt;/code&gt; を使っているので、リポジトリのユーザー名とかぶります。&lt;/p&gt;
-
 &lt;p&gt;&lt;img src=&#34;http://kuune.org/image/anyframe-peco-ghq-before.gif&#34; alt=&#34;before&#34; /&gt;&lt;/p&gt;
-
 &lt;p&gt;なので、下記のようにして &lt;code&gt;ghq root&lt;/code&gt; より後のパスで絞りこめるようにしました。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-zsh&#34;&gt;# zsh/anyframe-functions/sources/anyframe-source-ghq-repository-relative-path
 ghq list
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-zsh&#34;&gt;# .zsh/anyframe-functions/widgets/anyframe-widget-cd-ghq-repository-relative-path
 anyframe-source-ghq-repository-relative-path \
-  | anyframe-selector-auto \
-  | awk &amp;quot;{ print \&amp;quot;$(ghq root)/\&amp;quot; \$1 }&amp;quot; \
-  | anyframe-action-execute cd --
+| anyframe-selector-auto \
+| awk &amp;quot;{ print \&amp;quot;$(ghq root)/\&amp;quot; \$1 }&amp;quot; \
+| anyframe-action-execute cd --
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-zsh&#34;&gt;# .zshrc
 fpath=($HOME/.zsh $fpath)
 alias r=&amp;quot;anyframe-widget-cd-ghq-repository-relative-path&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;&lt;img src=&#34;http://kuune.org/image/anyframe-peco-ghq-after.gif&#34; alt=&#34;after&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/mollifier/anyframe&#34;&gt;anyframe&lt;/a&gt; は自前で plugin を簡単に書けるのでいいですね。&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;&lt;a href=&#34;https://github.com/mollifier/anyframe&#34;&gt;anyframe&lt;/a&gt; は自前で plugin を簡単に書けるのでいいですね。&lt;/p&gt;</description></item></channel></rss>
