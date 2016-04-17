@@ -51,14 +51,16 @@
       <img src="{{ "/image/thumbnail_s.png" | absURL }}" alt="naoina" width="60" height="60" itemprop="image">
       <div class="author-info">
         <strong itemprop="name">naoina</strong>
+        <ul class="socials">
+          <li class="social-btn"><a href="https://twitter.com/naoina" target="_blank"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a></li>
+          <li class="social-btn"><a href="https://github.com/naoina" target="_blank"><i class="fa fa-github-square fa-lg" aria-hidden="true"></i></a></li>
+        </ul>
       </div>
     </div>
 
     <h4>Links</h4>
     <ul class="links">
       <li><a href="/">{{ .Site.Title }}</a></li>
-      <li><a href="https://twitter.com/naoina">Twitter</a></li>
-      <li><a href="https://github.com/naoina">GitHub</a></li>
     </ul>
     <p><a href="{{ .RelRef "index.md" }}">Text index</a></p>
   </aside>

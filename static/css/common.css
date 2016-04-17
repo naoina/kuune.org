@@ -21,3 +21,11 @@ ul {
 li {
     list-style: none;
 }
+
+.fa-twitter-square {
+    color: #55acee;
+}
+
+.fa-github-square {
+    color: #000;
+}

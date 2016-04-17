@@ -63,6 +63,15 @@ img {
         border: none;
 }
 
+.socials {
+    margin: 0;
+}
+
+.social-btn {
+    display: inline-block;
+    margin-right: 5px;
+}
+
 @media (min-width: 768px) {
     .main {
         padding: 0 15%;
