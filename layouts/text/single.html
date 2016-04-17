@@ -2,9 +2,6 @@
 <html>
 <head>
   {{ partial "head.html" . }}
-  {{ if eq .Status "index" }}
-  <meta property="og:type" content="website">
-  {{ else }}
   <meta property="og:type" content="article">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@naoina">
@@ -14,18 +11,13 @@
   {{ else }}
   <meta name="twitter:image" content="{{ .Site.BaseURL }}image/thumbnail_w.png">
   {{ end }}
-  {{ end }}
   <link rel="stylesheet" href="/css/text.css" media="all">
   <link rel="stylesheet" href="/css/github.min.css" media="all">
   <script src="/js/highlight.pack.js" onload="hljs.initHighlighting();" async></script>
 </head>
 <body>
   <div class="main">
-    {{ if eq .Status "index" }}
-      {{ .Render "index" }}
-    {{ else }}
-      {{ .Render "article" }}
-    {{ end }}
+    {{ .Render "article" }}
   </div>
 </body>
 </html>

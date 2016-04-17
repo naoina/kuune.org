@@ -2,13 +2,24 @@
 <html>
 <head>
   {{ partial "head.html" . }}
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="/css/text.css" media="all">
 </head>
 <body>
   <div class="main">
-    {{ range first 1 .Data.Pages }}
-      {{ .Render "article" }}
-    {{ end }}
+    <header>
+      <a href="/">&larr;{{ .Site.Title }}</a>
+    </header>
+    <ul>
+      {{ range .Site.Sections.text.Pages }}
+        <li>
+          <p>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02 15:04:05 -0700" }}</time>
+          </p>
+        </li>
+      {{ end }}
+    </ul>
   </div>
 </body>
 </html>

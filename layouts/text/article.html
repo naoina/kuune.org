@@ -62,7 +62,7 @@
     <ul class="links">
       <li><a href="/">{{ .Site.Title }}</a></li>
     </ul>
-    <p><a href="{{ .RelRef "index.md" }}">Text index</a></p>
+    <p><a href="{{ absURL .Section }}">Text index</a></p>
   </aside>
 
   <footer class="article-footer">
