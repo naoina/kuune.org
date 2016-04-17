@@ -6,6 +6,8 @@
 <meta property="og:url" content="{{ .Permalink }}">
 {{ if .Params.logo }}
 <meta property="og:image" content="{{ .Site.BaseURL }}image/{{ .Params.logo }}">
+{{ else }}
+<meta property="og:image" content="{{ .Site.BaseURL }}image/thumbnail_w.png">
 {{ end }}
 <meta property="fb:app_id" content="1711329939155199">
 <title>{{ if ne .Site.Title .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
