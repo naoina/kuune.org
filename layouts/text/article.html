@@ -17,7 +17,7 @@
 
     <div itemprop="articleBody">
       {{ if .Params.logo }}
-        <img src="/image/{{ .Params.logo }}" alt="" class="article-logo" itemprop="image">
+        <img src="{{ partial "static" (add "/image/" .Params.logo) }}" alt="" class="article-logo" itemprop="image">
       {{ end }}
       {{ .Content }}
     </div>
@@ -50,7 +50,7 @@
 
     <h4>Profile</h4>
     <div itemprop="author publisher" itemscope itemtype="http://schema.org/Person">
-      <img src="{{ "/image/thumbnail_s.png" | absURL }}" alt="naoina" width="60" height="60" itemprop="image">
+      <img src="{{ partial "static" "/image/thumbnail_s.png" }}" alt="naoina" width="60" height="60" itemprop="image">
       <div class="author-info">
         <strong itemprop="name">naoina</strong>
         <ul class="socials">

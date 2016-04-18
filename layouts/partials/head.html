@@ -5,15 +5,15 @@
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:url" content="{{ .Permalink }}">
 {{ if .Params.logo }}
-<meta property="og:image" content="{{ .Site.BaseURL }}image/{{ .Params.logo }}">
+<meta property="og:image" content="{{.Site.BaseURL }}{{ partial "static" (add "image/" .Params.logo) }}">
 {{ else }}
-<meta property="og:image" content="{{ .Site.BaseURL }}image/thumbnail_w.png">
+<meta property="og:image" content="{{ partial "static" "/image/thumbnail_w.png" }}">
 {{ end }}
 <meta property="fb:app_id" content="1711329939155199">
 <title>{{ if ne .Site.Title .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
 <link rel="canonical" href="{{ .Permalink }}">
 {{ if .RSSlink }}<link rel="alternate" charset="UTF-8" type="application/rss+xml" title="{{ .Title }}" href="{{ .RSSlink }}">{{ end }}
-<link rel="stylesheet" href="/css/font-awesome.min.css" media="all">
-<link rel="stylesheet" href="/css/normalize.css" media="all">
-<link rel="stylesheet" href="/css/common.css" media="all">
+<link rel="stylesheet" href="{{ partial "static" "/css/font-awesome.min.css" }}" media="all">
+<link rel="stylesheet" href="{{ partial "static" "/css/normalize.css" }}" media="all">
+<link rel="stylesheet" href="{{ partial "static" "/css/common.css" }}" media="all">
 {{ partial "google-analytics.html" . }}
