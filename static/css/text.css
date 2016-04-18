@@ -69,6 +69,11 @@ img {
     margin-right: 5px;
 }
 
+.social-btns {
+    padding: 2rem 0 0;
+    line-height: 12px;
+}
+
 .footer-ad {
     max-width: 336px;
 }
