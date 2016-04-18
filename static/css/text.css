@@ -66,13 +66,18 @@ img {
     margin: 0;
 }
 
-.social-btn {
+.social-icon {
     display: inline-block;
     margin-right: 5px;
 }
 
+.social-btn {
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 1rem;
+}
+
 .social-btns {
-    padding: 2rem 0 0;
     line-height: 12px;
 }
 

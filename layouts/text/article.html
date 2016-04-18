@@ -15,7 +15,7 @@
       <meta itemprop="datePublished" content="{{ .Date.Format "2006-01-02"}}">
     </header>
 
-    <div itemprop="articleBody">
+    <div class="article-body" itemprop="articleBody">
       {{ if .Params.logo }}
         <img src="{{ partial "static" (add "/image/" .Params.logo) }}" alt="" class="article-logo" itemprop="image">
       {{ end }}
@@ -33,6 +33,22 @@
           </li>
         {{ end }}
       </ul>
+    </footer>
+
+    <footer class="clear">
+      {{ partial "social-buttons" . }}
+    </footer>
+
+    <footer class="clear footer-ad">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-6031962427645676"
+           data-ad-slot="4527394341"
+           data-ad-format="auto"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
     </footer>
   </article>
 
@@ -54,8 +70,8 @@
       <div class="author-info">
         <strong itemprop="name">naoina</strong>
         <ul class="socials">
-          <li class="social-btn"><a href="https://twitter.com/naoina" target="_blank"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a></li>
-          <li class="social-btn"><a href="https://github.com/naoina" target="_blank"><i class="fa fa-github-square fa-lg" aria-hidden="true"></i></a></li>
+          <li class="social-icon"><a href="https://twitter.com/naoina" target="_blank"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a></li>
+          <li class="social-icon"><a href="https://github.com/naoina" target="_blank"><i class="fa fa-github-square fa-lg" aria-hidden="true"></i></a></li>
         </ul>
       </div>
     </div>
@@ -66,22 +82,6 @@
     </ul>
     <p><a href="{{ absURL .Section }}">Text index</a></p>
   </aside>
-
-  <footer class="clear">
-    {{ partial "social-buttons" . }}
-  </footer>
-
-  <footer class="clear footer-ad">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-6031962427645676"
-         data-ad-slot="4527394341"
-         data-ad-format="auto"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </footer>
 
   <footer class="clear">
     {{ partial "disqus" . }}
