@@ -15,15 +15,9 @@
     </div>
 
     <footer class="tags-footer">
-      <span>
-        {{ if .Params.tags }}
-          {{ if len .Params.tags | eq 1 }}
-            tag:
-          {{ else }}
-            tags:
-          {{ end }}
-        {{ end }}
-      </span>
+      {{ if .Params.tags }}
+        <i class="fa fa-tag"></i>
+      {{ end }}
       <ul class="tags">
         {{ range .Params.tags }}
           <li class="tag" itemprop="keywords">
