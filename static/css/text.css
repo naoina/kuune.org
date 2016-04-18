@@ -81,8 +81,9 @@ img {
     line-height: 12px;
 }
 
-.footer-ad {
+.ad {
     max-width: 336px;
+    min-width: 300px;
 }
 
 .tags-footer {
@@ -91,17 +92,17 @@ img {
 
 @media (min-width: 768px) {
     .main {
-        padding: 0 15%;
+        padding: 0 10%;
         }
 
         .main .article {
             float: left;
-            width: 75%;
+            width: 65%;
             margin-right: 2rem;
         }
 
         .main .sidenav {
             float: left;
-            width: 22%;
+            min-width: 300px;
     }
 }
