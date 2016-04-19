@@ -15,3 +15,14 @@ tag = "tags"
 
 [blackfriday]
   extensions = ["hardLineBreak"]
+
+[params.twitter]
+  user = "naoina"
+  url = "https://twitter.com/naoina"
+
+[params.github]
+  user = "naoina"
+  url = "https://github.com/naoina"
+
+[params.facebook]
+  appid = "1711329939155199"

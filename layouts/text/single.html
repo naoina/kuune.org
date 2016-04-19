@@ -4,7 +4,7 @@
   {{ partial "head.html" . }}
   <meta property="og:type" content="article">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@naoina">
+  <meta name="twitter:site" content="@{{ .Site.Params.twitter.user }}">
   <meta name="twitter:description" content="{{ substr .Summary 0 100 }}">
   {{ if .Params.logosmall }}
   <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ partial "static" (add "image/" .Params.logosmall) }}">

@@ -15,8 +15,8 @@
         </li>
         <li>
           <ul class="links">
-            <li>GitHub: <a href="https://github.com/naoina">naoina</a></li>
-            <li>Twitter: <a href="https://twitter.com/naoina">naoina</a></li>
+            <li>GitHub: <a href="{{ .Site.Params.github.url }}">{{ .Site.Params.github.user }}</a></li>
+            <li>Twitter: <a href="{{ .Site.Params.twitter.url }}">{{ .Site.Params.twitter.user }}</a></li>
             <li><a href="{{ range first 1 .Site.Sections.text.Pages }}{{ .Permalink }}{{ end }}">Blog</a> (in Japanese)</li>
           </ul>
         </li>
