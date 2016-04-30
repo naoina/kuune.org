@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kocha on kuune.org</title><link>http://kuune.org/tags/kocha/</link><description>Recent content in Kocha on kuune.org</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 24 Jul 2014 10:56:39 +0900</lastBuildDate><atom:link href="http://kuune.org/tags/kocha/index.xml" rel="self" type="application/rss+xml"/><item><title>Kocha v0.5 リリースしました</title><link>http://kuune.org/text/2014/07/24/kocha-v0.5/</link><pubDate>Thu, 24 Jul 2014 10:56:39 +0900</pubDate><guid>http://kuune.org/text/2014/07/24/kocha-v0.5/</guid><description>
+&lt;p&gt;&lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;https://github.com/naoina/kocha&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;前のバージョンとは非互換になってます。というか v1.0 まではバンバン非互換の変更入れていくつもりなので、まともに使うのはオススメしません。&lt;br /&gt;
+ですが、もしそれでも Kocha を使いたいという場合は、人柱になって最新のバージョンを追いつつ使うか、&lt;a href=&#34;http://labix.org/gopkg.in&#34;&gt;gopkg.in&lt;/a&gt; を使ったりしてバージョンを固定して使うことをおすすめします。&lt;/p&gt;
+&lt;h2 id=&#34;v0-5-での変更点&#34;&gt;v0.5 での変更点&lt;/h2&gt;
+&lt;h3 id=&#34;url-ルーターを-denco-にしました&#34;&gt;URL ルーターを denco にしました&lt;/h3&gt;
+&lt;p&gt;以前までの URL ルーターを別に切り出して改良した &lt;a href=&#34;https://github.com/naoina/denco&#34;&gt;Denco&lt;/a&gt; を使うようにしました。&lt;br /&gt;
+これにより URL ルーティングのパフォーマンスが上がり、メモリ使用量も大幅に改善されています。&lt;/p&gt;
+&lt;h3 id=&#34;net-http-互換として使えるようになりました&#34;&gt;net/http 互換として使えるようになりました&lt;/h3&gt;
+&lt;p&gt;今までは Kocha で作ったものは Kocha でしか動かせませんでしたが、内外的に大幅に変更を加えて &lt;a href=&#34;http://golang.org/pkg/net/http/#Handler&#34;&gt;http.Handler&lt;/a&gt; インターフェースを実装しました。&lt;br /&gt;
+これによって他の &lt;code&gt;net/http&lt;/code&gt; 用ライブラリ（ミドルウェアとして処理を挟むものなど）と組み合わせて使えるようになりました。&lt;br /&gt;
+これは &lt;a href=&#34;http://naoina.github.io/kocha/docs/advanced.html&#34;&gt;http://naoina.github.io/kocha/docs/advanced.html&lt;/a&gt; に軽く書いています。&lt;br /&gt;
+なお v0.5 における非互換性は大体この変更のせいです。&lt;/p&gt;
+&lt;h3 id=&#34;go-1-3-以降のみをサポートします&#34;&gt;Go 1.3 以降のみをサポートします&lt;/h3&gt;
+&lt;p&gt;golang はどんどん開発が進んでいるので敢えて古いものを使う必要は今のところ無いので新しいもの使っていきましょう。&lt;/p&gt;
+&lt;p&gt;というのは建前で、実際のところは Kocha の graceful restart の機能を &lt;a href=&#34;https://github.com/naoina/miyabi&#34;&gt;miyabi&lt;/a&gt; というライブラリとして再実装し直して Kocha で使っているのですが、この miyabi が Go 1.3 で &lt;code&gt;net/http&lt;/code&gt; に導入された機能を使っているからです。&lt;/p&gt;
+&lt;h2 id=&#34;今後の予定&#34;&gt;今後の予定&lt;/h2&gt;
+&lt;p&gt;ログ周りの再設計をします。後は session による flash 機構の実装をしようと思います。&lt;br /&gt;
+そこまでできたら &lt;a href=&#34;http://vocanew.kuune.org&#34;&gt;ぼかにゅー&lt;/a&gt; や、この plog.la を Kocha で実装して、実際に使う際に必要な機能やデバッグをしていこうと考えています。&lt;/p&gt;</description></item><item><title>Kocha が v0.3 になりました</title><link>http://kuune.org/text/2014/03/14/kocha-v0.3/</link><pubDate>Fri, 14 Mar 2014 09:50:19 +0900</pubDate><guid>http://kuune.org/text/2014/03/14/kocha-v0.3/</guid><description>
+&lt;p&gt;&lt;code&gt;go get&lt;/code&gt; でバージョン指定できないのにバージョン付ける意味あんのかよみたいな話はあると思いますが、Kocha &lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;https://github.com/naoina/kocha&lt;/a&gt; に v0.3 のタグを付けました。&lt;/p&gt;
+&lt;p&gt;主な変更点は&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;モデル、ORM、マイグレーションなどのデータベース周りのサポート&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dev&lt;/code&gt; や &lt;code&gt;prod&lt;/code&gt; などの環境ごとの設定の廃止&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;です。&lt;/p&gt;
+&lt;h2 id=&#34;データベース周りのサポート&#34;&gt;データベース周りのサポート&lt;/h2&gt;
+&lt;p&gt;モデルのジェネレーターや ORM、マイグレーションのサポートを追加しました。&lt;br /&gt;
+何故サポートなのかというと、Kocha 固有の ORM を使わないといけないわけではなく、自由に ORM が選べるような実装になっているからです。&lt;/p&gt;
+&lt;h3 id=&#34;モデル&#34;&gt;モデル&lt;/h3&gt;
+&lt;p&gt;現状では &lt;a href=&#34;https://github.com/naoina/genmai&#34;&gt;genmai&lt;/a&gt; のみのサポートですが、簡単に他の ORM も追加できます。&lt;br /&gt;
+モデルのジェネレーターも特定の ORM のものを追加できるようにしていますが、まだ他の ORM 用の実装はしていません。気が向いたら &lt;a href=&#34;https://github.com/coopernurse/gorp&#34;&gt;gorp&lt;/a&gt; 用ぐらいは実装すると思います。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;kocha g model user name:string age:int
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;みたいにすると&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type User struct {
+Id int64 `db:&amp;quot;pk&amp;quot; json:&amp;quot;id&amp;quot;`
+Name string `json:&amp;quot;name&amp;quot;`
+Age int `json:&amp;quot;age&amp;quot;`
+genmai.TimeStamp
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;というような struct が書かれたファイルが生成されます。ついでに ORM 固有のインスタンスを取得するヘルパーが書かれたファイルも生成されます。&lt;br /&gt;
+まぁここら辺に関してはドキュメント &lt;a href=&#34;http://naoina.github.io/kocha/docs/model.html&#34;&gt;http://naoina.github.io/kocha/docs/model.html&lt;/a&gt; にあっさりですが書いています。&lt;/p&gt;
+&lt;h3 id=&#34;マイグレーション&#34;&gt;マイグレーション&lt;/h3&gt;
+&lt;p&gt;現時点で私が知っているマイグレーションツールといえば &lt;a href=&#34;https://bitbucket.org/liamstask/goose&#34;&gt;goose&lt;/a&gt; がありますが、ORM を使うときのデータベースの設定と、マイグレーションツールの設定が中身は同じなのに別々に管理しないといけないのが大変好ましくないと考えています。&lt;br /&gt;
+ということで、フレームワーク側でマイグレーションをサポートしました。Rails みたいですね。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;kocha g migration create_user_table
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;でマイグレーションするためのファイルが生成されます。ですが、中身は自分で書かないといけません。Rails みたいにマイグレーション名から自動でマイグレーションの中身を記述するみたいなことはしない方向です。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;kocha migrate up
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;で前方向のマイグレーションが走ります。戻したい時は&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;kocha migrate down
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;とすれば直近の 1 つのマイグレーションに対してロールバックする処理が走ります。まぁ実際の処理は全部ユーザー側で書かないといけないんですが。&lt;/p&gt;
+&lt;h2 id=&#34;環境ごとの設定の廃止&#34;&gt;環境ごとの設定の廃止&lt;/h2&gt;
+&lt;p&gt;今まではアプリケーションのトップレベルディレクトリに &lt;code&gt;dev.go&lt;/code&gt; や &lt;code&gt;prod.go&lt;/code&gt;、&lt;code&gt;config/dev.go&lt;/code&gt; や &lt;code&gt;config/prod.go&lt;/code&gt; といった、いわゆる環境ごとの設定セットがありました。&lt;br /&gt;
+今回の v0.3 からこれを廃止して、設定は基本的に環境変数によって実行時に指定するように変更しました。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;KOCHA_DB_DRIVER=&amp;quot;mysql&amp;quot; KOCHA_DB_DSN=&amp;quot;user:password@/dbname&amp;quot; kocha run
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;という感じになります。一応何も指定しない場合のデフォルトは sqlite3 が指定されてます。&lt;br /&gt;
+この変更は &lt;a href=&#34;http://12factor.net/&#34;&gt;The Twelve-Factor App&lt;/a&gt; (&lt;a href=&#34;http://twelve-factor-ja.herokuapp.com/&#34;&gt;日本語訳&lt;/a&gt;) に影響されました。これの &lt;a href=&#34;http://12factor.net/config&#34;&gt;config&lt;/a&gt; (&lt;a href=&#34;http://twelve-factor-ja.herokuapp.com/config&#34;&gt;日本語訳&lt;/a&gt;) に沿った形にしたということになります。&lt;br /&gt;
+余談ですが、WEB 系開発者はすべからく The Twelve-Factor App を読むべきだと思います。&lt;/p&gt;
+&lt;h2 id=&#34;今後の予定&#34;&gt;今後の予定&lt;/h2&gt;
+&lt;p&gt;ある程度なにか WEB サービスが作れそうなぐらいにはなってきたかなという感じです。&lt;br /&gt;
+ですが、まだフォーム周りはまともに手を付けてないので、ここを何とかしたら自分自身でドッグフードを食べながらやっていこうかと考えています。&lt;/p&gt;</description></item><item><title>私が Golang の WEB アプリケーションフレームワークを開発する理由</title><link>http://kuune.org/text/2014/02/18/reason-for-develop-waf-for-golang/</link><pubDate>Tue, 18 Feb 2014 23:09:59 +0900</pubDate><guid>http://kuune.org/text/2014/02/18/reason-for-develop-waf-for-golang/</guid><description>
+&lt;p&gt;私が今現在最も使っている言語が Golang で、最も注力しているものが &lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;Kocha&lt;/a&gt; という WEB アプリケーションフレームワーク開発である。&lt;br /&gt;
+Golang とは Go言語 のことで、Go だとググラビリティが低すぎるため Golang と書いている。&lt;/p&gt;
+&lt;p&gt;さて、Golang の WEB アプリケーションフレームワークを作っていると言うと大抵の人がこのようなことを言う。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;「Go で WEB (サービス|アプリ)を作ろうとは思わない。」
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;なぜだろうか。Golang が静的型付け言語で事前にコンパイルが必要であり、Rails や Django に比べてアドバンテージが無いからだろうか。&lt;br /&gt;
+実際 WEB 開発に於いてのアドバンテージは無いに等しいし、静的型付けが必要であれば、Java があり、Scala があり、Play Framework がある。Golang である必要が無い。&lt;br /&gt;
+ではなぜ私は Golang の WEB アプリケーションフレームワークを作っているのだろうか。もちろん明確な理由がいくつかある。&lt;/p&gt;
+&lt;h2 id=&#34;速い&#34;&gt;速い&lt;/h2&gt;
+&lt;p&gt;Golang はバイナリにコンパイルされるため実行速度が速い。単純に考えて、仮に Rails や Django の 10 倍の速度が出るとすると、10 台のサーバーが 1 台にできる。&lt;br /&gt;
+もちろん実際にはネットワークなども絡むためそう単純ではないのだが、それでもサーバーの台数は減らせるものと思われる。&lt;/p&gt;
+&lt;h2 id=&#34;適度に固く-書きやすく読みやすい&#34;&gt;適度に固く、書きやすく読みやすい&lt;/h2&gt;
+&lt;p&gt;私見だが、Golang は C 言語以上 Python 未満という位置づけの言語のような印象である。&lt;br /&gt;
+型システムがあるためそれなりに固くできるが、動的型付け言語のような書きやすさや読みやすさもそれなりにある。要はバランスが取れている。&lt;/p&gt;
+&lt;h2 id=&#34;バイナリにコンパイルされる&#34;&gt;バイナリにコンパイルされる&lt;/h2&gt;
+&lt;p&gt;これまでは Golang 自体の利点であったが、これが Kocha を開発している一番の理由である。&lt;br /&gt;
+ではなぜバイナリにコンパイルされることが嬉しいのかであるが、理由は 2 つある。&lt;/p&gt;
+&lt;h3 id=&#34;1-デプロイの容易さ&#34;&gt;1. デプロイの容易さ&lt;/h3&gt;
+&lt;p&gt;Golang は動作に必要なライブラリは全てコンパイル時に静的リンクされるため、サーバー側に依存ライブラリを入れる必要が無くなる。&lt;br /&gt;
+また Kocha ではオールインワンバイナリと呼んでいるが、テンプレートファイルや静的ファイルを全て 1 つのバイナリにまとめる機能がある。&lt;br /&gt;
+オールインワンバイナリの場合、コンパイルされた 1 つの実行ファイルのみをデプロイすればいいためデプロイツールを使う必要は無く、単に rsync や scp で転送すれば良いだけになる。&lt;br /&gt;
+余談であるが、Kocha は Graceful restart が可能なので、サービスを停止することなくデプロイが可能である。&lt;/p&gt;
+&lt;h3 id=&#34;2-オンプレミスの想定&#34;&gt;2. オンプレミスの想定&lt;/h3&gt;
+&lt;p&gt;例えば自社のとある ASP のサービスを Rails で開発、運用しているとしよう。ここでとある顧客にオンプレミスで提供することになった。&lt;br /&gt;
+その場合、オンプレミスなのでソースコードがそのまま顧客のサーバーに置かれるということになる。&lt;br /&gt;
+もちろん契約書などで縛るのだろうが、実際にソースコードの閲覧、変更などが可能であるため、技術、ひいては資産の流出になり得るのではないかということを思うわけである。&lt;/p&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;以上が、私が Golang の WEB アプリケーションフレームワークを開発する理由である。&lt;br /&gt;
+ただ、私は Golang に魅了された 1 人であり、結局のところ Golang で WEB 開発をしたいと思っているのが最大の理由であることも否定できない。&lt;/p&gt;</description></item><item><title>Kocha における URL ルーターの実装と予定</title><link>http://kuune.org/text/2013/12/16/plan-for-implementation-of-url-router-for-kocha/</link><pubDate>Mon, 16 Dec 2013 23:05:02 +0900</pubDate><guid>http://kuune.org/text/2013/12/16/plan-for-implementation-of-url-router-for-kocha/</guid><description>&lt;p&gt;現在、&lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;Kocha&lt;/a&gt; における URL ルーター(&lt;code&gt;/path/to/controller&lt;/code&gt; とかの URL を特定のコントローラーにルーティングするアレ)の実装は素朴な実装で、ルートごとの正規表現を配列に持っていて、頭から順番にループを回して一致するものを探すようになっている。&lt;br /&gt;
+非常に簡単な仕組みだが、O(N)なのでルートが増えると遅くなる。そこで下記の記事にあるような全部のルートを 1 つの正規表現でマッチさせる実装を試した。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://r7kamura.github.io/2013/11/27/rack-multiplexer.html&#34;&gt;http://r7kamura.github.io/2013/11/27/rack-multiplexer.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;結果は、ループを回す方法の約 7 倍程度 &lt;strong&gt;遅く&lt;/strong&gt; なった。Ruby だと 17 倍ほど速くなるものが Golang だと 7 倍遅くなってしまった。&lt;br /&gt;
+泣きながらググったところ、golang の正規表現は Ruby や Python のそれとは違う方式なのと、Pure Go で実装してるから〜みたいな話っぽい。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://groups.google.com/forum/#!topic/golang-nuts/6d1maef4jQ8&#34;&gt;https://groups.google.com/forum/#!topic/golang-nuts/6d1maef4jQ8&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://golang.org/doc/faq#Why_does_Go_perform_badly_on_benchmark_x&#34;&gt;http://golang.org/doc/faq#Why_does_Go_perform_badly_on_benchmark_x&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;さらに調べたら下記の記事が見つかった。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://blog.ant0ine.com/typepad/2013/02/better-url-routing-golang-1.html&#34;&gt;http://blog.ant0ine.com/typepad/2013/02/better-url-routing-golang-1.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A9%E3%82%A4%E6%9C%A8&#34;&gt;Trie&lt;/a&gt; を使ったらめっちゃ速くなったわー。らしい。&lt;br /&gt;
+というわけで、Trie 関連の調査を開始して、&lt;a href=&#34;http://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A9%E3%82%A4%E6%9C%A8&#34;&gt;Trie&lt;/a&gt; → &lt;a href=&#34;http://ja.wikipedia.org/wiki/%E5%9F%BA%E6%95%B0%E6%9C%A8&#34;&gt;Patricia tree&lt;/a&gt; → &lt;a href=&#34;http://ja.wikipedia.org/wiki/%E4%B8%89%E5%88%86%E6%8E%A2%E7%B4%A2%E6%9C%A8&#34;&gt;Ternary Search Tree&lt;/a&gt; → &lt;a href=&#34;http://d.hatena.ne.jp/takeda25/20120303/1330760254&#34;&gt;LOUDS&lt;/a&gt; → &lt;a href=&#34;http://nanika.osonae.com/DArray/dary.html&#34;&gt;Double Array&lt;/a&gt; ←ｲﾏｺｺ&lt;br /&gt;
+という状況です。&lt;br /&gt;
+とりあえず Kocha の URL ルーターは&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;起動時に静的に構築する&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;追加や削除は無い&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;よって、構築する時間よりは検索時間が速いものが好ましい&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;という要件なので、Double Array による URL ルーターが本命ではないかと考えていますが、憶測より実測するべきなので、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ternary Search Tree&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Double Array&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Trie (前述の記事の実装)&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;の 3 つを実装、ベンチマークして速いものを採用しようかと考えています。&lt;/p&gt;</description></item><item><title>Kocha v0.1 リリースしました</title><link>http://kuune.org/text/2013/12/10/kocha-v0.1/</link><pubDate>Tue, 10 Dec 2013 00:44:55 +0900</pubDate><guid>http://kuune.org/text/2013/12/10/kocha-v0.1/</guid><description>
+&lt;p&gt;&lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;https://github.com/naoina/kocha&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://naoina.github.io/kocha/&#34;&gt;http://naoina.github.io/kocha/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ドキュメントを書いたら区切りとして v0.1 を出そうと決めており、Google先生のご指導の元、やっとのことでドキュメントが書けましたので v0.1 と相成りました。&lt;br /&gt;
+v0.1 リリースと書いていますが、git のタグを打った後すぐコミットとかしてるので本当にただの区切りで、それ以上の意味はありません。&lt;/p&gt;
+&lt;h2 id=&#34;kochaとは&#34;&gt;Kochaとは&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://golang.org/&#34;&gt;Go言語&lt;/a&gt;で書かれているウェブアプリケーションフレームワークです。読みは &lt;strong&gt;紅茶&lt;/strong&gt; です。&lt;/p&gt;
+&lt;h2 id=&#34;コンセプト&#34;&gt;コンセプト&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;とにかく便利に&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;独自記法の設定ファイルを使わない&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;1 つのバイナリで完結&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;速度&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;とにかく便利に&#34;&gt;とにかく便利に&lt;/h3&gt;
+&lt;p&gt;これを一番念頭に置いて作っています。設計の美しさや意味的な正しさよりも、とにかく便利に使えることを目指しています。&lt;br /&gt;
+そのために Ruby on Rails ライクなコマンドラインツールも提供していて、1 行もコードを書くことなくサンプルが動きます。&lt;br /&gt;
+現在はまだ色々足りてないものがありますが、今後便利そうなものは積極的に取り込んでいく方針です。&lt;/p&gt;
+&lt;h3 id=&#34;独自記法の設定ファイルを使わない&#34;&gt;独自記法の設定ファイルを使わない&lt;/h3&gt;
+&lt;p&gt;Kocha は全ての設定がただの Go のソースファイルです。&lt;br /&gt;
+独自記法の設定ファイルは好きなように構文を作れるので柔軟ではありますが、それと引き換えに学習コストが飛躍的に上がります。&lt;br /&gt;
+また、独自記法はそれだけのために作られるものなのでつぶしが利きませんし、誰もそんなものを覚えたくはありません。&lt;/p&gt;
+&lt;h3 id=&#34;1-つのバイナリで完結&#34;&gt;1 つのバイナリで完結&lt;/h3&gt;
+&lt;p&gt;Go で WAF を作ろうと思った動機のひとつです。&lt;br /&gt;
+昨今の WAF はデプロイのために全てのコードベースをサーバー上に上げるものが大半です。また、既存の Go の WAF でもテンプレートや設定ファイルも一緒にデプロイしなければならなかったりします。&lt;br /&gt;
+せっかくバイナリにコンパイルされるのですから、それだけで完結できるに越した事はないと考えました。&lt;br /&gt;
+ですので Kocha では &lt;code&gt;kocha build -a prod&lt;/code&gt; などとすれば、テンプレートや設定ファイルはおろか、静的ファイルまでも全て 1 つのバイナリに内包できるようにしました。&lt;br /&gt;
+デプロイはビルドされたバイナリだけをサーバーに置けば完了します。&lt;/p&gt;
+&lt;h3 id=&#34;速度&#34;&gt;速度&lt;/h3&gt;
+&lt;p&gt;速さは正義です。現時点では一部しかベンチマークを取ってませんが、基本的にはベンチマークを取って速い実装を採用するという方針です。&lt;br /&gt;
+ここら辺はこれから頑張るといった感じです。&lt;/p&gt;
+&lt;h2 id=&#34;今後について&#34;&gt;今後について&lt;/h2&gt;
+&lt;p&gt;GitHub の issues に色々上げています。まだ色々とやることや、したいことがあるので、まだ飽きないと思います。多分。&lt;/p&gt;
+&lt;p&gt;あとほどんどの人にはどうでもいいと思いますが、Windows でもちゃんと動きます。&lt;/p&gt;</description></item><item><title>GoでWEBアプリケーションフレームワーク書いた</title><link>http://kuune.org/text/2013/10/17/web-application-framework-written-in-go/</link><pubDate>Thu, 17 Oct 2013 00:54:14 +0900</pubDate><guid>http://kuune.org/text/2013/10/17/web-application-framework-written-in-go/</guid><description>&lt;p&gt;&lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;https://github.com/naoina/kocha&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;名前は紅茶と読みます。テストはまだ無い。&lt;br /&gt;
+今後の目標としてはとりあえず&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;テスト書く&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;コマンドライン作る&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Usage書く&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;テンプレート周りの向上&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ですかね。&lt;/p&gt;</description></item></channel></rss>
