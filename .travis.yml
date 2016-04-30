@@ -1,6 +1,6 @@
 language: go
 go:
-- 1.4
+- 1.6
 install:
 - go get -u -v github.com/spf13/hugo
 - go get -u -v github.com/tdewolff/minify/cmd/minify
