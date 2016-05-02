@@ -14,9 +14,9 @@ tags = ["misc"]
 
 
 <div style="display:inline;">
-<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&o=9&p=8&l=as1&m=amazon&f=ifr&ref=qf_sp_asin_til&asins=4062836025" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=naoina09-22&o=9&p=8&l=as1&asins=4062836076&ref=tf_til&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=naoina09-22&o=9&p=8&l=as1&asins=4062836637&ref=tf_til&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+<iframe src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&o=9&p=8&l=as1&m=amazon&f=ifr&ref=qf_sp_asin_til&asins=4062836025" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+<iframe src="//rcm-fe.amazon-adsystem.com/e/cm?t=naoina09-22&o=9&p=8&l=as1&asins=4062836076&ref=tf_til&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+<iframe src="//rcm-fe.amazon-adsystem.com/e/cm?t=naoina09-22&o=9&p=8&l=as1&asins=4062836637&ref=tf_til&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
 </div>
 
 一応アニメシリーズは全部見たけど結構再現度高い。アニメ見てから原作読んでも、原作読んでからアニメ見ても違和感ないと思う。
@@ -26,7 +26,7 @@ tags = ["misc"]
 蛇足だけど、同じ西尾維新の作品で忘却探偵シリーズというのがある。
 最近ドラマでもやってたから知ってるかも知れないし、知らないかも知れない。
 
-<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=naoina09-22&o=9&p=8&l=as1&asins=4062192020&ref=tf_til&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+<iframe src="//rcm-fe.amazon-adsystem.com/e/cm?t=naoina09-22&o=9&p=8&l=as1&asins=4062192020&ref=tf_til&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
 
 この「掟上今日子の備忘録」だけ読んでみたが、良く言えば読みやすい、悪く言えば平坦という印象だった。
 これは物語シリーズと全然違う。ところどころそれっぽい言い回しはあるけど、まぁ全然違うので物語シリーズを基準に買うとコレジャナイ感がすごい。多分、逆も然り。
