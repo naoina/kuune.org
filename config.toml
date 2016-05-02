@@ -1,4 +1,4 @@
-baseurl = "http://kuune.org/"
+baseurl = "https://kuune.org/"
 languageCode = "en-us"
 title = "kuune.org"
 contentdir = "content"
