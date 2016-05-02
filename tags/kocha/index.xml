@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kocha on kuune.org</title><link>http://kuune.org/tags/kocha/</link><description>Recent content in Kocha on kuune.org</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 24 Jul 2014 10:56:39 +0900</lastBuildDate><atom:link href="http://kuune.org/tags/kocha/index.xml" rel="self" type="application/rss+xml"/><item><title>Kocha v0.5 リリースしました</title><link>http://kuune.org/text/2014/07/24/kocha-v0.5/</link><pubDate>Thu, 24 Jul 2014 10:56:39 +0900</pubDate><guid>http://kuune.org/text/2014/07/24/kocha-v0.5/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kocha on kuune.org</title><link>https://kuune.org/tags/kocha/</link><description>Recent content in Kocha on kuune.org</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 24 Jul 2014 10:56:39 +0900</lastBuildDate><atom:link href="https://kuune.org/tags/kocha/index.xml" rel="self" type="application/rss+xml"/><item><title>Kocha v0.5 リリースしました</title><link>https://kuune.org/text/2014/07/24/kocha-v0.5/</link><pubDate>Thu, 24 Jul 2014 10:56:39 +0900</pubDate><guid>https://kuune.org/text/2014/07/24/kocha-v0.5/</guid><description>
 &lt;p&gt;&lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;https://github.com/naoina/kocha&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;前のバージョンとは非互換になってます。というか v1.0 まではバンバン非互換の変更入れていくつもりなので、まともに使うのはオススメしません。&lt;br /&gt;
 ですが、もしそれでも Kocha を使いたいという場合は、人柱になって最新のバージョンを追いつつ使うか、&lt;a href=&#34;http://labix.org/gopkg.in&#34;&gt;gopkg.in&lt;/a&gt; を使ったりしてバージョンを固定して使うことをおすすめします。&lt;/p&gt;
@@ -16,7 +16,7 @@
 &lt;p&gt;というのは建前で、実際のところは Kocha の graceful restart の機能を &lt;a href=&#34;https://github.com/naoina/miyabi&#34;&gt;miyabi&lt;/a&gt; というライブラリとして再実装し直して Kocha で使っているのですが、この miyabi が Go 1.3 で &lt;code&gt;net/http&lt;/code&gt; に導入された機能を使っているからです。&lt;/p&gt;
 &lt;h2 id=&#34;今後の予定&#34;&gt;今後の予定&lt;/h2&gt;
 &lt;p&gt;ログ周りの再設計をします。後は session による flash 機構の実装をしようと思います。&lt;br /&gt;
-そこまでできたら &lt;a href=&#34;http://vocanew.kuune.org&#34;&gt;ぼかにゅー&lt;/a&gt; や、この plog.la を Kocha で実装して、実際に使う際に必要な機能やデバッグをしていこうと考えています。&lt;/p&gt;</description></item><item><title>Kocha が v0.3 になりました</title><link>http://kuune.org/text/2014/03/14/kocha-v0.3/</link><pubDate>Fri, 14 Mar 2014 09:50:19 +0900</pubDate><guid>http://kuune.org/text/2014/03/14/kocha-v0.3/</guid><description>
+そこまでできたら &lt;a href=&#34;http://vocanew.kuune.org&#34;&gt;ぼかにゅー&lt;/a&gt; や、この plog.la を Kocha で実装して、実際に使う際に必要な機能やデバッグをしていこうと考えています。&lt;/p&gt;</description></item><item><title>Kocha が v0.3 になりました</title><link>https://kuune.org/text/2014/03/14/kocha-v0.3/</link><pubDate>Fri, 14 Mar 2014 09:50:19 +0900</pubDate><guid>https://kuune.org/text/2014/03/14/kocha-v0.3/</guid><description>
 &lt;p&gt;&lt;code&gt;go get&lt;/code&gt; でバージョン指定できないのにバージョン付ける意味あんのかよみたいな話はあると思いますが、Kocha &lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;https://github.com/naoina/kocha&lt;/a&gt; に v0.3 のタグを付けました。&lt;/p&gt;
 &lt;p&gt;主な変更点は&lt;/p&gt;
 &lt;ol&gt;
@@ -65,7 +65,7 @@ genmai.TimeStamp
 余談ですが、WEB 系開発者はすべからく The Twelve-Factor App を読むべきだと思います。&lt;/p&gt;
 &lt;h2 id=&#34;今後の予定&#34;&gt;今後の予定&lt;/h2&gt;
 &lt;p&gt;ある程度なにか WEB サービスが作れそうなぐらいにはなってきたかなという感じです。&lt;br /&gt;
-ですが、まだフォーム周りはまともに手を付けてないので、ここを何とかしたら自分自身でドッグフードを食べながらやっていこうかと考えています。&lt;/p&gt;</description></item><item><title>私が Golang の WEB アプリケーションフレームワークを開発する理由</title><link>http://kuune.org/text/2014/02/18/reason-for-develop-waf-for-golang/</link><pubDate>Tue, 18 Feb 2014 23:09:59 +0900</pubDate><guid>http://kuune.org/text/2014/02/18/reason-for-develop-waf-for-golang/</guid><description>
+ですが、まだフォーム周りはまともに手を付けてないので、ここを何とかしたら自分自身でドッグフードを食べながらやっていこうかと考えています。&lt;/p&gt;</description></item><item><title>私が Golang の WEB アプリケーションフレームワークを開発する理由</title><link>https://kuune.org/text/2014/02/18/reason-for-develop-waf-for-golang/</link><pubDate>Tue, 18 Feb 2014 23:09:59 +0900</pubDate><guid>https://kuune.org/text/2014/02/18/reason-for-develop-waf-for-golang/</guid><description>
 &lt;p&gt;私が今現在最も使っている言語が Golang で、最も注力しているものが &lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;Kocha&lt;/a&gt; という WEB アプリケーションフレームワーク開発である。&lt;br /&gt;
 Golang とは Go言語 のことで、Go だとググラビリティが低すぎるため Golang と書いている。&lt;/p&gt;
 &lt;p&gt;さて、Golang の WEB アプリケーションフレームワークを作っていると言うと大抵の人がこのようなことを言う。&lt;/p&gt;
@@ -94,7 +94,7 @@ Golang とは Go言語 のことで、Go だとググラビリティが低すぎ
 もちろん契約書などで縛るのだろうが、実際にソースコードの閲覧、変更などが可能であるため、技術、ひいては資産の流出になり得るのではないかということを思うわけである。&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;以上が、私が Golang の WEB アプリケーションフレームワークを開発する理由である。&lt;br /&gt;
-ただ、私は Golang に魅了された 1 人であり、結局のところ Golang で WEB 開発をしたいと思っているのが最大の理由であることも否定できない。&lt;/p&gt;</description></item><item><title>Kocha における URL ルーターの実装と予定</title><link>http://kuune.org/text/2013/12/16/plan-for-implementation-of-url-router-for-kocha/</link><pubDate>Mon, 16 Dec 2013 23:05:02 +0900</pubDate><guid>http://kuune.org/text/2013/12/16/plan-for-implementation-of-url-router-for-kocha/</guid><description>&lt;p&gt;現在、&lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;Kocha&lt;/a&gt; における URL ルーター(&lt;code&gt;/path/to/controller&lt;/code&gt; とかの URL を特定のコントローラーにルーティングするアレ)の実装は素朴な実装で、ルートごとの正規表現を配列に持っていて、頭から順番にループを回して一致するものを探すようになっている。&lt;br /&gt;
+ただ、私は Golang に魅了された 1 人であり、結局のところ Golang で WEB 開発をしたいと思っているのが最大の理由であることも否定できない。&lt;/p&gt;</description></item><item><title>Kocha における URL ルーターの実装と予定</title><link>https://kuune.org/text/2013/12/16/plan-for-implementation-of-url-router-for-kocha/</link><pubDate>Mon, 16 Dec 2013 23:05:02 +0900</pubDate><guid>https://kuune.org/text/2013/12/16/plan-for-implementation-of-url-router-for-kocha/</guid><description>&lt;p&gt;現在、&lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;Kocha&lt;/a&gt; における URL ルーター(&lt;code&gt;/path/to/controller&lt;/code&gt; とかの URL を特定のコントローラーにルーティングするアレ)の実装は素朴な実装で、ルートごとの正規表現を配列に持っていて、頭から順番にループを回して一致するものを探すようになっている。&lt;br /&gt;
 非常に簡単な仕組みだが、O(N)なのでルートが増えると遅くなる。そこで下記の記事にあるような全部のルートを 1 つの正規表現でマッチさせる実装を試した。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://r7kamura.github.io/2013/11/27/rack-multiplexer.html&#34;&gt;http://r7kamura.github.io/2013/11/27/rack-multiplexer.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;結果は、ループを回す方法の約 7 倍程度 &lt;strong&gt;遅く&lt;/strong&gt; なった。Ruby だと 17 倍ほど速くなるものが Golang だと 7 倍遅くなってしまった。&lt;br /&gt;
@@ -120,7 +120,7 @@ Golang とは Go言語 のことで、Go だとググラビリティが低すぎ
 &lt;li&gt;Trie (前述の記事の実装)&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;の 3 つを実装、ベンチマークして速いものを採用しようかと考えています。&lt;/p&gt;</description></item><item><title>Kocha v0.1 リリースしました</title><link>http://kuune.org/text/2013/12/10/kocha-v0.1/</link><pubDate>Tue, 10 Dec 2013 00:44:55 +0900</pubDate><guid>http://kuune.org/text/2013/12/10/kocha-v0.1/</guid><description>
+&lt;p&gt;の 3 つを実装、ベンチマークして速いものを採用しようかと考えています。&lt;/p&gt;</description></item><item><title>Kocha v0.1 リリースしました</title><link>https://kuune.org/text/2013/12/10/kocha-v0.1/</link><pubDate>Tue, 10 Dec 2013 00:44:55 +0900</pubDate><guid>https://kuune.org/text/2013/12/10/kocha-v0.1/</guid><description>
 &lt;p&gt;&lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;https://github.com/naoina/kocha&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&#34;http://naoina.github.io/kocha/&#34;&gt;http://naoina.github.io/kocha/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;ドキュメントを書いたら区切りとして v0.1 を出そうと決めており、Google先生のご指導の元、やっとのことでドキュメントが書けましたので v0.1 と相成りました。&lt;br /&gt;
@@ -154,7 +154,7 @@ v0.1 リリースと書いていますが、git のタグを打った後すぐ�
 ここら辺はこれから頑張るといった感じです。&lt;/p&gt;
 &lt;h2 id=&#34;今後について&#34;&gt;今後について&lt;/h2&gt;
 &lt;p&gt;GitHub の issues に色々上げています。まだ色々とやることや、したいことがあるので、まだ飽きないと思います。多分。&lt;/p&gt;
-&lt;p&gt;あとほどんどの人にはどうでもいいと思いますが、Windows でもちゃんと動きます。&lt;/p&gt;</description></item><item><title>GoでWEBアプリケーションフレームワーク書いた</title><link>http://kuune.org/text/2013/10/17/web-application-framework-written-in-go/</link><pubDate>Thu, 17 Oct 2013 00:54:14 +0900</pubDate><guid>http://kuune.org/text/2013/10/17/web-application-framework-written-in-go/</guid><description>&lt;p&gt;&lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;https://github.com/naoina/kocha&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;あとほどんどの人にはどうでもいいと思いますが、Windows でもちゃんと動きます。&lt;/p&gt;</description></item><item><title>GoでWEBアプリケーションフレームワーク書いた</title><link>https://kuune.org/text/2013/10/17/web-application-framework-written-in-go/</link><pubDate>Thu, 17 Oct 2013 00:54:14 +0900</pubDate><guid>https://kuune.org/text/2013/10/17/web-application-framework-written-in-go/</guid><description>&lt;p&gt;&lt;a href=&#34;https://github.com/naoina/kocha&#34;&gt;https://github.com/naoina/kocha&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;名前は紅茶と読みます。テストはまだ無い。&lt;br /&gt;
 今後の目標としてはとりあえず&lt;/p&gt;
 &lt;ul&gt;
