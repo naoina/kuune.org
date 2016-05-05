@@ -6,8 +6,8 @@ img {
 }
 
 .main {
-    padding: 0 5%;
-    margin: 2rem 0;
+    padding: 0 15px;
+    margin: 2rem auto;
     }
 
     .main h1 {
@@ -47,10 +47,6 @@ img {
         background: #f8f8f8;
         padding: .2em .3em;
         margin-right: 5px;
-    }
-
-    .main .tags-header h1 {
-        display: inline-block;
     }
 
     .author-info {
@@ -104,6 +100,19 @@ img {
 
         .main .sidenav {
             float: left;
-            min-width: 300px;
+            width: 30%;
+            max-width: 336px;
+    }
+}
+
+@media (min-width: 992px) {
+    .main {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main {
+        width: 1170px;
     }
 }
