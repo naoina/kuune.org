@@ -14,7 +14,7 @@ canonifyurls = false
 tag = "tags"
 
 [blackfriday]
-  extensions = ["hardLineBreak"]
+  extensions = ["hardLineBreak", "Footnotes"]
 
 [params.twitter]
   user = "naoina"
