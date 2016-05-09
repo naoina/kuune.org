@@ -7,17 +7,18 @@ install:
 script:
 - hugo -d $DEPLOY_DIR
 - minify -r $DEPLOY_DIR
-- openssl aes-256-cbc -K $encrypted_5172ec3b3f0f_key -iv $encrypted_5172ec3b3f0f_iv -in $DEPLOY_KEY.enc -out $DEPLOY_KEY -d
-- chmod 600 $DEPLOY_KEY
-- eval $(ssh-agent)
-- ssh-add $DEPLOY_KEY
-- git remote set-url origin git@github.com:$TRAVIS_REPO_SLUG.git
-- ./deploy.sh
-- rm -f $DEPLOY_KEY
 env:
   global:
   - DEPLOY_DIR=public
-  - DEPLOY_KEY=deploy_key.pem
+deploy:
+  provider: s3
+  bucket: kuune.org
+  skip_cleanup: true
+  local_dir: "$DEPLOY_DIR"
+  access_key_id:
+    secure: aIFzhNZvgjterusAFE7rDbIZ18jpWr2aRDJ0QUWTlFT8RWO/JWJslcOsn3fxmVGjrkkkB6MHVyTX3PucYDl64yD+Aiow3d3jJn1IEN1DVGmTCAzdyYHr26GUq4C7VrE1WXykE4mYgOtaLCCVjHNoODBRxWGRoHc0lF+3iauqQ1w=
+  secret_access_key:
+    secure: bIAAEmCa0hXJX7q1M8W/VnLTemw09DRVNQ0RoOy1qyg5C6PBWoFhDNS030u2HfswdPeRoD2pH6eaqnjicDh+eLU0r6g8RHz2ai6G7jyT365gONhvHET7To588Xx5LkuFQZyKPPfWRHT2VOZTbrXek2OJAb1Y1aelY5tl5sYptBQ=
 notifications:
   email:
     on_success: always
