@@ -34,6 +34,11 @@ img {
     .main code {
         color: #333;
         background: #f8f8f8;
+        padding: 2px 4px;
+    }
+
+    .main pre code {
+        padding: 10px 10px;
     }
 
     .main .tags {
@@ -57,6 +62,10 @@ img {
 
     .article-logo {
         border: none;
+}
+
+.article-body li {
+    margin: 10px;
 }
 
 .socials {
