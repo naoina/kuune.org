@@ -51,3 +51,22 @@ tags = ["linux", "vaio"]
     * 依然 Suspend は動かない
 
 あと何かあれば追記する。
+
+### 追記 ( 2016-09-06T13:47:56+09:00 )
+
+いい加減カーネル 4.2.5 のままにするのは厳しくなってきたのでちょっと気合入れて Linux カーネルのソース見て 4.7.2 でタッチパッド動くようにした。といってもやったのは識別子追加しただけ。
+
+```diff
+diff --git a/drivers/input/mouse/elan_i2c_core.c b/drivers/input/mouse/elan_i2c_core.c
+index d15b338..1e84449 100644
+--- a/drivers/input/mouse/elan_i2c_core.c
++++ b/drivers/input/mouse/elan_i2c_core.c
+@@ -1233,6 +1233,7 @@ static const struct acpi_device_id elan_acpi_id[] = {
+ 	{ "ELAN0100", 0 },
+ 	{ "ELAN0600", 0 },
+ 	{ "ELAN1000", 0 },
++	{ "VAIO0001", 0 },
+ 	{ }
+ };
+ MODULE_DEVICE_TABLE(acpi, elan_acpi_id);
+```
