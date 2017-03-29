@@ -21,14 +21,14 @@ img {
 
     .main .article ul {
         padding-left: 1rem;
-    }
+        }
 
-    .main .article li {
-        list-style: disc;
-    }
+        .main .article ul li {
+            list-style: disc;
+        }
 
-    .main .article li li {
-        list-style: circle;
+        .main .article ul li li {
+            list-style: circle;
     }
 
     .main code {
