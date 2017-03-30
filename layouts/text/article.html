@@ -19,6 +19,7 @@
       {{ if .Params.logo }}
         <img src="{{ partial "static" (add "/image/" .Params.logo) }}" alt="" class="article-logo" itemprop="image">
       {{ end }}
+      {{ .TableOfContents }}
       {{ .Content }}
     </div>
 
