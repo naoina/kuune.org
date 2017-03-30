@@ -31,6 +31,10 @@ img {
             list-style: circle;
     }
 
+    .main .article ol {
+        padding-left: 1rem;
+    }
+
     .main code {
         color: #333;
         background: #f8f8f8;
