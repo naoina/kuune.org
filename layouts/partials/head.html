@@ -12,7 +12,7 @@
 <meta property="fb:app_id" content="{{ .Site.Params.facebook.appid }}">
 <title>{{ if ne .Site.Title .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
 <link rel="canonical" href="{{ .Permalink }}">
-{{ if .RSSlink }}<link rel="alternate" charset="UTF-8" type="application/rss+xml" title="{{ .Title }}" href="{{ .RSSlink }}">{{ end }}
+{{ if .RSSLink }}<link rel="alternate" charset="UTF-8" type="application/rss+xml" title="{{ .Title }}" href="{{ .RSSLink }}">{{ end }}
 <link rel="stylesheet" href="{{ partial "static" "/css/font-awesome.min.css" }}" media="all">
 <link rel="stylesheet" href="{{ partial "static" "/css/normalize.css" }}" media="all">
 <link rel="stylesheet" href="{{ partial "static" "/css/common.css" }}" media="all">
