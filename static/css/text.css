@@ -68,6 +68,9 @@ img {
         border: none;
 }
 
+.article-body > h2 {
+    clear: both;
+}
 .article-body li {
     margin: 10px;
 }
@@ -98,6 +101,39 @@ img {
 
 .tags-footer {
     margin-top: 2rem;
+}
+
+#TableOfContents {
+    float: right;
+    background: #f8f8f8;
+    font-size: 90%;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    width: 30%;
+    }
+    #TableOfContents > ul {
+        margin: 0;
+        padding: 1rem;
+        }
+        #TableOfContents > ul li {
+            margin: 0;
+            line-height: 1.3rem;
+        }
+
+        #TableOfContents > ul > li {
+            list-style: none;
+            }
+            #TableOfContents > ul > li > ul {
+                margin: 0;
+                padding: 0;
+                }
+                #TableOfContents > ul > li > ul > li {
+                    list-style: none;
+                    }
+
+                    #TableOfContents > ul > li > ul > li > ul {
+                        display: none;
 }
 
 @media (min-width: 768px) {
