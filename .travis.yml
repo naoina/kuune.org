@@ -1,12 +1,12 @@
 language: go
 go:
-- 1.6
+- 1.8
 install:
 - go get -u -v github.com/spf13/hugo
 - go get -u -v github.com/tdewolff/minify/cmd/minify
 script:
 - hugo -d $DEPLOY_DIR
-- minify -r $DEPLOY_DIR
+- minify -r -o $DEPLOY_DIR $DEPLOY_DIR
 env:
   global:
   - DEPLOY_DIR=public
