@@ -19,8 +19,7 @@
       {{ if .Params.logo }}
         <img src="{{ partial "static" (add "/image/" .Params.logo) }}" alt="" class="article-logo" itemprop="image">
       {{ end }}
-      {{ .TableOfContents }}
-      {{ .Content }}
+      {{ replaceRE "(?s)(<h2.*?>.*)" (printf "%s$1" .TableOfContents) .Content | safeHTML }}
     </div>
 
     <footer class="tags-footer">

@@ -105,12 +105,8 @@ img {
 }
 
 #TableOfContents {
-    float: right;
     background: #f8f8f8;
     font-size: 90%;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
-    width: 30%;
     }
     #TableOfContents > ul {
         margin: 0;
@@ -157,6 +153,10 @@ img {
 @media (min-width: 992px) {
     .main {
         width: 970px;
+    }
+
+    #TableOfContents {
+        width: 30%;
     }
 }
 
