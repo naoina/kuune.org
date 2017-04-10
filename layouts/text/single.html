@@ -3,13 +3,17 @@
 <head>
   {{ partial "head.html" . }}
   <meta property="og:type" content="article">
-  <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@{{ .Site.Params.twitter.user }}">
   <meta name="twitter:description" content="{{ substr .Summary 0 100 }}">
   {{ if .Params.logosmall }}
+  <meta name="twitter:card" content="summary">
   <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ partial "static" (add "image/" .Params.logosmall) }}">
+  {{ else if .Params.logo }}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ partial "static" (add "image/" .Params.logo) }}">
   {{ else }}
-  <meta name="twitter:image" content="{{ partial "static" "/image/thumbnail_w.png" }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ partial "static" "/image/thumbnail_w.png" }}">
   {{ end }}
   <link rel="stylesheet" href="{{ partial "static" "/css/text.css" }}" media="all">
   <link rel="stylesheet" href="{{ partial "static" "/css/github.min.css" }}" media="all">
