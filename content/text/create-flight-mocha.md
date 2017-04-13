@@ -1,5 +1,6 @@
 +++
 date = "2013-05-24T20:10:14+09:00"
+publishdate = "2013-05-24T20:10:14+09:00"
 draft = false
 title = "flight-mocha作りました"
 tags = ["flight", "javascript", "mocha"]

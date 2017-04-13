@@ -1,5 +1,6 @@
 +++
 date = "2013-10-22T18:52:15+09:00"
+publishdate = "2013-10-22T18:52:15+09:00"
 draft = false
 title = "toCamelCaseの実装 in golang"
 tags = ["go", "golang"]

@@ -1,5 +1,6 @@
 +++
 date = "2014-07-01T11:14:16+09:00"
+publishdate = "2014-07-01T11:14:16+09:00"
 draft = false
 title = "Gin Web Framework について"
 tags = ["go", "golang", "gin"]

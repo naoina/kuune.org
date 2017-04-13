@@ -1,5 +1,6 @@
 +++
 date = "2015-12-14T22:25:41+09:00"
+publishdate = "2015-12-14T22:25:41+09:00"
 draft = false
 title = "スケートボードを始めた"
 tags = ["misc"]

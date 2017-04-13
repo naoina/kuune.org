@@ -1,5 +1,6 @@
 +++
 date = "2013-05-09T23:37:20+09:00"
+publishdate = "2013-05-09T23:37:20+09:00"
 draft = false
 title = "pyflakes から flake8 に乗り換えて幸せになった話"
 tags = ["python", "flake8"]

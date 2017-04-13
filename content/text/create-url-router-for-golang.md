@@ -1,5 +1,6 @@
 +++
 date = "2014-01-08T23:36:36+09:00"
+publishdate = "2014-01-08T23:36:36+09:00"
 draft = false
 title = "Golang 用 URL ルーター作った"
 tags = ["go", "golang", "trie"]

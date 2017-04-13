@@ -1,5 +1,6 @@
 +++
 date = "2013-10-17T12:57:11+09:00"
+publishdate = "2013-10-17T12:57:11+09:00"
 draft = false
 title = "golangのdeferはos.Exitした場合は実行されない件"
 tags = ["go", "golang"]

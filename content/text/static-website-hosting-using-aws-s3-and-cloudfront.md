@@ -1,5 +1,6 @@
 +++
 date = "2016-05-12T20:48:55+09:00"
+publishdate = "2016-05-12T20:48:55+09:00"
 draft = false
 logo = "AmazonWebservices_Logo.png"
 logosmall = "aws-square.png"

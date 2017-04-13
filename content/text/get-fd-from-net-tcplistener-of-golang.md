@@ -1,5 +1,6 @@
 +++
 date = "2013-11-12T23:57:53+09:00"
+publishdate = "2013-11-12T23:57:53+09:00"
 draft = false
 title = "golang の net.TCPLister から file descriptor を取る"
 tags = ["go", "golang"]
