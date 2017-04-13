@@ -1,5 +1,6 @@
 +++
 date = "2013-06-08T01:26:46+09:00"
+publishdate = "2013-06-08T01:26:46+09:00"
 draft = false
 title = "MySQLからPostgreSQLに移行しました"
 

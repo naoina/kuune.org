@@ -1,5 +1,6 @@
 +++
 date = "2015-05-17T12:21:40+09:00"
+publishdate = "2015-05-17T12:21:40+09:00"
 draft = false
 title = " 私の英語学習の教材について"
 tags = ["english", "misc"]

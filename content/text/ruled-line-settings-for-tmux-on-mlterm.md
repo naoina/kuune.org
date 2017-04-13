@@ -1,5 +1,6 @@
 +++
 date = "2016-05-11T19:57:41+09:00"
+publishdate = "2016-05-11T19:57:41+09:00"
 draft = false
 logo = ""
 logosmall = ""
