@@ -35,6 +35,11 @@ img {
         padding-left: 1rem;
     }
 
+    .main .article .footnotes ol li {
+        font-size: 80%;
+        margin: 0;
+    }
+
     .main code {
         color: #333;
         background: #f8f8f8;
