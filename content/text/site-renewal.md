@@ -1,6 +1,5 @@
 +++
 date = "2015-01-29T07:54:48+09:00"
-publishdate = "2015-01-29T07:54:48+09:00"
 draft = false
 title = "サイトをリニューアルした"
 tags = ["misc"]

@@ -1,6 +1,5 @@
 +++
 date = "2013-12-16T23:05:02+09:00"
-publishdate = "2013-12-16T23:05:02+09:00"
 draft = false
 title = "Kocha における URL ルーターの実装と予定"
 tags = ["go", "golang", "kocha"]

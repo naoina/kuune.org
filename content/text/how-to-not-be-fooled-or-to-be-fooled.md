@@ -1,6 +1,5 @@
 +++
 date = "2016-06-07T20:58:14+09:00"
-publishdate = "2016-06-07T20:58:14+09:00"
 draft = false
 logo = ""
 logosmall = ""

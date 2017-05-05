@@ -1,6 +1,5 @@
 +++
 date = "2014-06-27T09:22:12+09:00"
-publishdate = "2014-06-27T09:22:12+09:00"
 draft = false
 title = "使うエンジニア、作るエンジニア"
 tags = ["programming"]

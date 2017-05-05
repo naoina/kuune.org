@@ -1,6 +1,5 @@
 +++
 date = "2017-04-09T15:19:43+09:00"
-publishdate = "2017-04-09T15:19:43+09:00"
 draft = false
 logo = "6c1557c6845312f580287c11437eff169796fc04.jpg"
 logosmall = ""

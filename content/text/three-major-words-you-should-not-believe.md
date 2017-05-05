@@ -3,7 +3,6 @@ date = "2017-05-01T09:30:43+09:00"
 draft = false
 logo = ""
 logosmall = ""
-publishdate = "2017-05-01T18:39:27+09:00"
 tags = ["misc"]
 title = "3 大「信じてはいけない言葉」"
 
