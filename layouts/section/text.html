@@ -11,11 +11,11 @@
       <a href="/">&larr;{{ .Site.Title }}</a>
     </header>
     <ul>
-      {{ range .Site.Sections.text.Pages.ByPublishDate.Reverse }}
+      {{ range .Site.Sections.text.Pages }}
         <li>
           <p>
             <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
-            <time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">{{ .PublishDate.Format "2006-01-02 15:04:05 -0700" }}</time>
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02 15:04:05 -0700" }}</time>
           </p>
         </li>
       {{ end }}
