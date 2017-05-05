@@ -1,6 +1,5 @@
 +++
 date = "2014-02-18T23:09:59+09:00"
-publishdate = "2014-02-18T23:09:59+09:00"
 draft = false
 title = "私が Golang の WEB アプリケーションフレームワークを開発する理由"
 tags = ["go", "golang", "kocha"]

@@ -1,9 +1,8 @@
 +++
-date = "2017-04-19T14:17:00+09:00"
+date = "2017-05-06T00:20:21+09:00"
 draft = false
 logo = ""
 logosmall = ""
-publishdate = "2017-05-05T23:19:36+09:00"
 tags = ["deeplearning", "keras", "tips"]
 title = "Keras モデルを圧縮して保存する"
 

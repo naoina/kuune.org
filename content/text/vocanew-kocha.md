@@ -1,6 +1,5 @@
 +++
 date = "2015-04-01T23:22:40+09:00"
-publishdate = "2015-04-01T23:22:40+09:00"
 draft = false
 title = "ぼかにゅーを Kocha で再実装しました"
 tags = ["vocanew"]

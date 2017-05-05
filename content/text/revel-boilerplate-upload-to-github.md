@@ -1,6 +1,5 @@
 +++
 date = "2013-08-30T00:54:27+09:00"
-publishdate = "2013-08-30T00:54:27+09:00"
 draft = false
 title = "Revel Boilerplate上げた"
 tags = ["go", "golang", "revel"]
