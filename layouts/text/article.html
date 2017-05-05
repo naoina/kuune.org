@@ -11,8 +11,8 @@
         {{ end }}
       </ul>
       <p>
-        Published at: <time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">{{ .PublishDate.Format "2006-01-02 15:04:05 -0700" }}</time>
-        {{ if gt .Lastmod .PublishDate }}
+        Published at: <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">{{ .Date.Format "2006-01-02 15:04:05 -0700" }}</time>
+        {{ if gt .Lastmod .Date }}
         <br>Last modified at: <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="dateModified">{{ .Lastmod.Format "2006-01-02 15:04:05 -0700" }}</time>
         {{ end }}
       </p>
