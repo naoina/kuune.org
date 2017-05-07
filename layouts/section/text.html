@@ -10,8 +10,9 @@
     <header>
       <a href="/">&larr;{{ .Site.Title }}</a>
     </header>
+    {{ $paginator := .Paginate .Site.Sections.text.Pages 50 }}
     <ul>
-      {{ range .Site.Sections.text.Pages }}
+      {{ range $paginator.Pages }}
         <li>
           <p>
             <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
@@ -20,6 +21,7 @@
         </li>
       {{ end }}
     </ul>
+    {{ partial "pagination" $paginator }}
   </div>
 </body>
 </html>
