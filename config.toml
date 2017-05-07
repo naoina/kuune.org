@@ -6,6 +6,7 @@ layoutdir = "layouts"
 publishdir = "public"
 builddrafts = false
 canonifyurls = false
+paginatepath = "p"
 
 [permalinks]
   text = "/:section/:year/:month/:day/:filename/"

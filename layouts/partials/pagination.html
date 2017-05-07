@@ -1,0 +1,13 @@
+<nav>
+  <span>
+    {{ with .Prev }}
+      <a href="{{ .URL }}">&lt;&nbsp;Prev</a>
+    {{ end }}
+  </span>
+  <span>|&nbsp;Page&nbsp;{{ .PageNumber }}&nbsp;|</span>
+  <span>
+    {{ with .Next }}
+      <a href="{{ .URL }}">Next&nbsp;&gt;</a>
+    {{ end }}
+  </span>
+</nav>

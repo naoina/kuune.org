@@ -10,9 +10,10 @@
       <span>Tag:</span>
       <h1>{{ .Title }}</h1>
     </header>
+    {{ $paginator := .Paginate .Data.Pages 50 }}
     <section>
       <ul>
-        {{ range .Data.Pages }}
+        {{ range $paginator.Pages }}
           <li>
             <p>
               <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
@@ -22,6 +23,7 @@
         {{ end }}
       </ul>
     </section>
+    {{ partial "pagination" $paginator }}
   </div>
 </body>
 </html>
