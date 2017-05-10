@@ -1,0 +1,17 @@
+{{ $url := .Get "url" }}
+{{ $host := replaceRE "^https?://([^/]+).*" "$1" $url }}
+{{ $path := replaceRE "^https?://" "/" $url }}
+{{ with getJSON "data" $path "/og.json" }}
+  <a href="{{ $url }}" class="card-block">
+    <blockquote cite="{{ $url }}" class="card-blockquote">
+      <img src="{{ .OgImage }}" alt="" class="card-image">
+      <div class="card-summary">
+        <h3 class="card-title">{{ .Title }}</h3>
+        <p class="card-description">{{ .Description }}</p>
+        <span class="card-host">{{ $host }}</span>
+      </div>
+    </blockquote>
+    <div class="clear"></div>
+  </a>
+  <div class="clear"></div>
+{{ end }}
