@@ -137,6 +137,56 @@ img {
                         display: none;
 }
 
+.card-block {
+    font-size: 85%;
+    border: 1px solid #dbdfe4;
+    padding: 10px;
+    display: block;
+    margin: 1rem 0;
+    }
+
+    .card-block:hover,
+    .card-block:active,
+    .card-block:focus {
+        background: #f6f8f9;
+        text-decoration: none;
+    }
+    .card-block .card-blockquote,
+    .card-block .card-title,
+    .card-block .card-description {
+        margin: 0;
+    }
+    .card-block .card-description {
+        height: 5em;
+        overflow: hidden;
+    }
+    .card-block .card-image {
+        width: 30%;
+        float: left;
+    }
+    .card-block .card-summary {
+        width: 64%;
+        margin-left: 3%;
+        float: left;
+    }
+    .card-block .card-title {
+        display: inline-block;
+    }
+    .card-block .card-title:hover,
+    .card-block .card-title:active,
+    .card-block .card-title:focus {
+        text-decoration: underline;
+    }
+    .card-block .card-description {
+        color: #333;
+        margin-top: 1ex;
+    }
+    .card-block .card-host {
+        color: #7f919e;
+        display: block;
+        margin-top: 1ex;
+}
+
 @media (min-width: 768px) {
     .main {
         padding: 0 10%;
@@ -168,5 +218,9 @@ img {
 @media (min-width: 1200px) {
     .main {
         width: 1170px;
+    }
+
+    .card-block {
+        width: 65%;
     }
 }
