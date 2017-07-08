@@ -22,6 +22,10 @@ ul {
         list-style: none;
 }
 
+figcaption {
+    text-align: center;
+}
+
 .clear {
     clear: both;
 }
