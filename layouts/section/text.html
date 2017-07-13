@@ -10,7 +10,7 @@
     <header>
       <a href="/">&larr;{{ .Site.Title }}</a>
     </header>
-    {{ $paginator := .Paginate .Site.Sections.text.Pages 50 }}
+    {{ $paginator := .Paginate (.Site.GetPage "section" "text").Pages 50 }}
     <ul>
       {{ range $paginator.Pages }}
         <li>
