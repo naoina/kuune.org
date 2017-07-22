@@ -64,6 +64,10 @@ img {
         margin-right: 5px;
     }
 
+    .main .sidenav .donations .donation {
+        margin-bottom: 1rem;
+    }
+
     .author-info {
         display: inline-block;
         vertical-align: top;

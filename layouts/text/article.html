@@ -79,6 +79,19 @@
       </div>
     </div>
 
+    <h4>Donation</h4>
+    <ul class="donations">
+      <li class="donation">
+        <div><i class="fa fa-btc"></i> Bitcoin</div>
+        <img src="{{ partial "static" "/image/bitcoin-qr.png" }}" alt="{{ .Site.Params.bitcoin.address }}" width="115" height="115">
+        <small>{{ .Site.Params.bitcoin.address }}</small>
+      </li>
+
+      <li class="donation">
+        <div><i class="fa fa-amazon"></i> <a href="https://www.amazon.co.jp/registry/wishlist/TE72PDXI8Z2Y/">Amazon Wish List</a></div>
+      </li>
+    </ul>
+
     <h4>Links</h4>
     <ul class="links">
       <li><a href="/">{{ .Site.Title }}</a></li>
