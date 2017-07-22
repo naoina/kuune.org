@@ -27,3 +27,6 @@ tag = "tags"
 
 [params.facebook]
   appid = "1711329939155199"
+
+[params.bitcoin]
+  address = "3GZuMjKHrDaSD4mAkn5qV5UnWpwLavahBM"
