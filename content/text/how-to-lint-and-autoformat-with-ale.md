@@ -34,7 +34,7 @@ let g:ale_linters = {
       \ }
 ```
 
-`g:ale_linters`を設定することで、特定のファイルタイプに対してLinterを指定できます。指定が無いものに関しては存在するLinterが全て実行されます。私の環境だと[JSHint](http://jshint.com/)と[ESLint](http://eslint.org/)が入っているので、デフォルトのままだと両方実行されます。しかしJSHintは限定的にしか使わないため、ALEで実行するLinterをESLintに限定しています。
+`g:ale_linters`を設定することで、特定のファイルタイプに対してLinterを指定できます。
 
 ## ソースコードの自動整形
 
