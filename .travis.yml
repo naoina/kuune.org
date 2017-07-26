@@ -2,7 +2,7 @@ language: go
 go:
 - 1.8
 install:
-- go get -u -v github.com/spf13/hugo
+- go get -u -v github.com/gohugoio/hugo
 - go get -u -v github.com/tdewolff/minify/cmd/minify
 script:
 - hugo -d $DEPLOY_DIR
