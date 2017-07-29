@@ -79,11 +79,18 @@
       </div>
     </div>
 
+    <h4>Recent articles</h4>
+    <ul class="recent-articles fa-ul">
+      {{ range first 5 (.Site.GetPage "section" .Type).Pages.ByDate.Reverse }}
+        <li><i class="fa fa-li fa-file-o fg-lg fg-gray"></i><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+    <p><a href="{{ absURL .Section }}">See all articles</a></p>
+
     <h4>Links</h4>
     <ul class="links">
       <li><a href="https://naoina.info/">naoina.info</a></li>
     </ul>
-    <p><a href="{{ absURL .Section }}">Text index</a></p>
 
     <div class="ad">
       <ins class="adsbygoogle"
