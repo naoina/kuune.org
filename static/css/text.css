@@ -6,14 +6,17 @@ img {
 }
 
 .main {
-    padding: 0 15px;
-    margin: 2rem auto;
+    margin: 1rem auto;
     letter-spacing: 0.5px;
     }
 
     .main h1 {
         font-size: 1.5em;
         }
+
+    .main .section > * {
+        padding: 15px;
+    }
 
     .main .article h2 {
         margin-top: 2rem;
@@ -216,7 +219,6 @@ img {
         .main .article {
             float: left;
             width: 65%;
-            margin-right: 2rem;
         }
 
         .main .sidenav {
