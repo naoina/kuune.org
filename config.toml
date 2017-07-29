@@ -28,3 +28,6 @@ tag = "tags"
 
 [params.facebook]
   appid = "1711329939155199"
+
+[params.disqus]
+  text = "kuune"
