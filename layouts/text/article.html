@@ -57,13 +57,13 @@
 
   <aside class="sidenav">
     <nav class="nav">
-      {{ if .NextInSection }}
-        <h4>Next article</h4>
-        <p><a href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a></p>
-      {{ end }}
       {{ if .PrevInSection }}
         <h4>Previous article</h4>
         <p><a href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a></p>
+      {{ end }}
+      {{ if .NextInSection }}
+        <h4>Next article</h4>
+        <p><a href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a></p>
       {{ end }}
     </nav>
 
