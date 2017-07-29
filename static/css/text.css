@@ -68,11 +68,13 @@ img {
         margin-bottom: 1rem;
     }
 
-    .main .sidenav .recent-articles {
+    .main .sidenav .recent-articles,
+    .main .sidenav .links {
         font-size: 90%;
     }
 
-    .main .sidenav .recent-articles li {
+    .main .sidenav .recent-articles li,
+    .main .sidenav .links li {
         margin-top: 0.3rem;
     }
 
