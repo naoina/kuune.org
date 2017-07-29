@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{ partial "head.html" . }}
+  <meta property="og:type" content="{{ block "og:type" . }}article{{ end }}">
+  <meta name="twitter:site" content="@{{ .Site.Params.twitter.user }}">
+  <meta name="twitter:description" content="{{ substr .Summary 0 100 }}">
+  {{ if .Params.logosmall }}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ partial "static" (add "image/" .Params.logosmall) }}">
+  {{ else if .Params.logo }}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ partial "static" (add "image/" .Params.logo) }}">
+  {{ end }}
+  <link rel="stylesheet" href="{{ partial "static" "/css/text.css" }}" media="all">
+  {{ block "stylesheets" . }}{{ end }}
+  {{ block "scripts" . }}{{ end }}
+  <script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async defer></script>
+  <script src="https://platform.twitter.com/widgets.js" async defer></script>
+  <script src="https://b.st-hatena.com/js/bookmark_button.js" async defer></script>
+  <script src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.6&appId=1711329939155199" async defer></script>
+  <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+</head>
+<body>
+  <div class="main">
+    {{ block "main" . }}
+      {{ partial "article" . }}
+    {{ end }}
+  </div>
+</body>
+</html>
