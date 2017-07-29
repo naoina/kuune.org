@@ -79,6 +79,12 @@ img {
         margin-bottom: 1rem;
 }
 
+.article-body {
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
 .article-body > h2 {
     clear: both;
 }
