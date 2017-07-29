@@ -1,0 +1,19 @@
+{{ define "og:type" }}website{{ end }}
+
+{{ define "main" }}
+<header>
+  <a href="/">&larr;{{ .Site.Title }}</a>
+</header>
+{{ $paginator := .Paginate (.Site.GetPage "section" .Section).Pages 50 }}
+<ul>
+  {{ range $paginator.Pages }}
+    <li>
+      <p>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02 15:04:05 -0700" }}</time>
+      </p>
+    </li>
+  {{ end }}
+</ul>
+{{ partial "pagination" $paginator }}
+{{ end }}
