@@ -68,6 +68,14 @@ img {
         margin-bottom: 1rem;
     }
 
+    .main .sidenav .recent-articles {
+        font-size: 90%;
+    }
+
+    .main .sidenav .recent-articles li {
+        margin-top: 0.3rem;
+    }
+
     .author-info {
         display: inline-block;
         vertical-align: top;
