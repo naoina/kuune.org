@@ -1,9 +1,6 @@
 {{ define "og:type" }}website{{ end }}
 
 {{ define "main" }}
-<header>
-  <a href="/">&larr;{{ .Site.Title }}</a>
-</header>
 {{ $paginator := .Paginate (.Site.GetPage "section" .Section).Pages 50 }}
 <ul>
   {{ range $paginator.Pages }}
