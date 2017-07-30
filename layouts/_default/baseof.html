@@ -13,6 +13,16 @@
   <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ partial "static" (add "image/" .Params.logo) }}">
   {{ end }}
   <link rel="stylesheet" href="{{ partial "static" "/css/text.css" }}" media="all">
+  {{ with index (.Param "header") .Section }}
+    <style>
+      .header {
+        background: {{ .background }};
+      }
+      .header .site-title-link {
+        color: {{ .color }};
+      }
+    </style>
+  {{ end }}
   {{ block "stylesheets" . }}{{ end }}
   {{ block "scripts" . }}{{ end }}
   <script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async defer></script>
@@ -23,7 +33,7 @@
 </head>
 <body>
   <header class="header">
-    <h1><a href="/{{ .Section }}/">{{ or (index .Site.Params.titles .Section) .Site.Title }}</a></h1>
+    <h1 class="site-title"><a href="/{{ .Section }}/" class="site-title-link">{{ or (index .Site.Params.titles .Section) .Site.Title }}</a></h1>
   </header>
 
   <div class="main">
