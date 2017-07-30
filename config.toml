@@ -22,6 +22,9 @@ tag = "tags"
 [params.titles]
   money = "不労所得への道"
 
+[params.header]
+  money = { color = "#fff", background = "#000" }
+
 [params.links]
   text = [
     { name = "不労所得への道", url = "https://kuune.org/money/" }
