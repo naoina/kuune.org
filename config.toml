@@ -11,6 +11,7 @@ disableHugoGeneratorInject = true
 
 [permalinks]
   text = "/:section/:year/:month/:day/:filename/"
+  money = "/:section/:year/:month/:day/"
 
 [taxonomies]
 tag = "tags"
@@ -19,6 +20,7 @@ tag = "tags"
   extensions = ["hardLineBreak", "Footnotes"]
 
 [params.titles]
+  money = "不労所得への道"
 
 [params.twitter]
   user = "naoina"
@@ -33,3 +35,4 @@ tag = "tags"
 
 [params.disqus]
   text = "kuune"
+  money = "money-kuune-org"
