@@ -2,8 +2,7 @@
 
 {{ define "main" }}
 <header class="tags-header">
-  <span>Tag:</span>
-  <h1>{{ .Title }}</h1>
+  <h1><i class="fa fa-tag"></i>&nbsp;{{ .Title }}</h1>
 </header>
 {{ $paginator := .Paginate .Data.Pages 50 }}
 <section>
