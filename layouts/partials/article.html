@@ -13,7 +13,7 @@
       <p>
         公開日時: <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">{{ .Date.Format "2006-01-02 15:04:05 -0700" }}</time>
         {{ if gt .Lastmod .Date }}
-        <br>Last modified at: <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="dateModified">{{ .Lastmod.Format "2006-01-02 15:04:05 -0700" }}</time>
+        <br>最終更新日時: <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="dateModified">{{ .Lastmod.Format "2006-01-02 15:04:05 -0700" }}</time>
         {{ end }}
       </p>
       <meta itemprop="dateCreated" content="{{ .Date.Format "2006-01-02"}}">
