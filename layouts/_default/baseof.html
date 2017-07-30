@@ -22,6 +22,10 @@
   <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
 </head>
 <body>
+  <header class="header">
+    <h1><a href="/">{{ or (index .Site.Params.titles .Section) .Site.Title }}</a></h1>
+  </header>
+
   <div class="main">
     {{ block "main" . }}
       {{ partial "article" . }}
