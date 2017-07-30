@@ -18,6 +18,8 @@ tag = "tags"
 [blackfriday]
   extensions = ["hardLineBreak", "Footnotes"]
 
+[params.titles]
+
 [params.twitter]
   user = "naoina"
   url = "https://twitter.com/naoina"
