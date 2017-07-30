@@ -11,7 +11,7 @@
         {{ end }}
       </ul>
       <p>
-        Published at: <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">{{ .Date.Format "2006-01-02 15:04:05 -0700" }}</time>
+        公開日時: <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">{{ .Date.Format "2006-01-02 15:04:05 -0700" }}</time>
         {{ if gt .Lastmod .Date }}
         <br>Last modified at: <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="dateModified">{{ .Lastmod.Format "2006-01-02 15:04:05 -0700" }}</time>
         {{ end }}
@@ -58,16 +58,16 @@
   <aside class="sidenav">
     <nav class="nav">
       {{ if .PrevInSection }}
-        <h4>Previous Article</h4>
+        <h4>古い記事</h4>
         <p><a href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a></p>
       {{ end }}
       {{ if .NextInSection }}
-        <h4>Next Article</h4>
+        <h4>新しい記事</h4>
         <p><a href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a></p>
       {{ end }}
     </nav>
 
-    <h4>Author</h4>
+    <h4>著者</h4>
     <div itemprop="author publisher" itemscope itemtype="http://schema.org/Person">
       <img src="{{ partial "static" "/image/thumbnail_w.png" }}" alt="naoina" width="115" height="115" itemprop="image">
       <div class="author-info">
@@ -79,17 +79,17 @@
       </div>
     </div>
 
-    <h4>Recent Articles</h4>
+    <h4>最近の記事</h4>
     <div class="recent-articles">
       <ul class="fa-ul">
         {{ range first 5 (.Site.GetPage "section" .Type).Pages.ByDate.Reverse }}
           <li><i class="fa fa-li fa-file-o fg-gray"></i><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
         {{ end }}
       </ul>
-      <p><a href="{{ absURL .Section }}">See All Articles</a></p>
+      <p><a href="{{ absURL .Section }}">すべての記事を見る</a></p>
     </div>
 
-    <h4>Links</h4>
+    <h4>リンク</h4>
     <div class="links">
       <ul class="fa-ul">
         <li><i class="fa fa-li fa-external-link fg-gray"></i><a href="https://naoina.info/" target="_blank">naoina.info</a></li>
