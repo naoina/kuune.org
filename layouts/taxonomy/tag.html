@@ -1,29 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-  {{ partial "head.html" . }}
-  <link rel="stylesheet" href="{{ partial "static" "/css/text.css" }}" media="all">
-</head>
-<body>
-  <div class="main">
-    <header class="tags-header">
-      <span>Tag:</span>
-      <h1>{{ .Title }}</h1>
-    </header>
-    {{ $paginator := .Paginate .Data.Pages 50 }}
-    <section>
-      <ul>
-        {{ range $paginator.Pages }}
-          <li>
-            <p>
-              <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
-              <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}</time>
-            </p>
-          </li>
-        {{ end }}
-      </ul>
-    </section>
-    {{ partial "pagination" $paginator }}
-  </div>
-</body>
-</html>
+{{ define "og:type" }}website{{ end }}
+
+{{ define "main" }}
+<header class="tags-header">
+  <span>Tag:</span>
+  <h1>{{ .Title }}</h1>
+</header>
+{{ $paginator := .Paginate .Data.Pages 50 }}
+<section>
+  <ul>
+    {{ range $paginator.Pages }}
+      <li>
+        <p>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}</time>
+        </p>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+{{ partial "pagination" $paginator }}
+{{ end }}
