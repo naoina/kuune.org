@@ -4,12 +4,12 @@
       <h1 itemprop="name headline"><a href="{{ .RelPermalink }}" class="title-link" itemprop="url">{{ .Title }}</a></h1>
       {{ if .Params.tags }}
         <i class="fa fa-tag"></i>
+        <ul class="tags">
+          {{ range .Params.tags }}
+            <li class="tag"><a href="/tags/{{ . | urlize }}">{{ . }}</a></li>
+          {{ end }}
+        </ul>
       {{ end }}
-      <ul class="tags">
-        {{ range .Params.tags }}
-          <li class="tag"><a href="/tags/{{ . | urlize }}">{{ . }}</a></li>
-        {{ end }}
-      </ul>
       <p>
         公開日時: <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">{{ .Date.Format "2006-01-02 15:04:05 -0700" }}</time>
         {{ if gt .Lastmod .Date }}
@@ -26,18 +26,18 @@
       {{ replaceRE "(?s)(<h2.*?>.*)" (printf "%s$1" .TableOfContents) .Content | safeHTML }}
     </div>
 
-    <footer class="tags-footer">
-      {{ if .Params.tags }}
-        <i class="fa fa-tag"></i>
-      {{ end }}
-      <ul class="tags">
-        {{ range .Params.tags }}
-          <li class="tag" itemprop="keywords">
-            <a href="/tags/{{ . | urlize }}">{{ . }}</a>
-          </li>
-        {{ end }}
-      </ul>
-    </footer>
+    {{ if .Params.tags }}
+      <footer class="tags-footer">
+          <i class="fa fa-tag"></i>
+        <ul class="tags">
+          {{ range .Params.tags }}
+            <li class="tag" itemprop="keywords">
+              <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </footer>
+    {{ end }}
 
     <footer class="clear">
       {{ partial "social-buttons" . }}
