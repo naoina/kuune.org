@@ -93,6 +93,9 @@
     <div class="links">
       <ul class="fa-ul">
         <li><i class="fa fa-li fa-external-link fg-gray"></i><a href="https://naoina.info/" target="_blank">naoina.info</a></li>
+        {{ range index (.Param "links") .Section }}
+          <li><i class="fa fa-li fa-external-link fg-gray"></i><a href="{{ .url }}" target="_blank">{{ .name }}</a></li>
+        {{ end }}
       </ul>
     </div>
 
