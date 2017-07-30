@@ -99,6 +99,11 @@ img {
         margin-bottom: 1rem;
 }
 
+.datetime {
+    font-size: 90%;
+    color: #999;
+}
+
 .article-body {
     word-wrap: break-word;
     word-break: break-word;
