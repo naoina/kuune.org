@@ -1,21 +1,23 @@
 {{ define "og:type" }}website{{ end }}
 
 {{ define "main" }}
-<header class="tags-header">
-  <h1><i class="fa fa-tag"></i>&nbsp;{{ .Title }}</h1>
-</header>
-{{ $paginator := .Paginate .Data.Pages 50 }}
-<section>
-  <ul>
-    {{ range $paginator.Pages }}
-      <li>
-        <p>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
-          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}</time>
-        </p>
-      </li>
-    {{ end }}
-  </ul>
-</section>
-{{ partial "pagination" $paginator }}
+<div class="section">
+  <header class="tags-header">
+    <h1><i class="fa fa-tag"></i>&nbsp;{{ .Title }}</h1>
+  </header>
+  {{ $paginator := .Paginate .Data.Pages 50 }}
+  <section>
+    <ul>
+      {{ range $paginator.Pages }}
+        <li>
+          <p>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}</time>
+          </p>
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ partial "pagination" $paginator }}
+</div>
 {{ end }}
