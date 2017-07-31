@@ -8,6 +8,7 @@ builddrafts = false
 canonifyurls = false
 paginatepath = "p"
 disableHugoGeneratorInject = true
+preserveTaxonomyNames = true
 
 [permalinks]
   text = "/:section/:year/:month/:day/:filename/"
