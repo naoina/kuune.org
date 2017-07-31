@@ -7,19 +7,31 @@
   <link rel="stylesheet" href="{{ partial "static" "/css/main.css" }}" media="all">
 </head>
 <body>
-  <div class="main">
-    <div class="inner">
-      <h1>{{ .Site.Title }}</h1>
-      <ul class="vcard">
-        <li class="thumbnail">
-          <img src="{{ partial "static" "/image/thumbnail_w.png" }}" width="180" height="180" alt="naoina">
-        </li>
+  <div>
+    <h1>naoina.info</h1>
+
+    <img src="{{ partial "static" "/image/thumbnail_w.png" }}" alt="naoina" width="180" height="180">
+    <p>HN: naoina</p>
+
+    <div>
+      <h2>Links</h2>
+      <ul class="indent-2">
+        <li><i class="fa fa-rss fa-lg"></i>&nbsp;<a href="{{ absURL "/text/" }}">Blog</a> (In Japanese)</li>
+        <li><i class="fa fa-github fa-lg"></i>&nbsp;<a href="{{ .Site.Params.github.url }}">GitHub</a></li>
+        <li><i class="fa fa-twitter fa lg"></i>&nbsp;<a href="{{ .Site.Params.twitter.url }}">Twitter</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Donation</h2>
+      <ul class="indent-2">
         <li>
-          <ul class="links">
-            <li>GitHub: <a href="{{ .Site.Params.github.url }}">{{ .Site.Params.github.user }}</a></li>
-            <li>Twitter: <a href="{{ .Site.Params.twitter.url }}">{{ .Site.Params.twitter.user }}</a></li>
-            <li><a href="{{ range first 1 (.Site.GetPage "section" "text").Pages }}{{ .Permalink }}{{ end }}">Blog</a> (in Japanese)</li>
-          </ul>
+          <div><i class="fa fa-btc">&nbsp;Bitcoin</i></div>
+          <img src="{{ partial "static" "/image/bitcoin-qr.png" }}" alt="{{ .Site.Params.bitcoin.address }}" width="115" height="115" class="block">
+          <small>{{ .Site.Params.bitcoin.address }}</small>
+        </li>
+        <li class="margin-top-1">
+          <div><i class="fa fa-amazon"></i>&nbsp;<a href="{{ .Site.Params.amazon.url }}">Amazon Wish List</a></div>
         </li>
       </ul>
     </div>

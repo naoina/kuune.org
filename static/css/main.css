@@ -1,42 +1,34 @@
 @charset "UTF-8";
 
-.main {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    margin: auto;
-    width: 33.33%;
-    height: 50%;
+body {
+    padding: 1rem;
+    display: -webkit-box;
+    display:    -moz-box;
+    display:     -ms-box;
+    display:      -o-box;
+    display:         box;
+    -webkit-box-align: center;
+       -moz-box-align: center;
+        -ms-box-align: center;
+         -o-box-align: center;
+    -webkit-box-pack: center;
+       -moz-box-pack: center;
+        -ms-box-pack: center;
+         -o-box-pack: center;
 }
 
-.vcard > li {
-    display: inline-block;
-    vertical-align: middle;
+li {
+    list-style: none;
 }
 
-@media (max-width: 768px) {
-    .main {
-        display: -webkit-box;
-        display:    -moz-box;
-        display:     -ms-box;
-        display:      -o-box;
-        display:         box;
-        -webkit-box-align: center;
-           -moz-box-align: center;
-            -ms-box-align: center;
-             -o-box-align: center;
-        -webkit-box-pack: center;
-           -moz-box-pack: center;
-            -ms-box-pack: center;
-             -o-box-pack: center;
-        width: 100%;
-        height: 100%;
-    }
+.indent-2 {
+    padding-left: 2rem;
+}
 
-    .inner {
-        width: 66.66%;
-        height: 66.66%;
-    }
+.block {
+    display: block;
+}
+
+.margin-top-1 {
+    margin-top: 1rem;
 }
