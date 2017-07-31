@@ -47,3 +47,9 @@ tag = "tags"
 [params.disqus]
   text = "kuune"
   money = "money-kuune-org"
+
+[params.bitcoin]
+  address = "3GZuMjKHrDaSD4mAkn5qV5UnWpwLavahBM"
+
+[params.amazon]
+  url = "https://www.amazon.co.jp/registry/wishlist/TE72PDXI8Z2Y/"
