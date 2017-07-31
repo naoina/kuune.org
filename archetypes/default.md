@@ -2,7 +2,7 @@
 title = ""
 date = {{ .Date }}
 draft = false
-tags = []
+"{{ .Section }}/tags" = []
 logo = ""
 logosmall = ""
 +++
