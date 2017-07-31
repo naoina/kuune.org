@@ -3,7 +3,7 @@ date = "2016-05-11T19:57:41+09:00"
 draft = false
 logo = ""
 logosmall = ""
-tags = ["mlterm", "tmux"]
+"text/tags" = ["mlterm", "tmux"]
 title = "mlterm 上の tmux で罫線を正しく表示する設定"
 
 +++

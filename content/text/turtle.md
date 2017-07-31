@@ -3,7 +3,7 @@ date = "2017-04-12T23:38:23+09:00"
 draft = false
 logo = "955298c2508ed3d90c1fba3328a38d22da5f0305.jpg"
 logosmall = ""
-tags = ["misc"]
+"text/tags" = ["misc"]
 title = "カメ"
 
 +++

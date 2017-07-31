@@ -2,7 +2,7 @@
 title = "ALEでソースコードのLint/自動整形する"
 date = 2017-07-23T18:47:29+09:00
 draft = false
-tags = ["Vim", "NeoVim", "ALE", "lint", "format"]
+"text/tags" = ["Vim", "NeoVim", "ALE", "lint", "format"]
 logo = ""
 logosmall = ""
 +++

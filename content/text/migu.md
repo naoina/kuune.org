@@ -2,7 +2,7 @@
 date = "2014-10-29T17:53:44+09:00"
 draft = false
 title = "Migu という golang 用 DB スキーマのマイグレーションツールを作った話"
-tags = ["go", "golang", "migu"]
+"text/tags" = ["go", "golang", "migu"]
 
 +++
 

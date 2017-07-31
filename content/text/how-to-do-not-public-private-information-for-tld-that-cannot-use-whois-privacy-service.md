@@ -3,7 +3,7 @@ date = "2017-05-21T18:25:48+09:00"
 draft = false
 logo = ""
 logosmall = ""
-tags = ["TLD", "whois"]
+"text/tags" = ["TLD", "whois"]
 title = "WHOIS 公開代理サービスが利用できない TLD で個人情報を晒さない方法"
 
 +++

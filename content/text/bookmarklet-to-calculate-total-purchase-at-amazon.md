@@ -2,7 +2,7 @@
 date = "2013-06-15T01:02:14+09:00"
 draft = false
 title = "いままでいくらAmazonで買い物したか合計するブックマークレット"
-tags = ["misc"]
+"text/tags" = ["misc"]
 
 +++
 

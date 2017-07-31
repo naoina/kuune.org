@@ -2,7 +2,7 @@
 date = "2014-02-20T22:28:50+09:00"
 draft = false
 title = "UI ファーストという開発手法"
-tags = ["programming"]
+"text/tags" = ["programming"]
 
 +++
 

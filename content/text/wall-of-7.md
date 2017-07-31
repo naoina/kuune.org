@@ -3,7 +3,7 @@ date = "2017-04-17T00:33:38+09:00"
 draft = false
 logo = ""
 logosmall = ""
-tags = ["deep learning"]
+"text/tags" = ["deep learning"]
 title = "7% の壁"
 
 +++

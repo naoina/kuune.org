@@ -3,7 +3,7 @@ date = "2016-06-07T20:58:14+09:00"
 draft = false
 logo = ""
 logosmall = ""
-tags = ["misc"]
+"text/tags" = ["misc"]
 title = "騙されない方法あるいは騙される方法"
 
 +++

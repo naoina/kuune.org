@@ -3,7 +3,7 @@ date = "2016-08-21T16:24:14+09:00"
 draft = false
 logo = ""
 logosmall = ""
-tags = ["kindle", "misc"]
+"text/tags" = ["kindle", "misc"]
 title = "Kindle Peperwhite を今更買った"
 
 +++
