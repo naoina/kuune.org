@@ -1,3 +1,5 @@
+{{ $section := or (index (split .Data.Singular "/") 0) .Section }}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +15,7 @@
   <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ partial "static" (add "image/" .Params.logo) }}">
   {{ end }}
   <link rel="stylesheet" href="{{ partial "static" "/css/text.css" }}" media="all">
-  {{ with index (.Param "header") .Section }}
+  {{ with index (.Param "header") $section }}
     <style>
       .header {
         background: {{ .background }};
@@ -33,7 +35,7 @@
 </head>
 <body>
   <header class="header">
-    <h1 class="site-title"><a href="/{{ .Section }}/" class="site-title-link">{{ or (index .Site.Params.titles .Section) .Site.Title }}</a></h1>
+    <h1 class="site-title"><a href="/{{ $section }}/" class="site-title-link">{{ or (index .Site.Params.titles $section) .Site.Title }}</a></h1>
   </header>
 
   <div class="main">
