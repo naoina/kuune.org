@@ -14,7 +14,8 @@ disableHugoGeneratorInject = true
   money = "/:section/:year/:month/:day/"
 
 [taxonomies]
-tag = "tags"
+"text/tag" = "text/tags"
+"money/tag" = "money/tags"
 
 [blackfriday]
   extensions = ["hardLineBreak", "Footnotes"]

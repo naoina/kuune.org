@@ -2,7 +2,7 @@
 date = "2014-06-12T18:35:08+09:00"
 draft = false
 title = "世界最速だった URL ルーターをリリースしました"
-tags = ["go", "golang", "denco"]
+"text/tags" = ["go", "golang", "denco"]
 
 +++
 

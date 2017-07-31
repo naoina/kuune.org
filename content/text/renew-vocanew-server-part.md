@@ -2,7 +2,7 @@
 date = "2013-09-22T21:16:52+09:00"
 draft = false
 title = "ぼかにゅーをリニューアルしました（サーバー編）"
-tags = ["vocanew"]
+"text/tags" = ["vocanew"]
 
 +++
 

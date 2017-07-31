@@ -2,11 +2,12 @@
   <article class="article">
     <header>
       <h1 itemprop="name headline"><a href="{{ .RelPermalink }}" class="title-link" itemprop="url">{{ .Title }}</a></h1>
-      {{ if .Params.tags }}
+      {{ $taxonomyname := printf "%s/tags" .Section }}
+      {{ with index .Params $taxonomyname }}
         <i class="fa fa-tag"></i>
         <ul class="tags">
-          {{ range .Params.tags }}
-            <li class="tag"><a href="/tags/{{ . | urlize }}">{{ . }}</a></li>
+          {{ range . }}
+            <li class="tag"><a href="/{{ $taxonomyname }}/{{ . | urlize }}">{{ . }}</a></li>
           {{ end }}
         </ul>
       {{ end }}
@@ -26,13 +27,13 @@
       {{ replaceRE "(?s)(<h2.*?>.*)" (printf "%s$1" .TableOfContents) .Content | safeHTML }}
     </div>
 
-    {{ if .Params.tags }}
+    {{ with index .Params $taxonomyname }}
       <footer class="tags-footer">
           <i class="fa fa-tag"></i>
         <ul class="tags">
-          {{ range .Params.tags }}
+          {{ range . }}
             <li class="tag" itemprop="keywords">
-              <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+              <a href="/{{ $taxonomyname }}/{{ . | urlize }}">{{ . }}</a>
             </li>
           {{ end }}
         </ul>

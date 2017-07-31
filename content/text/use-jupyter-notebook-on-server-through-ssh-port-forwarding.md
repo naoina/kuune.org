@@ -3,7 +3,7 @@ date = "2017-05-14T01:18:42+09:00"
 draft = false
 logo = ""
 logosmall = ""
-tags = ["jupyter", "ssh"]
+"text/tags" = ["jupyter", "ssh"]
 title = "サーバー上の Jupyter Notebook を SSH Port Forwarding を通して使う"
 
 +++

@@ -2,7 +2,7 @@
 date = "2014-11-07T16:21:00+09:00"
 draft = false
 title = "Golangでどんな json が返ってくるかわからない時に struct で定義するまでじゃないんだけど､ interface だと呼び出しが面倒なのどうしたらいいんだろう問題への一回答例"
-tags = ["go", "golang"]
+"text/tags" = ["go", "golang"]
 
 +++
 

@@ -3,7 +3,7 @@ date = "2017-05-06T00:20:21+09:00"
 draft = false
 logo = ""
 logosmall = ""
-tags = ["deeplearning", "keras", "tips"]
+"text/tags" = ["deeplearning", "keras", "tips"]
 title = "Keras モデルを圧縮して保存する"
 
 +++

@@ -2,7 +2,7 @@
 date = "2015-02-16T00:03:34+09:00"
 draft = false
 title = "naoina/toml を TOML v0.4.0 に準拠させた"
-tags = ["go", "golang", "toml"]
+"text/tags" = ["go", "golang", "toml"]
 
 +++
 
