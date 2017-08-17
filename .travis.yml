@@ -11,15 +11,23 @@ script:
 env:
   global:
   - DEPLOY_DIR=public
+  - secure: Ah3SeBJK8N4j56kLo0YbznpndvZmcOjQgFoWeVdNQ50PnXFhe8Ix8I+aFkSc/eUKSeWIxTaLu1+LfmDdRFFnfDAXbMvhjLm7ALJLVsetdcrnLH9IZYtOL5H5laVwm9VB6n7Jjgyg2dGTtzmeHVlryUNDeBUJm7RLDEMIUJ4EES4=
+  - secure: NgTkbZnIwk0AmhgVPv3G4pPmuLimDUnYdfzv7CYljIzAcFYfDzMnkxfwgWL3YzHM7pa9ZmFkwlyq0Izg5izo8N+xCqMQE9r05z9QvsoAi+MKPiOdi0xP/0yavZA/Ntk0Zxi/ehtn7PXa33SjkwB0fs7w2SaWdiKrBA3pNI2x2eM=
+before_deploy:
+- pip install --user awscli
+- export PATH=$PATH:$HOME/.local/bin
 deploy:
   provider: s3
   bucket: kuune.org
   skip_cleanup: true
   local_dir: "$DEPLOY_DIR"
-  access_key_id:
-    secure: aIFzhNZvgjterusAFE7rDbIZ18jpWr2aRDJ0QUWTlFT8RWO/JWJslcOsn3fxmVGjrkkkB6MHVyTX3PucYDl64yD+Aiow3d3jJn1IEN1DVGmTCAzdyYHr26GUq4C7VrE1WXykE4mYgOtaLCCVjHNoODBRxWGRoHc0lF+3iauqQ1w=
-  secret_access_key:
-    secure: bIAAEmCa0hXJX7q1M8W/VnLTemw09DRVNQ0RoOy1qyg5C6PBWoFhDNS030u2HfswdPeRoD2pH6eaqnjicDh+eLU0r6g8RHz2ai6G7jyT365gONhvHET7To588Xx5LkuFQZyKPPfWRHT2VOZTbrXek2OJAb1Y1aelY5tl5sYptBQ=
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+after_deploy:
+- aws configure set preview.cloudfront true
+- aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+- aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+- aws cloudfront create-invalidation --distribution-id E2ZKHXSUPMD859 --paths /text/ /text/index.html
 notifications:
   email:
     on_success: always
