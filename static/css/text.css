@@ -108,6 +108,7 @@ img {
     word-wrap: break-word;
     word-break: break-word;
     overflow-wrap: break-word;
+    line-height: 1.7em;
 }
 
 .article-body > h2 {
@@ -155,7 +156,7 @@ img {
         }
         #TableOfContents > ul li {
             margin: 0;
-            line-height: 1.3rem;
+            line-height: 1.7em;
         }
 
         #TableOfContents > ul > li {
