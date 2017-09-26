@@ -8,6 +8,8 @@ builddrafts = false
 canonifyurls = false
 paginatepath = "p"
 disableHugoGeneratorInject = true
+pygmentsCodefences = true
+pygmentsUseClasses = true
 
 [permalinks]
   text = "/:section/:year/:month/:day/:filename/"
