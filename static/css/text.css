@@ -115,6 +115,9 @@ img {
     word-wrap: break-word;
     word-break: break-word;
     overflow-wrap: break-word;
+}
+
+.article-body p {
     line-height: 1.7em;
 }
 
