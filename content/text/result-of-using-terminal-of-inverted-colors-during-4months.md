@@ -8,7 +8,7 @@ title = "ターミナルを白背景と黒文字に設定して4ヶ月生活し�
 
 眼精疲労が減った（気がする）
 
-<blockquote class="twitter-tweet"><p>父さんこれからターミナルは白背景に黒字で生きていこうと思うんだ</p>&mdash; インターネットプログラマン (@naoina) <a href="https://twitter.com/naoina/statuses/342522327432572929">June 6, 2013</a></blockquote><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p>父さんこれからターミナルは白背景に黒字で生きていこうと思うんだ</p>&mdash; インターネットプログラマン (@naoina) <a href="https://twitter.com/naoina/statuses/342522327432572929">June 6, 2013</a></blockquote><script defer src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 現在のターミナル
 
