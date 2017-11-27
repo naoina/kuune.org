@@ -6,8 +6,8 @@ title = "Travis-CI で Windows バイナリをテストする"
 
 +++
 
-<blockquote class="twitter-tweet" lang="en"><p>travis-ciでapi-getでwine突っ込んでやったらwindows環境でのテストできるのでは？</p>&mdash; 7017 (@naoina) <a href="https://twitter.com/naoina/statuses/498832759981240321">August 11, 2014</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" lang="en"><p>travis-ciでapi-getでwine突っ込んでやったらwindows環境でのテストできるのでは？ </p>&mdash; 7017 (@naoina) <a href="https://twitter.com/naoina/statuses/498832759981240321">August 11, 2014</a></blockquote>
+<script defer src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 できました。
 
