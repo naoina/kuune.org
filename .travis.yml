@@ -3,10 +3,9 @@ go:
 - 1.8
 install:
 - go get -u -v github.com/gohugoio/hugo
-- go get -u -v github.com/naoina/hugo-jupyter-handler
 - go get -u -v github.com/tdewolff/minify/cmd/minify
 script:
-- go run hugo.go -d $DEPLOY_DIR
+- hugo -d $DEPLOY_DIR
 - minify -r -o $DEPLOY_DIR $DEPLOY_DIR
 env:
   global:
