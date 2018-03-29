@@ -1,0 +1,37 @@
+{{ $file := .Get 0 }}
+{{ $ipynb := getJSON "content/" $file }}
+{{ range $cell := $ipynb.cells }}
+  {{ if eq $cell.cell_type "markdown" }}
+    {{ range $source := $cell.source }}
+      {{ $.Scratch.Add "content" $source }}
+    {{ end }}
+    {{ range $name, $attachment := $cell.attachments }}
+      {{ range $mime, $data := $attachment }}
+        {{ $.Scratch.Add "attachments" (slice (dict "filename" (printf "attachment:%s" $name) "dataURL" (printf "data:%s;base64,%s" $mime $data))) }}
+      {{ end }}
+    {{ end }}
+  {{ else if eq $cell.cell_type "code" }}
+    {{ $.Scratch.Add "content" (printf "```%s\n" $ipynb.metadata.kernelspec.language) }}
+    {{ range $source := $cell.source }}
+      {{ $.Scratch.Add "content" $source }}
+    {{ end }}
+    {{ $.Scratch.Add "content" "\n```" }}
+    {{ $.Scratch.Add "content" "\n" }}
+    {{ $.Scratch.Add "content" "```text\n" }}
+    {{ range $output := $cell.outputs }}
+      {{ if eq $output.output_type "stream" }}
+        {{ range $text := $output.text }}
+          {{ $.Scratch.Add "content" $text }}
+        {{ end }}
+      {{ else }}
+        {{ errorf "%s: unsupported output_type" $output.output_type }}
+      {{ end }}
+    {{ end }}
+    {{ $.Scratch.Add "content" "\n```" }}
+  {{ end }}
+  {{ $.Scratch.Add "content" "\n" }}
+{{ end }}
+{{ range $attachment := $.Scratch.Get "attachments" }}
+  {{ $.Scratch.Set "content" (replace ($.Scratch.Get "content") $attachment.filename $attachment.dataURL) }}
+{{ end }}
+{{ $.Scratch.Get "content" | markdownify }}
