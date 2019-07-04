@@ -1,5 +1,5 @@
 baseurl = "https://kuune.org/"
-languageCode = "en-us"
+languageCode = "ja-jp"
 title = "kuune.org"
 contentdir = "content"
 layoutdir = "layouts"
