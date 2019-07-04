@@ -13,28 +13,18 @@ pygmentsUseClasses = true
 
 [permalinks]
   text = "/:section/:year/:month/:day/:filename/"
-  money = "/:section/:year/:month/:day/"
 
 [taxonomies]
 "text/tag" = "text/tags"
-"money/tag" = "money/tags"
 
 [blackfriday]
   extensions = ["hardLineBreak", "Footnotes"]
 
 [params.titles]
-  money = "不労所得への道"
 
 [params.header]
-  money = { color = "#fff", background = "#000" }
 
 [params.links]
-  text = [
-    { name = "不労所得への道", url = "https://kuune.org/money/" }
-  ]
-  money = [
-    { name = "kuune.org", url = "https://kuune.org/text/" },
-  ]
 
 [params.twitter]
   user = "naoina"
@@ -49,7 +39,6 @@ pygmentsUseClasses = true
 
 [params.disqus]
   text = "kuune"
-  money = "money-kuune-org"
 
 [params.bitcoin]
   address = "3GZuMjKHrDaSD4mAkn5qV5UnWpwLavahBM"
