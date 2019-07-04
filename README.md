@@ -10,7 +10,7 @@ My own profile, text (blog) site.
 ## Setup
 
 ```bash
-go get -u github.com/spf13/hugo
+go get -u github.com/gohugoio/hugo
 ```
 
 ## Create a text entry
