@@ -8,7 +8,7 @@ title = "何故私は AWS を Deep Learning で使うのか"
 
 +++
 
-Deep Learning ブームの中皆様いかがお過ごしでしょうか。以前 [機械学習で為替予測 Deep Learning 編]({{< relref "market-prediction-with-deep-learning.md" >}}) に書いたように私は Deep Learning で為替予測をやってるんですが、計算リソースとして AWS を使っています。何故 AWS を選んだのかというと、コストパフォーマンスが良いからです。
+Deep Learning ブームの中皆様いかがお過ごしでしょうか。以前 [機械学習で為替予測 Deep Learning 編]({{< relref "market-prediction-with-deep-learning/index.md" >}}) に書いたように私は Deep Learning で為替予測をやってるんですが、計算リソースとして AWS を使っています。何故 AWS を選んだのかというと、コストパフォーマンスが良いからです。
 
 ## 概算
 
