@@ -1,11 +1,8 @@
 +++
 date = "2016-05-12T20:48:55+09:00"
 draft = false
-logo = "AmazonWebservices_Logo.png"
-logosmall = "aws-square.png"
 "text/tags" = ["aws", "s3", "cloudfront"]
 title = "Amazon S3 + CloudFront で始める静的サイトホスティング"
-
 +++
 
 ## はじめに
