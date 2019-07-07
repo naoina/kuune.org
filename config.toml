@@ -10,6 +10,11 @@ paginatepath = "p"
 disableHugoGeneratorInject = true
 pygmentsCodefences = true
 pygmentsUseClasses = true
+enableGitInfo = true
+
+[frontmatter]
+  date = ["date"]
+  lastmod = [":git"]
 
 [permalinks]
   text = "/:section/:year/:month/:day/:filename/"
