@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ partial "static" (add "image/" .Params.logo) }}">
   {{ end }}
-  <link rel="stylesheet" href="{{ partial "static" "/css/text.css" }}" media="all">
+  <link rel="stylesheet" href="{{ (resources.Get "css/text.scss" | toCSS | minify | fingerprint).RelPermalink }}" media="all">
   {{ with index (.Param "header") $section }}
     <style>
       .header {

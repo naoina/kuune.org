@@ -2,7 +2,7 @@
 <html>
 <head>
   {{ partial "head.html" . }}
-  <link rel="stylesheet" href="/css/main.css" media="all">
+  <link rel="stylesheet" href="{{ (resources.Get "css/main.scss" | toCSS | minify | fingerprint).RelPermalink }}" media="all">
 </head>
 <body>
   <div class="main">

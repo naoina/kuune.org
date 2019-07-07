@@ -2,15 +2,15 @@
 <html>
 <head>
   {{ partial "head.html" . }}
-  <meta property="og:image" content="{{.Site.BaseURL }}{{ partial "static" "image/thumbnail_w.png" }}">
+  <meta property="og:image" content="{{ (resources.Get "image/thumbnail_w.png" | fingerprint).Permalink }}">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="{{ partial "static" "/css/main.css" }}" media="all">
+  <link rel="stylesheet" href="{{ (resources.Get "css/main.scss" | toCSS | minify | fingerprint).RelPermalink }}" media="all">
 </head>
 <body>
   <div>
     <h1>naoina.info</h1>
 
-    <img src="{{ partial "static" "/image/thumbnail_w.png" }}" alt="naoina" width="180" height="180">
+    <img src="{{ (resources.Get "image/thumbnail_w.png" | fingerprint).RelPermalink }}" alt="naoina" width="180" height="180">
     <p>HN: naoina</p>
 
     <div>

@@ -1,3 +1,3 @@
 {{ define "stylesheets" }}
-  <link rel="stylesheet" href="{{ partial "static" "/css/github.css" }}" media="all">
+  <link rel="stylesheet" href="{{ (resources.Get "css/github.scss" | toCSS | minify | fingerprint).RelPermalink }}" media="all">
 {{ end }}
