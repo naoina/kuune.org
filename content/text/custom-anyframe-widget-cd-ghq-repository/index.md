@@ -11,7 +11,7 @@ zsh には [anyframe][] という [peco](https://github.com/peco/peco)/[percol](
 
 自分はユーザー名をハンドルそのままの `naoina` を使っているので、リポジトリのユーザー名とかぶります。
 
-![before](/image/anyframe-peco-ghq-before.gif)
+{{< img src="anyframe-peco-ghq-before.gif" alt="before" >}}
 
 なので、下記のようにして `ghq root` より後のパスで絞りこめるようにしました。
 
@@ -35,7 +35,7 @@ fpath=($HOME/.zsh $fpath)
 alias r="anyframe-widget-cd-ghq-repository-relative-path"
 ```
 
-![after](/image/anyframe-peco-ghq-after.gif)
+{{< img src="anyframe-peco-ghq-after.gif" alt="after" >}}
 
 [anyframe][] は自前で plugin を簡単に書けるのでいいですね。
 
