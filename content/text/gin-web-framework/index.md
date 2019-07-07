@@ -12,7 +12,7 @@ golang の新しい WEB アプリケーションフレームワークである [
 
 まず、Martini と比べて **何が** 40 倍速いのか、というところですが
 
-![20140701105236.png](/image/dd59ea0d-11d3-5dca-915f-ddb148cb4abc.png)
+{{< img src="dd59ea0d-11d3-5dca-915f-ddb148cb4abc.png" alt="20140701105236.png" >}}
 
 これ、HTTP ルーターの速度を測ってるんですね。速いですね。ちなみに *Check out the benchmark suite* ってところからベンチマークリポジトリに飛べます。
 

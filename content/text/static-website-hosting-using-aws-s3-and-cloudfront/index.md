@@ -13,11 +13,11 @@ title = "Amazon S3 + CloudFront で始める静的サイトホスティング"
 
 まず Amazon S3 のバケットを作成します。今回のバケット名は静的サイトのドメインと同じにして、リージョンは 1 番安い US Standard を選びます。CloudFront は世界各国のエッジサーバーから配信するため物理的に近いリージョンを選ぶ必要がないためです。
 
-![1d7af2f](/image/1d7af2f.png)
+{{< img src="1d7af2f.png" alt="1d7af2f" >}}
 
 作成したバケットで `静的ウェブサイトホスティング` を有効にします。これが有効になっていない場合、S3 は `https://example.com/hoge/` のようなアクセスで `/hoge/index.html` を返してくれず 403 Forbidden を返してしまいます。
 
-![1bc170a](/image/1bc170a.png)
+{{< img src="1bc170a.png" alt="1bc170a" >}}
 
 CloudFront からアクセスできるようにバケットポリシーを設定します。
 
@@ -95,24 +95,24 @@ S3 へのアップロードに必要な IAM を設定します。TravisCI や Ci
 
 CloudFront のディストリビューションを作成します。今回は静的サイトの配信が目的なので配信方法は `Web` を選択します。
 
-![c09e457](/image/c09e457.png)
+{{< img src="c09e457.png" alt="c09e457" >}}
 
 Origin Settings は下図のように設定します。
 
-![115e142](/image/115e142.png)
+{{< img src="115e142.png" alt="115e142" >}}
 
 `Origin Domain Name` には先程作成した S3 のバケットの静的ウェブサイトホスティングのエンドポイントを指定します。サジェストされる S3 Origin は **選択しません**。これで S3 をオリジンサーバーとして CloudFront がファイルを取得してくれます。S3 の静的ウェブサイトホスティングは HTTP でしかアクセスできないので `Origin Protocol Policy` は `HTTP Only` を選択します。
 
 次に Default Cache Behavior Settings を設定します。
 
-![fb99297](/image/fb99297.png)
+{{< img src="fb99297.png" alt="fb99297" >}}
 
 常に HTTPS アクセスになるように `Viewer Protocol Policy` は `Redirect HTTP to HTTPS` を選択します。世の中は今常時 SSL 化の流れにあるので、特に理由がなければ HTTPS にするのがベターです。CloudFront にコンテンツを gzip 圧縮して配信してもらうよう `Compress Objects Automatically` は Yes にします。転送量が減るので多少なりとも転送料金の節約になります。
 
 次に Distribution Settings の設定です。
 
-![0c6426e](/image/0c6426e.png)
-![023ba92](/image/023ba92.png)
+{{< img src="0c6426e.png" alt="0c6426e" >}}
+{{< img src="023ba92.png" alt="023ba92" >}}
 
 このブログのように日本向けであれば `Price Class` は `Use Only US, Europe and Asia` で十分です。`Alternate Domain Names (CNAMEs)` には静的サイトのドメインを入力します。SSL を有効にするため `SSL Certificate` は `Custom SSL Certificate` を選択します。SSL 証明書を持っていない場合は `Request an ACM certificate` から AWS Certificate Management (以下 ACM) を使って無料で取得できます。今回は新規に取得しますが、既に証明書持っている場合は [こちら](http://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/id_credentials_server-certs_manage.html) を参照してください。
 
@@ -120,15 +120,15 @@ Origin Settings は下図のように設定します。
 
 CloudFront に設定する SSL 証明書を取得します。ACM を使えば無料で取得できるのでこれを利用します。
 
-![5d142d9](/image/5d142d9.png)
+{{< img src="5d142d9.png" alt="5d142d9" >}}
 
 証明書をリクエストすると下図のようなメールアドレスに確認メールが送信されます。仮に下記のようなメールアドレスを持っていない場合は Whois の管理者メールアドレスを自身のアドレスにしてメールを受け取れるようにする必要があります。ドメイン管理サービスの Whois 代理公開を設定していた場合は一時的に自身の情報に Whois 情報を更新してから証明書をリクエストしましょう。
 
-![a90ad5a](/image/a90ad5a.png)
+{{< img src="a90ad5a.png" alt="a90ad5a" >}}
 
 証明書が取得できたら Distribution Settings に戻って証明書を CloudFrond に設定します。下図のリロードボタンを押下してから先ほど取得した証明書を選択します。
 
-![eb88978](/image/eb88978.png)
+{{< img src="eb88978.png" alt="eb88978" >}}
 
 これで CloudFront のディストリビューションを作成する準備ができました。下部にある `Create Distribution` を押下して作成しましょう。CloudFrond が Deployed になるには少々時間がかかるので気長に待ちます。
 
@@ -136,7 +136,7 @@ CloudFront に設定する SSL 証明書を取得します。ACM を使えば無
 
 最後に DNS を設定します。CloudFrond のディストリビューションを作成したら `.cloudfront.net` で終わるドメインが割り当てられます。このドメインを DNS の CNAME レコードに指定すれば独自ドメインでも CloudFront で配信されるコンテンツにアクセスできるようになります。もし Zone apex で運用する場合は Route 53 を使ってエイリアスとして割り当てます。
 
-![fbcdfcc](/image/fbcdfcc.png)
+{{< img src="fbcdfcc.png" alt="fbcdfcc" >}}
 
 ## 注意点
 

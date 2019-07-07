@@ -14,7 +14,7 @@ title = "スケートボードを始めた"
 ドンキとかにある安いやつはダメだけど、専門ショップで買うなら最初はどれでもいいらしいのでグラフィック（裏に書いてある絵）で選んだ。
 ちなみにこれ。
 
-[![cliche-deck](/image/cliche-deck.jpg)](http://skateboardshopsunabe.com/?pid=93307131)
+<a href="http://skateboardshopsunabe.com/?pid=93307131">{{< img src="cliche-deck.jpg" alt="cliche-deck" >}}</a>
 
 買ってからスケートボードを裸で持って滑りにいってたけど持ちにくいし片手塞がるのでそれ用のバッグも後日買った。
 

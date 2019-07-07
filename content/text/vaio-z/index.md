@@ -6,9 +6,9 @@ title = "VAIO Z (VJZ13A1) が届きました"
 
 +++
 
-![VAIO Z 1](/image/vaio-z1.jpg)
-![VAIO Z 2](/image/vaio-z2.jpg)
-![VAIO Z 3](/image/vaio-z3.jpg)
+{{< img src="vaio-z1.jpg" alt="VAIO Z 1" >}}
+{{< img src="vaio-z2.jpg" alt="VAIO Z 2" >}}
+{{< img src="vaio-z3.jpg" alt="VAIO Z 3" >}}
 
 ## 所感
 
