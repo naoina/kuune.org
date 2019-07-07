@@ -11,7 +11,7 @@
 <title>{{ if ne .Site.Title .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
 <link rel="canonical" href="{{ .Permalink }}">
 {{ with .OutputFormats.Get "rss" }}<link rel="{{ .Rel }}" charset="UTF-8" type="{{ .MediaType.Type }}" title="{{ $.Title }}" href="{{ .RelPermalink }}">{{ end }}
-<link rel="stylesheet" href="{{ partial "static" "/css/font-awesome.min.css" }}" media="all">
-<link rel="stylesheet" href="{{ partial "static" "/css/normalize.css" }}" media="all">
-<link rel="stylesheet" href="{{ partial "static" "/css/common.css" }}" media="all">
+{{ range slice "font-awesome.min.css" "normalize.min.css" "common.scss" }}
+  <link rel="stylesheet" href="{{ (path.Join "css" . | resources.Get | toCSS | minify | fingerprint).RelPermalink }}" media="all">
+{{ end }}
 {{ partial "google-analytics.html" . }}
