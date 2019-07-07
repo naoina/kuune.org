@@ -1,6 +1,6 @@
 <figure {{ with .Get "class" }}class="{{.}}"{{ end }}>
   {{ with .Get "link"}}<a href="{{.}}">{{ end }}
-    <img src="{{ partial "static" (.Get "src") }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}" {{ end }}{{ with .Get "width" }}width="{{.}}" {{ end }}/>
+    <img src="{{ (.Get "src" | $.Page.Resources.GetMatch | fingerprint).RelPermalink }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}" {{ end }}{{ with .Get "width" }}width="{{.}}" {{ end }}/>
   {{ if .Get "link"}}</a>{{ end }}
   <figcaption>{{ if isset .Params "title" }}
     <i>{{ .Get "title" }}</i>{{ end }}

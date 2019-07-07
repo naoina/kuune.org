@@ -4,8 +4,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:url" content="{{ .Permalink }}">
-{{ if .Params.logo }}
-<meta property="og:image" content="{{.Site.BaseURL }}{{ partial "static" (add "image/" .Params.logo) }}">
+{{ with path.Join "image" .Params.logo | .Resources.GetMatch }}
+  <meta property="og:image" content="{{ (fingerprint .).Permalink }}">
 {{ end }}
 <meta property="fb:app_id" content="{{ .Site.Params.facebook.appid }}">
 <title>{{ if ne .Site.Title .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
