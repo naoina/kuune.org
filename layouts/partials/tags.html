@@ -1,0 +1,9 @@
+{{ $taxonomyname := printf "%s/tags" .Section }}
+{{ with index .Params $taxonomyname }}
+  <i class="fa fa-tag"></i>
+  <ul class="tags">
+    {{- range . -}}
+      <li class="tag"{{ if $.IsPage }} itemprop="keywords"{{ end }}><a href="{{ path.Join $taxonomyname (urlize .) | relURL }}/">{{ . }}</a></li>
+    {{- end -}}
+  </ul>
+{{ end }}
