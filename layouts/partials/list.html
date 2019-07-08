@@ -1,0 +1,10 @@
+<ul>
+  {{ range .Pages }}
+    <li>
+      <p>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" class="datetime">{{ .Date.Format "2006-01-02 15:04:05 -0700" }}</time>
+      </p>
+    </li>
+  {{ end }}
+</ul>
