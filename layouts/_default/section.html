@@ -3,16 +3,9 @@
 {{ define "main" }}
 {{ $paginator := .Paginate (.Site.GetPage "section" .Section).Pages 50 }}
 <section class="section">
-  <ul>
-    {{ range $paginator.Pages }}
-      <li>
-        <p>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
-          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" class="datetime">{{ .Date.Format "2006-01-02 15:04:05 -0700" }}</time>
-        </p>
-      </li>
-    {{ end }}
-  </ul>
+  <section>
+    {{ partial "list" $paginator }}
+  </section>
   {{ partial "pagination" $paginator }}
 </section>
 {{ end }}
