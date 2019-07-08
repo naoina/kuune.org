@@ -2,15 +2,7 @@
   <article class="article">
     <header>
       <h1 itemprop="name headline"><a href="{{ .RelPermalink }}" class="title-link" itemprop="url">{{ .Title }}</a></h1>
-      {{ $taxonomyname := printf "%s/tags" .Section }}
-      {{ with index .Params $taxonomyname }}
-        <i class="fa fa-tag"></i>
-        <ul class="tags">
-          {{ range . }}
-            <li class="tag"><a href="/{{ $taxonomyname }}/{{ . | urlize }}">{{ . }}</a></li>
-          {{ end }}
-        </ul>
-      {{ end }}
+      {{ partial "tags" . }}
       <p class="datetime">
         作成日時: <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="dateCreated">{{ .Date.Format "2006-01-02 15:04:05 -0700" }}</time>
         {{ if gt .Lastmod .Date }}
@@ -26,18 +18,9 @@
       {{ replaceRE "(?s)(<h2.*?>.*)" (printf "%s$1" .TableOfContents) .Content | safeHTML }}
     </div>
 
-    {{ with index .Params $taxonomyname }}
-      <footer class="tags-footer">
-          <i class="fa fa-tag"></i>
-        <ul class="tags">
-          {{ range . }}
-            <li class="tag" itemprop="keywords">
-              <a href="/{{ $taxonomyname }}/{{ . | urlize }}">{{ . }}</a>
-            </li>
-          {{ end }}
-        </ul>
-      </footer>
-    {{ end }}
+    <footer class="tags-footer">
+      {{ partial "tags" . }}
+    </footer>
 
     <footer class="clear">
       {{ partial "social-buttons" . }}
