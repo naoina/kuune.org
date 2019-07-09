@@ -1,6 +1,21 @@
-<figure {{ with .Get "class" }}class="{{.}}"{{ end }}>
+{{ $image := .Get "src" | $.Page.Resources.GetMatch }}
+{{ $width := .Get "width" | default 0 | int }}
+{{ $srcsets := slice }}
+{{ if $width }}
+  {{ $width3x := mul $width 3 }}
+  {{ $width2x := mul $width 2 }}
+  {{ if lt $image.Width $width3x }}
+    {{ errorf "image width must be greater than or equal to %d, but %d" $width3x $image.Width }}
+  {{ end }}
+  {{ $srcsets = append (($width3x | printf "%dx" | $image.Resize).RelPermalink | printf "%s 3x") $srcsets }}
+  {{ $srcsets = append (($width2x | printf "%dx" | $image.Resize).RelPermalink | printf "%s 2x") $srcsets }}
+  {{ $srcsets = append (($width   | printf "%dx" | $image.Resize).RelPermalink | printf "%s 1x") $srcsets }}
+{{ end }}
+<figure>
   {{ with .Get "link"}}<a href="{{.}}">{{ end }}
-    <img src="{{ (.Get "src" | $.Page.Resources.GetMatch | fingerprint).RelPermalink }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}" {{ end }}{{ with .Get "width" }}width="{{.}}" {{ end }}/>
+  <img src="{{ (fingerprint $image).RelPermalink }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}" {{ end }}
+    {{ with $srcsets }} srcset="{{ delimit $srcsets ", " }}"{{ end }}
+  />
   {{ if .Get "link"}}</a>{{ end }}
   <figcaption>{{ if isset .Params "title" }}
     <i>{{ .Get "title" }}</i>{{ end }}
