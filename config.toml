@@ -25,6 +25,10 @@ enableGitInfo = true
 [blackfriday]
   extensions = ["hardLineBreak", "Footnotes"]
 
+[imaging]
+  resampleFilter = "lanczos"
+  quality = 92
+
 [params.titles]
 
 [params.header]
