@@ -56,3 +56,10 @@ enableGitInfo = true
 
 [params.amazon]
   url = "https://www.amazon.co.jp/registry/wishlist/TE72PDXI8Z2Y/"
+
+[deployment]
+
+[[deployment.targets]]
+  name = "kuune.org"
+  URL = "s3://kuune.org?region=us-east-1"
+  cloudFrontDistributionID = "E2ZKHXSUPMD859"
