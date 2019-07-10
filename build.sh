@@ -12,5 +12,5 @@ EOF
 go get -u -v -tags extended github.com/gohugoio/hugo
 go get -u -v github.com/tdewolff/minify/cmd/minify
 hugo
-publishdir=$(hugo config | grep "publishdir" | cut -d ' ' -f 3)
+publishdir=$(hugo config | awk '/^publishdir/ {gsub("\"", ""); print $3}')
 minify -r -o $publishdir $publishdir
