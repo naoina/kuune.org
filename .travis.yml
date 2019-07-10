@@ -9,6 +9,7 @@ env:
   - secure: NgTkbZnIwk0AmhgVPv3G4pPmuLimDUnYdfzv7CYljIzAcFYfDzMnkxfwgWL3YzHM7pa9ZmFkwlyq0Izg5izo8N+xCqMQE9r05z9QvsoAi+MKPiOdi0xP/0yavZA/Ntk0Zxi/ehtn7PXa33SjkwB0fs7w2SaWdiKrBA3pNI2x2eM=
 deploy:
   provider: script
+  skip_cleanup: true
   script: bash deploy.sh
 notifications:
   email:
