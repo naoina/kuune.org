@@ -1,32 +1,15 @@
 language: go
 go:
 - 1.11
-install:
-- go get -u -v -tags extended github.com/gohugoio/hugo
-- go get -u -v github.com/tdewolff/minify/cmd/minify
 script:
-- hugo -d $DEPLOY_DIR
-- minify -r -o $DEPLOY_DIR $DEPLOY_DIR
+- bash build.sh
 env:
   global:
-  - DEPLOY_DIR=public
   - secure: Ah3SeBJK8N4j56kLo0YbznpndvZmcOjQgFoWeVdNQ50PnXFhe8Ix8I+aFkSc/eUKSeWIxTaLu1+LfmDdRFFnfDAXbMvhjLm7ALJLVsetdcrnLH9IZYtOL5H5laVwm9VB6n7Jjgyg2dGTtzmeHVlryUNDeBUJm7RLDEMIUJ4EES4=
   - secure: NgTkbZnIwk0AmhgVPv3G4pPmuLimDUnYdfzv7CYljIzAcFYfDzMnkxfwgWL3YzHM7pa9ZmFkwlyq0Izg5izo8N+xCqMQE9r05z9QvsoAi+MKPiOdi0xP/0yavZA/Ntk0Zxi/ehtn7PXa33SjkwB0fs7w2SaWdiKrBA3pNI2x2eM=
-before_deploy:
-- pip install --user awscli
-- export PATH=$PATH:$HOME/.local/bin
 deploy:
-  provider: s3
-  bucket: kuune.org
-  skip_cleanup: true
-  local_dir: "$DEPLOY_DIR"
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-after_deploy:
-- aws configure set preview.cloudfront true
-- aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
-- aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
-- aws cloudfront create-invalidation --distribution-id E2ZKHXSUPMD859 --paths /text/ /text/index.html
+  provider: script
+  script: bash deploy.sh
 notifications:
   email:
     on_success: always
