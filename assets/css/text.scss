@@ -169,6 +169,7 @@ img {
 }
 
 #TableOfContents {
+    display: inline-block;
     background: #f8f8f8;
     font-size: 90%;
     }
@@ -269,7 +270,8 @@ img {
     }
 
     #TableOfContents {
-        width: 40%;
+        min-width: 40%;
+        max-width: 80%;
     }
 }
 
