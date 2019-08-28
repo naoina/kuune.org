@@ -3,7 +3,7 @@
 {{ define "main" }}
 <div class="section">
   <header class="tags-header">
-    <h1><i class="fa fa-tag"></i>&nbsp;{{ .Title }}</h1>
+    <h1><i class="fa fa-tag"></i>{{ .Title }}</h1>
   </header>
   {{ $paginator := .Paginate .Data.Pages 50 }}
   <section>
