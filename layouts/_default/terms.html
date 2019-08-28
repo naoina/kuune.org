@@ -1,0 +1,16 @@
+{{ define "og:type" }}website{{ end }}
+
+{{ define "main" }}
+<div class="section">
+  <header>
+    <h1>Tags</h1>
+  </header>
+  <section class="tag-list">
+    <ul>
+      {{- range .Data.Pages -}}
+        <li><i class="fa fa-tag"></i><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{- end -}}
+    </ul>
+  </section>
+</div>
+{{ end }}
