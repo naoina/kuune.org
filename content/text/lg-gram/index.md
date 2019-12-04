@@ -1,0 +1,112 @@
++++
+title = "LG gramを買った"
+date = 2019-12-04T09:28:06+09:00
+draft = false
+"text/tags" = ["misc", "lg gram", "linux"]
++++
+
+# TL;DR
+
+メモリ36GB積めて重量1kgを切る今世紀最高のラップトップであるLG gramを買って人権を得ましょう。
+
+# ここから本文
+
+[VAIO Z (VJZ13A1)を使い始めて]({{< relref "vaio-z/index.md" >}})から4年と9ヶ月…ついにPCを買い替えました。
+
+LG gram (14Z990) 14インチモデルです。今回はAmazon.comで購入して個人輸入しました。これまでいろんなものを海外通販で買いましたが、大体扱いがこんな感じで箱がつぶれてるとか普通です。
+
+{{< img src="lg-gram01.jpg" alt="LG gram 01" >}}
+
+## 諸条件
+
+今回PCを新調するにあたっての条件は下記でした。
+
+- なるべく軽い
+- メモリを16GBより多く積めるもの
+- 英語配列キーボード
+- 白い筐体
+
+#### なるべく軽い
+
+気軽にホイホイ持ち運びたいので軽いことは絶対条件でした。LG gramは13.3インチで965g、14インチでも995gと、どちらも1kgを切っています。単純な軽さだけなら13.3インチなのですが、VAIO Z VJZ13A1も13.3インチで少し狭いなと思っていて、LG gramは14インチでも30gしか重さが変わらないので広いほうを選びました。
+
+#### メモリを16GBより多く積めるもの
+
+VAIO Z VJZ13A1には16GB積んでいるのですが、これでも自分の用途だと足りなくて人権がなくなってきたのでもっとメモリを積めるものを探しました。とはいえ大体どのラップトップも公称最大16GBのものが多く、探した時にはLG gramしか見つかりませんでした。LG gramも公称最大16GBなんですが、実は自由に差し替えられるメモリスロットが1つあり、そこに16GBのメモリモジュールを挿して動くという情報がありました。これだとオンボードの4GB + 16GBで合計メモリ20GBになります。後述しますが、自分は32GBのメモリモジュールを挿して合計メモリ36GBとしました。
+
+#### 英語配列キーボード
+
+元々英語配列使いだったのですが、VAIO Zは発売即購入だったので、まだ英語配列キーボードへのオプションが出る前で日本語配列しかありませんでした。なのでソフト的に英語配列にして使っていましたが、今度はハード的に英語配列のキーボードにしたいと思いました。
+ところが、国内で販売されているLG gramは2017年モデル以降は全部日本語配列キーボードになってしまいました。ですので、英語配列キーボードを搭載している北米向けモデルを個人輸入することにしました。
+
+#### 白い筐体
+
+白って良くないですか？Kindle Paperwhiteも白を買った身としては次のメインPCは白にしたかったのです。が、白いラップトップってほとんどないんですよね。Dell XPSは白い筐体があるんですが、メモリが16GBということで候補から外れました。
+
+## 開封の儀
+
+装丁は少しチープなApple製品といった印象です。
+
+{{< img src="lg-gram02.jpg" alt="LG gram 02" >}}
+
+付属品はACアダプタ、電源ケーブル、USB Type-C接続のLANアダプタです。
+
+{{< img src="lg-gram03.jpg" alt="LG gram 03" >}}
+
+本体はこんな感じ。
+
+{{< img src="lg-gram04.jpg" alt="LG gram 04" >}}
+
+LG gramのサイズ展開は13.3インチ、14インチ、15インチ、17インチと複数あるからか、カバーで14インチと分かるようになっていました。
+
+{{< img src="lg-gram05.jpg" alt="LG gram 05" >}}
+
+{{< img src="lg-gram06.jpg" alt="LG gram 06" >}}
+
+英語配列キーボード
+
+{{< img src="lg-gram07.jpg" alt="LG gram 07" >}}
+
+メモリとNVMe SSD換装のためにカバーを開けたところ。換装可能なメモリスロットが1つ、M.2スロットの空きが1つあるのがわかります。
+
+{{< img src="lg-gram08.jpg" alt="LG gram 08" >}}
+
+Samsungの32GBメモリとSamsung 500GB 970 EVO Plus。こいつらをLG gramに取り付けます。自分は国内で購入しましたが、これらもAmazon.comとか海外の方が安いので、すぐ欲しいとかでなければ海外通販で買うほうがいいかと思います。
+
+{{< img src="lg-gram09.jpg" alt="LG gram 09" >}}
+
+{{< img src="lg-gram11.jpg" alt="LG gram 11" >}}
+
+{{< img src="lg-gram10.jpg" alt="LG gram 10" >}}
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07N124XDS&linkId=dec66cfbb1c6d43ee1ce6f294fa33e8b"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07MZ4R9FR&linkId=d9003f1d11f51ce47e8c7f6a613c6045"></iframe>
+
+元々付いていた4GBのメモリ。
+
+{{< img src="lg-gram12.jpg" alt="LG gram 12" >}}
+
+無事メモリが認識されて36GBです。北米版のモデルなのでプリインストールされているWindows 10の言語設定は英語ですね。
+
+{{< img src="lg-gram13.jpg" alt="LG gram 13" >}}
+
+## 所感
+
+- 重量1kg以下で36GBメモリはとにかく最高
+- キーの押下圧が多少重い
+- VAIO Zに比べて解像度が低くなった
+- ACアダプタにUSB差込口が無いのが不便
+- ファンが若干うるさい
+- Back tickとBack slashのキー細くない？？？
+
+## Arch Linuxでの現状
+
+- Synapticsを設定しないとタッチパッドはまともに使えなかったが、設定したら神デバイスと化した
+- 何もしなくてもSuspendが動いて最高
+- ファンコントロールができないうえに、ファンがすぐ回る（本当にすぐ回る）のでちょっとだけうるさい
+- 他は特に困ることは何もない
+
+## まとめ
+
+VAIO Zみたいなニッチな筐体だとそのままでは色々動かなくてLinuxデスクトップとして使うのは中々に厳しかったが、それより軽くてメモリ載せられて、なおかつ何もしなくても特に問題が出ないLG gramは現時点で最高のLinux用ラップトップだと思います。メモリだけでいうなら現時点でMac Book Pro 16インチが64GB載るので最強ですが、いかんせん2kgは重すぎる。2kgが軽いと思えるぐらい身体を鍛えてるみなさんであればMac Book Pro 16インチで良いと思います。
