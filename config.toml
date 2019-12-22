@@ -49,14 +49,6 @@ enableGitInfo = true
 [params.disqus]
   text = "kuune"
 
-[params.bitcoin]
-  address = "3GZuMjKHrDaSD4mAkn5qV5UnWpwLavahBM"
-[params.monacoin]
-  address = "MPiZxekuRqdCmE9qoRs2v5YJcUgARLSXez"
-
-[params.amazon]
-  url = "https://www.amazon.co.jp/registry/wishlist/TE72PDXI8Z2Y/"
-
 [deployment]
 
 [[deployment.targets]]
