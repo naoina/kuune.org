@@ -7,7 +7,7 @@ logo = ""
 logosmall = ""
 +++
 
-[以前紹介したALE]({{< relref "how-to-lint-and-autoformat-with-ale/index.md" >}})の[Re:VIEW](https://github.com/kmuto/review)用linterを作りました。
+[以前紹介したALE]({{< relref "text/how-to-lint-and-autoformat-with-ale/index.md" >}})の[Re:VIEW](https://github.com/kmuto/review)用linterを作りました。
 
 https://github.com/naoina/ale-linter-review
 
