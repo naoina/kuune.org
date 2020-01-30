@@ -11,7 +11,7 @@ draft = false
 
 # ここから本文
 
-[VAIO Z (VJZ13A1)を使い始めて]({{< relref "vaio-z/index.md" >}})から4年と9ヶ月…ついにPCを買い替えました。
+[VAIO Z (VJZ13A1)を使い始めて]({{< relref "text/vaio-z/index.md" >}})から4年と9ヶ月…ついにPCを買い替えました。
 
 LG gram (14Z990) 14インチモデルです。今回はAmazon.comで購入して個人輸入しました。これまでいろんなものを海外通販で買いましたが、大体扱いがこんな感じで箱がつぶれてるとか普通です。
 

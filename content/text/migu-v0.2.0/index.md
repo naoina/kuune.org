@@ -11,7 +11,7 @@ logosmall = ""
 
 https://github.com/naoina/migu
 
-MiguについてはリポジトリのREADMEか、[以前の記事]({{< relref "migu/index.md" >}})を見てください。
+MiguについてはリポジトリのREADMEか、[以前の記事]({{< relref "text/migu/index.md" >}})を見てください。
 
 ## //+migu が必須になった
 

@@ -10,7 +10,7 @@ title = "機械学習で為替予測 Deep Learning 編その 4"
 
 ## Average Pooling を使うようにした
 
-以前、小さい変化を無視しないようにするために [Max Pooling を使わない]({{< relref "market-prediction-with-deep-learning-2/index.md#do-not-use-max-pooling" >}}) と書きましたが、実際にやってみると精度が出る時は出るんですが、あまり安定しなくなりました。そんなときにどこかのブログで Average Pooling を使っているのを見て、そういえば Average Pooling なら Max Pooling に比べて小さな変化も無視されなくなるなと思い、Average Pooling を使うようにしてみました。これで精度は割と安定するようになりました。
+以前、小さい変化を無視しないようにするために [Max Pooling を使わない]({{< relref "text/market-prediction-with-deep-learning-2/index.md#do-not-use-max-pooling" >}}) と書きましたが、実際にやってみると精度が出る時は出るんですが、あまり安定しなくなりました。そんなときにどこかのブログで Average Pooling を使っているのを見て、そういえば Average Pooling なら Max Pooling に比べて小さな変化も無視されなくなるなと思い、Average Pooling を使うようにしてみました。これで精度は割と安定するようになりました。
 
 ## LeakyReLU を Optimizer に使ってみた
 
