@@ -1,8 +1,6 @@
 +++
 date = "2017-04-09T15:19:43+09:00"
 draft = false
-logo = "6c1557c6845312f580287c11437eff169796fc04.jpg"
-logosmall = ""
 "text/tags" = ["機械学習", "deep learning"]
 title = "機械学習で為替予測 Deep Learning 編"
 
