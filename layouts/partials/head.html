@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:url" content="{{ .Permalink }}">
-{{ with path.Join "image" .Params.logo | .Resources.GetMatch }}
+{{ with .Resources.GetMatch "logo.{jpg,png}" }}
   <meta property="og:image" content="{{ (fingerprint .).Permalink }}">
 {{ end }}
 <meta property="fb:app_id" content="{{ .Site.Params.facebook.appid }}">
