@@ -3,3 +3,4 @@ resources/
 .ipynb_checkpoints/
 .~*
 /hugo
+*_original
