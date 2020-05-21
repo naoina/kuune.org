@@ -1,4 +1,4 @@
-# kuune.org
+# kuune.org ![](https://github.com/naoina/kuune.org/workflows/Build%20and%20deploy/badge.svg)
 
 My own profile, text (blog) site.
 
