@@ -18,8 +18,13 @@ jobs:
       GOPATH: ${{ github.workspace }}
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+      with:
+        repository: gohugoio/hugo
+        path: hugo
     - uses: actions/setup-go@v2
     - run: echo "::add-path::${GOPATH}/bin"
+    - run: (cd hugo; CGO_ENABLED=1 go install --tags extended)
     - run: ./build.sh
     - run: ./deploy.sh
       env:
