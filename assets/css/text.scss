@@ -130,6 +130,39 @@ img {
     word-wrap: break-word;
     word-break: break-word;
     overflow-wrap: break-word;
+
+    .highlight {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .dataframe {
+        border: none;
+        tr {
+            border: none;
+        }
+        thead {
+            border-bottom: 1px solid #000000;
+        }
+        tbody {
+            tr {
+                &:nth-child(odd) {
+                    background: #f5f5f5;
+                }
+                &:hover {
+                    background: rgba(66, 165, 245, 0.2);
+                }
+            }
+        }
+        th, td {
+            border: none;
+            font-size: 80%;
+            padding: 0.5em;
+        }
+        td {
+            text-align: right;
+        }
+    }
 }
 
 .article-body p {
