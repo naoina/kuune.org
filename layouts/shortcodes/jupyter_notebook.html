@@ -1,7 +1,9 @@
 {{ $file := .Get 0 }}
 {{ $ipynb := getJSON "content/" $file }}
+{{ $begin := false }}
 {{ range $cell := $ipynb.cells }}
   {{ if eq $cell.cell_type "markdown" }}
+    {{ $begin = true }}
     {{ range $source := $cell.source }}
       {{ $.Scratch.Add "content" $source }}
     {{ end }}
@@ -11,23 +13,52 @@
       {{ end }}
     {{ end }}
   {{ else if eq $cell.cell_type "code" }}
-    {{ $.Scratch.Add "content" (printf "```%s\n" $ipynb.metadata.kernelspec.language) }}
-    {{ range $source := $cell.source }}
-      {{ $.Scratch.Add "content" $source }}
-    {{ end }}
-    {{ $.Scratch.Add "content" "\n```" }}
-    {{ $.Scratch.Add "content" "\n" }}
-    {{ $.Scratch.Add "content" "```text\n" }}
-    {{ range $output := $cell.outputs }}
-      {{ if eq $output.output_type "stream" }}
-        {{ range $text := $output.text }}
-          {{ $.Scratch.Add "content" $text }}
-        {{ end }}
-      {{ else }}
-        {{ errorf "%s: unsupported output_type" $output.output_type }}
+    {{ if $begin }}{{- /* trim import module section, or something like that */ -}}
+      {{ $.Scratch.Add "content" (printf "```%s\n" $ipynb.metadata.kernelspec.language) }}
+      {{ range $source := $cell.source }}
+        {{ $.Scratch.Add "content" $source }}
       {{ end }}
+      {{ $.Scratch.Add "content" "\n```" }}
+      {{ $.Scratch.Add "content" "\n" }}
+      {{ range $output := $cell.outputs }}
+        {{ if eq $output.output_type "stream" }}
+          {{ $.Scratch.Add "content" "```text\n" }}
+          {{ range $text := $output.text }}
+            {{ $.Scratch.Add "content" $text }}
+          {{ end }}
+          {{ $.Scratch.Add "content" "\n```" }}
+        {{ else if in (slice "display_data" "execute_result") $output.output_type }}
+          {{ $displayed := false }}
+          {{ range $content_type, $data := $output.data }}
+            {{ if and (eq $content_type "text/html") (not $displayed) }}
+              {{ $displayed = true }}
+              {{ $html := "" }}
+              {{ range $line := $data }}
+                {{ $html = add $html $line }}
+              {{ end }}
+              {{ $.Scratch.Add "content" (printf "<div>%s</div>" $html) }}{{- /* workaround for rendering </style><table>... correctly */ -}}
+              {{ $.Scratch.Add "content" "\n" }}
+            {{ else if and (eq $content_type "text/plain") (not $displayed) }}
+              {{ $displayed = true }}
+              {{ $.Scratch.Add "content" "```text\n" }}
+              {{ range $line := $data }}
+                {{ $.Scratch.Add "content" $line }}
+              {{ end }}
+              {{ $.Scratch.Add "content" "\n```" }}
+            {{ else if and (eq $content_type "image/png") (not $displayed) }}
+              {{ $displayed = true }}
+              {{ $.Scratch.Add "content" (printf "![](data:image/png;base64,%s)" $data) }}
+            {{ else if not $displayed }}
+              {{ errorf "%s: unsupported content type" $content_type }}
+            {{ end }}
+            {{ $.Scratch.Add "content" "\n" }}
+          {{ end }}
+        {{ else }}
+          {{ errorf "%s: unsupported output_type" $output.output_type }}
+        {{ end }}
+      {{ end }}
+      {{ $.Scratch.Add "content" "\n" }}
     {{ end }}
-    {{ $.Scratch.Add "content" "\n```" }}
   {{ end }}
   {{ $.Scratch.Add "content" "\n" }}
 {{ end }}
