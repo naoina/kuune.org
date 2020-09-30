@@ -108,11 +108,21 @@ img {
         }
 
         .recent-articles,
-        .links {
+        .links,
+        .toc-nav {
             font-size: 90%;
             & li {
                 margin-top: 0.3rem;
             }
+        }
+
+        .position-fixed-container {
+            display: inline-block;
+            max-width: 336px;
+        }
+
+        .toc {
+            display: none; // hidden on mobile devices.
         }
     }
 
@@ -204,6 +214,16 @@ img {
 
     figure {
         display: inline-block;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        &::before {
+            display: block;
+            content: " ";
+            height: 20px;
+            margin-top: -20px;
+            visibility: hidden;
+        }
     }
 }
 
@@ -298,18 +318,62 @@ img {
             float: left;
             width: 30%;
             max-width: 336px;
+
+            .toc {
+                display: block;
+
+                .toc-list {
+                    // from fa-ul
+                    $margin-left: 2.14285714em;
+
+                    padding: 0;
+                    list-style: none;
+                    margin-left: $margin-left;
+
+                    .toc-list-item {
+                        &.is-active-li {
+                            > .is-active-link {
+                                font-weight: bold;
+                            }
+
+                            &::before {
+                                display: inline-block;
+                                content: "\f105";
+                                font-family: FontAwesome;
+                                font-weight: bold;
+                                color: #aaa;
+                                margin-left: -$margin-left;
+                                width: $margin-left;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .toc-list {
+                        margin-left: 1em;
+
+                        .toc-list-item {
+                            &::before {
+                                margin-right: 1em;
+                                margin-left: -$margin-left - 1em;
+                            }
+                        }
+                    }
+                }
+            }
         }
+    }
+
+    // For tocbot
+    .is-position-fixed {
+        position: fixed;
+        top: 0;
     }
 }
 
 @media (min-width: 992px) {
     .main {
         width: 970px;
-    }
-
-    #TableOfContents {
-        min-width: 40%;
-        max-width: 80%;
     }
 }
 
