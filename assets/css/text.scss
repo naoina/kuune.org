@@ -84,13 +84,13 @@ img {
     }
 
     pre {
+        @include break();
+        @include scrollbar();
+
         margin: 0;
         color: #333;
         background: #f5f5f5;
         padding: 0.5em 1em;
-
-        @include break();
-        @include scrollbar();
 
         code {
             padding: 0;
@@ -177,10 +177,11 @@ img {
     }
 
     .dataframe {
-        border: none;
-
         @include break();
         @include scrollbar();
+
+        border: none;
+        white-space: nowrap;
 
         tr {
             border: none;
