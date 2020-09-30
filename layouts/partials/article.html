@@ -15,7 +15,7 @@
       {{ with .Resources.GetMatch "logo.{jpg,png}" }}
         <img src="{{ (fingerprint .).RelPermalink }}" alt="" class="article-logo" itemprop="image">
       {{ end }}
-      {{ replaceRE "(?s)(<h2.*?>.*)" (printf "%s$1" .TableOfContents) .Content | safeHTML }}
+      {{ .Content }}
     </div>
 
     <footer class="tags-footer">
@@ -62,26 +62,6 @@
       </div>
     </div>
 
-    <h4>最近の記事</h4>
-    <div class="recent-articles">
-      <ul class="fa-ul">
-        {{ range first 5 (.Site.GetPage "section" .Type).Pages.ByDate.Reverse }}
-          <li><i class="fa fa-li fa-file-o fg-gray"></i><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-        {{ end }}
-      </ul>
-      <p><a href="{{ absURL .Section }}">すべての記事を見る</a></p>
-    </div>
-
-    <h4>リンク</h4>
-    <div class="links">
-      <ul class="fa-ul">
-        <li><i class="fa fa-li fa-external-link fg-gray"></i><a href="https://naoina.info/" target="_blank">naoina.info</a></li>
-        {{ range index (.Param "links") .Section }}
-          <li><i class="fa fa-li fa-external-link fg-gray"></i><a href="{{ .url }}" target="_blank">{{ .name }}</a></li>
-        {{ end }}
-      </ul>
-    </div>
-
     <div class="ad">
       <ins class="adsbygoogle"
            style="display:inline-block;width:336px;height:280px"
@@ -90,6 +70,33 @@
       <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
+    </div>
+
+    <div class="js-position-fixed position-fixed-container">
+      <div class="toc">
+        <h4>目次</h4>
+        <nav class="js-toc toc-nav"></nav>
+      </div>
+
+      <h4>最近の記事</h4>
+      <div class="recent-articles">
+        <ul class="fa-ul">
+          {{ range first 5 (.Site.GetPage "section" .Type).Pages.ByDate.Reverse }}
+            <li><i class="fa fa-li fa-book fg-gray"></i><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+        <p><a href="{{ absURL .Section }}">すべての記事を見る</a></p>
+      </div>
+
+      <h4>リンク</h4>
+      <div class="links">
+        <ul class="fa-ul">
+          <li><i class="fa fa-li fa-external-link fg-gray"></i><a href="https://naoina.info/" target="_blank">naoina.info</a></li>
+          {{ range index (.Param "links") .Section }}
+            <li><i class="fa fa-li fa-external-link fg-gray"></i><a href="{{ .url }}" target="_blank">{{ .name }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
     </div>
   </aside>
 </section>

@@ -1,3 +1,7 @@
 {{ define "stylesheets" }}
   <link rel="stylesheet" href="{{ (resources.Get "css/github.scss" | toCSS | minify | fingerprint).RelPermalink }}" media="all">
 {{ end }}
+{{ define "scripts" }}
+  <script src="{{ (resources.Get "js/tocbot-4.12.0.min.js").RelPermalink }}" defer></script>
+  <script src="{{ (resources.Get "js/toc.ts" | js.Build "toc.js" | minify | fingerprint).RelPermalink }}" defer></script>
+{{ end }}
