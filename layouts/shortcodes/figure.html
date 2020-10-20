@@ -19,11 +19,11 @@
   {{ if .Get "link"}}</a>{{ end }}
   <figcaption>{{ if isset .Params "title" }}
     <i>{{ .Get "title" }}</i>{{ end }}
-    {{ if or (.Get "caption") (.Get "attr")}}<p>
+    {{ if or (.Get "caption") (.Get "attr")}}<div><i>
     {{ .Get "caption" }}
     {{ with .Get "attrlink"}}<a href="{{.}}"> {{ end }}
       {{ .Get "attr" }}
     {{ if .Get "attrlink"}}</a> {{ end }}
-    </p> {{ end }}
+    </i></div> {{ end }}
   </figcaption>
 </figure>
