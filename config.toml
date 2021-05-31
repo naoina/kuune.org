@@ -23,7 +23,7 @@ enableGitInfo = true
 "text/tag" = "text/tags"
 
 [markup.goldmark.renderer]
-hardWrap = true
+hardWraps = true
 unsafe = true
 
 [imaging]
