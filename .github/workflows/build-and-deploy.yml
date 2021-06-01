@@ -23,7 +23,7 @@ jobs:
         repository: gohugoio/hugo
         path: hugo
     - uses: actions/setup-go@v2
-    - run: echo "::add-path::${GOPATH}/bin"
+    - run: echo "${GOPATH}/bin" >> $GITHUB_PATH
     - run: (cd hugo; CGO_ENABLED=1 go install --tags extended)
     - run: ./build.sh
     - run: ./deploy.sh
