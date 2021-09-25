@@ -2,7 +2,7 @@
 title = "Hit Boxのボタンを光らせる"
 date = 2021-07-22T22:42:55+09:00
 draft = false
-"text/tags" = ["hitbox", "game", "misc"]
+"text/tags" = ["hitbox", "game", "kaimana", "led", "misc"]
 +++
 
 今回はHit Boxのボタンを光らせます。諸々の都合上、[Hit Boxの基盤をUFBに換装]({{< relref "text/hitbox-ufb/index.md" >}}) していることが前提となります。
@@ -111,71 +111,13 @@ ID          Installed Latest Name
 arduino:avr 1.8.3     1.8.3  Arduino AVR Boards
 ```
 
-`arduino-cli` を使う環境構築はこれで終わりです。次は実際にLEDを光らせるためのプログラムをあれやこれやします。
+`arduino-cli` を使う環境構築はこれで終わりです。次は実際にLEDを光らせるためのプログラムを書き込みます。
 
 ## LEDを光らせるためのプログラム
 
 元のプログラムからHit Boxに対応して色々と自分好みに書き直したものをGitHubに置いたのでこれを使います。
 
 https://github.com/naoina/kaimana
-
-ボタンとLEDの対応は、数珠つなぎになっているJ2 RGB LEDの順番によって決められます。設定は下記の箇所です。
-
-https://github.com/naoina/kaimana/blob/752c8333674b53d7cd10ce4149c98f6cd30a483b/hitbox/kaimana_custom.h#L36-L70
-
-```c
-// Kaimana J2 RGB LED has 2 LEDs.
-#define  LED_P1_1      16
-#define  LED_P2_1      14
-#define  LED_P3_1      12
-#define  LED_P4_1      10
-#define  LED_K1_1      2
-#define  LED_K2_1      4
-#define  LED_K3_1      6
-#define  LED_K4_1      8
-#define  LED_LEFT_1    22
-#define  LED_DOWN_1    20
-#define  LED_RIGHT_1   18
-#define  LED_UP_1      0
-#define  LED_HOME_1    24
-#define  LED_GUIDE_1   26
-#define  LED_SELECT_1  28
-#define  LED_BACK_1    30
-#define  LED_START_1   32
-#define  LED_P1_2      (LED_P1_1 + 1)
-#define  LED_P2_2      (LED_P2_1 + 1)
-#define  LED_P3_2      (LED_P3_1 + 1)
-#define  LED_P4_2      (LED_P4_1 + 1)
-#define  LED_K1_2      (LED_K1_1 + 1)
-#define  LED_K2_2      (LED_K2_1 + 1)
-#define  LED_K3_2      (LED_K3_1 + 1)
-#define  LED_K4_2      (LED_K4_1 + 1)
-#define  LED_LEFT_2    (LED_LEFT_1 + 1)
-#define  LED_DOWN_2    (LED_DOWN_1 + 1)
-#define  LED_RIGHT_2   (LED_RIGHT_1 + 1)
-#define  LED_UP_2      (LED_UP_1 + 1)
-#define  LED_HOME_2    (LED_HOME_1 + 1)
-#define  LED_GUIDE_2   (LED_GUIDE_1 + 1)
-#define  LED_SELECT_2  (LED_SELECT_1 + 1)
-#define  LED_BACK_2    (LED_BACK_1 + 1)
-#define  LED_START_2   (LED_START_1 + 1)
-```
-
-また、1つのJ2 RGB LEDには2つのLEDがついていて、それぞれに番号が振られるので、ボタンごとに2つ番号があることになります。
-
-{{< figure src="led_order.jpg" title="" >}}
-
-自分は上ボタンから順番に上図のようにLEDを数珠つなぎにしているので、`LED_UP_1`が`0`、`LED_UP_2`が`1`、`LED_K1_1`が`2`、`LED_K1_2`が`3`…というふうにしています。
-
-もし使うJ2 RGB LEDが12個より多いか少ない場合、下記`LED_COUNT`をJ2 RGB LEDの個数x2に設定する必要があります。
-
-https://github.com/naoina/kaimana/blob/4c8ea5ef06ce118d1b747247eaed29ebd909cc3f/hitbox/kaimana_custom.h#L75
-
-```c
-#define  LED_COUNT   24
-```
-
-諸々設定できたらコンパイルします。
 
 ```bash
 arduino-cli compile --fqbn arduino:avr:leonardo hitbox
@@ -191,7 +133,7 @@ Port         Type              Board Name       FQBN                 Core
 /dev/ttyS4   Serial Port       Unknown
 ```
 
-コンパイル時にエラーが出なければ、KaimanaとPCをMicro USBで繋げてから下記コマンドで書き込みます。
+コンパイルしたあと、KaimanaとPCをMicro USBで繋げてから下記コマンドで書き込みます。
 
 ```bash
 arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:leonardo hitbox
@@ -213,11 +155,26 @@ J2 RGB LEDの取り付けは向きがあります。無理なくボタンにハ�
 
 ここまでできたらフタを締めて再び動作確認しましょう。
 
-## LEDの光る色を設定する
+## LEDの設定をする
 
 ボタンを押すとLEDが光る状態にします。もし光らない場合はスタートボタンを約3秒長押しして光る状態にしてください。
-その状態でセレクトボタン(Hit Boxだと側面のボタンの右から2番目)を約3秒長押しすると、LEDの設定モードになり、すべてのLEDが光ったままになります。
-次に色を設定したいボタンを押します。押した(選択した)ボタンによって操作するボタンが変わります。
+このままだと、おそらくボタンとLEDの対応がバラバラだと思いますので、正しくなるよう設定します。
+
+### ボタンとLEDの対応付け設定
+
+ボタンを押すとLEDが光る状態で、HOME/PS/XBボタン(Hit Boxだと側面のボタンの右から3番目)を3秒以上長押しすると、すべてのLEDが点滅します。
+次に、押したボタンと光るLEDの対応が正しくなるまで、すべてのボタンに対して下記の手順を繰り返します。
+
+1. 任意のボタンを押す
+2. どこかのボタンのLEDが光るのでそこを押す
+
+同じボタンを何回も押さないといけないこともあります。
+設定が完了したら、HOME/PS/XBボタンを3秒以上長押しして設定を保存します。
+
+### LEDの色設定
+
+ボタンを押すとLEDが光る状態で、SELECT/SHARE/BACKボタン(Hit Boxだと側面のボタンの右から2番目)を3秒以上長押しすると、すべてのLEDが点灯し、LEDの設定モードになります。
+次に色を設定したいボタンを押します。このとき、押した(選択した)ボタンによって操作するボタンが変わります。
 
 #### 攻撃ボタン(`P`か`K`)を選択した場合
 
@@ -232,7 +189,7 @@ RGBの値はそれぞれ0から255となっていて、255を超えるとまた0
 
 ちなみに、色の付いたクリアボタンの場合、何色に光らせてもほぼボタンの色にしかならないので白でいいと思います。三和のクリア白とかだとクリア部分が完全に透明で、LEDの色がちゃんと見えるため色を変えて楽しめます。
 
-すべて設定し終わったら、LEDを選択するモード(すべてのLEDが光っている状態)でセレクトボタンを約3秒長押しすれば設定が保存されます。
+すべて設定し終わったら、LEDを選択するモード(すべてのLEDが光っている状態)でセレクトボタンを3秒以上長押しすれば設定が保存されます。
 
 ## まとめ
 
