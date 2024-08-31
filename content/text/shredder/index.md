@@ -25,7 +25,7 @@ title = "家庭用シュレッダーのススメ"
 
 数ある電動シュレッダーの中で、私のオススメはこれです。
 
-<iframe src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B00E6KGOBY" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+{{< card url="https://amzn.to/3TbtuMC" >}}
 
 このシュレッダーのいいところは細断がクロスカットの 2x10mm とかなり細かいことです。
 細ければ細かいほど復元が難しくなるので、それだけで安心と安全につながります。

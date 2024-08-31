@@ -7,10 +7,9 @@ logo = ""
 logosmall = ""
 +++
 
-*天使のスタートアップ* を読んだので感想を書きます。
+_天使のスタートアップ_ を読んだので感想を書きます。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4061399683&linkId=e9fc316a573071f431293625518b6eb5"></iframe>
-<br>
+{{< card url="https://amzn.to/4dLeWvz" >}}
 
 ## 概要
 

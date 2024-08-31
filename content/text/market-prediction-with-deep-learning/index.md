@@ -30,7 +30,7 @@ title = "機械学習で為替予測 Deep Learning 編"
 
 やると学習が安定するのでほぼ必須です。やり方は適当にググるか下記の本読んでください。ちなみに自分は下記の本読むまで正しい正規化/標準化ができていませんでした。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B01HGIPIAK&linkId=c2604eda68088caf669b84e6e356572a"></iframe>
+{{< card url="https://amzn.to/3yXVsEY" >}}
 
 ## 欠損値の扱い
 

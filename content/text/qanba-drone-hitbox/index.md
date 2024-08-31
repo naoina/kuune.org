@@ -32,7 +32,7 @@ L3/R3ボタンが無いと何が不便かというと、ストVではトレモ�
 
 以上のような気になる点をすべて解消しているアケコンがありまして、それがQanba Droneです。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B078SST6QC&linkId=e606778b5d6e5f9531ea2089db51425b"></iframe>
+{{< card url="https://amzn.to/3yYprg2" >}}
 
 {{< figure src="qanba_drone.jpg" title="L3/R3ボタンある、コンパクト、手前側が斜めで手が置きやすいという最高の筐体" >}}
 
@@ -51,43 +51,40 @@ L3/R3ボタンが無いと何が不便かというと、ストVではトレモ�
   - Qanba Droneのネジ穴は少し深めなので、プラスドライバーは長めのものが必要です
 - 電動ドライバドリル
   - ボタンの穴を開けるのに使います。いちど手動で開けたのですが、めちゃくちゃ辛かったので絶対に用意したほうがいいです
-  - 自分はマキタのDIYモデルである [マキタ 充電式ドライバドリル MDF347DS](https://www.amazon.co.jp/%E3%83%9E%E3%82%AD%E3%82%BF-Makita-MDF347DS-%E5%85%85%E9%9B%BB%E5%BC%8F%E3%83%89%E3%83%A9%E3%82%A4%E3%83%90%E3%83%89%E3%83%AA%E3%83%AB/dp/B077K34PSH?&linkCode=ll1&tag=naoina09-22&linkId=74b30987a416152b059a7dd97aa91198&language=ja_JP&ref_=as_li_ss_tl) を買いました
+  - 自分はマキタのDIYモデルである [マキタ 充電式ドライバドリル MDF347DS](https://amzn.to/3AICxi3) を買いました
+    {{< card url="https://amzn.to/3AICxi3" >}}
   - ホームセンターなどでレンタルしてもいいかもしれません
 - 30mm ホールソー
   - ボタンの穴を開けるのに使います。純正Hit Boxで使われている24mmのボタンが良ければ24mmも買いましょう
+    {{< card url="https://amzn.to/47cI6S2" >}}
   - ステップドリルでもいいと思います
 - ニッパー
   - コードを切るのに使います。ハサミでもいいかもしれません
 - 圧着ペンチ
-  - 自分は [ホーザンP-706](https://www.amazon.co.jp/gp/product/B002TKG11G?ie=UTF8&psc=1&linkCode=ll1&tag=naoina09-22&linkId=a2804c84269e45882a0ce9ee0c0c231e&language=ja_JP&ref_=as_li_ss_tl) を使いました
+  - 自分は [ホーザンP-706](https://amzn.to/3yO5R6c) を使いました
+    {{< card url="https://amzn.to/3yO5R6c" >}}
 - ワイヤーストリッパー
   - ニッパーやカッターでも被覆を剥けますが、あったほうが圧倒的に効率がいいです
-  - 自分は [ベッセル3500E-2](https://www.amazon.co.jp/gp/product/B000CEAXM4?ie=UTF8&psc=1&linkCode=ll1&tag=naoina09-22&linkId=b3b318150e0f394c6cb4e2230485d795&language=ja_JP&ref_=as_li_ss_tl) を使いました
+  - 自分は [ベッセル3500E-2](https://amzn.to/3MtayW8) を使いました
+    {{< card url="https://amzn.to/3MtayW8" >}}
 - ファストン端子 (平型端子) #110
   - 方向ボタンの配線を作るのに使います
   - すでに圧着してあるコードがあるならそちらを買ってもいいと思います
 - 配線用コード
   - 方向ボタンの配線を作るのに使います
   - 自分はAWG20を買いましたが、ちょっと太かったのでAWG22か24を買ったほうがいいです
+    {{< card url="https://amzn.to/3TbISsz" >}}
   - すでにファストン端子を圧着してあるコードがあるならそちらを買ってもいいと思います
 - XHコネクタ
   - Qanba DroneのUSBコネクタがXHコネクタなので、それを分岐してSOCDクリーナーに5V電源とGNDを提供するために使います
+    {{< card url="https://amzn.to/3Tc7lhs" >}}
 - 熱収縮チューブ
   - USB配線のコネクタ変更での絶縁に使います
   - テープでもできなくはないですが、隙間があまりないので大変です
 - 呼び径M3のネジとナイロン製六角ナット & 瞬間接着剤
   - SOCDクリーナーをマウントするために使います
   - SOCDクリーナーをアケコンのケースに留めない場合は必要ないです
-
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B077K34PSH&linkId=da297098882e313b5d57ce15d4a43721"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B009DZ2Q96&linkId=fbf8835a8bcb8e3522539dd3b85e0e8d"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B002TKG11G&linkId=03995cd221c417a064caa34f4953a240"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B000CEAXM4&linkId=d95e16448b7d6c60a6ef258a0f87a489"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0876V1419&linkId=817e40da3bda7914762c3a026e18048c"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B071J1Z3CF&linkId=ebd53ebf00ddfed5a3d5a38a12f4c9ec"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B085QFT6YX&linkId=e5bfce18916c095830caa14dcaa8d761"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B077D5DQ9X&linkId=5a0316a828099cf6c0f78d9968cd6f2a"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07V5TQ8NW&linkId=b35eb03e165085e84dc0abaab777ef9d"></iframe>
+    {{< card url="https://amzn.to/4dGwXvd" >}}
 
 ## ケースを開ける
 
@@ -131,8 +128,9 @@ Qanba Droneはケースのネジを外してもレバーボールが引っかか
 
 電動ドライバドリルとホールソーを使います。レバーレス化において、唯一失敗すると取り返しがつかない工程なので慎重にやりましょう。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B077K34PSH&linkId=da297098882e313b5d57ce15d4a43721"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B009DZ2Q96&linkId=fbf8835a8bcb8e3522539dd3b85e0e8d"></iframe>
+{{< card url="https://amzn.to/3AICxi3" >}}
+
+{{< card url="https://amzn.to/47cI6S2" >}}
 
 自分は純正Hit Boxと同じ24mmではなく、全部30mmボタンにしたかったので30mmホールソーを使いましたが、ボタン間のクリアランスがかなりシビアになるので30mmで開けるのはおすすめしません。
 レバーの穴はそのままで24mmボタンがきれいにハマるので、特にこだわりがなければ24mmの穴を開けるほうが色々と楽です。
@@ -157,7 +155,7 @@ Qanba Droneはケースのネジを外してもレバーボールが引っかか
 
 自分はこのときニッパーとやすりで頑張ったのですが、ホットナイフを使ったほうが圧倒的に楽なのでこちらを使うことをおすすめします。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0016V7JII&linkId=9aba377a68a919b6296a50c4c8d9b8ad"></iframe>
+{{< card url="https://amzn.to/4cHwJ5y" >}}
 
 ## SOCDクリーナーを取り付ける
 
@@ -180,7 +178,7 @@ SOCDクリーナーを台側のケースに取り付けた場合、天板を外�
 
 Focus Attack SOCDクリーナーには3つネジ穴が付いているので、その位置で取り付けられるように呼び径M3のナイロン製六角ナットを瞬間接着剤で天板に付けます。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07V5TQ8NW&linkId=b35eb03e165085e84dc0abaab777ef9d"></iframe>
+{{< card url="https://amzn.to/4dGwXvd" >}}
 
 自分が買ったのは上記で、SOCDクリーナーの取り付けにはM3x6mmの高ナットと6mmのネジを使いました。
 
@@ -196,7 +194,7 @@ Focus Attack SOCDクリーナーには3つネジ穴が付いているので、�
 
 これをそのまま使えれば話は早かったんですが、Qanba Droneの基板に付いているUSBコネクタはXHコネクタで、パワーハーネスのコネクタの形状とは違うのでコネクタを変更する必要があります。基板側を変更するのは大変なので、パワーハーネス側を変えます。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B085QFT6YX&linkId=e5bfce18916c095830caa14dcaa8d761"></iframe>
+{{< card url="https://amzn.to/3Tc7lhs" >}}
 
 かしめている端子を外すのは難しいため、コードを切断してXHコネクタを付けます。
 
@@ -212,8 +210,6 @@ Focus Attack SOCDクリーナーには3つネジ穴が付いているので、�
 もし自分と同じ方式でやるならば、QIコネクタのメス端子 + ハウジングを使うとXHコネクタの基板側に挿すピンにいい感じで挿さります。
 
 {{< figure src="power_harness_5.jpg" title="熱収縮チューブで絶縁する。見た目もよい" >}}
-
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B077D5DQ9X&linkId=5a0316a828099cf6c0f78d9968cd6f2a"></iframe>
 
 ここまでできたらあとはSOCDクリーナーを天板に取り付けるだけです。
 
@@ -253,5 +249,7 @@ GND用のコードも同様に作成しますが、チェーンさせるよう�
 {{< figure src="qanba_drone_finished_2.jpg" title="表側" >}}
 
 [^1]: BrookのUniversal Fighting Boardであればはんだ付けは必要ないです。
+
 [^2]: PC版だとSteam側でコントローラーのボタン割当を変えればできなくはない
+
 [^3]: https://note.com/takahata88/n/n2a6c6ee41cdc

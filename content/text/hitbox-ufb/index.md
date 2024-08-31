@@ -10,33 +10,33 @@ UFBのJ9を別用途に使いたかったので今回の手順ではコードを
 
 J9を使う場合は下記を買って繋ぐだけでできると思いますが、ファストン端子は曲げないと多分ケースに収まらないです。（やったことはないのでこちらも自己責任でお願いします
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B083JX5H2B&linkId=6389be9ceb290a3caa754bc8ade018c4"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B083JW59Y3&linkId=233765a793c1168412acab67b769583e"></iframe>
+{{< card url="https://amzn.to/4dJJZIe" >}}
+
+{{< card url="https://amzn.to/3Tdd7iJ" >}}
 
 ## 必要なもの
 
-- [Universal Fighting Board](https://www.amazon.co.jp/Brook-Universal-Fighting-%E3%82%A2%E3%82%B1%E3%82%B3%E3%83%B3%E5%9F%BA%E6%9D%BF-Switch%E5%AF%BE%E5%BF%9C/dp/B07RYYX6LK?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&dchild=1&keywords=ufb&qid=1622562000&sr=8-1&linkCode=ll1&tag=naoina09-22&linkId=ddccc0b88c8f4ee322f7b6467095e268&language=ja_JP&ref_=as_li_ss_tl)
+- [Universal Fighting Board](https://amzn.to/4g3u4WL)
   - ピンヘッダとコネクタがハンダ付けされているバージョンを選びます
-- [QIコネクタ](https://www.amazon.co.jp/gp/product/B087C49W9M?ie=UTF8&psc=1&linkCode=ll1&tag=naoina09-22&linkId=ff7e90b064a62fed4f74b08abac0d3ae&language=ja_JP&ref_=as_li_ss_tl)
+    {{< card url="https://amzn.to/4g3u4WL" >}}
+- [QIコネクタ](https://amzn.to/3Z4oPA0)
   - デュポンコネクタとも言われるようです。USBの再結線用に必要です。Hit Boxに元々ついているコネクタはUFBには使い回せません
-- [PHコネクタ](https://www.amazon.co.jp/gp/product/B08JYNRTS1?ie=UTF8&psc=1&linkCode=ll1&tag=naoina09-22&linkId=27e89a37bd4b0ba8c6189c8842531a14&language=ja_JP&ref_=as_li_ss_tl)
+    {{< card url="https://amzn.to/3Z4oPA0" >}}
+- [PHコネクタ](https://amzn.to/4e84luD)
   - TOUCH PAD KEY/L3/R3ボタンを繋げるのに必要です
+    {{< card url="https://amzn.to/4e84luD" >}}
 - ニッパー
   - コードを切るのに使います。ハサミでもいいかもしれません
 - 圧着ペンチ
-  - 自分は [ホーザンP-706](https://www.amazon.co.jp/gp/product/B002TKG11G?ie=UTF8&psc=1&linkCode=ll1&tag=naoina09-22&linkId=a2804c84269e45882a0ce9ee0c0c231e&language=ja_JP&ref_=as_li_ss_tl) を買いました
+  - 自分は [ホーザンP-706](https://amzn.to/4fZYlG5) を買いました
+    {{< card url="https://amzn.to/4fZYlG5" >}}
 - ワイヤーストリッパー
   - ニッパーやカッターでも被覆を剥けますが、あったほうが圧倒的に効率がいいです
-  - 自分は [ベッセル3500E-2](https://www.amazon.co.jp/gp/product/B000CEAXM4?ie=UTF8&psc=1&linkCode=ll1&tag=naoina09-22&linkId=b3b318150e0f394c6cb4e2230485d795&language=ja_JP&ref_=as_li_ss_tl) を買いました
+  - 自分は [ベッセル3500E-2](https://amzn.to/3MpSjB1) を買いました
+    {{< card url="https://amzn.to/3MpSjB1" >}}
 - 絶縁テープ
   - ビニールテープでもいいですが、剥がしてもベタベタしない自己癒着テープが便利です
-
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B08H1TCFB1&linkId=a081c68f5cdd277d207f0bb6140405d2"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B002TKG11G&linkId=03995cd221c417a064caa34f4953a240"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B000CEAXM4&linkId=d95e16448b7d6c60a6ef258a0f87a489"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B08JYNRTS1&linkId=86d2cd839c6807e62c056109f1d3f187"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B087C49W9M&linkId=65f3a516de9604ce3db35e4f72bf46cf"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B010MYOQ7Q&linkId=80383b4027aa7a51b77e6907e656b558"></iframe>
+    {{< card url="https://amzn.to/3XpJQUv" >}}
 
 ## コードの切断
 

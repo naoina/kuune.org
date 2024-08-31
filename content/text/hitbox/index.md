@@ -8,7 +8,7 @@ draft = false
 ふとストリートファイターVを始めようと思い立ったので、格ゲーやるならアーケードコントローラー(以下アケコン)だ！ということでアケコンを探していると、今はレバーレスという種類のアケコンがあるのを知って、今からやるならレバーより良いと思い買いました。
 買ったのはいわゆる純正Hit Boxです。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B078GBDZX6&linkId=6b2518632326716f30de581b4f7133a3"></iframe>
+{{< card url="https://amzn.to/4g6S4In" >}}
 
 [本家](https://www.hitboxarcade.com/ja/products/ps4-pc-hit-box)のほうが$200と本体価格は安いですが、国際送料が$70なので、それを加味すると国内で買っても大して値段が変わらない上に到着まで時間がかかるし関税取られるとむしろ超えちゃうので、普通に国内で買ったほうがいいと思います。
 
@@ -71,6 +71,6 @@ https://wilco.jp/products/washer/rubber/
 静音に関しては、シリコンゴムK-127にすると元の三和ボタンより遥かに静かになります。また、サムドクサのボタン自体が三和ボタンよりキャップとボタン本体の間に遊びがないのでカチャカチャという音も減ります。
 GamerFingerのボタンが手に入らなくて困っていたり、ボタンは六角形より丸のほうがいいという方はサムドクサのボタンで静音化してみてはどうでしょうか。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B078GBDZX6&linkId=6b2518632326716f30de581b4f7133a3"></iframe>
+{{< card url="https://amzn.to/4g6S4In" >}}
 
 [^1]: PayPalを通して購入していたので返金してもらいました。

@@ -80,6 +80,6 @@ draft = false
 
 イヤホンはオープンエア派にとって、骨伝導イヤホンは最高の体験と言っても過言ではないでしょう。骨伝導イヤホンとしてはなかなか高価なAfterShokz Aeropex、いいところばかりではないですが、個人的にはAirPods Proに並ぶ良い買い物をしたと思っています。[^1] あとはネックバンドのないモデルが出てくれれば最高ですね。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07RNLPQ67&linkId=ce29c965e7c9859a58cbda1c99554945"></iframe>
+{{< card url="https://amzn.to/4dGxEVd" >}}
 
 [^1]: 現にもうAirPods Proは使っていません。

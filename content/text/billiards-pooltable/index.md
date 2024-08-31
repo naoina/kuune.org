@@ -37,8 +37,9 @@ BLF-6は四方の足のところに高さが調節できるネジがついてい
 
 使ったつっぱり棒と水平器はこれ。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=tf_til&t=naoina09-22&m=amazon&o=9&p=8&l=as1&IS2=1&detail=1&asins=B000S6KTA2&linkId=1d0869ccc4e02063c24e78cf7d2a2ed9&bc1=000000&lt1=_blank&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr"></iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B001C7CJKO&linkId=c799044934ed49bfbd729b4111f0372a"></iframe>
+{{< card url="https://amzn.to/3XlXTuh" >}}
+
+{{< card url="https://amzn.to/4cQ8WQZ" >}}
 
 BLF-6は自立式のテーブルに比べて外側に足があるため、テーブル下のスペースが広く、よりものを置けると思ったのでこれにしたのですが、このように水平出しをするのであればテーブル下のスペースは他のテーブルでも大して変わらない感じなので、他のテーブルでもよかったかなとも思います。まぁ他のテーブルも実はこのようにしないと水平が出ないかもしれませんし、そういった情報がないので結局は買ってみるしかなかったのですが。
 

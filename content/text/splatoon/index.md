@@ -8,7 +8,7 @@ title = "スプラトゥーンでウデマエが S+ になった"
 
 ここ 1 年ぐらいよく見る話題のスプラトゥーンでやっとウデマエが S+ になりました。
 
-<iframe src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=naoina09-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B00VDVY1C8" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+{{< card url="https://amzn.to/4dLMIRi" >}}
 
 始めたのはかなり遅くて、今年に入ってからで、1 月中旬から 3 月頭まで諸事情でプレイできなかったので実質 2 ヶ月ぐらいで、実プレイ時間は 194 時間でした。
 まだ S+ になってからプレイしてないので洗礼は受けていません。
