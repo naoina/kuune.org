@@ -16,19 +16,32 @@ class OGPParser(HTMLParser, json.JSONEncoder):
         with urlopen(self._url) as f:
             encoding = f.headers.get_content_charset()
             body = f.read()
-        self.feed(body.decode(encoding or 'utf8'))
+            actual_url = f.geturl()
+        self.feed(body.decode(encoding or "utf8"))
         self.close()
+        self._og["url"] = self._og.get("url", actual_url)
 
     def handle_starttag(self, tag, attrs):
-        if tag != 'meta':
+        if tag != "meta":
             return
         a = dict(attrs)
-        prop = a.get('property', '')
-        if not prop.startswith('og:'):
+        prop = a.get("property", "")
+        if not prop.startswith("og:"):
             return
         name = prop[3:]
-        content = a.get('content')
+        content = a.get("content")
         self._og[name] = content
+
+
+class AmazonParser(OGPParser):
+    def handle_starttag(self, tag, attrs):
+        if tag != "img":
+            return
+        a = dict(attrs)
+        if a.get("id") != "landingImage":
+            return
+        self._og["image"] = a.get("src", "")
+        self._og["title"] = a.get("alt", "")
 
 
 class OGPJSONEncoder(json.JSONEncoder):
@@ -40,16 +53,20 @@ class OGPJSONEncoder(json.JSONEncoder):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('url', type=str, nargs=1)
+    parser.add_argument("url", type=str, nargs=1)
     args = parser.parse_args()
     u = urlparse(args.url[0])
-    ogp = OGPParser(u.geturl())
+    url = u.geturl()
+    if url.startswith("https://amzn.to/"):
+        ogp = AmazonParser(url)
+    else:
+        ogp = OGPParser(url)
     ogp.parse()
-    data_path = Path('data') / u.hostname / u.path[1:]
+    data_path = Path("data") / u.hostname / u.path[1:]
     data_path.mkdir(parents=True, exist_ok=True)
-    with open(data_path / 'og.json', 'w') as f:
+    with open(data_path / "og.json", "w") as f:
         json.dump(ogp, f, cls=OGPJSONEncoder)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
