@@ -6,7 +6,7 @@
     <img src="{{ .image }}" alt="" class="card-image" />
     <div class="card-summary">
       <strong class="card-title">{{ .title }}</strong>
-      <p class="card-description">{{ .description }}</p>
+      {{ if .description }}<p class="card-description">{{ .description }}</p>{{ end }}
       <span class="card-host">{{ replaceRE "^https?://([^/]+).*" "$1" (or .url $url) }}</span>
     </div>
   </blockquote>
