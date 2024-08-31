@@ -54,6 +54,7 @@ class OGPJSONEncoder(json.JSONEncoder):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("url", type=str, nargs=1)
+    parser.add_argument("outdir", type=str, nargs=1, default="data")
     args = parser.parse_args()
     u = urlparse(args.url[0])
     url = u.geturl()
@@ -62,7 +63,7 @@ def main():
     else:
         ogp = OGPParser(url)
     ogp.parse()
-    data_path = Path("data") / u.hostname / u.path[1:]
+    data_path = Path(args.outdir[0]) / u.hostname / u.path[1:]
     data_path.mkdir(parents=True, exist_ok=True)
     with open(data_path / "og.json", "w") as f:
         json.dump(ogp, f, cls=OGPJSONEncoder)
