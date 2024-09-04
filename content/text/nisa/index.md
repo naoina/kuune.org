@@ -5,4 +5,4 @@ draft = false
 "text/tags" = ["nisa", "money"]
 +++
 
-{{< jupyter_notebook "text/nisa/index.ipynb" >}}
+{{< jupyter_notebook "index.ipynb.json" >}}

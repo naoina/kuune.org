@@ -1,5 +1,6 @@
 {{ $file := .Get 0 }}
-{{ $ipynb := getJSON "content/" $file }}
+{{ with .Page.Resources.Get $file }}
+{{ $ipynb := . | unmarshal }}
 {{ $begin := false }}
 {{ range $cell := $ipynb.cells }}
   {{ if eq $cell.cell_type "markdown" }}
@@ -66,3 +67,4 @@
   {{ $.Scratch.Set "content" (replace ($.Scratch.Get "content") $attachment.filename $attachment.dataURL) }}
 {{ end }}
 {{ $.Scratch.Get "content" | markdownify }}
+{{ end }}

@@ -7,4 +7,4 @@ logo = ""
 logosmall = ""
 +++
 
-{{< jupyter_notebook "text/how-to-use-jupyter-notebook-as-hugo-content.ipynb" >}}
+{{< jupyter_notebook "how-to-use-jupyter-notebook-as-hugo-content.ipynb.json" >}}

@@ -1,6 +1,7 @@
 {{ $url := .Get "url" }}
 {{ $path := replaceRE "^https?://" "/" $url }}
-{{ with getJSON "content/" .Page.File.Dir $path "/og.json" }}
+{{ with .Page.Resources.Get (path.Join $path "og.json") }}
+{{ with . | unmarshal }}
 <a href="{{ $url }}" class="card-block">
   <blockquote cite="{{ $url }}" class="card-blockquote">
     <img src="{{ .image }}" alt="" class="card-image" />
@@ -13,4 +14,5 @@
   <div class="clear"></div>
 </a>
 <div class="clear"></div>
+{{ end }}
 {{ end }}
