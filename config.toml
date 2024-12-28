@@ -49,10 +49,3 @@ unsafe = true
 
 [params.disqus]
   text = "kuune"
-
-[deployment]
-
-[[deployment.targets]]
-  name = "kuune.org"
-  URL = "s3://kuune.org?region=us-east-1"
-  cloudFrontDistributionID = "E2ZKHXSUPMD859"
