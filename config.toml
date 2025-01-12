@@ -6,11 +6,13 @@ layoutdir = "layouts"
 publishdir = "public"
 builddrafts = false
 canonifyurls = false
-paginatepath = "p"
 disableHugoGeneratorInject = true
 pygmentsCodefences = true
 pygmentsUseClasses = true
 enableGitInfo = true
+
+[pagination]
+path = "p"
 
 [frontmatter]
   date = ["date"]
