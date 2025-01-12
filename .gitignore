@@ -4,3 +4,4 @@ resources/
 .~*
 /hugo
 *_original
+.hugo_build.lock
