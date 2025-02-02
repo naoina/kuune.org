@@ -2,7 +2,7 @@
 title = "Hit Boxのボタンを光らせる"
 date = 2021-07-22T22:42:55+09:00
 draft = false
-"text/tags" = ["hitbox", "game", "kaimana", "led", "misc"]
+"tags" = ["hitbox", "game", "kaimana", "led", "misc"]
 +++
 
 今回はHit Boxのボタンを光らせます。諸々の都合上、[Hit Boxの基盤をUFBに換装]({{< relref "text/hitbox-ufb/index.md" >}}) していることが前提となります。

@@ -2,7 +2,7 @@
 title = "もう個人開発のWEBサービスを作ることはないという話"
 date = 2018-11-18T10:10:56+09:00
 draft = false
-"text/tags" = ["misc"]
+"tags" = ["misc"]
 logo = ""
 logosmall = ""
 +++

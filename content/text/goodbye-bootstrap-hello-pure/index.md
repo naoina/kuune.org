@@ -2,7 +2,7 @@
 date = "2013-06-20T20:30:34+09:00"
 draft = false
 title = "Goodbye Bootstrap, Hello Pure"
-"text/tags" = ["bootstrap", "pure", "css"]
+"tags" = ["bootstrap", "pure", "css"]
 
 +++
 

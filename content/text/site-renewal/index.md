@@ -2,7 +2,7 @@
 date = "2015-01-29T07:54:48+09:00"
 draft = false
 title = "サイトをリニューアルした"
-"text/tags" = ["misc"]
+"tags" = ["misc"]
 
 +++
 

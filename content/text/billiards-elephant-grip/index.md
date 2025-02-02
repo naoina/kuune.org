@@ -2,7 +2,7 @@
 title = "ビリヤードキューのグリップを象革に変えた"
 date = 2020-05-18T15:27:46+09:00
 draft = false
-"text/tags" = ["misc", "billiards"]
+"tags" = ["misc", "billiards"]
 +++
 
 ビリヤードキューのグリップはおおむね3種類あります。

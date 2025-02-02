@@ -2,7 +2,7 @@
 title = "Jupyter NotebookをHugoのコンテンツとして使う方法"
 date = 2017-07-27T10:58:43+09:00
 draft = false
-"text/tags" = ["Jupyter Notebook", "Hugo", "Go"]
+"tags" = ["Jupyter Notebook", "Hugo", "Go"]
 logo = ""
 logosmall = ""
 +++

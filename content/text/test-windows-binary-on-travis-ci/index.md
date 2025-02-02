@@ -2,7 +2,7 @@
 date = "2014-08-20T13:55:22+09:00"
 draft = false
 title = "Travis-CI で Windows バイナリをテストする"
-"text/tags" = ["travis-ci", "windows"]
+"tags" = ["travis-ci", "windows"]
 
 +++
 

@@ -1,7 +1,7 @@
 +++
 date = "2016-04-13T23:25:14+09:00"
 draft = false
-"text/tags" = ["misc", "splatoon"]
+"tags" = ["misc", "splatoon"]
 title = "スプラトゥーンでウデマエが S+ になった"
 
 +++

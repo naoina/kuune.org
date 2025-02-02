@@ -21,8 +21,14 @@ path = "p"
 [permalinks]
   text = "/:section/:year/:month/:day/:filename/"
 
+[permalinks.taxonomy]
+  tags = "/text/tags/"
+
+[permalinks.term]
+  tags = "/text/tags/:slug/"
+
 [taxonomies]
-"text/tag" = "text/tags"
+  text_tag = "tags"
 
 [markup.goldmark.renderer]
 hardWraps = true

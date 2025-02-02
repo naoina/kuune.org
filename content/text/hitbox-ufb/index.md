@@ -2,7 +2,7 @@
 title = "Hit Boxの基盤をUFBに換装する"
 date = 2021-06-10T20:28:35+09:00
 draft = false
-"text/tags" = ["hitbox", "ufb", "game", "misc"]
+"tags" = ["hitbox", "ufb", "game", "misc"]
 +++
 
 Hit Boxの基盤をBrookのUniversal Fighting Board(以下UFB)に載せ換えたので書いておきます。

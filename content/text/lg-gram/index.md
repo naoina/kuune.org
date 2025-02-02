@@ -2,7 +2,7 @@
 title = "LG gramを買った"
 date = 2019-12-04T09:28:06+09:00
 draft = false
-"text/tags" = ["misc", "lg gram", "linux"]
+"tags" = ["misc", "lg gram", "linux"]
 +++
 
 # TL;DR

@@ -2,7 +2,7 @@
 title = "Re:VIEWのALE linterを作った"
 date = 2017-08-18T00:45:39+09:00
 draft = false
-"text/tags" = ["ALE", "Neovim", "Vim", "Re:VIEW"]
+"tags" = ["ALE", "Neovim", "Vim", "Re:VIEW"]
 logo = ""
 logosmall = ""
 +++

@@ -3,7 +3,7 @@ date = "2017-05-01T09:30:43+09:00"
 draft = false
 logo = ""
 logosmall = ""
-"text/tags" = ["misc"]
+"tags" = ["misc"]
 title = "3 大「信じてはいけない言葉」"
 
 +++

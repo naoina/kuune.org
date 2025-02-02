@@ -2,7 +2,7 @@
 date = "2013-12-16T23:05:02+09:00"
 draft = false
 title = "Kocha における URL ルーターの実装と予定"
-"text/tags" = ["go", "golang", "kocha"]
+"tags" = ["go", "golang", "kocha"]
 
 +++
 

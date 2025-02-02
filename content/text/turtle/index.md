@@ -1,7 +1,7 @@
 +++
 date = "2017-04-12T23:38:23+09:00"
 draft = false
-"text/tags" = ["misc"]
+"tags" = ["misc"]
 title = "カメ"
 +++
 

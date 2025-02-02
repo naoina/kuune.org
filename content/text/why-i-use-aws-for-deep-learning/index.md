@@ -3,7 +3,7 @@ date = "2017-04-12T23:40:29+09:00"
 draft = false
 logo = ""
 logosmall = ""
-"text/tags" = ["deep learning", "aws"]
+"tags" = ["deep learning", "aws"]
 title = "何故私は AWS を Deep Learning で使うのか"
 
 +++

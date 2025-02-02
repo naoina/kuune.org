@@ -2,7 +2,7 @@
 date = "2014-02-18T23:09:59+09:00"
 draft = false
 title = "私が Golang の WEB アプリケーションフレームワークを開発する理由"
-"text/tags" = ["go", "golang", "kocha"]
+"tags" = ["go", "golang", "kocha"]
 
 +++
 

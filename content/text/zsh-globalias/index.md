@@ -2,7 +2,7 @@
 title = "Zshのglobaliasでgitのエイリアスを展開する"
 date = 2020-10-20T17:48:12+09:00
 draft = false
-"text/tags" = ["zsh", "globalias"]
+"tags" = ["zsh", "globalias"]
 +++
 
 ## はじめに

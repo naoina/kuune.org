@@ -2,7 +2,7 @@
 title = "「天使のスタートアップ」を読んだ"
 date = 2017-08-29T20:10:26+09:00
 draft = false
-"text/tags" = ["書評"]
+"tags" = ["書評"]
 logo = ""
 logosmall = ""
 +++

@@ -2,7 +2,7 @@
 date = "2014-01-20T09:31:19+09:00"
 draft = false
 title = "FeatureToggle ライブラリ書いた"
-"text/tags" = ["go", "golang", "gocchan"]
+"tags" = ["go", "golang", "gocchan"]
 
 +++
 

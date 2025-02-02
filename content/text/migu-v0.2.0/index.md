@@ -2,7 +2,7 @@
 title = "Migu v0.2.0をリリースしました"
 date = 2017-11-19T14:05:49+09:00
 draft = false
-"text/tags" = ["go", "golang", "migu"]
+tags = ["go", "golang", "migu"]
 logo = ""
 logosmall = ""
 +++

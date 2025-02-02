@@ -2,7 +2,7 @@
 date = "2013-10-21T23:40:16+09:00"
 draft = false
 title = "golangで実行時に関数の引数の名前を取得する方法"
-"text/tags" = ["go", "golang"]
+"tags" = ["go", "golang"]
 
 +++
 

@@ -2,7 +2,7 @@
 title = "骨伝導イヤホンAfterShokz Aeropexを買った"
 date = 2020-05-25T23:29:15+09:00
 draft = false
-"text/tags" = ["misc", "aftershokz", "earphone"]
+"tags" = ["misc", "aftershokz", "earphone"]
 +++
 
 色々あって骨伝導イヤホンAfterShokz Aeropexを買ったので軽くレビューします。

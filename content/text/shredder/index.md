@@ -2,7 +2,7 @@
 date = "2016-04-11T23:48:02+09:00"
 draft = false
 title = "家庭用シュレッダーのススメ"
-"text/tags" = ["misc"]
+"tags" = ["misc"]
 
 +++
 

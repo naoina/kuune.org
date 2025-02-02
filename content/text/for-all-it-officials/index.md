@@ -2,7 +2,7 @@
 date = "2013-11-26T09:16:51+09:00"
 draft = false
 title = "無料サポートだと思われてしまっている全てのIT関係者へ"
-"text/tags" = ["misc"]
+"tags" = ["misc"]
 
 +++
 

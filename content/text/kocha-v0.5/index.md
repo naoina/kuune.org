@@ -2,7 +2,7 @@
 date = "2014-07-24T10:56:39+09:00"
 draft = false
 title = "Kocha v0.5 リリースしました"
-"text/tags" = ["go", "golang", "kocha"]
+"tags" = ["go", "golang", "kocha"]
 
 +++
 

@@ -2,7 +2,7 @@
 title = "Qanba Droneをレバーレス化する"
 date = 2021-10-10T14:27:43+09:00
 draft = false
-"text/tags" = ["game", "qanba", "drone", "hitbox", "misc"]
+"tags" = ["game", "qanba", "drone", "hitbox", "misc"]
 +++
 
 今まで[純正Hit Boxの基板をUFBに換装した]({{< relref "text/hitbox-ufb/index.md" >}})ものを使っていて、少し気になる点がありました。

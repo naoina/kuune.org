@@ -2,7 +2,7 @@
 title = "今になって初めてメルカリを使ってみた感想"
 date = 2017-07-17T12:38:12+09:00
 draft = false
-"text/tags" = ["misc"]
+"tags" = ["misc"]
 logo = ""
 logosmall = ""
 +++

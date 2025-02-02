@@ -3,7 +3,7 @@ date = "2017-05-02T11:31:45+09:00"
 draft = false
 logo = ""
 logosmall = ""
-"text/tags" = ["機械学習", "deep learning"]
+"tags" = ["機械学習", "deep learning"]
 title = "機械学習で為替予測 Deep Learning 編その 3"
 
 +++
